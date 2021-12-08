@@ -1,10 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 
-month_list = ['2021-12', '2022-01', '2022-02']
+month_list = ['2021-12', '2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-07']
 
 for month in month_list:
     print(month, '\n')
+
     data = requests.get('https://www.berliner-philharmoniker.de/konzerte/kalender/von/' + month)
     soup = BeautifulSoup(data.text, 'html.parser')
 
