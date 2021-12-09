@@ -1,9 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .models import Event
+from .webscraper import main
+
 # Create your views here.
 
 def home(request):
+    events = {
+        'concerts' : Event.objects.all()
+    }
     return(
-        HttpResponse('<h1> Hello There </h1>')
+        render(request, 'searchtool/display.html', events)
     )

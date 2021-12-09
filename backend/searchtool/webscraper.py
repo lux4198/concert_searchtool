@@ -1,10 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+from .models import Event
 
 
 def main():
-    month_list = ['2021-12'] # '2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-07']
+    month_list = ['2021-12', '2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-07']
 
     for month in month_list:
         print(month, '\n')
@@ -35,6 +36,14 @@ def main():
                 singleevent['conductor'] = info[1]
                 singleevent['artists'] = info[2:-1]
                 singleevent['pieces'] = info[-1]
+
+            Event.objects.create(date = singleevent['date'], 
+                location = singleevent['location'],
+                conductor = singleevent['conductor'], 
+                artists = singleevent['artists'], 
+                pieces = singleevent['pieces'])
+
+            
 
             concerts.append(singleevent)
 
