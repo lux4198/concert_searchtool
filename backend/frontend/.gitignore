@@ -26,7 +26,3 @@ yarn-error.log*
 
 /src/notes.txt
 /Python/websites.txt
-
-# backend 
-
-./db.sqlite3
