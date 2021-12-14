@@ -34,7 +34,7 @@ function Accordionobject(props){
               </tr>
               <tr>
                   <th>Ensemble</th>
-                  <td>{concert.location} </td>
+                  <td>{concert.ensemble} </td>
               </tr>
               <tr>
                   <th>Conductor</th>
@@ -62,7 +62,7 @@ function ConcertDisplay(props){
   if (props.concerts.length > 0){
     return(
         concerts.map((concert) => 
-          <Accordionobject header = {concert.date} subheader = {concert.location + '  -  ' + concert.conductor} concert = {concert} /> 
+          <Accordionobject header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor} concert = {concert} /> 
         
         )
     )
@@ -70,7 +70,7 @@ function ConcertDisplay(props){
   else {
     return(
       <div>
-        Hello There
+        Loading
       </div>
   )
 }
@@ -91,6 +91,8 @@ function App() {
       getConcerts(allConcerts)
     })
   }
+
+  console.log(concerts)
 
     return(
       <div>
