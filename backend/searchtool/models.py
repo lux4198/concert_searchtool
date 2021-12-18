@@ -5,17 +5,17 @@ from django.db import models
 
 class Event(models.Model):
     date = models.DateTimeField()
-    ensemble = models.CharField(max_length=50)
     city = models.CharField(max_length=50)
-    conductor = models.CharField(max_length=50)
-    artists = models.TextField(max_length=100)
-    composers = models.TextField(max_length=100)
-    pieces = models.TextField(max_length=100)
+    composers = models.TextField(max_length=200)
+    pieces = models.TextField(max_length=300)
+    link = models.TextField(max_length=200)
+    musicians = models.TextField(max_length=300)
+
 
 
 
     def __str__(self):
-        return str([self.ensemble, self.conductor, self.pieces])
+        return str([self.musicians, self.pieces, self.composers])
     
 
 

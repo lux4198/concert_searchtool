@@ -6,7 +6,7 @@ from locale import setlocale, LC_TIME
 
 setlocale(LC_TIME, 'de_DE')
 
-# from .models import Event 
+from .models import Event 
 
 # goes to details page of given concert and returns composers : pieces as dict 
 def get_concert_details(details_link):
@@ -39,6 +39,7 @@ def date_march(concert_date):
 
 
 def main():
+
     month_list = ['2021-12', '2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-07']
     # month_list = ['2022-03']
 
@@ -103,12 +104,13 @@ def main():
             singleevent['city'] = 'Berlin'
 
             # create entries in database for scraped data 
-            # Event.objects.create(date = singleevent['date'], 
-            #     city = singleevent['city'],
-            #     conductor = singleevent['conductor'], 
-            #     musicians = singleevent['musicians'], 
-            #     pieces = singleevent['pieces'],
-            #     ensemble = singleevent['ensemble'])
+            Event.objects.create(
+                date = singleevent['date'], 
+                city = singleevent['city'], 
+                musicians = singleevent['musicians'], 
+                composers = singleevent['composers'],
+                pieces = singleevent['pieces'],
+                link = singleevent['link'])
 
             
 
