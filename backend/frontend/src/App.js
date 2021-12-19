@@ -14,6 +14,9 @@ function Accordionobject(props){
   let formattedDate = moment(concert.date).format('DD. MMM YYYY')
   let formattedDateTime = moment.utc(concert.date).format('DD. MMM YYYY - HH:mm')
 
+
+  console.log(concert.composers, concert.pieces)
+
   return(
 
   <Accordion> 
@@ -34,7 +37,7 @@ function Accordionobject(props){
               </tr>
               <tr>
                   <th>Ensemble</th>
-                  <td>{concert.ensemble} </td>
+                  <td>Hello There </td>
               </tr>
               <tr>
                   <th>Conductor</th>
@@ -42,11 +45,17 @@ function Accordionobject(props){
               </tr>
               <tr>
                   <th>Artists</th>
-                  <td>{concert.artists} </td>
+                  <td>{Object.keys(concert.musicians).map(
+                    (musician) => <p>{musician + ' - ' + concert.musicians[musician]} <br></br></p>
+                  )}</td>
               </tr>
               <tr>
                   <th>Pieces</th>
-                  <td>{concert.pieces}</td> 
+                  <td>{concert.composers.map(
+                    (composer) => <p> {composer} <br></br> {concert.pieces[concert.composers.findIndex(item => composer === item)].map(
+                      (piece) => <p>{piece + ' '}</p>
+                    )} </p>
+                  )}</td> 
               </tr>
             </tbody>
     </table>
@@ -62,7 +71,7 @@ function ConcertDisplay(props){
   if (props.concerts.length > 0){
     return(
         concerts.map((concert) => 
-          <Accordionobject header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor} concert = {concert} /> 
+          <Accordionobject header = {concert.date} subheader = { + '  -  ' + concert.conductor} concert = {concert} /> 
         
         )
     )

@@ -6,10 +6,10 @@ from django.db import models
 class Event(models.Model):
     date = models.DateTimeField()
     city = models.CharField(max_length=50)
-    composers = models.TextField(max_length=200)
-    pieces = models.TextField(max_length=300)
+    composers = models.JSONField(max_length=200)
+    pieces = models.JSONField(max_length=300)
     link = models.TextField(max_length=200)
-    musicians = models.TextField(max_length=300)
+    musicians = models.JSONField(max_length=300)
 
 
 
