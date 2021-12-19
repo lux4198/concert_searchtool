@@ -84,6 +84,8 @@ def main():
                         singleevent['musicians'][musician] = musician
                         continue
                     singleevent['musicians'][musician] = role.contents[0]
+                    if role.contents[0] == ' Dirigent':
+                        singleevent['conductor'] = musician
 
 
             # create link that leads to specific concert 
@@ -102,12 +104,15 @@ def main():
 
             # define the city of the events 
             singleevent['city'] = 'Berlin'
+            singleevent['ensemble'] = 'Berliner Philharmoniker'
 
             # create entries in database for scraped data 
             Event.objects.create(
                 date = singleevent['date'], 
                 city = singleevent['city'], 
+                ensemble = singleevent['ensemble'], 
                 musicians = singleevent['musicians'], 
+                conductor = singleevent['conductor'],
                 composers = singleevent['composers'],
                 pieces = singleevent['pieces'],
                 link = singleevent['link'])
@@ -116,8 +121,8 @@ def main():
 
             concerts.append(singleevent)
 
-        for item in concerts:
-            print(item, '\n')
+        # for item in concerts:
+        #     print(item, '\n')
 
 
 if __name__ == '__main__':

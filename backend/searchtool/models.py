@@ -10,6 +10,8 @@ class Event(models.Model):
     pieces = models.JSONField(max_length=300)
     link = models.TextField(max_length=200)
     musicians = models.JSONField(max_length=300)
+    conductor = models.TextField(max_length=50)
+    ensemble = models.TextField(max_length=100)
 
 
 
