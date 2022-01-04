@@ -32,9 +32,35 @@ for event in soup.find_all('div', {'class' : 'grid-x grid-margin-x'}):
         # other text in div is musicians role 
         for role in musician.contents:
             if role.text != Musician: 
-                Role = role.text
+                Role = role.get_text(strip = True)
         # add musicians + role to each event  
         singleevent['musicians'][Musician] = Role
     
+
+    # get Pieces and Composers 
+    # finds the div that contains this concerts program 
+    for div in soup.find_all('div', {'class' : 'cell medium-6'})[:3]:
+        content = [content.get_text(strip = True) for content in div.contents if content.get_text(strip = True) != '']
+        if content[0] != 'Programm':
+            continue
+        else:
+            composers_pieces = div
+
+    # gets the paragraphs with each composer + pieces from above mentioned div
+    paragraphs = [paragraphs for paragraphs in composers_pieces.find_all('p')]
+    
+    # long list comprehension -> checks every paragraph in composers_pieces div -> extracts the text and strips it of line breaks etc
+    # -> does not accept empty strings or -pause-, if paragraph does not contain program, but e.g. 'Einfuehrung', it is not accepted
+    composers_and_pieces = [[piece.get_text(strip = True) for piece in paragraph.contents if piece.get_text(strip = True) != '' 
+                and piece.get_text(strip = True) != '- Pause -'] for paragraph in paragraphs if paragraph.contents[1].get_text(strip = True) != 'Einführung']
+
+    # extracts composers and pieces from the program 
+    composers = [composers[0] for composers in composers_and_pieces if composers]
+    pieces = [pieces[1:] for pieces in composers_and_pieces if pieces]
+
+    singleevent['composers'] = composers
+    singleevent['pieces'] = pieces 
+
+    print(singleevent, '\n')
 
     
