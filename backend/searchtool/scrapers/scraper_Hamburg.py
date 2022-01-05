@@ -33,7 +33,9 @@ for event in soup.find_all('div', {'class' : 'grid-x grid-margin-x'}):
         for role in musician.contents:
             if role.text != Musician: 
                 Role = role.get_text(strip = True)
-        # add musicians + role to each event  
+        # add musicians + role to each event + add conductor as special key 
+        if Role == 'Dirigent':
+            singleevent['conductor'] = Musician
         singleevent['musicians'][Musician] = Role
     
 
