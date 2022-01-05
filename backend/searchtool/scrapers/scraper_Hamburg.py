@@ -37,6 +37,7 @@ for event in soup.find_all('div', {'class' : 'grid-x grid-margin-x'}):
         if Role == 'Dirigent':
             singleevent['conductor'] = Musician
         singleevent['musicians'][Musician] = Role
+    singleevent['ensemble'] = [musician.find('b').text for musician in musicians][0]
     
 
     # get Pieces and Composers 
