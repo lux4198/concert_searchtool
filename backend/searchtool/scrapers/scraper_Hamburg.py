@@ -5,19 +5,19 @@ concerts = []
 
 for i in range(100):
     if i == 0:
-        data = requests.get('https://www.elbphilharmonie.de/de/programm/EPHH/OR/')
-    else: 
-        data = requests.get(concerts[-1]['link'])
-        # if last possible date of concert season is reached, loop breaks 
-        if concerts[-1]['link'] == 'https://www.elbphilharmonie.de/de/programm/14-06-2022/EPHH/OR/':
-            # del(concerts[-1])
+        data_general = requests.get('https://www.elbphilharmonie.de/de/programm/EPHH/OR/')
+    else:
+        event_list = soup_general.find('ul', {'id' : 'event-list'})
+        if event_list:
+            link = event_list.find_all('li')[-1]
+            link = 'https://www.elbphilharmonie.de/' + link['data-url']
+            data_general = requests.get(link)
+        else:
             break
-        # delete last item in concert list (it will be added in the next loop)
-        del(concerts[-1])
 
-    soup = BeautifulSoup(data.text, 'html.parser')
+    soup_general = BeautifulSoup(data_general.text, 'html.parser')
 
-    for event in soup.find_all('div', {'class' : 'grid-x grid-margin-x'}):
+    for event in soup_general.find_all('li', {'class' : 'event-item'}):
 
         singleevent = {}
 
@@ -27,16 +27,16 @@ for i in range(100):
         singleevent['link'] = concert_link
         
         # get data from details link 
-        data = requests.get(concert_link)
-        soup = BeautifulSoup(data.text, 'html.parser')
+        data_details = requests.get(concert_link)
+        soup_detail = BeautifulSoup(data_details.text, 'html.parser')
 
         # get datetime of concert from header
-        date = soup.find('time')['datetime']
+        date = soup_detail.find('time')['datetime']
         singleevent['datetime'] = date
 
         # get musicians and roles 
         singleevent['musicians'] = {}
-        musicians = soup.find_all('p', {'class' : 'artists without-space'})
+        musicians = soup_detail.find_all('p', {'class' : 'artists without-space'})
 
         if musicians:
             for musician in musicians:
@@ -55,7 +55,7 @@ for i in range(100):
 
         # get Pieces and Composers 
         # finds the div that contains this concerts program 
-        for div in soup.find_all('div', {'class' : 'cell medium-6'})[:3]:
+        for div in soup_detail.find_all('div', {'class' : 'cell medium-6'})[:3]:
             content = [content.get_text(strip = True) for content in div.contents if content.get_text(strip = True) != '']
             if content[0] != 'Programm':
                 continue
@@ -71,8 +71,10 @@ for i in range(100):
         for paragraph in paragraphs:
             if len(paragraph.contents) >= 2 and paragraph.contents[1].get_text(strip = True) != 'Einführung':
                 ls = [piece.get_text(strip = True) for piece in paragraph.contents if piece.get_text(strip = True) != '' and piece.get_text(strip = True) != '- Pause -']
-            elif len(paragraph.contents) <= 2 and paragraph.contents[0].get_text(strip = True) != 'Einführung':
+            elif len(paragraph.contents) < 2 and paragraph.contents[0].get_text(strip = True) != 'Einführung':
                 ls = [paragraph.get_text(strip = True)]
+            else:
+                continue
             composers_and_pieces.append(ls)
 
         # extracts composers and pieces from the program 
@@ -89,7 +91,5 @@ for i in range(100):
 
         concerts.append(singleevent)
         
-        # print(singleevent, '\n')
-
-print(concerts[43:45])
+        print(singleevent, '\n')
     
