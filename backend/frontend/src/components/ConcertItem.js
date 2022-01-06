@@ -17,13 +17,13 @@ function ConcertItem(props){
     <div style = {{display : 'flex', justifyContent : 'center', }}>
       <Card style = {{width : '60%', marginTop : '1rem', marginBottom : '1rem', paddingTop : '1rem', paddingBottom : '1rem'}}>
           <div>
-            Hello There
+            {concert.city}
           </div>
           <Accordion> 
             <AccordionSummary
             expandIcon={<ExpandMore/>}
             aria-controls="panel1a-content"
-            id="panel1a-header"
+            id= {concert.id}
             >
               <Typography style = {{width : '25%'}}>{formattedDate}</Typography>
               <Typography style = {{ color: '#526268' }}>{props.subheader}</Typography>
@@ -46,24 +46,28 @@ function ConcertItem(props){
                       <tr>
                           <th>Artists</th>
                           <td>{Object.keys(concert.musicians).map(
-                            (musician) => <p>{musician + ' - ' + concert.musicians[musician]} <br></br></p>
+                            (musician) => <p key = {musician}>{musician + ' - ' + concert.musicians[musician]}</p>
                           )}</td>
                       </tr>
                       <tr>
                           <th>Pieces</th>
-                          <td>{concert.composers.map(
-                            (composer) => <p> {composer} <br></br> 
-                            
-                            {concert.pieces[concert.composers.findIndex(item => composer === item)].map(
-                              (piece) => <p>{piece + ', '}</p>
-                            )} </p>
-                          )}</td> 
+                              {
+                                concert.composers.map(
+                              (composer, index) => <td key = {composer + index}> <b>{composer} </b> <br></br> 
+
+                              {concert.pieces[index/* concert.composers.findIndex(item => composer === item) */].map(
+                                (piece) => <p key = {piece}>{piece}</p>
+                              )} 
+                              </td>
+                            )}
+                              {
+                                concert.composers.length === 0 && 
+                                  <td> {concert.pieces} </td>
+                              }
                       </tr>
                       <tr>
                         <th>
-                          <td>
-                            <a href= {concert.link}> Details</a>
-                          </td>
+                          <a href= {concert.link}> Details</a>
                         </th>
                       </tr>
                     </tbody>

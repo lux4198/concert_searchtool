@@ -11,7 +11,7 @@ function ConcertDisplay(props){
   if (props.concerts.length > 0){
     return(
         concerts.map((concert) => 
-          <ConcertItem header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor} concert = {concert} /> 
+          <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor} concert = {concert} /> 
         
         )
     )
