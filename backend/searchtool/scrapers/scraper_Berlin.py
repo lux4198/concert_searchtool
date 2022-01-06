@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 from locale import setlocale, LC_TIME
+import pytz
 
 setlocale(LC_TIME, 'de_DE')
 
@@ -33,7 +34,8 @@ def date_march(concert_date):
         concert_date[1] = 'Mrz'
         concert_date = ' '.join(concert_date)
         concert_date = datetime.strptime(concert_date, '%A,%d. %b %Y,  %H.%M')
-    return concert_date 
+    return pytz.timezone('Europe/Berlin').localize(concert_date)
+    
 
 
 
@@ -66,7 +68,7 @@ def main():
 
             # convert Mär to Mrz so strptime can parse data for march
             concert_date = date_march(concert_date)
-            
+
             singleevent['date'] = concert_date
 
 
