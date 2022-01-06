@@ -4,7 +4,6 @@ from ..models import Event
 
 
 def main():
-    # concerts = []
     for i in range(100):
         if i == 0:
             data_general = requests.get('https://www.elbphilharmonie.de/de/programm/EPHH/OR/')
@@ -14,6 +13,7 @@ def main():
                 link = event_list.find_all('li')[-1]
                 link = 'https://www.elbphilharmonie.de/' + link['data-url']
                 data_general = requests.get(link)
+                print(link)
             else:
                 break
 
@@ -53,7 +53,7 @@ def main():
                         if role.text != Musician: 
                             Role = role.get_text(strip = True)
                     # add musicians + role to each event + add conductor as special key 
-                    if Role == 'Dirigent':
+                    if Role == 'Dirigent' or 'Dirigentin':
                         singleevent['conductor'] = Musician
                     else:
                         singleevent['conductor'] = ''
@@ -75,14 +75,15 @@ def main():
             # long list comprehension -> checks every paragraph in composers_pieces div -> extracts the text and strips it of line breaks etc
             # -> does not accept empty strings or -pause-, if paragraph does not contain program, but e.g. 'Einfuehrung', it is not accepted
             composers_and_pieces = []
+            singlepiece = []
             for paragraph in paragraphs:
                 if len(paragraph.contents) >= 2 and paragraph.contents[1].get_text(strip = True) != 'Einführung':
                     ls = [piece.get_text(strip = True) for piece in paragraph.contents if piece.get_text(strip = True) != '' and piece.get_text(strip = True) != '- Pause -']
+                    composers_and_pieces.append(ls)
                 elif len(paragraph.contents) < 2 and paragraph.contents[0].get_text(strip = True) != 'Einführung':
-                    ls = [paragraph.get_text(strip = True)]
+                    singlepiece.append(paragraph.get_text(strip = True))
                 else:
                     continue
-                composers_and_pieces.append(ls)
 
             # extracts composers and pieces from the program 
             composers = [composers[0] for composers in composers_and_pieces if composers]
@@ -92,10 +93,12 @@ def main():
             singleevent['pieces'] = pieces 
 
             # if no composer is mentioned, all of the text is put into the pieces list (e.g. for piano recitals)
-            if len(composers_and_pieces) == 1:
-                singleevent['pieces'] = composers
-                singleevent['composers'] = []
-
+            if singlepiece:
+                singleevent['composers'].append(singlepiece)
+                singleevent['pieces'].append([])
+            
+            # print(singleevent, '\n')
+    
             # create entries in database for scraped data 
             Event.objects.create(
                 date = singleevent['datetime'], 
@@ -106,10 +109,6 @@ def main():
                 composers = singleevent['composers'],
                 pieces = singleevent['pieces'],
                 link = singleevent['link'])
-
-            # concerts.append(singleevent)
-            
-            # print(singleevent, '\n')
 
 if __name__ == '__main__':
     main()
