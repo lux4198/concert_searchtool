@@ -13,6 +13,9 @@ class Event(models.Model):
     conductor = models.TextField(max_length=50)
     ensemble = models.TextField(max_length=100)
 
+    class Meta:
+        ordering = ('date',)
+
 
 
 
