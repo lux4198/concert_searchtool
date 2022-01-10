@@ -3,6 +3,17 @@ import {React, useEffect, useState} from 'react'
 import moment from 'moment';
 
 import ConcertItem from "./components/ConcertItem.js";
+import Searchbar from './components/searchbar.js';
+
+
+function InputFunction() {
+  const [input, setInput] = useState('');
+  return (
+      <div>
+        <Searchbar value = {input} onChange = {e => setInput(e.target.value)}/>
+      </div>
+  );
+}
 
 
 function ConcertDisplay(props){
@@ -27,21 +38,23 @@ function ConcertDisplay(props){
 }
 }
 
-function AllConcerts() {
+function AllConcerts(props) {
 
   useEffect(() => {
-    getAllConcerts();
-  }, []);
+      getAllConcerts();
+    }, []);
 
-  const [concerts, getConcerts] = useState('');
+    const [concerts, getConcerts] = useState('');
 
-  const getAllConcerts = () => {
-    axios.get('/api/events')
-    .then((response) => {
-      const allConcerts = response.data
-      getConcerts(allConcerts)
-    })
-  }
+    const getAllConcerts = () => {
+      axios.get('/api/events/?search='+ props.search)
+      .then((response) => {
+        const allConcerts = response.data
+        getConcerts(allConcerts)
+      })
+    }
+
+
 
   console.log(concerts)
 
@@ -56,7 +69,8 @@ function App() {
 
     return(
       <div>
-        <AllConcerts />
+        <InputFunction/>
+          {/* <AllConcerts search = /> */}
       </div>
     )
 }
