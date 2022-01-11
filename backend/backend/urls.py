@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
+from rest_framework import routers
+
+from searchtool import views
+
+# router = routers.DefaultRouter()
+# router.register(r'events', views.EventView, 'event')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('searchtool/', include('searchtool.urls')),
+    path('api/events/', views.EventView.as_view())
 ]
