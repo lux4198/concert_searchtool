@@ -5,19 +5,6 @@ import moment from 'moment';
 import ConcertItem from "./components/ConcertItem.js";
 import Searchbar from './components/searchbar.js';
 
-import { Button } from '@material-ui/core';
-
-
-function InputFunction(props) {
-  return (
-      <div>
-        <Searchbar onChange = {e => {props.setInput(e.target.value)}}/>
-        <Button color = 'primary' onClick = {props.onClick}>
-          Click 
-        </Button>
-      </div>
-  );
-}
 
 
 function ConcertDisplay(props){
@@ -45,29 +32,21 @@ function ConcertDisplay(props){
 
 function App() {
 
-  const [input, setInput] = useState('');
-  // const input = ''
-
-  useEffect((input) => {
-    getAllConcerts(input);
-  }, []);
-
   const [concerts, getConcerts] = useState('');
 
   const getAllConcerts = (input) => {
-    axios.get('/api/events/?search='+ input)
+    axios.get('/api/events/?'+ input)
     .then((response) => {
       getConcerts(response.data)
       console.log(response.data)
     })
   }
 
-// console.log(concerts)
-
     return(
-      <div>
-        <InputFunction setInput = {setInput} onClick = {() => {getAllConcerts(input)}}/>
-        <ConcertDisplay concerts = {concerts}/>
+      <div>  
+          <Searchbar getAllConcerts = {getAllConcerts}/>
+
+          <ConcertDisplay concerts = {concerts}/>
       </div>
       )
 }
