@@ -1,9 +1,10 @@
 import axios from 'axios'
-import {React, useEffect, useState} from 'react'
+import {React, useEffect, useState, Component} from 'react'
 import moment from 'moment';
 
 import ConcertItem from "./components/ConcertItem.js";
 import Searchbar from './components/searchbar.js';
+import SearchSpecification from './components/SearchSpecification.js';
 
 
 
@@ -30,25 +31,34 @@ function ConcertDisplay(props){
 }
 
 
-function App() {
+class App extends Component {
+  constructor(){
+    super();
+      this.state = {
+        concerts : '', 
+      }
+      this.getAllConcerts = this.getAllConcerts.bind(this)
 
-  const [concerts, getConcerts] = useState('');
-
-  const getAllConcerts = (input) => {
-    axios.get('/api/events/?'+ input)
-    .then((response) => {
-      getConcerts(response.data)
-      console.log(response.data)
-    })
   }
 
-    return(
-      <div>  
-          <Searchbar getAllConcerts = {getAllConcerts}/>
+  // const [concerts, getConcerts] = useState('');
 
-          <ConcertDisplay concerts = {concerts}/>
-      </div>
-      )
+  getAllConcerts = (input) => {
+    axios.get('/api/events/?'+ input)
+    .then((response) => {
+      this.setState({concerts : response.data})
+      console.log(response.data)
+    })
+  };
+
+    render(){
+      return(
+        <div>  
+            <Searchbar getAllConcerts = {this.getAllConcerts}/>
+            <SearchSpecification onClick = {this.getAllConcerts}/>
+            <ConcertDisplay concerts = {this.state.concerts}/>
+        </div>
+      )}
 }
 
 
