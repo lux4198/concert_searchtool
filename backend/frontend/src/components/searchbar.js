@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { TextField } from '@material-ui/core'
 import { Button } from '@material-ui/core';
 
 
 function Searchbar(props) {
-    const [inputText, setInputText] = useState('')
 
     return (
         <form noValidate autoComplete="off" 
-                onSubmit={e => {e.preventDefault()
-                                props.getAllConcerts(inputText)}}>
+                onSubmit={props.onSubmit}>
 
-            <TextField variant = 'outlined' color = 'secondary' label = 'Search' onChange={e => {setInputText(e.target.value)}}
+            <TextField variant = 'outlined' color = 'secondary' label = 'Search' onChange={props.onChange}
                         type = 'text' value = {props.value} style = {props.style} size = 'large'
                         /* inputProps={{style: {fontSize: '1.5rem'}}} InputLabelProps={{style: {fontSize: '1.5rem'}}} */>
 
