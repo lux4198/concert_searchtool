@@ -9,7 +9,7 @@ import SearchSpecification from './components/SearchSpecification.js';
 
 
 function ConcertDisplay(props){
-
+  
   const concerts = props.concerts
   const now = moment()
 
@@ -36,25 +36,45 @@ class App extends Component {
     super();
       this.state = {
         concerts : '', 
+        update : false, 
+        search : '', 
+        inputText : '', 
       }
       this.getAllConcerts = this.getAllConcerts.bind(this)
+      this.searchSubmit = this.searchSubmit.bind(this)
+      this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this)
 
   }
 
-  // const [concerts, getConcerts] = useState('');
+  shouldComponentUpdate (nextstate) {
+
+    if (this.state.concerts !== nextstate.concerts) {
+      console.log('true', nextstate.concerts)
+      return true;
+    } else {
+      console.log('false')
+      return false;
+    }
+  }
 
   getAllConcerts = (input) => {
     axios.get('/api/events/?'+ input)
     .then((response) => {
-      this.setState({concerts : response.data})
-      console.log(response.data)
+      this.setState(() => {return ({concerts : response.data,})})
+      console.log(response.data, this.state.search)
     })
   };
+
+  searchSubmit = (e) => 
+      {e.preventDefault()
+        this.setState({search : this.state.inputText})
+        this.getAllConcerts(this.state.inputText)}
+
 
     render(){
       return(
         <div>  
-            <Searchbar getAllConcerts = {this.getAllConcerts}/>
+            <Searchbar getAllConcerts = {this.getAllConcerts} onSubmit = {this.searchSubmit} onChange = {(e) => {this.setState({inputText : e.target.value})}}/>
             <SearchSpecification onClick = {this.getAllConcerts}/>
             <ConcertDisplay concerts = {this.state.concerts}/>
         </div>
