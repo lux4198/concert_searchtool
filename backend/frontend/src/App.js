@@ -4,6 +4,7 @@ import moment from 'moment';
 
 import ConcertItem from "./components/ConcertItem.js";
 import Searchbar from './components/searchbar.js';
+import Datepicker from './components/Datepicker.js';
 import SearchSpecification from './components/SearchSpecification.js';
 
 
@@ -73,6 +74,7 @@ class App extends Component {
             <Searchbar getAllConcerts = {this.getAllConcerts} onSubmit = {this.searchSubmit} onChange = {(e) => {this.setState({inputText : e.target.value})}}/>
             <SearchSpecification onClick = {(text) => {this.getAllConcerts(text + '&' + this.state.inputText); this.setState({city : text});}}/>
             <ConcertDisplay concerts = {this.state.concerts}/>
+            <Datepicker/>
         </div>
       )}
 }
