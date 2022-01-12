@@ -36,8 +36,8 @@ class App extends Component {
     super();
       this.state = {
         concerts : '', 
-        search : '', 
         inputText : '', 
+        city: 'city=', 
       }
       this.getAllConcerts = this.getAllConcerts.bind(this)
       this.searchSubmit = this.searchSubmit.bind(this)
@@ -48,10 +48,8 @@ class App extends Component {
   shouldComponentUpdate (nextProps, nextState) {
 
     if (this.state.concerts !== nextState.concerts) {
-      console.log('true', nextState)
       return true;
     } else {
-      console.log('false')
       return false;
     }
   }
@@ -66,15 +64,14 @@ class App extends Component {
 
   searchSubmit = (e) => 
       {e.preventDefault()
-        this.setState({search : this.state.inputText})
-        this.getAllConcerts(this.state.inputText)}
+        this.getAllConcerts(this.state.city + '&' + this.state.inputText)}
 
 
     render(){
       return(
         <div>  
             <Searchbar getAllConcerts = {this.getAllConcerts} onSubmit = {this.searchSubmit} onChange = {(e) => {this.setState({inputText : e.target.value})}}/>
-            <SearchSpecification onClick = {this.getAllConcerts}/>
+            <SearchSpecification onClick = {(text) => {this.getAllConcerts(text + '&' + this.state.inputText); this.setState({city : text});}}/>
             <ConcertDisplay concerts = {this.state.concerts}/>
         </div>
       )}
