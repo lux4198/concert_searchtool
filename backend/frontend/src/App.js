@@ -36,7 +36,6 @@ class App extends Component {
     super();
       this.state = {
         concerts : '', 
-        update : false, 
         search : '', 
         inputText : '', 
       }
@@ -46,10 +45,10 @@ class App extends Component {
 
   }
 
-  shouldComponentUpdate (nextstate) {
+  shouldComponentUpdate (nextProps, nextState) {
 
-    if (this.state.concerts !== nextstate.concerts) {
-      console.log('true', nextstate.concerts)
+    if (this.state.concerts !== nextState.concerts) {
+      console.log('true', nextState)
       return true;
     } else {
       console.log('false')
