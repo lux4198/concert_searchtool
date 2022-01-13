@@ -8,27 +8,33 @@ from .models import Event
 from .scrapers.scraper_Berlin import main
 from .serializers import EventSerializer
 
+import datetime 
+import pytz
+
 # Create your views here.
 
 class EventView(generics.ListCreateAPIView):
-    queryset = Event.objects.all().order_by('date')
     serializer_class = EventSerializer
     model = Event
+
+    queryset = Event.objects.all().order_by('date')
+    queryset = queryset.filter(date__gte=str(datetime.datetime.now()))
 
     filterset_fields = ['city', 'conductor', 'ensemble', 'date']
 
     def get_queryset(self):
-        queryset = Event.objects.all()
-        composer= self.request.query_params.get('composer')
-        musician = self.request.query_params.get('musician')
-        piece = self.request.query_params.get('piece')
+        queryset = Event.objects.all().filter(date__gte=str(datetime.datetime.now()))
+        query = self.request.query_params.get('q')
         
-        if composer:
-            queryset = queryset.filter(composers__icontains=composer)
-        elif musician:
-            queryset = queryset.filter(musicians__icontains=musician)
-        elif piece:
-            queryset = queryset.filter(pieces__icontains=piece)
+        if query:
+            if queryset.filter(composers__icontains=query):
+                queryset = queryset.filter(composers__icontains=query)
+            elif queryset.filter(musicians__icontains=query):
+                queryset = queryset.filter(musicians__icontains=query)
+            elif queryset.filter(pieces__icontains=query):
+                queryset = queryset.filter(pieces__icontains=query)
+            else:
+                queryset = Event.objects.none()
         
         return queryset
 
