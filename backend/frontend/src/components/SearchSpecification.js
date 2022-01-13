@@ -1,9 +1,10 @@
-import React from 'react'
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Button } from '@material-ui/core'
+import React, { useState } from 'react'
+import { Accordion, AccordionSummary, AccordionDetails, Typography, Button, Checkbox, FormControlLabel, FormGroup } from '@material-ui/core'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 function SearchSpecification(props) {
+    const [city, setCity] = useState('');
     return (
         <div>
             <Accordion>
@@ -11,12 +12,12 @@ function SearchSpecification(props) {
                     <Typography>City</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Button onClick = {() => {props.onClick('city=Berlin')}}>
-                        Berlin
-                    </Button>
-                    <Button onClick = {() => {props.onClick('city=Hamburg')}}>
-                        Hamburg
-                    </Button>
+                    <FormGroup>
+                            <FormControlLabel control = {<Checkbox label = 'Berlin' onClick = {() => {setCity(city + ',Berlin'); props.onClick(city + ',Berlin')}}/>}
+                            label = 'Berlin'/>
+                            <FormControlLabel control = {<Checkbox onClick = {() => {setCity(city + ',Hamburg'); props.onClick(city + ',Hamburg')}}/>}
+                            label = 'Hamburg'/>
+                    </FormGroup>
                     
                 </AccordionDetails>
 
