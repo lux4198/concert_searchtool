@@ -17,8 +17,13 @@ function ConcertDisplay(props){
   if (props.concerts.length > 0){
     return(
         concerts.map((concert) => 
-          moment(concert.date) > now &&
-          <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor} concert = {concert} /> 
+        // {if (props.date)
+        //   moment(concert.date) > now &&
+        //   <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor}
+        //    concert = {concert} /> 
+        moment(concert.date) > moment(props.date) &&
+        <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor}
+        concert = {concert} /> 
     )
     )
   }
@@ -39,6 +44,7 @@ class App extends Component {
         concerts : '', 
         inputText : '', 
         city: 'city=', 
+        date : new Date(), 
       }
       this.getAllConcerts = this.getAllConcerts.bind(this)
       this.searchSubmit = this.searchSubmit.bind(this)
@@ -48,7 +54,7 @@ class App extends Component {
 
   shouldComponentUpdate (nextProps, nextState) {
 
-    if (this.state.concerts !== nextState.concerts) {
+    if (this.state.concerts !== nextState.concerts || this.state.date !== nextState.date) {
       return true;
     } else {
       return false;
@@ -73,8 +79,8 @@ class App extends Component {
         <div>  
             <Searchbar getAllConcerts = {this.getAllConcerts} onSubmit = {this.searchSubmit} onChange = {(e) => {this.setState({inputText : e.target.value})}}/>
             <SearchSpecification onClick = {(text) => {this.getAllConcerts(text + '&' + this.state.inputText); this.setState({city : text});}}/>
-            <ConcertDisplay concerts = {this.state.concerts}/>
-            <Datepicker/>
+            <Datepicker value = {this.state.date} onChange = {(newDate) => {this.setState({date : newDate})}}/>
+            <ConcertDisplay concerts = {this.state.concerts} date = {this.state.date}/>
         </div>
       )}
 }

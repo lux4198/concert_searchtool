@@ -4,20 +4,22 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
 
-export default function MaterialUIPickers() {
-  const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
+export default function MaterialUIPickers(props) {
+//   const [value, setValue] = React.useState(new Date());
 
-  const handleChange = (newValue) => {
-    setValue(newValue);
-  };
+//   const handleChange = (newValue) => {
+//     setValue(newValue);
+//   };
+
+
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
         <DesktopDatePicker
           label="Date desktop"
           inputFormat="MM/dd/yyyy"
-          value={value}
-          onChange={handleChange}
+          value={props.value}
+          onChange={props.onChange}
           renderInput={(params) => <TextField {...params} />}
         />
     </LocalizationProvider>
