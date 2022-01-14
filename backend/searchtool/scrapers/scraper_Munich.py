@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime 
 from ..models import Event
+import pytz
 
 
 def date_parser(concert_date):
@@ -13,71 +14,79 @@ def date_parser(concert_date):
             continue
 
 
-# main link for concert calender 
 
-data = requests.get('https://www.mphil.de/konzerte-karten/kalender')
-soup = BeautifulSoup(data.text, 'html.parser')
+def main():
+    # main link for concert calender 
 
-for item in soup.find_all('li', {'class' : 'mp16_cal-listitem card__vertical opas-list-element'}):
+    data = requests.get('https://www.mphil.de/konzerte-karten/kalender')
+    soup = BeautifulSoup(data.text, 'html.parser')
 
-    # for now only look at concerts in the main concerts hall / Isarphilharmonie
-    if not item.find('div', {'class' : 'concert__venue'}).text == 'Isarphilharmonie':
-        continue
+    for item in soup.find_all('li', {'class' : 'mp16_cal-listitem card__vertical opas-list-element'}):
 
-    singleevent = {}
+        # for now only look at concerts in the main concerts hall / Isarphilharmonie
+        if not item.find('div', {'class' : 'concert__venue'}).text == 'Isarphilharmonie':
+            continue
 
-    # find concert date and parse add it as datetime object to singleevent 
-    concert_date = item.find('time', {'class' : 'concert__date'})
-    concert_date = concert_date.text.replace('Uhr', '')
-    concert_date = ''.join(concert_date.split(',')[1:])
-    concert_date = date_parser(concert_date)
-    
-    singleevent['datetime'] = concert_date
+        singleevent = {}
 
-    # set city of events to Munich
-    singleevent['city'] = 'Munich'
+        # find concert date and parse add it as datetime object to singleevent 
+        concert_date = item.find('time', {'class' : 'concert__date'})
+        concert_date = concert_date.text.replace('Uhr', '')
+        concert_date = ''.join(concert_date.split(',')[1:])
+        concert_date = date_parser(concert_date)
+        concert_date = pytz.timezone('Europe/Berlin').localize(concert_date)
+        
+        singleevent['datetime'] = concert_date
 
-    # get link for each concert 
-    link = item.find('figure', {'class' : 'card__image'}).find('a', href=True)['href']
-    link = 'https://www.mphil.de' + link
-    singleevent['link'] = link
+        # set city of events to Munich
+        singleevent['city'] = 'Munich'
 
-    # get information about musicians and conductor 
-    singleevent['musicians'] = {}
-    musicians = item.find('dl', {'class' : 'concert__persons'}).find_all('dt')
-    musicians = [musician.get_text(strip=True) for musician in musicians]
-    roles = item.find('dl', {'class' : 'concert__persons'}).find_all('dd')
-    roles = [role.get_text(strip = True) for role in roles]
+        # get link for each concert 
+        link = item.find('figure', {'class' : 'card__image'}).find('a', href=True)['href']
+        link = 'https://www.mphil.de' + link
+        singleevent['link'] = link
 
-    for musician, role in zip(musicians, roles):
-        singleevent['musicians'][musician] = role 
+        # get information about musicians and conductor 
+        singleevent['musicians'] = {}
+        musicians = item.find('dl', {'class' : 'concert__persons'}).find_all('dt')
+        musicians = [musician.get_text(strip=True) for musician in musicians]
+        roles = item.find('dl', {'class' : 'concert__persons'}).find_all('dd')
+        roles = [role.get_text(strip = True) for role in roles]
 
-    # add conductor as a special key to dictionary
-    for role in roles:
-        if 'Dirigent' in role:
-            index = roles.index(role)
-            singleevent['conductor'] = musicians[index]
-    
-    # add composers and pieces to singleevent 
-    composers_pieces = item.find('div', {'class' : 'mp_popbesetzung'}).contents
-    composers_pieces = list(filter(None,[composers.get_text(strip=True) for composers in composers_pieces]))
-    
-    composers = [item.split(':')[0] for item in composers_pieces]
-    pieces = [[item.split(':')[1]] for item in composers_pieces]
-    
-    singleevent['composers'] = composers
-    singleevent['pieces'] = pieces
+        for musician, role in zip(musicians, roles):
+            singleevent['musicians'][musician] = role 
 
-    # set default ensemble to Münchner Philharmoniker
-    singleevent['ensemble'] = 'Münchner Philharmoniker'
+        # add conductor as a special key to dictionary
+        for role in roles:
+            if 'Dirigent' in role:
+                index = roles.index(role)
+                singleevent['conductor'] = musicians[index]
+        
+        # add composers and pieces to singleevent 
+        composers_pieces = item.find('div', {'class' : 'mp_popbesetzung'}).contents
+        composers_pieces = list(filter(None,[composers.get_text(strip=True) for composers in composers_pieces]))
+        
+        composers = [item.split(':')[0] for item in composers_pieces]
+        pieces = [[item.split(':')[1]] for item in composers_pieces]
+        
+        singleevent['composers'] = composers
+        singleevent['pieces'] = pieces
 
-# create entries in database for scraped data 
-    Event.objects.create(
-        date = singleevent['datetime'], 
-        city = singleevent['city'], 
-        ensemble = singleevent['ensemble'], 
-        musicians = singleevent['musicians'], 
-        conductor = singleevent['conductor'],
-        composers = singleevent['composers'],
-        pieces = singleevent['pieces'],
-        link = singleevent['link'])
+        # set default ensemble to Münchner Philharmoniker
+        singleevent['ensemble'] = 'Münchner Philharmoniker'
+
+    # create entries in database for scraped data 
+        Event.objects.create(
+            date = singleevent['datetime'], 
+            city = singleevent['city'], 
+            ensemble = singleevent['ensemble'], 
+            musicians = singleevent['musicians'], 
+            conductor = singleevent['conductor'],
+            composers = singleevent['composers'],
+            pieces = singleevent['pieces'],
+            link = singleevent['link'])
+        
+        print(concert_date)
+
+if __name__ == '__main__':
+    main()
