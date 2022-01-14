@@ -59,6 +59,7 @@ class App extends Component {
   }
 
   getAllConcerts = (input) => {
+    console.log(input)
     axios.get('/api/events/?'+ input)
     .then((response) => {
       this.setState(() => {return ({concerts : response.data,})})
