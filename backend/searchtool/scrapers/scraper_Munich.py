@@ -50,7 +50,15 @@ for item in soup.find_all('li', {'class' : 'mp16_cal-listitem card__vertical opa
     roles = [role.get_text(strip = True) for role in roles]
 
     for musician, role in zip(musicians, roles):
-        singleevent['musicians'][musician] = role
+        singleevent['musicians'][musician] = role 
+
+    # add conductor as a special key to dictionary
+    for role in roles:
+        if 'Dirigent' in role:
+            index = roles.index(role)
+            singleevent['conductor'] = musicians[index]
+        
+
 
 
 
