@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime 
-# from ..models import Event
+from ..models import Event
 
 
 def date_parser(concert_date):
@@ -57,25 +57,27 @@ for item in soup.find_all('li', {'class' : 'mp16_cal-listitem card__vertical opa
         if 'Dirigent' in role:
             index = roles.index(role)
             singleevent['conductor'] = musicians[index]
-        
+    
+    # add composers and pieces to singleevent 
+    composers_pieces = item.find('div', {'class' : 'mp_popbesetzung'}).contents
+    composers_pieces = list(filter(None,[composers.get_text(strip=True) for composers in composers_pieces]))
+    
+    composers = [item.split(':')[0] for item in composers_pieces]
+    pieces = [[item.split(':')[1]] for item in composers_pieces]
+    
+    singleevent['composers'] = composers
+    singleevent['pieces'] = pieces
 
+    # set default ensemble to Münchner Philharmoniker
+    singleevent['ensemble'] = 'Münchner Philharmoniker'
 
-
-
-
-
-
-
-
-
-
-# # create entries in database for scraped data 
-#             Event.objects.create(
-#                 date = singleevent['datetime'], 
-#                 city = singleevent['city'], 
-#                 ensemble = singleevent['ensemble'], 
-#                 musicians = singleevent['musicians'], 
-#                 conductor = singleevent['conductor'],
-#                 composers = singleevent['composers'],
-#                 pieces = singleevent['pieces'],
-#                 link = singleevent['link'])
+# create entries in database for scraped data 
+    Event.objects.create(
+        date = singleevent['datetime'], 
+        city = singleevent['city'], 
+        ensemble = singleevent['ensemble'], 
+        musicians = singleevent['musicians'], 
+        conductor = singleevent['conductor'],
+        composers = singleevent['composers'],
+        pieces = singleevent['pieces'],
+        link = singleevent['link'])
