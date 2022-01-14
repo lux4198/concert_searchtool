@@ -42,6 +42,17 @@ for item in soup.find_all('li', {'class' : 'mp16_cal-listitem card__vertical opa
     link = 'https://www.mphil.de' + link
     singleevent['link'] = link
 
+    # get information about musicians and conductor 
+    singleevent['musicians'] = {}
+    musicians = item.find('dl', {'class' : 'concert__persons'}).find_all('dt')
+    musicians = [musician.get_text(strip=True) for musician in musicians]
+    roles = item.find('dl', {'class' : 'concert__persons'}).find_all('dd')
+    roles = [role.get_text(strip = True) for role in roles]
+
+    for musician, role in zip(musicians, roles):
+        singleevent['musicians'][musician] = role
+
+
 
 
 
