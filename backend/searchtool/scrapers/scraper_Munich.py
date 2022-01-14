@@ -35,8 +35,14 @@ for item in soup.find_all('li', {'class' : 'mp16_cal-listitem card__vertical opa
     singleevent['datetime'] = concert_date
 
     # set city of events to Munich
-
     singleevent['city'] = 'Munich'
+
+    # get link for each concert 
+    link = item.find('figure', {'class' : 'card__image'}).find('a', href=True)['href']
+    link = 'https://www.mphil.de' + link
+    singleevent['link'] = link
+
+
 
 
 
