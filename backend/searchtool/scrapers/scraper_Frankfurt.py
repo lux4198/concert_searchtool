@@ -61,7 +61,10 @@ def main():
         singleevent['composers'] = composers
         singleevent['pieces'] = pieces 
 
-        
+        # add link to singleevent 
+        link = item.find('a', {'class' : 'link c-teaser__headlineLink'}, href = True)
+        link = link['href']
+        singleevent['link'] = link 
 
 
         
