@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime 
-# from ..models import Event
+from ..models import Event
 import pytz
 from locale import setlocale, LC_TIME
 
@@ -36,7 +36,7 @@ def main():
 
         # set city to Frankfurt and Ensemble to hr-Sinphonieorchester
         singleevent['city'] = 'Frankfurt' 
-        singleevent['ensemble'] = 'hr-Sinphonieorchester'
+        singleevent['ensemble'] = 'hr-Sinfonieorchester'
 
         # get musicians and conductor
         singleevent['musicians'] = {}
@@ -66,16 +66,18 @@ def main():
         link = link['href']
         singleevent['link'] = link 
 
-
+        print(singleevent['datetime'])
         
-        # Event.objects.create(
-        #             date = singleevent['date'], 
-        #             city = singleevent['city'], 
-        #             ensemble = singleevent['ensemble'], 
-        #             musicians = singleevent['musicians'], 
-        #             conductor = singleevent['conductor'],
-        #             composers = singleevent['composers'],
-        #             pieces = singleevent['pieces'],
-        #             link = singleevent['link'])
+        Event.objects.create(
+                    date = singleevent['datetime'], 
+                    city = singleevent['city'], 
+                    ensemble = singleevent['ensemble'], 
+                    musicians = singleevent['musicians'], 
+                    conductor = singleevent['conductor'],
+                    composers = singleevent['composers'],
+                    pieces = singleevent['pieces'],
+                    link = singleevent['link'])
 
-    
+
+if __name__ == '__main__':
+    main()
