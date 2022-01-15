@@ -32,4 +32,33 @@ for item in soup.find_all('li', {'style' : 'margin-top: 20px;'}):
     # add date to singleevent and make it timezone aware 
     singleevent['datetime'] = pytz.timezone('Europe/Berlin').localize(concert_date)
 
+    # set city to Frankfurt and Ensemble to hr-Sinphonieorchester
+    singleevent['city'] = 'Frankfurt' 
+    singleevent['ensemble'] = 'hr-Sinphonieorchester'
+
+    # get musicians and conductor
+    singleevent['musicians'] = {}
+    musicians = item.find_all('ul' , {'class' : 'c-concert-info__list'})[0]
+    musicians = musicians.find_all('li' , {'class' : 'c-concert-info__item'})
+    musicians = [musician.get_text(strip = True).split('|') for musician in musicians]
+
+    for musician in musicians: 
+        if len(musician) == 2:
+            singleevent['musicians'][musician[0]] = musician[1]
+            if musician[1] == 'Dirigent' or 'Dirigentin':
+                singleevent['conductor'] = musician[0]
+        else:
+            singleevent['musicians'][musician[0]] = ''
+
+    
+    # Event.objects.create(
+    #             date = singleevent['date'], 
+    #             city = singleevent['city'], 
+    #             ensemble = singleevent['ensemble'], 
+    #             musicians = singleevent['musicians'], 
+    #             conductor = singleevent['conductor'],
+    #             composers = singleevent['composers'],
+    #             pieces = singleevent['pieces'],
+    #             link = singleevent['link'])
+
     
