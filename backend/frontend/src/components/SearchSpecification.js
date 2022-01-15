@@ -5,10 +5,10 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function SearchSpecification(props) {
     const [city, setCity] = useState('');
-    const [checked, setChecked] = useState([false, false, false])
+    const [checked, setChecked] = useState([false, false, false, false])
 
     const onChange1 = (event) => {
-        setChecked([event.target.checked, checked[1], checked[2]]);
+        setChecked([event.target.checked, checked[1], checked[2], checked[3]]);
 
         if (event.target.checked){
             setCity(city + ',Berlin'); 
@@ -21,7 +21,7 @@ function SearchSpecification(props) {
     } 
 
     const onChange2 = (event) => {
-        setChecked([checked[0], event.target.checked, checked[2]]);
+        setChecked([checked[0], event.target.checked, checked[2], checked[3]]);
 
         if (event.target.checked){
             setCity(city + ',Hamburg'); 
@@ -33,7 +33,7 @@ function SearchSpecification(props) {
     } 
 
     const onChange3 = (event) => {
-        setChecked([checked[0], checked[1], event.target.checked]);
+        setChecked([checked[0], checked[1], event.target.checked, checked[3]]);
 
         if (event.target.checked){
             setCity(city + ',Munich'); 
@@ -41,6 +41,17 @@ function SearchSpecification(props) {
         else {
             setCity(city.replace(',Munich', '')); 
             props.onClick(city.replace(',Munich', ''))
+        } 
+    } 
+    const onChange4 = (event) => {
+        setChecked([checked[0], checked[1], checked[2], event.target.checked]);
+
+        if (event.target.checked){
+            setCity(city + ',Frankfurt'); 
+            props.onClick(city + ',Frankfurt')}
+        else {
+            setCity(city.replace(',Frankfurt', '')); 
+            props.onClick(city.replace(',Frankfurt', ''))
         } 
     } 
     return (
@@ -57,6 +68,8 @@ function SearchSpecification(props) {
                             label = 'Hamburg'/>
                             <FormControlLabel control = {<Checkbox onClick = {onChange3}/>}
                             label = 'Munich'/>
+                            <FormControlLabel control = {<Checkbox onClick = {onChange4}/>}
+                            label = 'Frankfurt'/>
                     </FormGroup>
                     
                 </AccordionDetails>

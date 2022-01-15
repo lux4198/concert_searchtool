@@ -27,7 +27,7 @@ function ConcertDisplay(props){
   else {
     return(
       <div>
-        Loading
+        Search for conductor, composer, piece or musician.
       </div>
   )
 }
