@@ -59,11 +59,11 @@ class App extends Component {
   }
 
   getAllConcerts = (input) => {
-    console.log(input)
+    // console.log(input)
     axios.get('/api/events/?'+ input)
     .then((response) => {
       this.setState(() => {return ({concerts : response.data,})})
-      console.log(response.data, this.state.search)
+      // console.log(response.data, this.state.search)
     })
   };
 
@@ -76,7 +76,8 @@ class App extends Component {
       return(
         <div>  
             <Searchbar getAllConcerts = {this.getAllConcerts} onSubmit = {this.searchSubmit} onChange = {(e) => {this.setState({inputText : 'q=' + e.target.value})}}/>
-            <SearchSpecification onClick = {(text) => {this.getAllConcerts('city=' + text + '&' + this.state.inputText); this.setState({city : text});}}/>
+            <SearchSpecification onClick = {(text) => {this.getAllConcerts('city=' + text + '&' + this.state.inputText); this.setState({city : text});}}
+            query = {this.state.inputText}/>
             <Datepicker value = {this.state.date} onChange = {(newDate) => {this.setState({date : newDate})}}/>
             <ConcertDisplay concerts = {this.state.concerts} date = {this.state.date}/>
         </div>

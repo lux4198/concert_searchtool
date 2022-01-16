@@ -1,11 +1,32 @@
 import React, { useState } from 'react'
 import { Accordion, AccordionSummary, AccordionDetails, Typography, Button, Checkbox, FormControlLabel, FormGroup } from '@material-ui/core'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import axios from 'axios'
 
+
+function checkConcerts(query, input, setBool){
+    axios.get('/api/events/?'+ input + '&' + query)
+    .then((response) => {
+      if (response.data.length === 0){
+          setBool(false)
+      }
+      else{
+          setBool(true)
+      }
+    })
+  };
 
 function SearchSpecification(props) {
     const [city, setCity] = useState('');
     const [checked, setChecked] = useState([false, false, false, false])
+    const [query, setQuery] = useState(props.query)
+    const [bool, setBool] = useState(true)
+
+    checkConcerts(query, 'city=Munich', setBool)
+
+    if (query !== props.query){
+        console.log(props.query)
+        setQuery(() => {return(props.query)})}
 
     const onChange1 = (event) => {
         setChecked([event.target.checked, checked[1], checked[2], checked[3]]);
@@ -63,11 +84,11 @@ function SearchSpecification(props) {
                 <AccordionDetails>
                     <FormGroup>
                             <FormControlLabel control = {<Checkbox label = 'Berlin' checked = {checked[0]} onClick = {onChange1}/>}
-                            label = 'Berlin'/>
+                            label = 'Berlin' />
                             <FormControlLabel control = {<Checkbox onClick = {onChange2}/>}
                             label = 'Hamburg'/>
                             <FormControlLabel control = {<Checkbox onClick = {onChange3}/>}
-                            label = 'Munich'/>
+                            label = 'Munich' disabled = {!bool}/>
                             <FormControlLabel control = {<Checkbox onClick = {onChange4}/>}
                             label = 'Frankfurt'/>
                     </FormGroup>
