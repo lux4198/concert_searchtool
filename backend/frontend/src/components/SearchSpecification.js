@@ -1,81 +1,140 @@
-import React, { useState } from 'react'
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Button, Checkbox, FormControlLabel, FormGroup } from '@material-ui/core'
+import React, {Component} from 'react'
+import { Accordion, AccordionSummary, AccordionDetails, Typography, Checkbox, FormControlLabel, FormGroup } from '@material-ui/core'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import axios from 'axios'
 
+class SearchSpecification extends Component {
+    constructor(){
+        super();
+        this.state = {
+            bool : [true, true, true, true],
+            city : '',
+            checked : [false, false, false, false], 
+        }
+    }
 
-function checkConcerts(query, input, setBool){
-    axios.get('/api/events/?'+ input + '&' + query)
-    .then((response) => {
-      if (response.data.length === 0){
-          setBool(false)
-      }
-      else{
-          setBool(true)
-      }
-    })
-  };
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.query !== this.props.query) {
+            this.check1().then(this.check2().then(this.check3().then(this.check4())))
+        }
+}
 
-function SearchSpecification(props) {
-    const [city, setCity] = useState('');
-    const [checked, setChecked] = useState([false, false, false, false])
-    const [query, setQuery] = useState(props.query)
-    const [bool, setBool] = useState(true)
+    updateBool(i, change){
+        this.setState(state => {
+          const list = state.bool.map((item, j) => {
+            if (j === i) {
+              return change;
+            } else {
+              return item;
+            }
+          });
+          return ({
+            bool : list,
+          });
+        });
+      };
 
-    checkConcerts(query, 'city=Munich', setBool)
+    updateChecked(i, change){
+        this.setState(state => {
+          const list = state.checked.map((item, j) => {
+            if (j === i) {
+              return change;
+            } else {
+              return item;
+            }
+          });
+          return {
+            list,
+          };
+        });
+      };
 
-    if (query !== props.query){
-        console.log(props.query)
-        setQuery(() => {return(props.query)})}
+    checkConcerts(input, index){
+        axios.get('/api/events/?'+ input + '&' + this.props.query)
+        .then((response) => {
+          if (response.data.length === 0){
+              this.updateBool(index,false)
+          }
+          else{
+            this.updateBool(index,true)
+          }
+        })
+      };
 
-    const onChange1 = (event) => {
-        setChecked([event.target.checked, checked[1], checked[2], checked[3]]);
+    check1(){
+        return new Promise((resolve) => {
+            this.checkConcerts('city=Berlin', 0)
+            resolve();
+        })
+    }
+    check2(){
+        return new Promise((resolve) => {
+            this.checkConcerts('city=Hamburg', 1)
+            resolve();
+        })
+    }
+    check3(){
+        return new Promise((resolve) => {
+            this.checkConcerts('city=Munich', 2)
+            resolve();
+        })
+    }
+    check4(){
+        this.checkConcerts('city=Frankfurt', 3)
+    }
+
+    
+
+    onChange1 = (event) => {
+        this.updateChecked(0, event.target.checked)
 
         if (event.target.checked){
-            setCity(city + ',Berlin'); 
-            props.onClick(city + ',Berlin')}
+            this.setState({city : this.state.city + ',Berlin'}) 
+            this.props.onClick(this.state.city + ',Berlin')}
 
         else {
-            setCity(city.replace(',Berlin', '')); 
-            props.onClick(city.replace(',Berlin', ''))
+            this.setState({city : this.state.city.replace(',Berlin', '')}) 
+            this.props.onClick(this.state.city.replace(',Berlin', ''))
         } 
     } 
 
-    const onChange2 = (event) => {
-        setChecked([checked[0], event.target.checked, checked[2], checked[3]]);
+    onChange2 = (event) => {
+        this.updateChecked(1, event.target.checked)
 
         if (event.target.checked){
-            setCity(city + ',Hamburg'); 
-            props.onClick(city + ',Hamburg')}
+            this.setState({city : this.state.city + ',Hamburg'}) 
+            this.props.onClick(this.state.city + ',Hamburg')}
         else {
-            setCity(city.replace(',Hamburg', '')); 
-            props.onClick(city.replace(',Hamburg', ''))
+            this.setState({city : this.state.city.replace(',Hamburg', '')}) 
+            this.props.onClick(this.state.city.replace(',Hamburg', ''))
         } 
     } 
 
-    const onChange3 = (event) => {
-        setChecked([checked[0], checked[1], event.target.checked, checked[3]]);
+    onChange3 = (event) => {
+        this.updateChecked(2, event.target.checked)
 
         if (event.target.checked){
-            setCity(city + ',Munich'); 
-            props.onClick(city + ',Munich')}
+            this.setState({city : this.state.city + ',Munich'}) 
+            this.props.onClick(this.state.city + ',Munich')}
         else {
-            setCity(city.replace(',Munich', '')); 
-            props.onClick(city.replace(',Munich', ''))
+            this.setState({city : this.state.city.replace(',Munich', '')}) 
+            this.props.onClick(this.state.city.replace(',Munich', ''))
         } 
     } 
-    const onChange4 = (event) => {
-        setChecked([checked[0], checked[1], checked[2], event.target.checked]);
+    onChange4 = (event) => {
+        this.updateChecked(3, event.target.checked)
 
         if (event.target.checked){
-            setCity(city + ',Frankfurt'); 
-            props.onClick(city + ',Frankfurt')}
+            this.setState({city : this.state.city + ',Frankfurt'}) 
+            this.props.onClick(this.state.city + ',Frankfurt')}
         else {
-            setCity(city.replace(',Frankfurt', '')); 
-            props.onClick(city.replace(',Frankfurt', ''))
+            this.setState({city : this.state.city.replace(',Frankfurt', '')}) 
+            this.props.onClick(this.state.city.replace(',Frankfurt', ''))
         } 
     } 
-    return (
+    
+    render(){
+        return (
         <div>
             <Accordion>
                 <AccordionSummary aria-controls="panel1a-content" id="panel1a-header"  expandIcon={<ExpandMoreIcon />}>
@@ -83,21 +142,21 @@ function SearchSpecification(props) {
                 </AccordionSummary>
                 <AccordionDetails>
                     <FormGroup>
-                            <FormControlLabel control = {<Checkbox label = 'Berlin' checked = {checked[0]} onClick = {onChange1}/>}
-                            label = 'Berlin' />
-                            <FormControlLabel control = {<Checkbox onClick = {onChange2}/>}
-                            label = 'Hamburg'/>
-                            <FormControlLabel control = {<Checkbox onClick = {onChange3}/>}
-                            label = 'Munich' disabled = {!bool}/>
-                            <FormControlLabel control = {<Checkbox onClick = {onChange4}/>}
-                            label = 'Frankfurt'/>
+                            <FormControlLabel control = {<Checkbox /* checked = {this.state.checked[0]} */ onClick = {this.onChange1}/>}
+                            label = 'Berlin' disabled = {!this.state.bool[0]}/>
+                            <FormControlLabel control = {<Checkbox onClick = {this.onChange2}/>}
+                            label = 'Hamburg' disabled = {!this.state.bool[1]}/>
+                            <FormControlLabel control = {<Checkbox onClick = {this.onChange3}/>}
+                            label = 'Munich' disabled = {!this.state.bool[2]}/>
+                            <FormControlLabel control = {<Checkbox onClick = {this.onChange4}/>}
+                            label = 'Frankfurt' disabled = {!this.state.bool[3]}/>
                     </FormGroup>
                     
                 </AccordionDetails>
 
             </Accordion>
         </div>
-    )
+    )}
 }
 
 export default SearchSpecification
