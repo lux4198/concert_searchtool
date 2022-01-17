@@ -8,7 +8,7 @@ class SearchSpecification extends Component {
         super();
         this.state = {
             bool : [true, true, true, true],
-            city : '',
+            city : 'city=',
             checked : [false, false, false, false], 
         }
     }
@@ -107,7 +107,7 @@ class SearchSpecification extends Component {
                 </AccordionSummary>
                 <AccordionDetails>
                     <FormGroup>
-                        {console.log(this.state.checked)}
+                        {console.log(this.state.city)}
                             <FormControlLabel control = {<Checkbox /* checked = {this.state.checked[0]} */ onClick = {(event) => this.CheckBoxonChange(event, ',Berlin', 0)}/>}
                             label = 'Berlin' disabled = {this.state.checked[0] ? false : !this.state.bool[0]}/>
                             <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Hamburg', 1)}/>}
