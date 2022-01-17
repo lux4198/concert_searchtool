@@ -83,53 +83,18 @@ class SearchSpecification extends Component {
         this.checkConcerts('city=Frankfurt', 3)
     }
 
-    
 
-    onChange1 = (event) => {
+    CheckBoxonChange(event, city){
+        
         this.updateChecked(0, event.target.checked)
 
         if (event.target.checked){
-            this.setState({city : this.state.city + ',Berlin'}) 
-            this.props.onClick(this.state.city + ',Berlin')}
+            this.setState({city : this.state.city + city}) 
+            this.props.onClick(this.state.city + city)}
 
         else {
-            this.setState({city : this.state.city.replace(',Berlin', '')}) 
-            this.props.onClick(this.state.city.replace(',Berlin', ''))
-        } 
-    } 
-
-    onChange2 = (event) => {
-        this.updateChecked(1, event.target.checked)
-
-        if (event.target.checked){
-            this.setState({city : this.state.city + ',Hamburg'}) 
-            this.props.onClick(this.state.city + ',Hamburg')}
-        else {
-            this.setState({city : this.state.city.replace(',Hamburg', '')}) 
-            this.props.onClick(this.state.city.replace(',Hamburg', ''))
-        } 
-    } 
-
-    onChange3 = (event) => {
-        this.updateChecked(2, event.target.checked)
-
-        if (event.target.checked){
-            this.setState({city : this.state.city + ',Munich'}) 
-            this.props.onClick(this.state.city + ',Munich')}
-        else {
-            this.setState({city : this.state.city.replace(',Munich', '')}) 
-            this.props.onClick(this.state.city.replace(',Munich', ''))
-        } 
-    } 
-    onChange4 = (event) => {
-        this.updateChecked(3, event.target.checked)
-
-        if (event.target.checked){
-            this.setState({city : this.state.city + ',Frankfurt'}) 
-            this.props.onClick(this.state.city + ',Frankfurt')}
-        else {
-            this.setState({city : this.state.city.replace(',Frankfurt', '')}) 
-            this.props.onClick(this.state.city.replace(',Frankfurt', ''))
+            this.setState({city : this.state.city.replace(city, '')}) 
+            this.props.onClick(this.state.city.replace(city, ''))
         } 
     } 
     
@@ -142,13 +107,13 @@ class SearchSpecification extends Component {
                 </AccordionSummary>
                 <AccordionDetails>
                     <FormGroup>
-                            <FormControlLabel control = {<Checkbox /* checked = {this.state.checked[0]} */ onClick = {this.onChange1}/>}
+                            <FormControlLabel control = {<Checkbox /* checked = {this.state.checked[0]} */ onClick = {(event) => this.CheckBoxonChange(event, ',Berlin')}/>}
                             label = 'Berlin' disabled = {!this.state.bool[0]}/>
-                            <FormControlLabel control = {<Checkbox onClick = {this.onChange2}/>}
+                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Hamburg')}/>}
                             label = 'Hamburg' disabled = {!this.state.bool[1]}/>
-                            <FormControlLabel control = {<Checkbox onClick = {this.onChange3}/>}
+                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Munich')}/>}
                             label = 'Munich' disabled = {!this.state.bool[2]}/>
-                            <FormControlLabel control = {<Checkbox onClick = {this.onChange4}/>}
+                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Frankfurt')}/>}
                             label = 'Frankfurt' disabled = {!this.state.bool[3]}/>
                     </FormGroup>
                     
