@@ -44,7 +44,7 @@ class SearchSpecification extends Component {
             }
           });
           return {
-            list,
+            checked : list,
           };
         });
       };
@@ -84,9 +84,9 @@ class SearchSpecification extends Component {
     }
 
 
-    CheckBoxonChange(event, city){
+    CheckBoxonChange(event, city, index){
         
-        this.updateChecked(0, event.target.checked)
+        this.updateChecked(index, event.target.checked)
 
         if (event.target.checked){
             this.setState({city : this.state.city + city}) 
@@ -107,14 +107,15 @@ class SearchSpecification extends Component {
                 </AccordionSummary>
                 <AccordionDetails>
                     <FormGroup>
-                            <FormControlLabel control = {<Checkbox /* checked = {this.state.checked[0]} */ onClick = {(event) => this.CheckBoxonChange(event, ',Berlin')}/>}
-                            label = 'Berlin' disabled = {!this.state.bool[0]}/>
-                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Hamburg')}/>}
-                            label = 'Hamburg' disabled = {!this.state.bool[1]}/>
-                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Munich')}/>}
-                            label = 'Munich' disabled = {!this.state.bool[2]}/>
-                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Frankfurt')}/>}
-                            label = 'Frankfurt' disabled = {!this.state.bool[3]}/>
+                        {console.log(this.state.checked)}
+                            <FormControlLabel control = {<Checkbox /* checked = {this.state.checked[0]} */ onClick = {(event) => this.CheckBoxonChange(event, ',Berlin', 0)}/>}
+                            label = 'Berlin' disabled = {this.state.checked[0] ? false : !this.state.bool[0]}/>
+                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Hamburg', 1)}/>}
+                            label = 'Hamburg' disabled = {this.state.checked[1] ? false : !this.state.bool[1]}/>
+                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Munich', 2)}/>}
+                            label = 'Munich' disabled = {this.state.checked[2] ? false : !this.state.bool[2]}/>
+                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Frankfurt', 3)}/>}
+                            label = 'Frankfurt' disabled = {this.state.checked[3] ? false : !this.state.bool[3]}/>
                     </FormGroup>
                     
                 </AccordionDetails>
