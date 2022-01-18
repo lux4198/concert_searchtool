@@ -18,7 +18,7 @@ function ConcertDisplay(props){
 
   if (props.concerts.length > 0){
     return(
-        concerts.map((concert) => 
+        concerts.slice(0,props.index).map((concert) => 
 
         <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor}
         concert = {concert} /> 
@@ -44,6 +44,7 @@ class App extends Component {
         city: 'city=', 
         date : new Date(), 
         resetFilter : false, 
+        index : 10, 
       }
       this.getAllConcerts = this.getAllConcerts.bind(this)
       this.searchSubmit = this.searchSubmit.bind(this)
@@ -53,7 +54,7 @@ class App extends Component {
 
   shouldComponentUpdate (nextProps, nextState) {
 
-    if (this.state.concerts !== nextState.concerts || this.state.date !== nextState.date) {
+    if (this.state.concerts !== nextState.concerts || this.state.date !== nextState.date | this.state.index !== nextState.index) {
       return true;
     } else {
       return false;
@@ -65,7 +66,7 @@ class App extends Component {
 
     axios.get('/api/events/?'+ date + '&' + input)
     .then((response) => {
-      this.setState(() => {return ({concerts : response.data,})})
+      this.setState(() => {return ({concerts : response.data, index : 10})})
       // console.log(response.data, this.state.search)
     })
   };
@@ -86,7 +87,10 @@ class App extends Component {
             <CurrentFilters date = {this.state.date} city = {this.state.city} onClick = {() => {
                 this.setState({city : 'city=', date : new Date, reset : true}, () => {this.getAllConcerts(this.state.inputText)})}}/>
 
-            <ConcertDisplay concerts = {this.state.concerts} date = {this.state.date} index = {10}/>
+            <ConcertDisplay concerts = {this.state.concerts} date = {this.state.date} index = {this.state.index}/>
+            <Button onClick = {() => {this.setState({index : this.state.index + 10})}}>
+                Load More 
+            </Button>
         </div>
       )}
 }
