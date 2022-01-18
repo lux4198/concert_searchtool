@@ -20,10 +20,10 @@ class EventView(generics.ListCreateAPIView):
     queryset = Event.objects.all().order_by('date')
     queryset = queryset.filter(date__gte=str(datetime.datetime.now()))
 
-    filterset_fields = ['conductor', ]
 
     def get_queryset(self):
-        queryset = Event.objects.all().filter(date__gte=str(datetime.datetime.now()))
+        datequery = self.request.query_params.get('date')
+        queryset = Event.objects.all().filter(date__gte=datequery)
         query = self.request.query_params.get('q')
 
         cityquery = self.request.query_params.get('city')
@@ -40,6 +40,8 @@ class EventView(generics.ListCreateAPIView):
                 queryset = queryset.filter(musicians__icontains=query)
             elif queryset.filter(pieces__icontains=query):
                 queryset = queryset.filter(pieces__icontains=query)
+            elif queryset.filter(conductor__icontains=query):
+                queryset = queryset.filter(conductor__icontains=query)
             else:
                 queryset = Event.objects.none()
         return queryset

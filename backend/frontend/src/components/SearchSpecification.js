@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import { Accordion, AccordionSummary, AccordionDetails, Typography, Checkbox, FormControlLabel, FormGroup } from '@material-ui/core'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import axios from 'axios'
+import moment from 'moment'
 
 class SearchSpecification extends Component {
     constructor(){
@@ -14,14 +15,11 @@ class SearchSpecification extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (prevProps.query !== this.props.query) {
+        if (prevProps.query !== this.props.query | prevProps.date !== this.props.date) {
             this.check1().then(this.check2().then(this.check3().then(this.check4())))
         }
         if (this.props.reset & this.props.reset !== prevProps.reset){
             this.setState({checked : [false, false, false, false], city : 'city='}, () => {this.props.handleReset()})
-        }
-        else{
-
         }
     }
 
@@ -56,7 +54,9 @@ class SearchSpecification extends Component {
       };
 
     checkConcerts(input, index){
-        axios.get('/api/events/?'+ input + '&' + this.props.query)
+        const date = 'date=' + moment(this.props.date).format('YYYY-MM-DD HH:mm')
+
+        axios.get('/api/events/?'+ date + '&' + input + '&' + this.props.query)
         .then((response) => {
           if (response.data.length === 0){
               this.updateBool(index,false)
