@@ -17,7 +17,13 @@ class SearchSpecification extends Component {
         if (prevProps.query !== this.props.query) {
             this.check1().then(this.check2().then(this.check3().then(this.check4())))
         }
-}
+        if (this.props.reset & this.props.reset !== prevProps.reset){
+            this.setState({checked : [false, false, false, false]}, () => {this.props.handleReset()})
+        }
+        else{
+
+        }
+    }
 
     updateBool(i, change){
         this.setState(state => {
@@ -107,14 +113,13 @@ class SearchSpecification extends Component {
                 </AccordionSummary>
                 <AccordionDetails>
                     <FormGroup>
-                        {console.log(this.state.city)}
-                            <FormControlLabel control = {<Checkbox /* checked = {this.state.checked[0]} */ onClick = {(event) => this.CheckBoxonChange(event, ',Berlin', 0)}/>}
+                            <FormControlLabel control = {<Checkbox checked = {this.state.checked[0]} onClick = {(event) => this.CheckBoxonChange(event, ',Berlin', 0)}/>}
                             label = 'Berlin' disabled = {this.state.checked[0] ? false : !this.state.bool[0]}/>
-                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Hamburg', 1)}/>}
+                            <FormControlLabel control = {<Checkbox checked = {this.state.checked[1]} onClick = {(event) => this.CheckBoxonChange(event, ',Hamburg', 1)}/>}
                             label = 'Hamburg' disabled = {this.state.checked[1] ? false : !this.state.bool[1]}/>
-                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Munich', 2)}/>}
+                            <FormControlLabel control = {<Checkbox checked = {this.state.checked[2]} onClick = {(event) => this.CheckBoxonChange(event, ',Munich', 2)}/>}
                             label = 'Munich' disabled = {this.state.checked[2] ? false : !this.state.bool[2]}/>
-                            <FormControlLabel control = {<Checkbox onClick = {(event) => this.CheckBoxonChange(event, ',Frankfurt', 3)}/>}
+                            <FormControlLabel control = {<Checkbox checked = {this.state.checked[3]} onClick = {(event) => this.CheckBoxonChange(event, ',Frankfurt', 3)}/>}
                             label = 'Frankfurt' disabled = {this.state.checked[3] ? false : !this.state.bool[3]}/>
                     </FormGroup>
                     
