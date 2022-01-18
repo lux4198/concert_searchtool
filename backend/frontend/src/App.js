@@ -20,7 +20,6 @@ function ConcertDisplay(props){
     return(
         concerts.map((concert) => 
 
-        moment(concert.date) > moment(props.date) &&
         <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor}
         concert = {concert} /> 
     )
@@ -83,7 +82,7 @@ class App extends Component {
             <SearchSpecification onClick = {(text) => {this.getAllConcerts('city=' + text + '&' + this.state.inputText); this.setState({city : text});}}
             query = {this.state.inputText} reset = {this.state.reset} handleReset = {() => {this.setState({reset : false})}} date = {this.state.date}/>
 
-            <Datepicker value = {this.state.date} onChange = {(newDate) => {this.setState({date : newDate})}}/>
+            <Datepicker value = {this.state.date} onChange = {(newDate) => {this.setState({date : newDate}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText)})}}/>
             <CurrentFilters date = {this.state.date} city = {this.state.city} onClick = {() => {
                 this.setState({city : 'city=', date : new Date, reset : true}, () => {this.getAllConcerts(this.state.inputText)})}}/>
 
