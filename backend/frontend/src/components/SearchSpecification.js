@@ -18,7 +18,7 @@ class SearchSpecification extends Component {
             this.check1().then(this.check2().then(this.check3().then(this.check4())))
         }
         if (this.props.reset & this.props.reset !== prevProps.reset){
-            this.setState({checked : [false, false, false, false]}, () => {this.props.handleReset()})
+            this.setState({checked : [false, false, false, false], city : 'city='}, () => {this.props.handleReset()})
         }
         else{
 
