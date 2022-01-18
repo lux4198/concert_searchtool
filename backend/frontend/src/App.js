@@ -61,6 +61,26 @@ class App extends Component {
     }
   }
 
+  
+
+  componentDidMount(){
+    this.getAllConcerts(this.state.city + '&' + this.state.inputText)
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = (e) => {
+    const el = e.target.documentElement
+    const bottom = el.scrollHeight - el.scrollTop === el.clientHeight;
+
+    if (bottom) { 
+      this.setState({index : this.state.index + 10})
+     }
+  }
+
   getAllConcerts = (input) => {
     const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
@@ -74,7 +94,7 @@ class App extends Component {
   searchSubmit = (e) => 
       {e.preventDefault()
         this.getAllConcerts(this.state.city + '&' + this.state.inputText)}
-
+    
 
     render(){
       return(
@@ -88,9 +108,6 @@ class App extends Component {
                 this.setState({city : 'city=', date : new Date, reset : true}, () => {this.getAllConcerts(this.state.inputText)})}}/>
 
             <ConcertDisplay concerts = {this.state.concerts} date = {this.state.date} index = {this.state.index}/>
-            <Button onClick = {() => {this.setState({index : this.state.index + 10})}}>
-                Load More 
-            </Button>
         </div>
       )}
 }
