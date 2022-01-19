@@ -6,7 +6,7 @@ function CurrentFilters(props) {
     return (
         <div>
             Filters: <br/>
-            {moment(props.date).format('DD. MMM YYYY')} <br/>
+            {(moment(props.date).format('DD. MMM YYYY') !== moment().format('DD. MMM YYYY'))? moment(props.date).format('DD. MMM YYYY') : ''} <br/>
             {props.city.replace('city=', '').replace(',', '')}
             <Button onClick = {props.onClick}>
                 Reset Filter
