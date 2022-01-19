@@ -14,11 +14,11 @@ import { Button } from '@material-ui/core';
 function ConcertDisplay(props){
   
   const concerts = props.concerts
-  const index = props.index
+  // const index = props.index
 
   if (props.concerts.length > 0){
     return(
-        concerts.slice(0,props.index).map((concert) => 
+        concerts./* slice(0,props.index) */map((concert) => 
 
         <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor}
         concert = {concert} /> 
@@ -78,22 +78,25 @@ class App extends Component {
 
     if (bottom) { 
       this.setState({index : this.state.index + 10})
+      this.getAllConcerts(this.state.city + '&' + this.state.inputText)
      }
   }
 
   getAllConcerts = (input) => {
     const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
+    const index = 'n=' + this.state.index
 
-    axios.get('/api/events/?'+ date + '&' + input)
+    axios.get('/api/events/?'+ index + '&' + date + '&' + input)
     .then((response) => {
-      this.setState(() => {return ({concerts : response.data, index : 10})})
+      this.setState(() => {return ({concerts : response.data})})
       // console.log(response.data, this.state.search)
     })
   };
 
   searchSubmit = (e) => 
       {e.preventDefault()
-        this.getAllConcerts(this.state.city + '&' + this.state.inputText)}
+        this.setState({index : 10}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText)})
+      }
     
 
     render(){
@@ -107,7 +110,10 @@ class App extends Component {
             <CurrentFilters date = {this.state.date} city = {this.state.city} onClick = {() => {
                 this.setState({city : 'city=', date : new Date, reset : true}, () => {this.getAllConcerts(this.state.inputText)})}}/>
 
-            <ConcertDisplay concerts = {this.state.concerts} date = {this.state.date} index = {this.state.index}/>
+            <ConcertDisplay concerts = {this.state.concerts} date = {this.state.date} /* index = {this.state.index} *//>
+            <Button>
+              ' '
+            </Button>
         </div>
       )}
 }
