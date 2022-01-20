@@ -96,26 +96,27 @@ class App extends Component {
     })
     }
 
-    else {const index = 'n=' + this.state.index
-
+    else {
+    const index = 'n=' + this.state.index
     axios.get('/api/events/?'+ index + '&' + date + '&' + input)
     .then((response) => {
+      console.log(input)
       this.setState(() => {return ({concerts : response.data})})
       // console.log(response.data, this.state.search)
     })
   }
   };
 
-  searchSubmit = (e) => 
-      {e.preventDefault()
-        this.setState({index : 10}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText)})
+  searchSubmit = (text) => 
+      {
+        this.setState({index : 10, inputText : 'q=' + text}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText)})
       }
     
 
     render(){
       return(
         <div>  
-            <Searchbar concerts = {this.state.allConcerts} onSubmit = {this.searchSubmit} onChange = {(e) => {this.setState({inputText : 'q=' + e.target.value})}}
+            <Searchbar concerts = {this.state.allConcerts} onSubmit = {this.searchSubmit}
                         /* value = {} *//>
 
             <SearchSpecification onClick = {(text) => {this.getAllConcerts('city=' + text + '&' + this.state.inputText); this.setState({city : text});}}
