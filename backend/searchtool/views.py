@@ -10,6 +10,7 @@ from .serializers import EventSerializer
 
 import datetime 
 import pytz
+# from unidecode import unidecode 
 
 # Create your views here.
 
@@ -28,10 +29,10 @@ class EventView(generics.ListCreateAPIView):
         if not datequery:
             datequery = str(datetime.datetime.now())
         if not items: 
-            items = 10
+            items = len(Event.objects.all().filter(date__gte=datequery))
 
-        print(items)
         queryset = Event.objects.all().filter(date__gte=datequery)
+
         query = self.request.query_params.get('q')
 
         cityquery = self.request.query_params.get('city')
@@ -42,16 +43,19 @@ class EventView(generics.ListCreateAPIView):
                 queryset = queryset.filter(city__in=cityquery.split(','))
         
         if query:
-            if queryset.filter(composers__icontains=query):
-                queryset = queryset.filter(composers__icontains=query)
-            elif queryset.filter(musicians__icontains=query):
-                queryset = queryset.filter(musicians__icontains=query)
-            elif queryset.filter(pieces__icontains=query):
-                queryset = queryset.filter(pieces__icontains=query)
-            elif queryset.filter(conductor__icontains=query):
-                queryset = queryset.filter(conductor__icontains=query)
-            else:
-                queryset = Event.objects.none()
+            query = query.split(',')
+            for item in query:
+                if queryset.filter(composers__unaccent__icontains=item):
+                    queryset = queryset.filter(composers__unaccent__icontains=item)
+                elif queryset.filter(musicians__icontains=item):
+                    queryset = queryset.filter(musicians__icontains=item)
+                elif queryset.filter(pieces__icontains=item):
+                    queryset = queryset.filter(pieces__icontains=item)
+                elif queryset.filter(conductor__icontains=item):
+                    queryset = queryset.filter(conductor__icontains=item)
+                else:
+                    queryset = Event.objects.none()
+
         return queryset[:int(items)]
 
 
