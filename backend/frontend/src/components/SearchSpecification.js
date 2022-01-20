@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Checkbox, FormControlLabel, FormGroup } from '@material-ui/core'
+import { Card, Typography, Checkbox, FormControlLabel, FormGroup } from '@material-ui/core'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import axios from 'axios'
 import moment from 'moment'
@@ -107,12 +107,9 @@ class SearchSpecification extends Component {
     render(){
         return (
         <div>
-            <Accordion>
-                <AccordionSummary aria-controls="panel1a-content" id="panel1a-header"  expandIcon={<ExpandMoreIcon />}>
-                    <Typography>City</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <FormGroup>
+                <Card style = {{'marginBottom' : '2rem', 'marginTop' : '2rem'}}>
+                    <h2>City</h2>
+                    <FormGroup style = {{'flexDirection': 'row',}}>
                             <FormControlLabel control = {<Checkbox checked = {this.state.checked[0]} onClick = {(event) => this.CheckBoxonChange(event, ',Berlin', 0)}/>}
                             label = 'Berlin' disabled = {this.state.checked[0] ? false : !this.state.bool[0]}/>
                             <FormControlLabel control = {<Checkbox checked = {this.state.checked[1]} onClick = {(event) => this.CheckBoxonChange(event, ',Hamburg', 1)}/>}
@@ -123,9 +120,7 @@ class SearchSpecification extends Component {
                             label = 'Frankfurt' disabled = {this.state.checked[3] ? false : !this.state.bool[3]}/>
                     </FormGroup>
                     
-                </AccordionDetails>
-
-            </Accordion>
+                </Card>
         </div>
     )}
 }

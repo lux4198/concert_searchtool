@@ -75,7 +75,7 @@ class App extends Component {
 
   handleScroll = (e) => {
     const el = e.target.documentElement
-    const bottom = el.scrollHeight - el.scrollTop === el.clientHeight;
+    const bottom = Math.floor(el.scrollHeight - el.scrollTop) === el.clientHeight;
 
     if (bottom) { 
       this.setState({index : this.state.index + 10})
@@ -84,8 +84,6 @@ class App extends Component {
   }
 
   getAllConcerts = (input, didMount) => {
-    // (didMount === undefined)? didMount = false : didMount = true
-
     const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
     if (didMount === true){
@@ -100,7 +98,6 @@ class App extends Component {
     const index = 'n=' + this.state.index
     axios.get('/api/events/?'+ index + '&' + date + '&' + input)
     .then((response) => {
-      console.log(input)
       this.setState(() => {return ({concerts : response.data})})
       // console.log(response.data, this.state.search)
     })
@@ -116,8 +113,7 @@ class App extends Component {
     render(){
       return(
         <div>  
-            <Searchbar concerts = {this.state.allConcerts} onSubmit = {this.searchSubmit}
-                        /* value = {} *//>
+            <Searchbar concerts = {this.state.allConcerts} onSubmit = {this.searchSubmit}/>
 
             <SearchSpecification onClick = {(text) => {this.getAllConcerts('city=' + text + '&' + this.state.inputText); this.setState({city : text});}}
             query = {this.state.inputText} reset = {this.state.reset} handleReset = {() => {this.setState({reset : false})}} date = {this.state.date}/>
