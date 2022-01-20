@@ -6,7 +6,7 @@ function Searchbar(props) {
 
     if (props.concerts){
     const concerts = props.concerts
-    var composers = concerts.map((concert) => concert.composers)
+    var composers = concerts.map((concert) => JSON.parse(concert.composers))
     composers = [].concat.apply([], composers)
     composers = [...new Set(composers)]
     composers = composers.filter(composer => typeof(composer) === 'string')
@@ -22,14 +22,9 @@ function Searchbar(props) {
 
     var search_suggestion = composers.concat(conductors, artists)
     search_suggestion = [...new Set(search_suggestion)]
-
 }
 
     return (
-        // <form noValidate autoComplete="off" 
-        //         onSubmit={props.onSubmit}>
-        //     <TextField variant = 'outlined' color = 'secondary' onChange={props.onChange} label = 'Search'
-        //                 type = 'text' value = {props.value} style = {props.style} size = 'medium'/>
             <Autocomplete
                 multiple
                 freeSolo
@@ -48,7 +43,6 @@ function Searchbar(props) {
                 />
                 )}
             />
-        // </form>
     )
 }
 
