@@ -18,7 +18,6 @@ function ConcertDisplay(props){
   if (props.concerts.length > 0){
     return(
         concerts.map((concert) => 
-
         <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor}
         concert = {concert} /> 
     )
@@ -42,7 +41,7 @@ class App extends Component {
         allQueryConcerts : [], 
         concerts : '', 
         inputText : '', 
-        pieceInputText : '', 
+        pieceInputText : 'p=', 
         city: 'city=', 
         date : new Date(), 
         resetFilter : false, 
@@ -56,7 +55,8 @@ class App extends Component {
   shouldComponentUpdate (nextProps, nextState) {
 
     if (this.state.concerts !== nextState.concerts | this.state.date !== nextState.date | this.state.index !== nextState.index
-        | this.state.allConcerts !== nextState.allConcerts | this.state.allQueryConcerts !== nextState.allQueryConcerts) {
+        | this.state.allConcerts !== nextState.allConcerts | this.state.allQueryConcerts !== nextState.allQueryConcerts | 
+        this.state.pieceInputText !== nextState.pieceInputText) {
       return true;
     } else { 
       return false;
@@ -64,7 +64,6 @@ class App extends Component {
   }
 
   componentDidMount(){
-
     this.getAllConcerts(this.state.city + '&' + this.state.inputText, true)
     this.getAllConcerts(this.state.city + '&' + this.state.inputText)
     window.addEventListener('scroll', this.handleScroll);
@@ -91,7 +90,6 @@ class App extends Component {
       axios.get('/api/events/?'+ date + '&' + input)
     .then((response) => {
       this.setState(() => {return({allConcerts : response.data, allQueryConcerts : response.data})})
-      // console.log(response.data, this.state.search)
     })
     }
 
@@ -100,19 +98,17 @@ class App extends Component {
     axios.get('/api/events/?'+ index + '&' + date + '&' + input)
     .then((response) => {
       this.setState(() => {return ({concerts : response.data})})
-      // console.log(response.data, this.state.search)
     })
     axios.get('/api/events/?'+ date + '&' + input)
     .then((response) => {
       this.setState(() => {return ({allQueryConcerts : response.data})})
-      // console.log(response.data, this.state.search)
     })
   }
   };
 
   searchSubmit = (text) => 
       {
-        this.setState({index : 10, inputText : 'q=' + text}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText + '&p=' + this.state.pieceInputText)})
+        this.setState({index : 10, inputText : 'q=' + text}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText)})
       }
   searchPiece = (text) => {
     var text = text.join('').replace(/"/g, '\\"')
@@ -128,7 +124,7 @@ class App extends Component {
             <Searchbar concerts = {this.state.allQueryConcerts} onSubmit = {this.searchPiece} label = {'Search for piece'} piece = {true} inputText = {this.state.inputText}/>
 
             <SearchSpecification onClick = {(text) => {this.getAllConcerts('city=' + text + '&' + this.state.inputText); this.setState({city : text});}}
-            query = {this.state.inputText} reset = {this.state.reset} handleReset = {() => {this.setState({reset : false})}} date = {this.state.date}/>
+            query = {this.state.inputText + '&' + this.state.pieceInputText} reset = {this.state.reset} handleReset = {() => {this.setState({reset : false})}} date = {this.state.date}/>
             
             <div style = {{'display' : 'flex', 'flexDirection' : 'row',}}>
               <Datepicker value = {this.state.date} onChange = {(newDate) => {this.setState({date : newDate}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText)})}}/>

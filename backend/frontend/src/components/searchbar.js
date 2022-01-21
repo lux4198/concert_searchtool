@@ -38,13 +38,17 @@ function getPiecesbyComposer(concerts, composer){
             var piece = []
             for(i = 0; i < index.length; i++){
                 piece.push(concert.pieces[index[i]])
-            }
+            };
             return(piece)
         }
+        
     })
-    pieces = [].concat.apply([], pieces)
-    pieces = [].concat.apply([], pieces)
+    pieces = pieces.filter((item) => item !== undefined)
+
+    pieces = pieces.concat.apply([], pieces)
+    pieces = pieces.concat.apply([], pieces)
     pieces = [...new Set(pieces)]
+
     return(pieces)
 }
 
