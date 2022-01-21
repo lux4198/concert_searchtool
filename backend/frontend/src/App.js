@@ -124,7 +124,7 @@ class App extends Component {
     render(){
       return(
         <div>  
-            <Searchbar concerts = {(this.state.inputText === '' | 'q=')? this.state.allConcerts : this.state.concerts} onSubmit = {this.searchSubmit} label = {'Search for Composer, Conductor, Artists'} piece = {false}/>
+            <Searchbar concerts = {(this.state.inputText === '' || 'q=')? this.state.allConcerts : this.state.concerts} onSubmit = {this.searchSubmit} label = {'Search for Composer, Conductor, Artists'} piece = {false}/>
             <Searchbar concerts = {this.state.allQueryConcerts} onSubmit = {this.searchPiece} label = {'Search for piece'} piece = {true} inputText = {this.state.inputText}/>
 
             <SearchSpecification onClick = {(text) => {this.getAllConcerts('city=' + text + '&' + this.state.inputText); this.setState({city : text});}}
