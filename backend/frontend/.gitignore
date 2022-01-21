@@ -26,3 +26,4 @@ yarn-error.log*
 
 /src/notes.txt
 /Python/websites.txt
+./backend/settings.py
