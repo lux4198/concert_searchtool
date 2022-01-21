@@ -18,6 +18,32 @@ function getplaceholder(pieces, search_suggestion, label){
     }
     }
 
+function getAllIndexes(arr, val) {
+    var indexes = [], i;
+    for(i = 0; i < arr.length; i++)
+        if (arr[i] === val)
+            indexes.push(i);
+    return indexes;
+}
+
+function getPiecesbyComposer(concerts, composer){
+    var pieces = concerts.map((concert) => {
+        if (JSON.parse(concert.composers).includes(composer)){
+            var composers = JSON.parse(concert.composers)
+            var index = getAllIndexes(composers, composer), i
+            var piece = []
+            for(i = 0; i < index.length; i++){
+                piece.push(concert.pieces[i])
+            }
+            return(piece)
+        }
+    })
+    pieces = [].concat.apply([], pieces)
+    pieces = [].concat.apply([], pieces)
+    pieces = [...new Set(pieces)]
+    return(pieces)
+}
+
 
 function Searchbar(props) {
 
@@ -45,7 +71,15 @@ function Searchbar(props) {
         pieces = [].concat.apply([], pieces)
         pieces = [].concat.apply([], pieces)
         pieces = [...new Set(pieces)]
-        console.log(pieces.length)
+    }
+    if (props.inputText){
+        var inputText = props.inputText.replace('q=', '')
+        if (composers.includes(inputText)){
+            getPiecesbyComposer(concerts, inputText)
+        }
+    }
+    else{
+        var inputText = false 
     }
 }
 
@@ -54,7 +88,7 @@ function Searchbar(props) {
                 multiple
                 freeSolo
                 disableClearable
-                options={pieces ? pieces.map((option) => option) : 
+                options={pieces && composers.includes(inputText) ? getPiecesbyComposer(props.concerts, inputText) : pieces ? pieces.map((option) => option) : 
                         search_suggestion ? search_suggestion.map((option) => option) : ''}
                 onChange = {(event, value) => {props.onSubmit(value)}}
                 renderInput={(params) => (
