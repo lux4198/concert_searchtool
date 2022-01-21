@@ -5,9 +5,13 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
-function getplaceholder(pieces, search_suggestion, label){
+function getplaceholder(pieces, search_suggestion, label, concerts, inputText, composers){
 
-    if (pieces && search_suggestion){
+    if (pieces && composers.includes(inputText)){
+        var composer_pieces = getPiecesbyComposer(concerts, inputText)
+        return(getPiecesbyComposer(concerts, inputText)[getRandomInt(composer_pieces.length)])
+    }
+    else if (pieces && search_suggestion){
         return('e.g. ' + pieces[getRandomInt(pieces.length)])
     }
     else if (search_suggestion){
@@ -33,7 +37,7 @@ function getPiecesbyComposer(concerts, composer){
             var index = getAllIndexes(composers, composer), i
             var piece = []
             for(i = 0; i < index.length; i++){
-                piece.push(concert.pieces[i])
+                piece.push(concert.pieces[index[i]])
             }
             return(piece)
         }
@@ -74,9 +78,6 @@ function Searchbar(props) {
     }
     if (props.inputText){
         var inputText = props.inputText.replace('q=', '')
-        if (composers.includes(inputText)){
-            getPiecesbyComposer(concerts, inputText)
-        }
     }
     else{
         var inputText = false 
@@ -95,7 +96,7 @@ function Searchbar(props) {
                 <TextField
                     {...params}
                     label= {props.label}
-                    placeholder= {getplaceholder(pieces, search_suggestion, props.label)}
+                    placeholder= {getplaceholder(pieces, search_suggestion, props.label, props.concerts, inputText, composers) }
                     InputProps={{
                     ...params.InputProps,
                     type: 'search',
