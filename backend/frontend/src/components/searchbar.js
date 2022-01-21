@@ -1,6 +1,23 @@
 import React, { useState } from 'react'
 import { TextField, Autocomplete } from '@mui/material'
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+function getplaceholder(pieces, search_suggestion, label){
+
+    if (pieces && search_suggestion){
+        return('e.g. ' + pieces[getRandomInt(pieces.length)])
+    }
+    else if (search_suggestion){
+        return('e.g. ' + search_suggestion[getRandomInt(search_suggestion.length)])
+    }
+    else{
+        return(label)
+    }
+    }
+
 
 function Searchbar(props) {
 
@@ -22,6 +39,14 @@ function Searchbar(props) {
 
     var search_suggestion = composers.concat(conductors, artists)
     search_suggestion = [...new Set(search_suggestion)]
+
+    if (props.piece){
+        var pieces = concerts.map((concert) => concert.pieces)
+        pieces = [].concat.apply([], pieces)
+        pieces = [].concat.apply([], pieces)
+        pieces = [...new Set(pieces)]
+        console.log(pieces.length)
+    }
 }
 
     return (
@@ -29,13 +54,14 @@ function Searchbar(props) {
                 multiple
                 freeSolo
                 disableClearable
-                options={search_suggestion ? search_suggestion.map((option) => {return(option)}): ''}
+                options={pieces ? pieces.map((option) => option) : 
+                        search_suggestion ? search_suggestion.map((option) => option) : ''}
                 onChange = {(event, value) => {props.onSubmit(value)}}
                 renderInput={(params) => (
                 <TextField
                     {...params}
-                    label="Search"
-                    placeholder='Search for Composer, Conductor, Artists'
+                    label= {props.label}
+                    placeholder= {getplaceholder(pieces, search_suggestion, props.label)}
                     InputProps={{
                     ...params.InputProps,
                     type: 'search',
