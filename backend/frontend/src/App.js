@@ -42,6 +42,7 @@ class App extends Component {
         allQueryConcerts : [], 
         concerts : '', 
         inputText : '', 
+        pieceInputText : '', 
         city: 'city=', 
         date : new Date(), 
         resetFilter : false, 
@@ -49,7 +50,6 @@ class App extends Component {
       }
       this.getAllConcerts = this.getAllConcerts.bind(this)
       this.searchSubmit = this.searchSubmit.bind(this)
-      this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this)
 
   }
 
@@ -63,10 +63,8 @@ class App extends Component {
     }
   }
 
-  
-
   componentDidMount(){
-    
+
     this.getAllConcerts(this.state.city + '&' + this.state.inputText, true)
     this.getAllConcerts(this.state.city + '&' + this.state.inputText)
     window.addEventListener('scroll', this.handleScroll);
@@ -82,7 +80,7 @@ class App extends Component {
 
     if (bottom) { 
       this.setState({index : this.state.index + 10})
-      this.getAllConcerts(this.state.city + '&' + this.state.inputText)
+      this.getAllConcerts(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText)
      }
   }
 
@@ -92,7 +90,7 @@ class App extends Component {
     if (didMount === true){
       axios.get('/api/events/?'+ date + '&' + input)
     .then((response) => {
-      this.setState(() => {return({allConcerts : response.data})}, console.log(this.state.allConcerts))
+      this.setState(() => {return({allConcerts : response.data, allQueryConcerts : response.data})})
       // console.log(response.data, this.state.search)
     })
     }
@@ -114,15 +112,20 @@ class App extends Component {
 
   searchSubmit = (text) => 
       {
-        this.setState({index : 10, inputText : 'q=' + text}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText)})
+        this.setState({index : 10, inputText : 'q=' + text}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText + '&p=' + this.state.pieceInputText)})
       }
+  searchPiece = (text) => {
+    var text = text.join('').replace(/"/g, '\\"')
+    var input = this.state.city + '&' + this.state.inputText + '&p=' + text
+    this.setState({index : 10, pieceInputText : 'p=' + text}, () => {this.getAllConcerts(input)})
+  }
     
 
     render(){
       return(
         <div>  
-            <Searchbar concerts = {this.state.allConcerts} onSubmit = {this.searchSubmit} label = {'Search for Composer, Conductor, Artists'} piece = {false}/>
-            <Searchbar concerts = {this.state.allQueryConcerts} onSubmit = {this.searchSubmit} label = {'Search for piece'} piece = {true}/>
+            <Searchbar concerts = {(this.state.inputText === '' | 'q=')? this.state.allConcerts : this.state.concerts} onSubmit = {this.searchSubmit} label = {'Search for Composer, Conductor, Artists'} piece = {false}/>
+            <Searchbar concerts = {this.state.allQueryConcerts} onSubmit = {this.searchPiece} label = {'Search for piece'} piece = {true} inputText = {this.state.inputText}/>
 
             <SearchSpecification onClick = {(text) => {this.getAllConcerts('city=' + text + '&' + this.state.inputText); this.setState({city : text});}}
             query = {this.state.inputText} reset = {this.state.reset} handleReset = {() => {this.setState({reset : false})}} date = {this.state.date}/>
