@@ -51,8 +51,40 @@ for item in soup.find_all('div', {'class' : 'spielplan-item'}):
         city = 'Dresden'
     singleevent['city'] = city 
     
+
     # default ensemble is Staatskapelle Dresden
     singleevent['ensemble'] = 'Staatskapelle Dresden'
+
+
+    # go to concert details page and parse data
+    details = requests.get(singleevent['link'])
+    concert_details = BeautifulSoup(details.text, 'html.parser')
+
+    
+    # extract musicians and conductor from details page 
+    singleevent['musicians'] = {}
+    singleevent['conductor'] = ''
+
+    if concert_details.find('div', {'class' : 'mitwirkende'}):
+        # each musician has a div within 'mitwirkende'
+        musicians = concert_details.find('div', {'class' : 'mitwirkende'}).find_all('div')
+
+        # each musician div contains the name and role of musician (usually)
+        for musician in musicians:
+            player = musician.contents[0].get_text(strip = True)
+            role = musician.contents[1].get_text(strip = True)
+            # add musician and role to musicians dict
+            singleevent['musicians'][player] = role
+
+            # add conductor to singleevent
+            if role == 'Dirigent' or role == 'Dirigentin':
+                singleevent['conductor'] = player 
+    print(singleevent['musicians'])
+        
+    
+            
+
+
 
 
 
