@@ -17,6 +17,11 @@ soup = BeautifulSoup(data.text, 'html.parser')
 # from parsed data, extract each concert item
 for item in soup.find_all('div', {'class' : 'spielplan-item'}):
 
+    # remove concert items that take place in chamber music hall (Semper Zwei)
+    if item.find('div', {'class' : 'zeit'}).contents[1].text == 'Semper Zwei':
+        continue
+    
+
     # singleevent variable stores info about concert item before passing it to Event model 
     singleevent = {}
 
@@ -29,13 +34,14 @@ for item in soup.find_all('div', {'class' : 'spielplan-item'}):
     json_data = item.find('script', {'type' : 'application/ld+json'}).get_text()
     json_data = json.loads(json_data)
 
+
     # extract concert Datetime
     concert_date = json_data['startDate']
     # create datetime object 
     concert_date = datetime.strptime(concert_date, '%Y-%m-%dT%H:%M')
-
     # add date to singleevent and make it timezone aware 
     singleevent['datetime'] = pytz.timezone('Europe/Berlin').localize(concert_date)
+
 
     # add city to singleevent 
     # if orchestra plays at another city, check for 'Gastconcert' in title and extract city
@@ -44,6 +50,14 @@ for item in soup.find_all('div', {'class' : 'spielplan-item'}):
     else:
         city = 'Dresden'
     singleevent['city'] = city 
+    
+    # default ensemble is Staatskapelle Dresden
+    singleevent['ensemble'] = 'Staatskapelle Dresden'
+
+
+
+
+
 
 
     # Event.objects.create(
