@@ -79,8 +79,22 @@ for item in soup.find_all('div', {'class' : 'spielplan-item'}):
             # add conductor to singleevent
             if role == 'Dirigent' or role == 'Dirigentin':
                 singleevent['conductor'] = player 
-    print(singleevent['musicians'])
-        
+    
+    # extract composers and pieces from div 'Werke'
+    if concert_details.find('div', {'class' : 'werke'}):
+        composers_pieces = concert_details.find('div', {'class' : 'werke'})
+
+        # get composers from h3 tags (composer highlighted in div)
+        composers = [composer.get_text(strip = True) for composer in composers_pieces.find_all('h3')]
+
+        # get pieces from li tags within each ul element
+        # ul element contains all pieces of highlighted composer 
+        ul_element = composers_pieces.find_all('ul')
+        # lc extracts text for each li tag (so 1 piece) for each ul element (for 1 composer)
+        pieces = [[li.get_text(strip = True) for li in ul] for ul in ul_element]
+
+        singleevent['composers'] = composers 
+        singleevent['pieces'] = pieces        
     
             
 
