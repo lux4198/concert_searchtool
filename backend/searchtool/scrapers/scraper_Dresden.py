@@ -1,4 +1,5 @@
 import json
+from numpy import single
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime 
@@ -27,6 +28,7 @@ for item in soup.find_all('div', {'class' : 'spielplan-item'}):
     # get json data from script tag of each concert item
     json_data = item.find('script', {'type' : 'application/ld+json'}).get_text()
     json_data = json.loads(json_data)
+
     # extract concert Datetime
     concert_date = json_data['startDate']
     # create datetime object 
@@ -34,6 +36,15 @@ for item in soup.find_all('div', {'class' : 'spielplan-item'}):
 
     # add date to singleevent and make it timezone aware 
     singleevent['datetime'] = pytz.timezone('Europe/Berlin').localize(concert_date)
+
+    # add city to singleevent 
+    # if orchestra plays at another city, check for 'Gastconcert' in title and extract city
+    if 'Gastkonzert in' in json_data['name']:
+        city = json_data['name'].split(' ')[2]
+    else:
+        city = 'Dresden'
+    singleevent['city'] = city 
+
 
     # Event.objects.create(
     #     date = singleevent['datetime'], 
