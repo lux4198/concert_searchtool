@@ -9,29 +9,17 @@ import SearchSpecification from './components/SearchSpecification.js';
 import CurrentFilters from './components/CurrentFilters.js';
 import { Button } from '@material-ui/core';
 
-
-
-function ConcertDisplay(props){
-  
-  const concerts = props.concerts
-  const index = props.index
-
-  if (props.concerts.length > 0){
-    return(
-        concerts.slice(0,index).map((concert) => 
-        <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor}
-        concert = {concert} /> 
-    )
-    )
-  }
-  else {
-    return(
+function RenderConcerts(props){
+ return( props.concerts.length > 0 ? 
+      props.concerts.slice(0, props.index).map((concert) => 
+      <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor}
+      concert = {concert} />) 
+      :
       <div>
         Search for conductor, composer, piece or musician.
-      </div>
-  )
+      </div>)
 }
-}
+
 
 
 class App extends Component {
@@ -53,17 +41,6 @@ class App extends Component {
 
   }
 
-  shouldComponentUpdate (nextProps, nextState) {
-
-    if (this.state.concerts !== nextState.concerts | this.state.date !== nextState.date | this.state.index !== nextState.index
-        | this.state.allConcerts !== nextState.allConcerts | this.state.allQueryConcerts !== nextState.allQueryConcerts | 
-        this.state.pieceInputText !== nextState.pieceInputText) {
-      return true;
-    } else { 
-      return false;
-    }
-  }
-
   componentDidMount(){
     this.getAllConcerts(this.state.city + '&' + this.state.inputText, true)
     this.getAllConcerts(this.state.city + '&' + this.state.inputText)
@@ -80,7 +57,7 @@ class App extends Component {
 
     if (bottom) { 
       this.setState({displayIndex : this.state.displayIndex + 10})
-      this.getAllConcerts(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText)
+      // this.getAllConcerts(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText)
      }
   }
 
@@ -123,23 +100,26 @@ class App extends Component {
 
     render(){
       return(
-        <div>  
+        <div>
+            {/* render searchbar for composers etc. and pieces  */}
             <Searchbar concerts = {(this.state.inputText === '' || 'q=')? this.state.allQueryConcerts : this.state.allQueryConcerts} onSubmit = {this.searchSubmit} label = {'Search for Composer, Conductor, Artists'} piece = {false}/>
             <Searchbar concerts = {this.state.allQueryConcerts} onSubmit = {this.searchPiece} label = {'Search for piece'} piece = {true} inputText = {this.state.inputText}/>
 
+            {/* searchspecification renders checkboxes for each city to narrow down the query for one or more cities */}
             <SearchSpecification onClick = {(text) => {this.getAllConcerts('city=' + text + '&' + this.state.inputText); this.setState({city : text});}}
             query = {this.state.inputText + '&' + this.state.pieceInputText} reset = {this.state.reset} handleReset = {() => {this.setState({reset : false})}} date = {this.state.date}/>
             
+            {/* renders a Datepicked to show only concert from specified date  */}
             <div style = {{'display' : 'flex', 'flexDirection' : 'row',}}>
               <Datepicker value = {this.state.date} onChange = {(newDate) => {this.setState({date : newDate}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText)})}}/>
               <CurrentFilters date = {this.state.date} city = {this.state.city} onClick = {() => {
                   this.setState({city : 'city=', date : new Date, reset : true}, () => {this.getAllConcerts(this.state.inputText)})}}/>
             </div>
-           
-            <ConcertDisplay index = {this.state.displayIndex} concerts = {this.state.allQueryConcerts} date = {this.state.date}/>
-            <Button>
-              ' '
-            </Button>
+
+          {/* render concert items from state (only 10 at a time) */}
+
+            <RenderConcerts concerts = {this.state.allQueryConcerts} index = {this.state.displayIndex}/>
+          
         </div>
       )}
 }
