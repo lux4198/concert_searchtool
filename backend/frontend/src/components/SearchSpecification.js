@@ -4,100 +4,80 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import axios from 'axios'
 import moment from 'moment'
 
+const cities = ['Berlin', 'Hamburg', 'Frankfurt', 'Munich', 'Dresden']
+
 class SearchSpecification extends Component {
     constructor(){
         super();
         this.state = {
-            bool : [true, true, true, true],
-            city : 'city=',
-            checked : [false, false, false, false], 
+          // bool and checked states : two arrays , bool keeps track whether checkbox should be disabled or not
+          // checked keeps track of whether a checkbox was checked or not, see this.updateBoolChecked
+            bool : Array(cities.length).fill(true),
+            checked : Array(cities.length).fill(false),
+          // city state is passed to query in app 
+            city : 'city=', 
         }
     }
 
     componentDidUpdate(prevProps, prevState) {
+        // if query changes disable prop on city checkboxes is reevaluated
         if (prevProps.query !== this.props.query | prevProps.date !== this.props.date) {
-            this.check1().then(this.check2().then(this.check3().then(this.check4())))
+            cities.map((city, i) => {this.checkConcerts('city=' + city ,i)})
         }
+        // when button is clicked reset prop is passed which resets checkbox states to false and runs a new query
         if (this.props.reset & this.props.reset !== prevProps.reset){
-            this.setState({checked : [false, false, false, false], city : 'city='}, () => {this.props.handleReset()})
+            this.setState({checked : Array(cities.length).fill(false), city : 'city='}, () => {this.props.handleReset()})
         }
     }
 
-    updateBool(i, change){
+    // updates corresponding element in bool or checked array while keeping the others intact 
+    // which state is changed depends on whether bool parameter is passed 
+    updateBoolChecked(i, change, bool){
         this.setState(state => {
-          const list = state.bool.map((item, j) => {
+          const method = bool === 'bool' ? state.bool : state.checked
+          const list = method.map((item, j) => {
             if (j === i) {
               return change;
             } else {
               return item;
             }
           });
-          return ({
+          return ( bool === 'bool' ? {
             bool : list,
-          });
+          } : 
+          {
+            checked : list
+          }
+          );
         });
       };
-
-    updateChecked(i, change){
-        this.setState(state => {
-          const list = state.checked.map((item, j) => {
-            if (j === i) {
-              return change;
-            } else {
-              return item;
-            }
-          });
-          return {
-            checked : list,
-          };
-        });
-      };
-
+    
+    // checks if query yields result in corresponding city and changes bool state accordingly 
     checkConcerts(input, index){
         const date = 'date=' + moment(this.props.date).format('YYYY-MM-DD HH:mm')
 
         axios.get('/api/events/?'+ date + '&' + input + '&' + this.props.query)
         .then((response) => {
           if (response.data.length === 0){
-              this.updateBool(index,false)
+              this.updateBoolChecked(index,false, 'bool')
           }
           else{
-            this.updateBool(index,true)
+            this.updateBoolChecked(index,true, 'bool')
           }
         })
       };
-
-    check1(){
-        return new Promise((resolve) => {
-            this.checkConcerts('city=Berlin', 0)
-            resolve();
-        })
-    }
-    check2(){
-        return new Promise((resolve) => {
-            this.checkConcerts('city=Hamburg', 1)
-            resolve();
-        })
-    }
-    check3(){
-        return new Promise((resolve) => {
-            this.checkConcerts('city=Munich', 2)
-            resolve();
-        })
-    }
-    check4(){
-        this.checkConcerts('city=Frankfurt', 3)
-    }
-
-
+    
+    // changes responsible states everytime a checkbox is clicked -> new query with city state
     CheckBoxonChange(event, city, index){
         
-        this.updateChecked(index, event.target.checked)
+        this.updateBoolChecked(index, event.target.checked)
 
+        // if box is checked, city is added to state city  
         if (event.target.checked){
             this.setState({city : this.state.city + city}) 
             this.props.onClick(this.state.city + city)}
-
+        
+        // if box is unchecked city is removed from state city
         else {
             this.setState({city : this.state.city.replace(city, '')}) 
             this.props.onClick(this.state.city.replace(city, ''))
@@ -107,20 +87,17 @@ class SearchSpecification extends Component {
     render(){
         return (
         <div>
-                <Card style = {{'marginBottom' : '2rem', 'marginTop' : '2rem'}}>
-                    <h2>City</h2>
-                    <FormGroup style = {{'flexDirection': 'row',}}>
-                            <FormControlLabel control = {<Checkbox checked = {this.state.checked[0]} onClick = {(event) => this.CheckBoxonChange(event, ',Berlin', 0)}/>}
-                            label = 'Berlin' disabled = {this.state.checked[0] ? false : !this.state.bool[0]}/>
-                            <FormControlLabel control = {<Checkbox checked = {this.state.checked[1]} onClick = {(event) => this.CheckBoxonChange(event, ',Hamburg', 1)}/>}
-                            label = 'Hamburg' disabled = {this.state.checked[1] ? false : !this.state.bool[1]}/>
-                            <FormControlLabel control = {<Checkbox checked = {this.state.checked[2]} onClick = {(event) => this.CheckBoxonChange(event, ',Munich', 2)}/>}
-                            label = 'Munich' disabled = {this.state.checked[2] ? false : !this.state.bool[2]}/>
-                            <FormControlLabel control = {<Checkbox checked = {this.state.checked[3]} onClick = {(event) => this.CheckBoxonChange(event, ',Frankfurt', 3)}/>}
-                            label = 'Frankfurt' disabled = {this.state.checked[3] ? false : !this.state.bool[3]}/>
-                    </FormGroup>
-                    
-                </Card>
+          <Card style = {{'marginBottom' : '2rem', 'marginTop' : '2rem'}}>
+            <h2>City</h2> 
+            <FormGroup style = {{'flexDirection': 'row',}}>
+              {/* creates a checkbox element for each city in cities */}
+              {cities.map((city, i) => {
+                return(<FormControlLabel key = {city} control = {<Checkbox checked = {this.state.checked[i]} onClick = {(event) => this.CheckBoxonChange(event, ',' + city, i)}/>}
+                label = {city} disabled = {this.state.checked[i] ? false : !this.state.bool[i]}/>)
+              })}
+
+            </FormGroup>
+          </Card>
         </div>
     )}
 }
