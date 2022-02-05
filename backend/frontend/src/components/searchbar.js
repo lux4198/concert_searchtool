@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
-import { TextField, Autocomplete } from '@mui/material'
+import { TextField, Autocomplete, ListItem, ListItemText, ListItemSecondaryAction, ListItemIcon } from '@mui/material'
+import { Delete } from '@mui/icons-material';
+
+import { createFilterOptions } from '@mui/material/Autocomplete';
+
+import parse from 'autosuggest-highlight/parse';
+import match from 'autosuggest-highlight/match';
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -32,8 +38,8 @@ function getAllIndexes(arr, val) {
 
 function getPiecesbyComposer(concerts, composer){
     var pieces = concerts.map((concert) => {
-        if (JSON.parse(concert.composers).includes(composer)){
-            var composers = JSON.parse(concert.composers)
+        if (concert.composers.includes(composer)){
+            var composers = concert.composers
             var index = getAllIndexes(composers, composer), i
             var piece = []
             for(i = 0; i < index.length; i++){
@@ -52,12 +58,16 @@ function getPiecesbyComposer(concerts, composer){
     return(pieces)
 }
 
+const filterOptions = createFilterOptions({
+    limit : 10, 
+})
+
 
 function Searchbar(props) {
 
     if (props.concerts){
     const concerts = props.concerts
-    var composers = concerts.map((concert) => JSON.parse(concert.composers))
+    var composers = concerts.map((concert) => concert.composers)
     composers = [].concat.apply([], composers)
     composers = [...new Set(composers)]
     composers = composers.filter(composer => typeof(composer) === 'string')
@@ -93,9 +103,19 @@ function Searchbar(props) {
                 multiple
                 freeSolo
                 disableClearable
+                filterOptions = {filterOptions}
                 options={pieces && composers.includes(inputText) ? getPiecesbyComposer(props.concerts, inputText) : pieces ? pieces.map((option) => option) : 
                         search_suggestion ? search_suggestion.map((option) => option) : ''}
+
                 onChange = {(event, value) => {props.onSubmit(value)}}
+
+                renderOption={(props, option) => {
+                    return(
+                        <li {...props}>
+                            {option}
+                        </li>
+                        )
+                }}
                 renderInput={(params) => (
                 <TextField
                     {...params}

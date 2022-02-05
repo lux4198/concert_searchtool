@@ -83,16 +83,21 @@ class App extends Component {
      }
   }
 
+  // function responsible for making the api call to get the concert items matching the query  
   getAllConcerts = (input, didMount) => {
+    // date is either specified date from datePicker or default new(Date), so today 
     const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
+    // didMount variable is only given once in componentDidMount method -> purpose is to display all possible queries at the start
     if (didMount === true){
       axios.get('/api/events/?'+ date + '&' + input)
     .then((response) => {
-      this.setState(() => {return({allConcerts : response.data, allQueryConcerts : response.data})})
+      // console.log(response.data)
+      this.setState({allConcerts : response.data, allQueryConcerts : response.data})
     })
     }
-
+    // if didMount variable is not specified, only 10 entries are loaded at a time to decrease render issues 
+    // this code is executed for each query and when scrolling
     else {
     const index = 'n=' + this.state.index
     axios.get('/api/events/?'+ index + '&' + date + '&' + input)
@@ -108,8 +113,13 @@ class App extends Component {
 
   searchSubmit = (text) => 
       {
-        this.setState({index : 10, inputText : 'q=' + text}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText)})
+        this.setState({index : 10, inputText : 'q=' + text}, () => {
+          this.getAllConcerts(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText);
+          console.log(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText)
+          // localStorage.setItem('query', this.state.inputText)
+        })
       }
+
   searchPiece = (text) => {
     var text = text.join('').replace(/"/g, '\\"')
     var input = this.state.city + '&' + this.state.inputText + '&p=' + text
@@ -120,7 +130,7 @@ class App extends Component {
     render(){
       return(
         <div>  
-            <Searchbar concerts = {(this.state.inputText === '' || 'q=')? this.state.allConcerts : this.state.concerts} onSubmit = {this.searchSubmit} label = {'Search for Composer, Conductor, Artists'} piece = {false}/>
+            <Searchbar concerts = {(this.state.inputText === '' || 'q=')? this.state.allQueryConcerts : this.state.allQueryConcerts} onSubmit = {this.searchSubmit} label = {'Search for Composer, Conductor, Artists'} piece = {false}/>
             <Searchbar concerts = {this.state.allQueryConcerts} onSubmit = {this.searchPiece} label = {'Search for piece'} piece = {true} inputText = {this.state.inputText}/>
 
             <SearchSpecification onClick = {(text) => {this.getAllConcerts('city=' + text + '&' + this.state.inputText); this.setState({city : text});}}

@@ -7,7 +7,7 @@ import moment from 'moment'
 
 function ConcertItem(props){
   const concert = props.concert
-  const composers = JSON.parse(concert.composers)
+  const composers = concert.composers
 
   let formattedDate = moment(concert.date).format('DD. MMM YYYY')
   let formattedDateTime = moment(concert.date).format('DD. MMM YYYY - HH:mm')

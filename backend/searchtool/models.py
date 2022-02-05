@@ -20,7 +20,7 @@ class Event(models.Model):
 
 
     def __str__(self):
-        return str([self.musicians, self.pieces, self.composers])
+        return self.conductor
     
 
 

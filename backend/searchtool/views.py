@@ -46,8 +46,8 @@ class EventView(generics.ListCreateAPIView):
         if query:
             query = query.split(',')
             for item in query:
-                if queryset.filter(composers__unaccent__icontains=item):
-                    queryset = queryset.filter(composers__unaccent__icontains=item)
+                if queryset.filter(composers__icontains=item):
+                    queryset = queryset.filter(composers__icontains=item)
                 elif queryset.filter(musicians__icontains=item):
                     queryset = queryset.filter(musicians__icontains=item)
                 elif queryset.filter(conductor__icontains=item):
