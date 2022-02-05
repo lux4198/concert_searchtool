@@ -24,12 +24,9 @@ class EventView(generics.ListCreateAPIView):
 
     def get_queryset(self):
         datequery = self.request.query_params.get('date')
-        items = self.request.query_params.get('n')
 
         if not datequery:
             datequery = str(datetime.datetime.now())
-        if not items: 
-            items = len(Event.objects.all().filter(date__gte=datequery))
 
         queryset = Event.objects.all().filter(date__gte=datequery)
 
@@ -62,6 +59,6 @@ class EventView(generics.ListCreateAPIView):
                 else:
                     queryset = Event.objects.none()
 
-        return queryset[:int(items)]
+        return queryset
 
 

@@ -14,10 +14,11 @@ import { Button } from '@material-ui/core';
 function ConcertDisplay(props){
   
   const concerts = props.concerts
+  const index = props.index
 
   if (props.concerts.length > 0){
     return(
-        concerts.map((concert) => 
+        concerts.slice(0,index).map((concert) => 
         <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor}
         concert = {concert} /> 
     )
@@ -45,7 +46,7 @@ class App extends Component {
         city: 'city=', 
         date : new Date(), 
         resetFilter : false, 
-        index : 10, 
+        displayIndex : 10, 
       }
       this.getAllConcerts = this.getAllConcerts.bind(this)
       this.searchSubmit = this.searchSubmit.bind(this)
@@ -78,7 +79,7 @@ class App extends Component {
     const bottom = Math.floor(el.scrollHeight - el.scrollTop) === el.clientHeight;
 
     if (bottom) { 
-      this.setState({index : this.state.index + 10})
+      this.setState({displayIndex : this.state.displayIndex + 10})
       this.getAllConcerts(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText)
      }
   }
@@ -88,7 +89,7 @@ class App extends Component {
     // date is either specified date from datePicker or default new(Date), so today 
     const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
-    // didMount variable is only given once in componentDidMount method -> purpose is to display all possible queries at the start
+    // didMount variable is only given once in componentDidMount method -> purpose is to get all concerts on page load and save them in state
     if (didMount === true){
       axios.get('/api/events/?'+ date + '&' + input)
     .then((response) => {
@@ -96,14 +97,8 @@ class App extends Component {
       this.setState({allConcerts : response.data, allQueryConcerts : response.data})
     })
     }
-    // if didMount variable is not specified, only 10 entries are loaded at a time to decrease render issues 
-    // this code is executed for each query and when scrolling
+    // if didMount variable is not specified, only allQueryConcert is changed 
     else {
-    const index = 'n=' + this.state.index
-    axios.get('/api/events/?'+ index + '&' + date + '&' + input)
-    .then((response) => {
-      this.setState(() => {return ({concerts : response.data})})
-    })
     axios.get('/api/events/?'+ date + '&' + input)
     .then((response) => {
       this.setState(() => {return ({allQueryConcerts : response.data})})
@@ -113,10 +108,9 @@ class App extends Component {
 
   searchSubmit = (text) => 
       {
-        this.setState({index : 10, inputText : 'q=' + text}, () => {
+        this.setState({displayIndex : 10, inputText : 'q=' + text}, () => {
           this.getAllConcerts(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText);
           console.log(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText)
-          // localStorage.setItem('query', this.state.inputText)
         })
       }
 
@@ -142,7 +136,7 @@ class App extends Component {
                   this.setState({city : 'city=', date : new Date, reset : true}, () => {this.getAllConcerts(this.state.inputText)})}}/>
             </div>
            
-            <ConcertDisplay concerts = {this.state.concerts} date = {this.state.date}/>
+            <ConcertDisplay index = {this.state.displayIndex} concerts = {this.state.allQueryConcerts} date = {this.state.date}/>
             <Button>
               ' '
             </Button>
