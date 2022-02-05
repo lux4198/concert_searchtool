@@ -26,7 +26,8 @@ def main():
 
             day = item.find('span', {'class' : 'c-eventTeaser__day'}).text
             month = item.find('span', {'class' : 'c-eventTeaser__month'}).text
-            if month == 'Jan' or 'Jun':
+            print(month)
+            if month == 'Jan' or month == 'Jun':
                 defaultyear = '2022'
             if month == 'Mär':
                 month = 'Mrz'
@@ -70,8 +71,9 @@ def main():
             link = item.find('a', {'class' : 'link c-teaser__headlineLink'}, href = True)
             link = link['href']
             singleevent['link'] = link 
+            print(concert_date, link)
 
-            print(singleevent['datetime'])
+            # print(singleevent['datetime'])
             
             # Event.objects.create(
             #             date = singleevent['datetime'], 
