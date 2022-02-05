@@ -3,7 +3,7 @@ from numpy import single
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime 
-from ..models import Event
+# from ..models import Event
 
 
 import pytz
@@ -11,6 +11,7 @@ from locale import setlocale, LC_TIME
 
 
 def main():
+    concerts = []
     # download website data from main link 
     data = requests.get('https://www.staatskapelle-dresden.de/konzerte/konzertkalender/')
     # parse data into Beautifulsoup
@@ -100,15 +101,18 @@ def main():
             singleevent['composers'] = composers 
             singleevent['pieces'] = pieces        
 
-        Event.objects.create(
-            date = singleevent['datetime'], 
-            city = singleevent['city'], 
-            ensemble = singleevent['ensemble'], 
-            musicians = singleevent['musicians'], 
-            conductor = singleevent['conductor'],
-            composers = singleevent['composers'],
-            pieces = singleevent['pieces'],
-            link = singleevent['link'])
+        # Event.objects.create(
+        #     date = singleevent['datetime'], 
+        #     city = singleevent['city'], 
+        #     ensemble = singleevent['ensemble'], 
+        #     musicians = singleevent['musicians'], 
+        #     conductor = singleevent['conductor'],
+        #     composers = singleevent['composers'],
+        #     pieces = singleevent['pieces'],
+        #     link = singleevent['link'])
+
+        concerts.append(singleevent)
+    return(concerts)
 
 if __name__ == '__main__':
     main()

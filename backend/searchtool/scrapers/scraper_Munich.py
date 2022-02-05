@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime 
-from ..models import Event
+# from ..models import Event
 import pytz
 
 
@@ -16,6 +16,7 @@ def date_parser(concert_date):
 
 
 def main():
+    concerts = []
     # main link for concert calender 
 
     data = requests.get('https://www.mphil.de/konzerte-karten/kalender')
@@ -76,17 +77,20 @@ def main():
         singleevent['ensemble'] = 'Münchner Philharmoniker'
 
     # create entries in database for scraped data 
-        Event.objects.create(
-            date = singleevent['datetime'], 
-            city = singleevent['city'], 
-            ensemble = singleevent['ensemble'], 
-            musicians = singleevent['musicians'], 
-            conductor = singleevent['conductor'],
-            composers = singleevent['composers'],
-            pieces = singleevent['pieces'],
-            link = singleevent['link'])
+        # Event.objects.create(
+        #     date = singleevent['datetime'], 
+        #     city = singleevent['city'], 
+        #     ensemble = singleevent['ensemble'], 
+        #     musicians = singleevent['musicians'], 
+        #     conductor = singleevent['conductor'],
+        #     composers = singleevent['composers'],
+        #     pieces = singleevent['pieces'],
+        #     link = singleevent['link'])
         
         print(concert_date)
+        concerts.append(singleevent)
+    return(concerts)
 
+    
 if __name__ == '__main__':
     main()

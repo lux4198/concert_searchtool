@@ -6,7 +6,7 @@ import pytz
 
 setlocale(LC_TIME, 'de_DE')
 
-from ..models import Event 
+# from ..models import Event 
 
 # goes to details page of given concert and returns composers : pieces as dict 
 def get_concert_details(details_link):
@@ -40,7 +40,7 @@ def date_march(concert_date):
 
 
 def main():
-
+    concerts = []
     month_list = ['2021-12', '2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-07']
     # month_list = ['2022-03']
 
@@ -49,8 +49,6 @@ def main():
 
         data = requests.get('https://www.berliner-philharmoniker.de/konzerte/kalender/von/' + month)
         soup = BeautifulSoup(data.text, 'html.parser')
-
-        concerts = []
 
         # find each concert in concert list 
         for element in soup.find_all('article', { 'class' : 'calendar-entry clickable-box orchestra'}):
@@ -69,7 +67,7 @@ def main():
             # convert Mär to Mrz so strptime can parse data for march
             concert_date = date_march(concert_date)
 
-            singleevent['date'] = concert_date
+            singleevent['datetime'] = concert_date
 
 
             # get musicians / orchester from musicians element 
@@ -108,22 +106,21 @@ def main():
             singleevent['ensemble'] = 'Berliner Philharmoniker'
 
             # create entries in database for scraped data 
-            Event.objects.create(
-                date = singleevent['date'], 
-                city = singleevent['city'], 
-                ensemble = singleevent['ensemble'], 
-                musicians = singleevent['musicians'], 
-                conductor = singleevent['conductor'],
-                composers = singleevent['composers'],
-                pieces = singleevent['pieces'],
-                link = singleevent['link'])
-
-            
+            # Event.objects.create(
+            #     date = singleevent['date'], 
+            #     city = singleevent['city'], 
+            #     ensemble = singleevent['ensemble'], 
+            #     musicians = singleevent['musicians'], 
+            #     conductor = singleevent['conductor'],
+            #     composers = singleevent['composers'],
+            #     pieces = singleevent['pieces'],
+            #     link = singleevent['link'])
 
             concerts.append(singleevent)
 
-        # for item in concerts:
-        #     print(item, '\n')
+    return(concerts)
+
+        
 
 
 if __name__ == '__main__':

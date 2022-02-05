@@ -1,9 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
-from ..models import Event
+# from ..models import Event
 
 
 def main():
+    concerts = []
     for i in range(100):
         if i == 0:
             data_general = requests.get('https://www.elbphilharmonie.de/de/programm/EPHH/OR/')
@@ -100,15 +101,17 @@ def main():
             # print(singleevent, '\n')
     
             # create entries in database for scraped data 
-            Event.objects.create(
-                date = singleevent['datetime'], 
-                city = singleevent['city'], 
-                ensemble = singleevent['ensemble'], 
-                musicians = singleevent['musicians'], 
-                conductor = singleevent['conductor'],
-                composers = singleevent['composers'],
-                pieces = singleevent['pieces'],
-                link = singleevent['link'])
+            # Event.objects.create(
+            #     date = singleevent['datetime'], 
+            #     city = singleevent['city'], 
+            #     ensemble = singleevent['ensemble'], 
+            #     musicians = singleevent['musicians'], 
+            #     conductor = singleevent['conductor'],
+            #     composers = singleevent['composers'],
+            #     pieces = singleevent['pieces'],
+            #     link = singleevent['link'])
+            concerts.append(singleevent)
+    return(concerts)
 
 if __name__ == '__main__':
     main()

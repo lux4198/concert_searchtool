@@ -1,7 +1,8 @@
+from numpy import single
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime 
-from ..models import Event
+# from ..models import Event
 import pytz
 from locale import setlocale, LC_TIME
 
@@ -9,6 +10,7 @@ setlocale(LC_TIME, 'de_DE')
 
 
 def main():
+    concerts = []
     # get main link for symphonic concerts 
     urls = ['https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/konzertreihen/hr-sinfoniekonzert-108.html',
             'https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/konzertreihen/auftakt-128.html']
@@ -71,15 +73,19 @@ def main():
 
             print(singleevent['datetime'])
             
-            Event.objects.create(
-                        date = singleevent['datetime'], 
-                        city = singleevent['city'], 
-                        ensemble = singleevent['ensemble'], 
-                        musicians = singleevent['musicians'], 
-                        conductor = singleevent['conductor'],
-                        composers = singleevent['composers'],
-                        pieces = singleevent['pieces'],
-                        link = singleevent['link'])
+            # Event.objects.create(
+            #             date = singleevent['datetime'], 
+            #             city = singleevent['city'], 
+            #             ensemble = singleevent['ensemble'], 
+            #             musicians = singleevent['musicians'], 
+            #             conductor = singleevent['conductor'],
+            #             composers = singleevent['composers'],
+            #             pieces = singleevent['pieces'],
+            #             link = singleevent['link'])
+
+            concerts.append(singleevent)
+    return(concerts)
+
 
 
 if __name__ == '__main__':
