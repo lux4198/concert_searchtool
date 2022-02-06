@@ -12,9 +12,9 @@ const styles = makeStyles({
     'width' : '95%', 
   },
   'card' : { 
-    'minHeight' : '20rem', 
-    'marginTop' : '5rem', 
-    'marginBottom' : '5rem',  
+    'minHeight' : '17rem', 
+    'marginTop' : '2rem', 
+    'marginBottom' : '2rem',  
     'display' : 'flex', 
     'flexDirection' : 'row', 
   },
@@ -36,7 +36,6 @@ const styles = makeStyles({
       'transform' : 'rotate(-180deg)',
       'textAlign' : 'center', 
       'fontWeight' : 'bold', 
-      'fontSize' : '1.3rem'
     }, 
     'leftsidePictureWrap' : {
       'display' : 'flex', 
@@ -75,7 +74,7 @@ function ConcertItem(props){
 
           <div className = {classes.leftsideTextWrap}>
 
-            <Typography  className = {classes.leftsideText}>
+            <Typography  className = {classes.leftsideText} variant = 'h6'>
               {concert.city}
             </Typography>
 
@@ -95,7 +94,7 @@ function ConcertItem(props){
             <div id = {'title'} style = {{'display' : 'flex', 'justifyContent' : 'space-between', 'flexDirection' : 'column',}}>
               <div style = {{'display' : 'flex', 'justifyContent' : 'space-between', 'paddingTop' : '3%'}}>
                 <Typography id = {'ensemble'} style = {{'marginBottom' : '1%'}} variant = {'h5'}>{concert.ensemble}</Typography>
-                <Button variant="contained" href = {concert.link}>
+                <Button variant="contained" target="_blank" href = {concert.link}>
                   Details
                 </Button>
               </div>
@@ -114,22 +113,28 @@ function ConcertItem(props){
                   )}
             </div>
             
-            <div style = {{'borderTop' : 'solid', 'paddingTop' : '2%', 'paddingBottom' : '2%'}}>
-              {composers.map(
-              (composer, index) =>
-              
-              <div style = {{'display' : 'flex', 'paddingTop' : '1%'}}>
-                <Typography style = {{'width' : '20%', 'fontWeight' : 'bold', 'marginRight' : '2%'}}> 
-                  {composer}
-                </Typography>
-                <div style = {{'width' : '70%'}}>
-                  {concert.pieces[index].map(
-                    (piece) => <Typography key = {piece} style = {{'fontStyle' : 'italic'}}>{piece}</Typography>
-                  )}
-                </div>
-              </div>
-              )
-              }
+            <div id = 'composersTable' style = {{'borderTop' : 'solid', 'paddingTop' : '2%', 'paddingBottom' : '2%'}}>
+              <table>
+                {composers.map(
+                  (composer, index) =>
+                  concert.pieces[index].map(
+                    (piece, pieceIndex) =>
+                    <tr>
+                      <td style = {{'whiteSpace' : 'nowrap', 'paddingRight' : '15px', 
+                                    'paddingBottom' : '3px', 'verticalAlign' : 'top'}}>
+                        <Typography style = {{'fontWeight' : 'bold'}}>
+                          {pieceIndex > 0 ? '' : composer}
+                        </Typography>
+                      </td>
+                      <td>
+                        <Typography style = {{'fontStyle' : 'italic'}}>
+                          {piece}
+                        </Typography>
+                      </td>
+                    </tr>
+                  )
+                )}
+              </table>
             </div>
 
             {
@@ -144,70 +149,4 @@ function ConcertItem(props){
   )
 }
 
-
-
 export default ConcertItem;
-
-
-
-{/* <div style = {{display : 'flex', justifyContent : 'center', }}>
-      <Card style = {{width : '60%', marginTop : '1rem', marginBottom : '1rem', paddingTop : '1rem', paddingBottom : '1rem'}}>
-          <div>
-            {concert.city}
-          </div>
-          <Accordion> 
-            <AccordionSummary
-            expandIcon={<ExpandMore/>}
-            aria-controls="panel1a-content"
-            id= {concert.id}
-            >
-              <Typography style = {{width : '25%'}}>{formattedDate}</Typography>
-              <Typography style = {{ color: '#526268' }}>{props.subheader}</Typography>
-            </AccordionSummary>
-            <AccordionDetails style = {{display : 'flex', flexDirection : 'column',  }}></AccordionDetails>
-            <table style = {{width : '100%'}}>
-                    <tbody style = {{textAlign : 'left', }}>
-                      <tr>
-                          <th>Date</th>
-                          <td>{formattedDateTime}</td>
-                      </tr>
-                      <tr>
-                          <th>Ensemble</th>
-                          <td>{concert.ensemble}</td>
-                      </tr>
-                      <tr>
-                          <th>Conductor</th>
-                          <td>{concert.conductor} </td>
-                      </tr>
-                      <tr>
-                          <th>Artists</th>
-                          <td>{Object.keys(concert.musicians).map(
-                            (musician) => <p key = {musician}>{musician + ' - ' + concert.musicians[musician]}</p>
-                          )}</td>
-                      </tr>
-                      <tr>
-                          <th>Pieces</th>
-                              {
-                                composers.map(
-                              (composer, index) => <td key = {composer + index}> <b>{composer} </b> <br></br> 
-
-                              {concert.pieces[index].map(
-                                (piece) => <p key = {piece}>{piece}</p>
-                              )} 
-                              </td>)
-                              }
-                              {
-                                concert.composers.length === 0 && 
-                                  <td> {concert.pieces} </td>
-                              }
-                      </tr>
-                      <tr>
-                        <th>
-                          <a href= {concert.link}> Details</a>
-                        </th>
-                      </tr>
-                    </tbody>
-            </table>
-          </Accordion>
-      </Card>
-    </div> */}
