@@ -5,6 +5,8 @@ import IMG_0136 from './images/IMG_0136.jpg'
 import {ExpandMore} from '@mui/icons-material'
 
 import moment from 'moment'
+import 'moment/locale/de'
+moment.locale('de')
 
 
 const styles = makeStyles({
@@ -20,35 +22,17 @@ const styles = makeStyles({
   },
     'leftside' : {
       'display' : 'flex', 
-      'flexDirection' : 'row',
-      'width' : '20%'
-    }, 
-    'leftsideTextWrap' : {
-      'display' : 'flex', 
-      'justifyContent' : 'flex-start', 
-      'alignItems' : 'center', 
-      'width' : '15%', 
-      'marginRight' : '2%', 
-      'marginLeft' : '2%'
+      'flexDirection' : 'column',
+      'paddingRight' : '1%',
+      'paddingLeft' : '1%', 
+      'alignItems' : 'center',
+      'paddingBottom' : '2%',
     }, 
     'leftsideText' : {
       'writingMode' : 'vertical-lr',
       'transform' : 'rotate(-180deg)',
-      'textAlign' : 'center', 
-      'fontWeight' : 'bold', 
+      'textAlign' : 'right', 
     }, 
-    'leftsidePictureWrap' : {
-      'display' : 'flex', 
-      'alignItems' : 'center',
-      'justifyContent' : 'space-evenly', 
-      'flexDirection' : 'column'
-    }, 
-    'leftsidePictureDate' : {
-      'textAlign' : 'center', 
-      'fontWeight' : 'bold', 
-      'fontSize' : '1rem'
-    }, 
-
     'rightside' : {
       'width' : '80%', 
       'marginRight' : '2%',
@@ -64,28 +48,33 @@ function ConcertItem(props){
   const composers = concert.composers
 
   let formattedDate = moment(concert.date).format('DD. MMM YYYY')
-  let formattedDateTime = moment(concert.date).format('DD. MMM YYYY - HH:mm')
+  let formattedWeekday = moment(concert.date).format('dddd')
+  let formattedTime = moment(concert.date).format('HH:mm')
 
   return(
     <div className= {classes.wrapper}>
       <Card className = {classes.card}>
 
         <div className = {classes.leftside}>
+            <div style = {{'display' : 'flex', 'flexDirection' : 'column', 'paddingTop' : '14%', 'paddingLeft' : '20%', 
+                            'paddingBottom' : '10%', }}>
+              <Typography variant = 'h6' style = {{'fontWeight' : 'bold'}}>
+                {formattedWeekday}
+              </Typography>
+              <Typography variant = 'h6' style = {{'fontWeight' : 'bold'}}>
+                 {formattedDate}
+              </Typography>
+              <Typography variant = 'h6' style = {{}}>
+                {formattedTime + ' Uhr'}
+              </Typography>
+            </div>
 
-          <div className = {classes.leftsideTextWrap}>
-
-            <Typography  className = {classes.leftsideText} variant = 'h6'>
-              {concert.city}
-            </Typography>
-
-          </div>
-          <div className = {classes.leftsidePictureWrap}>
-            <Typography className = {classes.leftsidePictureDate}>
-               {formattedDateTime} 
-            </Typography>
-            <img src = {IMG_0136} alt = '' style = {{'width' : '100%'}}/>
-          </div>
-
+            <div style = {{'display' : 'flex', 'justifyContent' : 'space-evenly'}}>
+              <Typography  className = {classes.leftsideText} variant = 'h5'>
+                {concert.city}
+              </Typography>
+              <img src = {IMG_0136} alt = '' />
+            </div>
         </div>
 
         <div className = {classes.rightside}>
@@ -113,7 +102,7 @@ function ConcertItem(props){
                   )}
             </div>
             
-            <div id = 'composersTable' style = {{'borderTop' : 'solid', 'paddingTop' : '2%', 'paddingBottom' : '2%'}}>
+            <div id = 'composerWrap' style = {{'borderTop' : 'solid', 'paddingTop' : '2%', 'paddingBottom' : '2%'}}>
               <table>
                 {composers.map(
                   (composer, index) =>
@@ -134,14 +123,12 @@ function ConcertItem(props){
                     </tr>
                   )
                 )}
+                {
+                  concert.composers.length === 0 && 
+                    <td> {concert.pieces} </td>
+                }
               </table>
             </div>
-
-            {
-              concert.composers.length === 0 && 
-                <td> {concert.pieces} </td>
-            }
-            {/* <div id = {'composersPieces'}>{concert.composers + ' - ' + concert.pieces}</div> */}
           </div>
         </div>
       </Card>
