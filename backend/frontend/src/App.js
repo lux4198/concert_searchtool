@@ -114,7 +114,7 @@ class App extends Component {
             <div style = {{'display' : 'flex', 'flexDirection' : 'row',}}>
               <Datepicker value = {this.state.date} onChange = {(newDate) => {this.setState({date : newDate}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText)})}}/>
               <CurrentFilters date = {this.state.date} city = {this.state.city} onClick = {() => {
-                  this.setState({city : 'city=', date : new Date, reset : true}, () => {this.getAllConcerts(this.state.inputText)})}}/>
+                  this.setState({city : 'city=', date : new Date, reset : true}, () => {this.getAllConcerts(this.state.inputText + '&' + this.state.pieceInputText)})}}/>
             </div>
 
           {/* render concert items from state (only 10 at a time) */}
