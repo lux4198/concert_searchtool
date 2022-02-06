@@ -81,7 +81,10 @@ function Searchbar(props) {
     artists = [].concat.apply([], artists)
     artists = [...new Set(artists)]
 
-    var search_suggestion = composers.concat(conductors, artists)
+    var ensembles = concerts.map((concert) => concert.ensemble)
+    ensembles = [...new Set(ensembles)]
+
+    var search_suggestion = composers.concat(conductors, artists, ensembles)
     search_suggestion = [...new Set(search_suggestion)]
 
     if (props.piece){

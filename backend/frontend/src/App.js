@@ -11,9 +11,11 @@ import { Button } from '@material-ui/core';
 
 function RenderConcerts(props){
  return( props.concerts.length > 0 ? 
-      props.concerts.slice(0, props.index).map((concert) => 
-      <ConcertItem key = {concert.id} header = {concert.date} subheader = {concert.ensemble + '  -  ' + concert.conductor}
-      concert = {concert} />) 
+
+      <div style = {{'display' : 'flex', 'flexDirection' : 'column', 'alignItems' : 'center'}}>
+        {props.concerts.slice(0, props.index).map((concert) =>
+        <ConcertItem key = {concert.id} concert = {concert} />)}
+      </div>
       :
       <div>
         Search for conductor, composer, piece or musician.
@@ -87,7 +89,6 @@ class App extends Component {
       {
         this.setState({displayIndex : 10, inputText : 'q=' + text}, () => {
           this.getAllConcerts(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText);
-          console.log(this.state.city + '&' + this.state.inputText + '&' + this.state.pieceInputText)
         })
       }
 
@@ -102,7 +103,7 @@ class App extends Component {
       return(
         <div>
             {/* render searchbar for composers etc. and pieces  */}
-            <Searchbar concerts = {(this.state.inputText === '' || 'q=')? this.state.allQueryConcerts : this.state.allQueryConcerts} onSubmit = {this.searchSubmit} label = {'Search for Composer, Conductor, Artists'} piece = {false}/>
+            <Searchbar concerts = {(this.state.inputText === '' || 'q=')? this.state.allQueryConcerts : this.state.allQueryConcerts} onSubmit = {this.searchSubmit} label = {'Search for Composer, Conductor, Artists or Ensemble'} piece = {false}/>
             <Searchbar concerts = {this.state.allQueryConcerts} onSubmit = {this.searchPiece} label = {'Search for piece'} piece = {true} inputText = {this.state.inputText}/>
 
             {/* searchspecification renders checkboxes for each city to narrow down the query for one or more cities */}

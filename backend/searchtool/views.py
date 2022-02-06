@@ -49,6 +49,8 @@ class EventView(generics.ListCreateAPIView):
                     queryset = queryset.filter(musicians__icontains=item)
                 elif queryset.filter(conductor__icontains=item):
                     queryset = queryset.filter(conductor__icontains=item)
+                elif queryset.filter(ensemble__icontains=item):
+                    queryset = queryset.filter(ensemble__icontains=item)
                 else:
                     queryset = Event.objects.none()
         if piece_query:
