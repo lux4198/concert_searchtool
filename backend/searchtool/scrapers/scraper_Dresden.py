@@ -76,13 +76,15 @@ def main():
             for musician in musicians:
                 player = musician.contents[0].get_text(strip = True)
                 role = musician.contents[1].get_text(strip = True)
+
+                # add conductor to singleevent
+                if role in ['Dirigent', 'Dirigentin']:
+                    singleevent['conductor'] = player 
+                    continue
+        
                 # add musician and role to musicians dict
                 singleevent['musicians'][player] = role
 
-                # add conductor to singleevent
-                if role == 'Dirigent' or role == 'Dirigentin':
-                    singleevent['conductor'] = player 
-        
         # extract composers and pieces from div 'Werke'
         singleevent['composers'] = ''
         singleevent['pieces'] = ''

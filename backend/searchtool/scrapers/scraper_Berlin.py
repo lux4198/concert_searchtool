@@ -1,3 +1,4 @@
+from numpy import single
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -77,14 +78,17 @@ def main():
                 role = div.find('span', {'class' : 'role'})
 
                 if not role:
-                    singleevent['musicians'][musician] = musician
+                    if musician == 'Berliner Philharmoniker':
+                        continue
+                    singleevent['musicians'][musician] = ''
                 else:
                     if not role.contents:
-                        singleevent['musicians'][musician] = musician
+                        singleevent['musicians'][musician] = ''
                         continue
-                    singleevent['musicians'][musician] = role.contents[0]
                     if role.contents[0] == ' Dirigent':
                         singleevent['conductor'] = musician
+                        continue
+                    singleevent['musicians'][musician] = role.contents[0]
 
 
             # create link that leads to specific concert 
@@ -117,7 +121,6 @@ def main():
             #     link = singleevent['link'])
 
             concerts.append(singleevent)
-
     return(concerts)
 
         

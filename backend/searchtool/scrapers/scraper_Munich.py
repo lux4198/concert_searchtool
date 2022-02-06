@@ -49,19 +49,19 @@ def main():
 
         # get information about musicians and conductor 
         singleevent['musicians'] = {}
+        singleevent['conductor'] = ''
         musicians = item.find('dl', {'class' : 'concert__persons'}).find_all('dt')
         musicians = [musician.get_text(strip=True) for musician in musicians]
         roles = item.find('dl', {'class' : 'concert__persons'}).find_all('dd')
         roles = [role.get_text(strip = True) for role in roles]
 
         for musician, role in zip(musicians, roles):
+            # add conductor as a special key to dictionary
+            if role in ['Dirigent', 'Dirigentin']:
+                singleevent['conductor'] = musician
+                continue
             singleevent['musicians'][musician] = role 
 
-        # add conductor as a special key to dictionary
-        for role in roles:
-            if 'Dirigent' in role:
-                index = roles.index(role)
-                singleevent['conductor'] = musicians[index]
         
         # add composers and pieces to singleevent 
         composers_pieces = item.find('div', {'class' : 'mp_popbesetzung'}).contents

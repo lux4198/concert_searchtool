@@ -42,24 +42,28 @@ def main():
 
             # get musicians and roles 
             singleevent['musicians'] = {}
-            musicians = soup_detail.find_all('p', {'class' : 'artists without-space'})
+            singleevent['conductor'] = ''
 
+            musicians = soup_detail.find_all('p', {'class' : 'artists without-space'})
+            
             if musicians:
+                singleevent['ensemble'] = [musician.find('b').text for musician in musicians][0]
                 for musician in musicians:
                     # musician / conductor always highlighted in bold text
                     Musician = musician.find('b').text
+                    if Musician == singleevent['ensemble']:
+                        continue
 
                     # other text in div is musicians role 
                     for role in musician.contents:
                         if role.text != Musician: 
                             Role = role.get_text(strip = True)
                     # add musicians + role to each event + add conductor as special key 
-                    if Role == 'Dirigent' or 'Dirigentin':
+                    if Role in ['Dirigent', 'Dirigentin']:
                         singleevent['conductor'] = Musician
-                    else:
-                        singleevent['conductor'] = ''
+                        continue
+
                     singleevent['musicians'][Musician] = Role
-                singleevent['ensemble'] = [musician.find('b').text for musician in musicians][0]        
 
             # get Pieces and Composers 
             # finds the div that contains this concerts program 
