@@ -1,11 +1,38 @@
-import React, { useState } from 'react'
-import { TextField, Autocomplete, ListItem, ListItemText, ListItemSecondaryAction, ListItemIcon } from '@mui/material'
-import { Delete } from '@mui/icons-material';
+import React from 'react'
+import { TextField, Autocomplete } from '@mui/material'
 
 import { createFilterOptions } from '@mui/material/Autocomplete';
 
-import parse from 'autosuggest-highlight/parse';
-import match from 'autosuggest-highlight/match';
+import { styled } from "@mui/material/styles";
+
+const StyledAutocomplete = styled(Autocomplete)({
+  "& .MuiInputLabel-outlined:not(.MuiInputLabel-shrink)": {
+    // Default transform is "translate(14px, 20px) scale(1)""
+    // This lines up the label with the initial cursor position in the input
+    // after changing its padding-left.
+    color : 'white'
+  },
+  "& .MuiInputLabel-root.Mui-focused" : {
+      color : 'white', 
+  },
+  "& .MuiAutocomplete-inputRoot": {
+    color: "white",
+    // This matches the specificity of the default styles at https://github.com/mui-org/material-ui/blob/v4.11.3/packages/material-ui-lab/src/Autocomplete/Autocomplete.js#L90
+    '&[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-child': {
+      color : 'white', 
+    },
+    "& .MuiOutlinedInput-notchedOutline": {
+      borderColor: "white"
+    },
+    "&:hover .MuiOutlinedInput-notchedOutline": {
+      borderColor: "white"
+    },
+    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+      borderColor: "white"
+    }
+  }
+});
+
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -18,10 +45,10 @@ function getplaceholder(pieces, search_suggestion, label, concerts, inputText, c
         return(getPiecesbyComposer(concerts, inputText)[getRandomInt(composer_pieces.length)])
     }
     else if (pieces && search_suggestion){
-        return('e.g. ' + pieces[getRandomInt(pieces.length)])
+        return('z.B. ' + pieces[getRandomInt(pieces.length)])
     }
     else if (search_suggestion){
-        return('e.g. ' + search_suggestion[getRandomInt(search_suggestion.length)])
+        return('z.B. ' + search_suggestion[getRandomInt(search_suggestion.length)])
     }
     else{
         return(label)
@@ -59,11 +86,13 @@ function getPiecesbyComposer(concerts, composer){
 }
 
 const filterOptions = createFilterOptions({
-    limit : 10, 
+    limit : 5, 
 })
 
 
+
 function Searchbar(props) {
+    const classes = props.classes
 
     if (props.concerts){
     const concerts = props.concerts
@@ -98,11 +127,34 @@ function Searchbar(props) {
     }
     else{
         var inputText = false 
+        
     }
 }
 
+    const [inputValue, setInputValue] = React.useState("");
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => {
+        if (inputValue.length > 0) {
+        setOpen(true);
+        }
+    };
+    const handleInputChange = (event, newInputValue) => {
+        setInputValue(newInputValue);
+        if (newInputValue.length > 0) {
+        setOpen(true);
+        } else {
+        setOpen(false);
+        }
+    };
+
     return (
-            <Autocomplete
+            <StyledAutocomplete
+                open={open}
+                onOpen={handleOpen}
+                onClose={() => setOpen(false)}
+                inputValue={inputValue}
+                onInputChange={handleInputChange}
+
                 multiple
                 freeSolo
                 disableClearable
@@ -123,6 +175,7 @@ function Searchbar(props) {
                 <TextField
                     {...params}
                     label= {props.label}
+                    // variant = 'filled'
                     placeholder= {getplaceholder(pieces, search_suggestion, props.label, props.concerts, inputText, composers) }
                     InputProps={{
                     ...params.InputProps,
