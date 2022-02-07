@@ -37,8 +37,15 @@ const styles = makeStyles({
       'width' : '80%', 
       'marginRight' : '2%',
       'marginLeft' : '2%',  
+    },
+    'highlighted' : {
+      'backgroundColor' : '#FFFF00'
     }
 })
+
+// function CheckHighlight(text, query){
+//   return(text.includes(query)? classes.highlighted : '')
+// }
 
 
 function ConcertItem(props){
@@ -46,6 +53,19 @@ function ConcertItem(props){
 
   const concert = props.concert
   const composers = concert.composers
+
+  var query = props.query.replace('q=', '') + ',' + props.pieceQuery.replace('p=', '')
+
+  query = query.split(',')
+
+  const checkHighlight = (text) => {
+    if(text&&query){
+    return(query.includes(text)? classes.highlighted : '')
+    }
+    else{
+      return('')
+    }
+  }
 
   let formattedDate = moment(concert.date).format('DD. MMM YYYY')
   let formattedWeekday = moment(concert.date).format('dddd')
@@ -69,8 +89,8 @@ function ConcertItem(props){
               </Typography>
             </div>
 
-            <div style = {{'display' : 'flex', 'justifyContent' : 'space-evenly'}}>
-              <Typography  className = {classes.leftsideText} variant = 'h5'>
+            <div style = {{'display' : 'flex', 'justifyContent' : 'space-between'}}>
+              <Typography  className = {classes.leftsideText} style = {{'paddingLeft' : '3%'}}variant = 'h5'>
                 {concert.city}
               </Typography>
               <img src = {IMG_0136} alt = '' />
@@ -82,21 +102,21 @@ function ConcertItem(props){
             
             <div id = {'title'} style = {{'display' : 'flex', 'justifyContent' : 'space-between', 'flexDirection' : 'column',}}>
               <div style = {{'display' : 'flex', 'justifyContent' : 'space-between', 'paddingTop' : '3%'}}>
-                <Typography id = {'ensemble'} style = {{'marginBottom' : '1%'}} variant = {'h5'}>{concert.ensemble}</Typography>
+                <Typography id = {'ensemble'} className = {checkHighlight(concert.ensemble)} style = {{'marginBottom' : '1%',}} variant = {'h5'}>{concert.ensemble}</Typography>
                 <Button variant="contained" target="_blank" href = {concert.link}>
                   Details
                 </Button>
               </div>
 
                 <div id = 'conductor' style = {{'display' : 'flex', 'flexDirection' : 'row'}}>
-                  <Typography style = {{'fontWeight' : 'bold', 'marginRight' : '2%'}}> {concert.conductor} </Typography>
+                  <Typography className = {checkHighlight(concert.conductor)} style = {{'fontWeight' : 'bold', 'marginRight' : '2%'}}> {concert.conductor} </Typography>
                   <Typography > {concert.conductor === '' ? '':'Dirigent'}</Typography>
                 </div>
             </div>
             <div id = 'musicians' style = {{'display' : 'flex', 'flexDirection' : 'column', 'paddingBottom' : '2%'}}>
               {Object.keys(concert.musicians).map((musician) => 
                   <div style = {{'display' : 'flex'}}>
-                    <Typography style = {{'fontWeight' : 'bold', 'marginRight' : '2%'}}> {musician} </Typography>
+                    <Typography className = {checkHighlight(musician)} style = {{'fontWeight' : 'bold', 'marginRight' : '2%'}}> {musician} </Typography>
                     <Typography > {concert.musicians[musician]}</Typography>
                   </div>
                   )}
@@ -111,12 +131,12 @@ function ConcertItem(props){
                     <tr>
                       <td style = {{'whiteSpace' : 'nowrap', 'paddingRight' : '15px', 
                                     'paddingBottom' : '3px', 'verticalAlign' : 'top'}}>
-                        <Typography style = {{'fontWeight' : 'bold'}}>
+                        <Typography className = {checkHighlight(composer)} style = {{'fontWeight' : 'bold'}}>
                           {pieceIndex > 0 ? '' : composer}
                         </Typography>
                       </td>
                       <td>
-                        <Typography style = {{'fontStyle' : 'italic'}}>
+                        <Typography className = {checkHighlight(piece)} style = {{'fontStyle' : 'italic'}}>
                           {piece}
                         </Typography>
                       </td>

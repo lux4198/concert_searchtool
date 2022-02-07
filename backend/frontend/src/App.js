@@ -14,7 +14,7 @@ function RenderConcerts(props){
 
       <div style = {{'display' : 'flex', 'flexDirection' : 'column', 'alignItems' : 'center'}}>
         {props.concerts.slice(0, props.index).map((concert) =>
-        <ConcertItem key = {concert.id} concert = {concert} />)}
+        <ConcertItem key = {concert.id} concert = {concert} query = {props.query} pieceQuery = {props.pieceQuery}/>)}
       </div>
       :
       <div>
@@ -103,7 +103,7 @@ class App extends Component {
       return(
         <div>
             {/* render searchbar for composers etc. and pieces  */}
-            <Searchbar concerts = {(this.state.inputText === '' || 'q=')? this.state.allQueryConcerts : this.state.allQueryConcerts} onSubmit = {this.searchSubmit} label = {'Search for Composer, Conductor, Artists or Ensemble'} piece = {false}/>
+            <Searchbar concerts = {this.state.allQueryConcerts} onSubmit = {this.searchSubmit} label = {'Search for Composer, Conductor, Artists or Ensemble'} piece = {false}/>
             <Searchbar concerts = {this.state.allQueryConcerts} onSubmit = {this.searchPiece} label = {'Search for piece'} piece = {true} inputText = {this.state.inputText}/>
 
             {/* searchspecification renders checkboxes for each city to narrow down the query for one or more cities */}
@@ -119,7 +119,8 @@ class App extends Component {
 
           {/* render concert items from state (only 10 at a time) */}
 
-            <RenderConcerts concerts = {this.state.allQueryConcerts} index = {this.state.displayIndex}/>
+            <RenderConcerts concerts = {this.state.allQueryConcerts} index = {this.state.displayIndex} query = {this.state.inputText}
+            pieceQuery = {this.state.pieceInputText} />
           
         </div>
       )}
