@@ -1,0 +1,45 @@
+.rw-wrapper{
+	width: 80%;
+	position: relative;
+	margin: 110px auto 0 auto;
+	font-family: 'Roboto';
+	padding: 10px;
+    margin-bottom: 200px ;
+}
+
+.rw-sentence{
+	margin: 0;
+	text-align: left;
+}
+
+.rw-sentence span{
+	color: #fff;
+	white-space: nowrap;
+	font-size: 200%;
+	font-weight: normal;
+    display: inline;
+}
+
+.rw-words{
+	display: inline;
+	text-indent: 20px;
+}
+
+.rw-words h2{
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+}
+
+.rw-words-1 h2{
+	animation: rotateWordsFirst 180s linear infinite 0s;
+}
+
+@keyframes rotateWordsFirst {
+    0% { opacity: 0; animation-timing-function:ease-in; transform: translateY(-40px)}
+    0.4% { opacity: 0.5; transform: translateY(-20px);}
+    0.7% { opacity: 1; transform: translateY(0px)}
+    1.7% {opacity: 1;transform: translateY(0px)}
+    2.22% { opacity: 0; transform: translateY(20px)}
+    100% { opacity: 0; }
+}
