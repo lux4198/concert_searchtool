@@ -1,0 +1,5705 @@
+[
+    {
+        "id": 1543,
+        "date": "2022-02-09T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/zurcher-kammerorchester-daniel-hope/16238",
+        "musicians": {
+            "Daniel Hope": "Violine"
+        },
+        "composers": [
+            "Aaron Copland",
+            "Florence B. Price",
+            "Duke Ellington",
+            "Leonard Bernstein",
+            "Kurt Weill",
+            "Aaron Copland",
+            "George Gershwin"
+        ],
+        "pieces": [
+            [
+                "Hoe-Down / aus dem Ballett »Rodeo«"
+            ],
+            [
+                "Adoration"
+            ],
+            [
+                "Come Sunday"
+            ],
+            [
+                "Suite aus »West Side Story« / Bearbeitung für Violine und Streichorchester von Paul Bateman"
+            ],
+            [
+                "Song-Suite"
+            ],
+            [
+                "Old American Songs (Auswahl) / Bearbeitung für Violine und Streichorchester von Paul Bateman"
+            ],
+            [
+                "Songs (Auswahl) / Bearbeitung für Violine und Streichorchester von Paul Bateman"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Zürcher Kammerorchester"
+    },
+    {
+        "id": 1544,
+        "date": "2022-02-10T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/london-symphony-orchestra-rana-noseda/16274",
+        "musicians": {
+            "Beatrice Rana": "Klavier"
+        },
+        "composers": [
+            "Ludwig van Beethoven",
+            "Dmitri Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester Nr. 5 Es-Dur op. 73"
+            ],
+            [
+                "Sinfonie Nr. 15 A-Dur op. 141"
+            ]
+        ],
+        "conductor": "Gianandrea Noseda",
+        "ensemble": "London Symphony Orchestra"
+    },
+    {
+        "id": 1502,
+        "date": "2022-02-10T19:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53791/",
+        "musicians": {
+            "Sir András Schiff": " Klavier",
+            "Damen des Rundfunkchors Berlin": ""
+        },
+        "composers": [
+            "Johannes Brahms",
+            "Josef Suk"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester Nr. 2 B-Dur op. 83"
+            ],
+            [
+                "Lebensreife, Symphonische Dichtung für großes Orchester und Frauenchor op. 34"
+            ]
+        ],
+        "conductor": "Kirill Petrenko",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1545,
+        "date": "2022-02-11T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-leonidas-kavakos-alan-gilbert/16178",
+        "musicians": {
+            "Morris Robinson": "Sprecher",
+            "Leonidas Kavakos": "Violine"
+        },
+        "composers": [
+            "Aaron Copland",
+            "Samuel Barber",
+            "Erich Wolfgang Korngold",
+            "Aaron Copland"
+        ],
+        "pieces": [
+            [
+                "Lincoln Portrait für Sprechstimme und Orchester"
+            ],
+            [
+                "Essay for Orchestra op. 12"
+            ],
+            [
+                "Konzert für Violine und Orchester D-Dur op. 35"
+            ],
+            [
+                "Sinfonie Nr. 3"
+            ]
+        ],
+        "conductor": "Alan Gilbert",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1503,
+        "date": "2022-02-11T19:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53791/",
+        "musicians": {
+            "Sir András Schiff": " Klavier",
+            "Damen des Rundfunkchors Berlin": ""
+        },
+        "composers": [
+            "Johannes Brahms",
+            "Josef Suk"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester Nr. 2 B-Dur op. 83"
+            ],
+            [
+                "Lebensreife, Symphonische Dichtung für großes Orchester und Frauenchor op. 34"
+            ]
+        ],
+        "conductor": "Kirill Petrenko",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1694,
+        "date": "2022-02-11T19:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/peer-gynt,hr-sinfoniekonzert-peer-gynt-100.html",
+        "musicians": {
+            "Ida Falk Winland": "Solveig",
+            "Víkingur Ólafsson": "Klavier"
+        },
+        "composers": [
+            "Anna Þorvaldsdóttir",
+            "Daníel Bjarnason",
+            "Edvard Grieg"
+        ],
+        "pieces": [
+            [
+                "Dreaming"
+            ],
+            [
+                "Neues Werk (Auftragswerk des hr, Los Angeles Philharmonic und Iceland Symphony Orchestra – Uraufführung)"
+            ],
+            [
+                "Peer Gynt – Schauspielmusik (Auszüge)"
+            ]
+        ],
+        "conductor": "Alain Altinoglu",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1504,
+        "date": "2022-02-12T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53791/",
+        "musicians": {
+            "Sir András Schiff": " Klavier",
+            "Damen des Rundfunkchors Berlin": ""
+        },
+        "composers": [
+            "Johannes Brahms",
+            "Josef Suk"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester Nr. 2 B-Dur op. 83"
+            ],
+            [
+                "Lebensreife, Symphonische Dichtung für großes Orchester und Frauenchor op. 34"
+            ]
+        ],
+        "conductor": "Kirill Petrenko",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1648,
+        "date": "2022-02-12T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/mozart-2022-02-12-1707",
+        "musicians": {
+            "Eva Zaïcik": "Mezzosopran",
+            "Mauro Peter": "Tenor",
+            "Tareq Nazmi": "Bass",
+            "Hanna-Elisabeth Müller": "Sopran",
+            "Philharmonischer Chor München": "Einstudierung: Andreas Herrmann"
+        },
+        "composers": [
+            "Wolfgang Amadeus Mozart",
+            "Wolfgang Amadeus Mozart"
+        ],
+        "pieces": [
+            [
+                " Symphonie Nr. 38 D-Dur KV 504 \"Prager Symphonie\""
+            ],
+            [
+                " Requiem d-Moll KV 626"
+            ]
+        ],
+        "conductor": "Philippe Herreweghe",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1546,
+        "date": "2022-02-12T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-leonidas-kavakos-alan-gilbert/16195",
+        "musicians": {
+            "Morris Robinson": "Sprecher",
+            "Leonidas Kavakos": "Violine"
+        },
+        "composers": [
+            "Aaron Copland",
+            "Samuel Barber",
+            "Erich Wolfgang Korngold",
+            "Aaron Copland"
+        ],
+        "pieces": [
+            [
+                "Lincoln Portrait für Sprechstimme und Orchester"
+            ],
+            [
+                "Essay for Orchestra op. 12"
+            ],
+            [
+                "Konzert für Violine und Orchester D-Dur op. 35"
+            ],
+            [
+                "Sinfonie Nr. 3"
+            ]
+        ],
+        "conductor": "Alan Gilbert",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1716,
+        "date": "2022-02-13T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/6-symphoniekonzert/",
+        "musicians": {
+            "Saimir Pirgu": "Tenor",
+            "Camilla Nylund": "Sopran",
+            "Elena Zhidkova": "Alt",
+            "Franz-Josef Selig": "Bass",
+            "Sächsischer Staatsopernchor Dresden": ""
+        },
+        "composers": [
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 9 d-Moll",
+                "Te Deum C-Dur WAB 45 für Soli, Chor, Orchester und Orgel"
+            ]
+        ],
+        "conductor": "Christian Thielemann",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1649,
+        "date": "2022-02-14T19:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/mozart-2022-02-14-1709",
+        "musicians": {
+            "Eva Zaïcik": "Mezzosopran",
+            "Mauro Peter": "Tenor",
+            "Tareq Nazmi": "Bass",
+            "Hanna-Elisabeth Müller": "Sopran",
+            "Philharmonischer Chor München": "Einstudierung: Andreas Herrmann"
+        },
+        "composers": [
+            "Wolfgang Amadeus Mozart",
+            "Wolfgang Amadeus Mozart"
+        ],
+        "pieces": [
+            [
+                " Symphonie Nr. 38 D-Dur KV 504 \"Prager Symphonie\""
+            ],
+            [
+                " Requiem d-Moll KV 626"
+            ]
+        ],
+        "conductor": "Philippe Herreweghe",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1717,
+        "date": "2022-02-14T19:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/6-symphoniekonzert/",
+        "musicians": {
+            "Saimir Pirgu": "Tenor",
+            "Camilla Nylund": "Sopran",
+            "Elena Zhidkova": "Alt",
+            "Franz-Josef Selig": "Bass",
+            "Sächsischer Staatsopernchor Dresden": ""
+        },
+        "composers": [
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 9 d-Moll",
+                "Te Deum C-Dur WAB 45 für Soli, Chor, Orchester und Orgel"
+            ]
+        ],
+        "conductor": "Christian Thielemann",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1547,
+        "date": "2022-02-18T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-jean-yves-thibaudet-marin-alsop/16197",
+        "musicians": {
+            "Jean-Yves Thibaudet": "Klavier"
+        },
+        "composers": [
+            "Samuel Barber",
+            "John Adams",
+            "Leonard Bernstein"
+        ],
+        "pieces": [
+            [
+                "Second Essay for Orchestra op. 17"
+            ],
+            [
+                "Fearful Symmetries für Orchester oder Kammerorchester"
+            ],
+            [
+                "Sinfonie Nr. 2 für Klavier und Orchester »The Age of Anxiety«"
+            ]
+        ],
+        "conductor": "Marin Alsop",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1548,
+        "date": "2022-02-19T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-jean-yves-thibaudet-marin-alsop/16198",
+        "musicians": {
+            "Jean-Yves Thibaudet": "Klavier"
+        },
+        "composers": [
+            "Samuel Barber",
+            "John Adams",
+            "Leonard Bernstein"
+        ],
+        "pieces": [
+            [
+                "Second Essay for Orchestra op. 17"
+            ],
+            [
+                "Fearful Symmetries für Orchester oder Kammerorchester"
+            ],
+            [
+                "Sinfonie Nr. 2 für Klavier und Orchester »The Age of Anxiety«"
+            ]
+        ],
+        "conductor": "Marin Alsop",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1650,
+        "date": "2022-02-20T10:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/strauss-korngold-hillborg-2022-02-20-1711",
+        "musicians": {
+            "Nicolas Altstaedt": "Violoncello"
+        },
+        "composers": [
+            "Richard Strauss",
+            "Erich Wolfgang Korngold",
+            "Anders Hillborg",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                " \"Don Juan\" op. 20 Tondichtung für großes Orchester (nach Nikolaus Lenaus dramatischem Gedicht)"
+            ],
+            [
+                " Konzert in einem Satz für Violoncello und Orchester op. 37"
+            ],
+            [
+                " Konzert für Violoncello und Orchester, Auftragswerk und Deutsche Erstaufführung"
+            ],
+            [
+                " \"Till Eulenspiegels lustige Streiche\" op. 28 nach alter Schelmenweise in Rondeauform für großes Orchester gesetzt"
+            ]
+        ],
+        "conductor": "Krzysztof Urbański",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1651,
+        "date": "2022-02-21T19:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/strauss-korngold-hillborg-2022-02-21-1712",
+        "musicians": {
+            "Nicolas Altstaedt": "Violoncello"
+        },
+        "composers": [
+            "Richard Strauss",
+            "Erich Wolfgang Korngold",
+            "Anders Hillborg",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                " \"Don Juan\" op. 20 Tondichtung für großes Orchester (nach Nikolaus Lenaus dramatischem Gedicht)"
+            ],
+            [
+                " Konzert in einem Satz für Violoncello und Orchester op. 37"
+            ],
+            [
+                " Konzert für Violoncello und Orchester, Auftragswerk und Deutsche Erstaufführung"
+            ],
+            [
+                " \"Till Eulenspiegels lustige Streiche\" op. 28 nach alter Schelmenweise in Rondeauform für großes Orchester gesetzt"
+            ]
+        ],
+        "conductor": "Krzysztof Urbański",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1549,
+        "date": "2022-02-22T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/mahler-auferstehungssinfonie/16259",
+        "musicians": {
+            "Catriona Morison": "Mezzosopran",
+            "Rundfunkchor Berlin": "",
+            "Christina Landshamer": "Sopran"
+        },
+        "composers": [
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 2 c-Moll für Sopran, Alt, Chor und Orchester »Auferstehungssinfonie«"
+            ]
+        ],
+        "conductor": "Jakub Hrůša",
+        "ensemble": "Bamberger Symphoniker"
+    },
+    {
+        "id": 1550,
+        "date": "2022-02-23T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/schumann-das-paradies-und-die-peri-sir-simon-rattle/16701",
+        "musicians": {
+            "Lucy Crowe": "Sopran",
+            "Anna Prohaska": "Sopran",
+            "Andrew Staples": "Tenor",
+            "Florian Boesch": "Bass",
+            "Linard Vrielink": "Tenor",
+            "Staatsopernchor": "",
+            "Anna Lapkovskaja": "Alt"
+        },
+        "composers": [
+            "Robert Schumann"
+        ],
+        "pieces": [
+            [
+                "Das Paradies und die Peri für Soli, Chor und Orchester op. 50"
+            ]
+        ],
+        "conductor": "Sir Simon Rattle",
+        "ensemble": "Staatskapelle Berlin"
+    },
+    {
+        "id": 1652,
+        "date": "2022-02-25T19:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/strauss-schostakowitsch-2022-02-25-1713",
+        "musicians": {
+            "Camilla Nylund": "Sopran"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Richard Strauss",
+            "Dmitrij Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                " \"Die Hebriden\", Konzertouvertüre in h-Moll op. 26"
+            ],
+            [
+                " \"Vier letzte Lieder\" nach Gedichten von Hermann Hesse und Joseph von Eichendorff für Sopran und Orchester"
+            ],
+            [
+                " Symphonie Nr. 10 e-Moll op. 93"
+            ]
+        ],
+        "conductor": "Tugan Sokhiev",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1505,
+        "date": "2022-02-25T19:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53792/",
+        "musicians": {
+            "Nadine Sierra ": " Sopran",
+            "Marianne Crebassa ": " Mezzosopran",
+            "Rundfunkchor Berlin ": ""
+        },
+        "composers": [
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 2 c-Moll »Auferstehung«"
+            ]
+        ],
+        "conductor": "Gustavo Dudamel",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1506,
+        "date": "2022-02-26T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53792/",
+        "musicians": {
+            "Nadine Sierra ": " Sopran",
+            "Marianne Crebassa ": " Mezzosopran",
+            "Rundfunkchor Berlin ": ""
+        },
+        "composers": [
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 2 c-Moll »Auferstehung«"
+            ]
+        ],
+        "conductor": "Gustavo Dudamel",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1653,
+        "date": "2022-02-26T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/strauss-schostakowitsch-2022-02-26-1715",
+        "musicians": {
+            "Camilla Nylund": "Sopran"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Richard Strauss",
+            "Dmitrij Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                " \"Die Hebriden\", Konzertouvertüre in h-Moll op. 26"
+            ],
+            [
+                " \"Vier letzte Lieder\" nach Gedichten von Hermann Hesse und Joseph von Eichendorff für Sopran und Orchester"
+            ],
+            [
+                " Symphonie Nr. 10 e-Moll op. 93"
+            ]
+        ],
+        "conductor": "Tugan Sokhiev",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1551,
+        "date": "2022-02-26T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/gurzenich-orchester-koln-francois-xavier-roth/16674",
+        "musicians": {
+            "Leigh Melrose": "Bariton",
+            "Calixto Bieito": "Inszenierung",
+            "Alexandra Ionis": "Mezzosopran"
+        },
+        "composers": [
+            "»Canto di speranza« – Human Sculptures of Absurdity, Melancholy and Violence",
+            "Bernd Alois Zimmermann"
+        ],
+        "pieces": [
+            [],
+            [
+                "Sinfonie in einem Satz für großes Orchester",
+                "Stille und Umkehr",
+                "Musique pour les soupers du Roi Ubu",
+                "Photoptosis für großes Orchester"
+            ]
+        ],
+        "conductor": "François-Xavier Roth",
+        "ensemble": "Gürzenich-Orchester Köln"
+    },
+    {
+        "id": 1654,
+        "date": "2022-02-27T10:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/strauss-schostakowitsch-2022-02-27-1716",
+        "musicians": {
+            "Camilla Nylund": "Sopran"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Richard Strauss",
+            "Dmitrij Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                " \"Die Hebriden\", Konzertouvertüre in h-Moll op. 26"
+            ],
+            [
+                " \"Vier letzte Lieder\" nach Gedichten von Hermann Hesse und Joseph von Eichendorff für Sopran und Orchester"
+            ],
+            [
+                " Symphonie Nr. 10 e-Moll op. 93"
+            ]
+        ],
+        "conductor": "Tugan Sokhiev",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1552,
+        "date": "2022-02-27T10:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-yuja-wang-alan-gilbert/16177",
+        "musicians": {
+            "Yuja Wang": "Klavier"
+        },
+        "composers": [
+            "Ludwig van Beethoven",
+            "Franz Liszt",
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "Ouvertüre zu »Fidelio« op. 72"
+            ],
+            [
+                "Konzert für Klavier und Orchester Nr. 1 Es-Dur S 124"
+            ],
+            [
+                "Sinfonie Nr. 5 c-Moll op. 67"
+            ]
+        ],
+        "conductor": "Alan Gilbert",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1507,
+        "date": "2022-02-27T19:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53792/",
+        "musicians": {
+            "Nadine Sierra ": " Sopran",
+            "Marianne Crebassa ": " Mezzosopran",
+            "Rundfunkchor Berlin ": ""
+        },
+        "composers": [
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 2 c-Moll »Auferstehung«"
+            ]
+        ],
+        "conductor": "Gustavo Dudamel",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1553,
+        "date": "2022-02-28T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/symphoniker-hamburg-michael-konig-michael-volle-sylvain-cambreling/16412",
+        "musicians": {
+            "Michael Volle": "Bariton",
+            "Michael König": "Tenor"
+        },
+        "composers": [
+            "Joseph Haydn",
+            "Edgard Varèse",
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Die Vorstellung des Chaos / Einleitung zum Oratorium »Die Schöpfung« Hob. XXI:2"
+            ],
+            [
+                "Déserts für Bläser, Klavier, Schlagzeug und Tonband"
+            ],
+            [
+                "Das Lied von der Erde / Eine Sinfonie für eine Tenor- und eine Baritonstimme und Orchester"
+            ]
+        ],
+        "conductor": "Sylvain Cambreling",
+        "ensemble": "Symphoniker Hamburg"
+    },
+    {
+        "id": 1718,
+        "date": "2022-03-03T19:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/kammer-und-auffuehrungsabende/2122/4-kammerabend/",
+        "musicians": {
+            "Lukas Stepp": "Violine",
+            "Anya Dambeck": "Viola",
+            "Boris Kusnezow": "Klavier",
+            "Michael Schmid": "Violine",
+            "Andreas Kißling": "Flöte",
+            "Reimond Püschel": "Kontrabass",
+            "Astrid von Brück": "Harfe",
+            "Friedwart Christian Dittmann": "Violoncello"
+        },
+        "composers": [
+            "Frank Martin",
+            "Ludwig van Beethoven",
+            "André Jolivet",
+            "Sergej Rachmaninow",
+            "Gustav Mahler",
+            "Alfred Schnittke"
+        ],
+        "pieces": [
+            [
+                "Ballade für Flöte, Streicher und Klavier"
+            ],
+            [
+                "Serenade für Flöte, Violine und Viola D-Dur op. 25"
+            ],
+            [
+                "»Chant de Linos« für Flöte, Harfe und Streichtrio"
+            ],
+            [
+                "Klaviertrio Nr. 1 g-Moll »Élégiaque«"
+            ],
+            [
+                "Klavierquartett a-Moll"
+            ],
+            [
+                "Klavierquartett nach einem Fragment von Gustav Mahler"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1554,
+        "date": "2022-03-03T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-vinnitskaya-macelaru/16182",
+        "musicians": {
+            "Anna Vinnitskaya": "Klavier"
+        },
+        "composers": [
+            "Sean Shepherd",
+            "Sergej Rachmaninow",
+            "Dmitri Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                "Melt"
+            ],
+            [
+                "Rhapsodie über ein Thema von Paganini für Klavier und Orchester op. 43"
+            ],
+            [
+                "Sinfonie Nr. 1 f-Moll op. 10"
+            ]
+        ],
+        "conductor": "Cristian Măcelaru",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1508,
+        "date": "2022-03-03T19:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53793/",
+        "musicians": {
+            "Albrecht Mayer": " Oboe d'amore"
+        },
+        "composers": [
+            "Igor Strawinsky",
+            "Johann Sebastian Bach"
+        ],
+        "pieces": [
+            [
+                "Divertimento, Orchestersuite nach dem Ballett Der Kuss der Fee",
+                "Petruschka"
+            ],
+            [
+                "Konzert für Oboe d'amore, Streicher und Basso continuo A-Dur BWV 1055R"
+            ]
+        ],
+        "conductor": "François-Xavier Roth",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1555,
+        "date": "2022-03-04T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-vinnitskaya-macelaru/16183",
+        "musicians": {
+            "Anna Vinnitskaya": "Klavier"
+        },
+        "composers": [
+            "Sean Shepherd",
+            "Sergej Rachmaninow",
+            "Dmitri Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                "Melt"
+            ],
+            [
+                "Rhapsodie über ein Thema von Paganini für Klavier und Orchester op. 43"
+            ],
+            [
+                "Sinfonie Nr. 1 f-Moll op. 10"
+            ]
+        ],
+        "conductor": "Cristian Măcelaru",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1509,
+        "date": "2022-03-04T19:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53793/",
+        "musicians": {
+            "Albrecht Mayer": " Oboe d'amore"
+        },
+        "composers": [
+            "Igor Strawinsky",
+            "Johann Sebastian Bach"
+        ],
+        "pieces": [
+            [
+                "Divertimento, Orchestersuite nach dem Ballett Der Kuss der Fee",
+                "Petruschka"
+            ],
+            [
+                "Konzert für Oboe d'amore, Streicher und Basso continuo A-Dur BWV 1055R"
+            ]
+        ],
+        "conductor": "François-Xavier Roth",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1510,
+        "date": "2022-03-05T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53793/",
+        "musicians": {
+            "Albrecht Mayer": " Oboe d'amore"
+        },
+        "composers": [
+            "Igor Strawinsky",
+            "Johann Sebastian Bach"
+        ],
+        "pieces": [
+            [
+                "Divertimento, Orchestersuite nach dem Ballett Der Kuss der Fee",
+                "Petruschka"
+            ],
+            [
+                "Konzert für Oboe d'amore, Streicher und Basso continuo A-Dur BWV 1055R"
+            ]
+        ],
+        "conductor": "François-Xavier Roth",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1556,
+        "date": "2022-03-06T17:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-vinnitskaya-macelaru/17010",
+        "musicians": {
+            "Anna Vinnitskaya": "Klavier"
+        },
+        "composers": [
+            "Sean Shepherd",
+            "Sergej Rachmaninow",
+            "Dmitri Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                "Melt"
+            ],
+            [
+                "Rhapsodie über ein Thema von Paganini für Klavier und Orchester op. 43"
+            ],
+            [
+                "Sinfonie Nr. 1 f-Moll op. 10"
+            ]
+        ],
+        "conductor": "Cristian Măcelaru",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1655,
+        "date": "2022-03-09T19:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/webern-schumann-rihm-strauss-2022-03-09-1719",
+        "musicians": {
+            "Isabelle Faust": "Violine"
+        },
+        "composers": [
+            "Anton Webern",
+            "Robert Schumann",
+            "Wolfgang Rihm",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                " Passacaglia op. 1"
+            ],
+            [
+                " Konzert für Violine und Orchester d-Moll WoO 23"
+            ],
+            [
+                " \"Verwandlung\" für Orchester"
+            ],
+            [
+                " \"Tod und Verklärung\" op. 24 Tondichtung für großes Orchester"
+            ]
+        ],
+        "conductor": "François-Xavier Roth",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1557,
+        "date": "2022-03-09T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/st-petersburger-philharmoniker-tjeknavorian-soltani-temirkanov/16239",
+        "musicians": {
+            "Kian Soltani": "Violoncello",
+            "Emmanuel Tjeknavorian": "Violine"
+        },
+        "composers": [
+            "Johannes Brahms",
+            "Piotr I. Tschaikowsky"
+        ],
+        "pieces": [
+            [
+                "Konzert für Violine, Violoncello und Orchester a-Moll op. 102"
+            ],
+            [
+                "Sinfonie Nr. 5 e-Moll op. 64"
+            ]
+        ],
+        "conductor": "Yuri Temirkanov",
+        "ensemble": "St. Petersburger Philharmoniker"
+    },
+    {
+        "id": 1656,
+        "date": "2022-03-10T17:30:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/schumann-rihm-strauss-2022-03-10-1721",
+        "musicians": {
+            "Malte Arkona": "Moderation",
+            "Isabelle Faust": "Violine"
+        },
+        "composers": [
+            "Robert Schumann",
+            "Wolfgang Rihm",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                " Konzert für Violine und Orchester d-Moll WoO 23"
+            ],
+            [
+                " \"Verwandlung\" für Orchester"
+            ],
+            [
+                " \"Tod und Verklärung\" op. 24 Tondichtung für großes Orchester"
+            ]
+        ],
+        "conductor": "François-Xavier Roth",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1719,
+        "date": "2022-03-10T19:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/kammer-und-auffuehrungsabende/2122/3-auffuehrungsabend/",
+        "musicians": {
+            "Viktor Osokin": "Kontrabass"
+        },
+        "composers": [
+            "Franz Schubert",
+            "Nino Rota",
+            "Felix Mendelssohn Bartholdy"
+        ],
+        "pieces": [
+            [
+                "Ouvertüre C-Dur D 644 »Rosamunde«"
+            ],
+            [
+                "Divertimento concertante für Kontrabass und Orchester"
+            ],
+            [
+                "Symphonie Nr. 1 c-Moll op. 11"
+            ]
+        ],
+        "conductor": "Lucas Macías Navarro",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1558,
+        "date": "2022-03-10T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/tschechische-philharmonie-semyon-bychkov/16218",
+        "musicians": {},
+        "composers": [
+            "Bedřich Smetana"
+        ],
+        "pieces": [
+            [
+                "Má vlast (Mein Vaterland) / Sinfonische Dichtung"
+            ]
+        ],
+        "conductor": "Semyon Bychkov",
+        "ensemble": "Tschechische Philharmonie"
+    },
+    {
+        "id": 1695,
+        "date": "2022-03-11T19:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/pini-di-roma,hr-sinfoniekonzert-pini-di-roma-102.html",
+        "musicians": {
+            "Truls Mørk": "Violoncello"
+        },
+        "composers": [
+            "Giacomo Puccini",
+            "Robert Schumann",
+            "Ottorino Respighi",
+            "Ottorino Respighi"
+        ],
+        "pieces": [
+            [
+                "Preludio sinfonico"
+            ],
+            [
+                "Cellokonzert"
+            ],
+            [
+                "Fontane di Roma"
+            ],
+            [
+                "Pini di Roma"
+            ]
+        ],
+        "conductor": "Juraj Valčuha",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1511,
+        "date": "2022-03-11T19:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53794/",
+        "musicians": {
+            "René Pape ": " Bass",
+            "Fabio Sartori ": " Tenor",
+            "Elena Stikhina ": " Sopran",
+            "Rundfunkchor Berlin ": "",
+            "Anita Rachvelishvili ": " Mezzosopran"
+        },
+        "composers": [
+            "Giuseppe Verdi"
+        ],
+        "pieces": [
+            [
+                "Messa da Requiem"
+            ]
+        ],
+        "conductor": "Daniel Barenboim",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1559,
+        "date": "2022-03-11T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/tschechische-philharmonie-yuja-wang-semyon-bychkov/16219",
+        "musicians": {
+            "Yuja Wang": "Klavier"
+        },
+        "composers": [
+            "Miloslav Kabeláč",
+            "Sergej Rachmaninow",
+            "Antonín Dvořák"
+        ],
+        "pieces": [
+            [
+                "Mysterium der Zeit / Passacaglia für großes Orchester op.  31"
+            ],
+            [
+                "Konzert für Klavier und Orchester Nr. 1 fis-Moll op. 1"
+            ],
+            [
+                "Sinfonie Nr. 8 G-Dur op. 88"
+            ]
+        ],
+        "conductor": "Semyon Bychkov",
+        "ensemble": "Tschechische Philharmonie"
+    },
+    {
+        "id": 1560,
+        "date": "2022-03-12T10:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/braunschweiger-staatsorchester-simovic-dinic/17345",
+        "musicians": {
+            "Roman Simovic": "Violine"
+        },
+        "composers": [
+            "Ludwig van Beethoven",
+            "Felix Mendelssohn Bartholdy",
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "Leonoren-Ouvertüre Nr. 3 op. 72a"
+            ],
+            [
+                "Konzert für Violine und Orchester e-Moll op. 64"
+            ],
+            [
+                "Sinfonie Nr. 5 c-Moll op. 67"
+            ]
+        ],
+        "conductor": "Srba Dinić",
+        "ensemble": "Staatsorchester Braunschweig"
+    },
+    {
+        "id": 1512,
+        "date": "2022-03-12T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53794/",
+        "musicians": {
+            "René Pape ": " Bass",
+            "Fabio Sartori ": " Tenor",
+            "Elena Stikhina ": " Sopran",
+            "Rundfunkchor Berlin ": "",
+            "Anita Rachvelishvili ": " Mezzosopran"
+        },
+        "composers": [
+            "Giuseppe Verdi"
+        ],
+        "pieces": [
+            [
+                "Messa da Requiem"
+            ]
+        ],
+        "conductor": "Daniel Barenboim",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1561,
+        "date": "2022-03-12T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/tschechische-philharmonie-katia-marielle-labeque-bychkov/16220",
+        "musicians": {
+            "Boris Prýgl": "Bassbariton",
+            "Aleš Briscein": "Tenor",
+            "Katia Labèque": "Klavier",
+            "Marielle Labèque": "Klavier",
+            "Evelina Dobračeva": "Sopran",
+            "Lucie Hilscherová": "Mezzosopran",
+            "Prager Philharmonischer Chor": ""
+        },
+        "composers": [
+            "Bohuslav Martinů",
+            "Leoš Janáček"
+        ],
+        "pieces": [
+            [
+                "Konzert für zwei Klaviere und Orchester"
+            ],
+            [
+                "Glagolitische Messe"
+            ]
+        ],
+        "conductor": "Semyon Bychkov",
+        "ensemble": "Tschechische Philharmonie"
+    },
+    {
+        "id": 1657,
+        "date": "2022-03-13T10:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/webern-schumann-rihm-strauss-2022-03-13-1722",
+        "musicians": {
+            "Isabelle Faust": "Violine"
+        },
+        "composers": [
+            "Anton Webern",
+            "Robert Schumann",
+            "Wolfgang Rihm",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                " Passacaglia op. 1"
+            ],
+            [
+                " Konzert für Violine und Orchester d-Moll WoO 23"
+            ],
+            [
+                " \"Verwandlung\" für Orchester"
+            ],
+            [
+                " \"Tod und Verklärung\" op. 24 Tondichtung für großes Orchester"
+            ]
+        ],
+        "conductor": "François-Xavier Roth",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1513,
+        "date": "2022-03-13T19:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53794/",
+        "musicians": {
+            "René Pape ": " Bass",
+            "Fabio Sartori ": " Tenor",
+            "Elena Stikhina ": " Sopran",
+            "Rundfunkchor Berlin ": "",
+            "Anita Rachvelishvili ": " Mezzosopran"
+        },
+        "composers": [
+            "Giuseppe Verdi"
+        ],
+        "pieces": [
+            [
+                "Messa da Requiem"
+            ]
+        ],
+        "conductor": "Daniel Barenboim",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1514,
+        "date": "2022-03-17T19:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53837/",
+        "musicians": {
+            "Lucy Crowe ": " Sopran",
+            "Werner Güra ": " Tenor",
+            "Ann Hallenberg ": " Mezzosopran",
+            "Monteverdi Choir ": ""
+        },
+        "composers": [
+            "Johannes Brahms",
+            "Felix Mendelssohn Bartholdy"
+        ],
+        "pieces": [
+            [
+                "Schicksalslied op. 54"
+            ],
+            [
+                "Symphonie Nr. 2 B-Dur op. 52 »Lobgesang«"
+            ]
+        ],
+        "conductor": "Sir John Eliot Gardiner",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1658,
+        "date": "2022-03-17T19:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/bruckner-2022-03-17-1723",
+        "musicians": {},
+        "composers": [
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                " Symphonie Nr. 8 c-Moll"
+            ]
+        ],
+        "conductor": "Valery Gergiev",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1515,
+        "date": "2022-03-18T19:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53837/",
+        "musicians": {
+            "Lucy Crowe ": " Sopran",
+            "Werner Güra ": " Tenor",
+            "Ann Hallenberg ": " Mezzosopran",
+            "Monteverdi Choir ": ""
+        },
+        "composers": [
+            "Johannes Brahms",
+            "Felix Mendelssohn Bartholdy"
+        ],
+        "pieces": [
+            [
+                "Schicksalslied op. 54"
+            ],
+            [
+                "Symphonie Nr. 2 B-Dur op. 52 »Lobgesang«"
+            ]
+        ],
+        "conductor": "Sir John Eliot Gardiner",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1659,
+        "date": "2022-03-18T19:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/bruckner-2022-03-18-1724",
+        "musicians": {},
+        "composers": [
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                " Symphonie Nr. 8 c-Moll"
+            ]
+        ],
+        "conductor": "Valery Gergiev",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1516,
+        "date": "2022-03-19T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53837/",
+        "musicians": {
+            "Lucy Crowe ": " Sopran",
+            "Werner Güra ": " Tenor",
+            "Ann Hallenberg ": " Mezzosopran",
+            "Monteverdi Choir ": ""
+        },
+        "composers": [
+            "Johannes Brahms",
+            "Felix Mendelssohn Bartholdy"
+        ],
+        "pieces": [
+            [
+                "Schicksalslied op. 54"
+            ],
+            [
+                "Symphonie Nr. 2 B-Dur op. 52 »Lobgesang«"
+            ]
+        ],
+        "conductor": "Sir John Eliot Gardiner",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1660,
+        "date": "2022-03-19T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/rachmaninow-prokofjew-2022-03-19-1725",
+        "musicians": {
+            "Yefim Bronfman": "Klavier"
+        },
+        "composers": [
+            "Sergej Rachmaninow",
+            "Sergej Prokofjew"
+        ],
+        "pieces": [
+            [
+                " Konzert für Klavier und Orchester Nr. 3 d-Moll op. 30"
+            ],
+            [
+                " Symphonie Nr. 5 B-Dur op. 100"
+            ]
+        ],
+        "conductor": "Valery Gergiev",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1720,
+        "date": "2022-03-20T10:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/7-symphoniekonzert/",
+        "musicians": {
+            "Simon Höfele": "Trompete",
+            "Lucas Lipari-Mayer": "Trompete"
+        },
+        "composers": [
+            "Matthias Pintscher",
+            "Dmitri Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                "»Chute d’Étoiles« für zwei Trompeten und Orchester"
+            ],
+            [
+                "Symphonie Nr. 15 A-Dur op. 141"
+            ]
+        ],
+        "conductor": "Vladimir Jurowski",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1721,
+        "date": "2022-03-21T19:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/7-symphoniekonzert/",
+        "musicians": {
+            "Simon Höfele": "Trompete",
+            "Lucas Lipari-Mayer": "Trompete"
+        },
+        "composers": [
+            "Matthias Pintscher",
+            "Dmitri Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                "»Chute d’Étoiles« für zwei Trompeten und Orchester"
+            ],
+            [
+                "Symphonie Nr. 15 A-Dur op. 141"
+            ]
+        ],
+        "conductor": "Vladimir Jurowski",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1562,
+        "date": "2022-03-21T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/city-of-birmingham-symphony-orchestra-sheku-kanneh-mason-mirga-grazinyte-tyla/16265",
+        "musicians": {
+            "Sheku Kanneh-Mason": "Violoncello"
+        },
+        "composers": [
+            "Piotr I. Tschaikowsky",
+            "Dmitri Schostakowitsch",
+            "Piotr I. Tschaikowsky"
+        ],
+        "pieces": [
+            [
+                "Fantasie-Ouvertüre h-Moll »Romeo und Julia«"
+            ],
+            [
+                "Konzert für Violoncello und Orchester Nr. 2 g-Moll op. 126"
+            ],
+            [
+                "Sinfonie Nr. 4 f-Moll op. 36"
+            ]
+        ],
+        "conductor": "Mirga Gražinytė-Tyla",
+        "ensemble": "City of Birmingham Symphony Orchestra"
+    },
+    {
+        "id": 1563,
+        "date": "2022-03-22T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/junge-deutsche-philharmonie-nicolas-altstaedt-dima-slobodeniouk/16590",
+        "musicians": {
+            "Nicolas Altstaedt": "Violoncello"
+        },
+        "composers": [
+            "Richard Wagner",
+            "Esa-Pekka Salonen",
+            "Arnold Schönberg",
+            "Einführung mit Musikern der Jungen Deutschen Philharmonie"
+        ],
+        "pieces": [
+            [
+                "Vorspiel zu »Lohengrin« WWV 75"
+            ],
+            [
+                "Konzert für Violoncello und Orchester"
+            ],
+            [
+                "Pelleas und Melisande / Sinfonische Dichtung op. 5"
+            ],
+            [
+                "19 Uhr / Elbphilharmonie, Großer Saal"
+            ]
+        ],
+        "conductor": "Dima Slobodeniouk",
+        "ensemble": "Junge Deutsche Philharmonie"
+    },
+    {
+        "id": 1722,
+        "date": "2022-03-22T19:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/7-symphoniekonzert/",
+        "musicians": {
+            "Simon Höfele": "Trompete",
+            "Lucas Lipari-Mayer": "Trompete"
+        },
+        "composers": [
+            "Matthias Pintscher",
+            "Dmitri Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                "»Chute d’Étoiles« für zwei Trompeten und Orchester"
+            ],
+            [
+                "Symphonie Nr. 15 A-Dur op. 141"
+            ]
+        ],
+        "conductor": "Vladimir Jurowski",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1564,
+        "date": "2022-03-24T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-pierre-laurent-aimard-ingo-metzmacher/16181",
+        "musicians": {
+            "Pierre-Laurent Aimard": "Klavier"
+        },
+        "composers": [
+            "Olivier Messiaen",
+            "Tristan Murail",
+            "Maurice Ravel",
+            "Claude Debussy"
+        ],
+        "pieces": [
+            [
+                "Les offrandes oubliées / Sinfonische Meditation"
+            ],
+            [
+                "Le désenchantement du monde / Sinfonisches Konzert für Klavier und Orchester"
+            ],
+            [
+                "Une barque sur l’océan (Fassung für Orchester)"
+            ],
+            [
+                "La mer / Drei sinfonische Skizzen"
+            ]
+        ],
+        "conductor": "Ingo Metzmacher",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1565,
+        "date": "2022-03-25T19:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/academy-of-st-martin-in-the-fields-lucas-arthur-jussen/16233",
+        "musicians": {
+            "Lucas Jussen": "Klavier",
+            "Arthur Jussen": "Klavier"
+        },
+        "composers": [
+            "Ralph Vaughan Williams",
+            "Wolfgang Amadeus Mozart",
+            "Johann Sebastian Bach",
+            "Franz Schubert"
+        ],
+        "pieces": [
+            [
+                "The Charterhouse Suite"
+            ],
+            [
+                "Konzert für zwei Klaviere und Orchester Es-Dur KV 316a"
+            ],
+            [
+                "Konzert für zwei Klaviere c-Moll BWV 1060"
+            ],
+            [
+                "Sinfonie Nr. 5 B-Dur D 485"
+            ]
+        ],
+        "conductor": "Ben Glassberg",
+        "ensemble": "Academy of St Martin in the Fields"
+    },
+    {
+        "id": 1566,
+        "date": "2022-03-27T09:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/philharmonisches-staatsorchester-hamburg-bashkirova-diakun/16455",
+        "musicians": {
+            "Elena Bashkirova": "Klavier"
+        },
+        "composers": [
+            "Claude Debussy",
+            "Manuel de Falla",
+            "Bohuslav Martinů"
+        ],
+        "pieces": [
+            [
+                "Prélude à l’après-midi d’un faune"
+            ],
+            [
+                "Noches en los jardines de España / Symphonische Impressionen für Klavier und Orchester"
+            ],
+            [
+                "Sinfonie Nr. 3 H 299"
+            ]
+        ],
+        "conductor": "Marzena Diakun",
+        "ensemble": "Philharmonisches Staatsorchester Hamburg"
+    },
+    {
+        "id": 1567,
+        "date": "2022-03-27T16:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-pierre-laurent-aimard-ingo-metzmacher/16208",
+        "musicians": {
+            "Pierre-Laurent Aimard": "Klavier"
+        },
+        "composers": [
+            "Olivier Messiaen",
+            "Tristan Murail",
+            "Maurice Ravel",
+            "Claude Debussy"
+        ],
+        "pieces": [
+            [
+                "Les offrandes oubliées / Sinfonische Meditation"
+            ],
+            [
+                "Le désenchantement du monde / Sinfonisches Konzert für Klavier und Orchester"
+            ],
+            [
+                "Une barque sur l’océan (Fassung für Orchester)"
+            ],
+            [
+                "La mer / Drei sinfonische Skizzen"
+            ]
+        ],
+        "conductor": "Ingo Metzmacher",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1568,
+        "date": "2022-03-28T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/philharmonisches-staatsorchester-hamburg-bashkirova-diakun/16456",
+        "musicians": {
+            "Elena Bashkirova": "Klavier"
+        },
+        "composers": [
+            "Claude Debussy",
+            "Manuel de Falla",
+            "Bohuslav Martinů"
+        ],
+        "pieces": [
+            [
+                "Prélude à l’après-midi d’un faune"
+            ],
+            [
+                "Noches en los jardines de España / Symphonische Impressionen für Klavier und Orchester"
+            ],
+            [
+                "Sinfonie Nr. 3 H 299"
+            ]
+        ],
+        "conductor": "Marzena Diakun",
+        "ensemble": "Philharmonisches Staatsorchester Hamburg"
+    },
+    {
+        "id": 1569,
+        "date": "2022-03-30T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/helene-grimaud-camerata-salzburg/16287",
+        "musicians": {
+            "Giovanni Guzzo": "Violine und Leitung",
+            "Camerata Salzburg": ""
+        },
+        "composers": [
+            "Wolfgang Amadeus Mozart",
+            "Robert Schumann"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester d-Moll KV 466",
+                "Sinfonie g-Moll KV 550"
+            ],
+            [
+                "Konzert für Klavier und Orchester a-Moll op. 54"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Hélène Grimaud"
+    },
+    {
+        "id": 1723,
+        "date": "2022-03-31T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/kammer-und-auffuehrungsabende/2122/5-kammerabend/",
+        "musicians": {
+            "Ralf Götz": "Horn",
+            "Albert Kegel": "Fagott",
+            "Thomas Ziesch": "Klarinette",
+            "Katalin Stefula": "Flöte",
+            "Susanne Wettemann": "Oboe"
+        },
+        "composers": [
+            "Paul Hindemith",
+            "Franz Danzi",
+            "Alexander von Zemlinsky",
+            "Carl Nielsen"
+        ],
+        "pieces": [
+            [
+                "Kleine Kammermusik für fünf Bläser op. 24 Nr. 2"
+            ],
+            [
+                "Bläserquintett F-Dur op. 56 Nr. 3"
+            ],
+            [
+                "Humoreske für Bläserquintett"
+            ],
+            [
+                "Bläserquintett op. 43"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1696,
+        "date": "2022-03-31T18:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/konzert-fuer-orchester,hr-sinfoniekonzert-konzert-fuer-orchester-102.html",
+        "musicians": {
+            "Lars Vogt": "Klavier"
+        },
+        "composers": [
+            "Igor Strawinsky",
+            "Ludwig van Beethoven",
+            "Béla Bartók"
+        ],
+        "pieces": [
+            [
+                "Chant funèbre"
+            ],
+            [
+                "3. Klavierkonzert"
+            ],
+            [
+                "Konzert für Orchester"
+            ]
+        ],
+        "conductor": "Karina Canellakis",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1570,
+        "date": "2022-03-31T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-christian-tetzlaff-sakari-oramo/16184",
+        "musicians": {
+            "Christian Tetzlaff": "Violine"
+        },
+        "composers": [
+            "Edward Elgar",
+            "Robert Schumann"
+        ],
+        "pieces": [
+            [
+                "Konzert für Violine und Orchester h-Moll op. 61"
+            ],
+            [
+                "Sinfonie Nr. 1 B-Dur op. 38 »Frühlingssinfonie«"
+            ]
+        ],
+        "conductor": "Sakari Oramo",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1697,
+        "date": "2022-04-01T18:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/konzert-fuer-orchester,hr-sinfoniekonzert-konzert-fuer-orchester-102.html",
+        "musicians": {
+            "Lars Vogt": "Klavier"
+        },
+        "composers": [
+            "Igor Strawinsky",
+            "Ludwig van Beethoven",
+            "Béla Bartók"
+        ],
+        "pieces": [
+            [
+                "Chant funèbre"
+            ],
+            [
+                "3. Klavierkonzert"
+            ],
+            [
+                "Konzert für Orchester"
+            ]
+        ],
+        "conductor": "Karina Canellakis",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1571,
+        "date": "2022-04-01T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-christian-tetzlaff-sakari-oramo/16185",
+        "musicians": {
+            "Christian Tetzlaff": "Violine"
+        },
+        "composers": [
+            "Edward Elgar",
+            "Robert Schumann"
+        ],
+        "pieces": [
+            [
+                "Konzert für Violine und Orchester h-Moll op. 61"
+            ],
+            [
+                "Sinfonie Nr. 1 B-Dur op. 38 »Frühlingssinfonie«"
+            ]
+        ],
+        "conductor": "Sakari Oramo",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1572,
+        "date": "2022-04-02T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/swr-symphonieorchester-tamestit-currentzis-2g/16678",
+        "musicians": {
+            "Antoine Tamestit": "Viola"
+        },
+        "composers": [
+            "Johannes Brahms",
+            "Marko Nikodijević"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 1 c-Moll op. 68"
+            ],
+            [
+                "Neues Werk für Viola und Orchester"
+            ]
+        ],
+        "conductor": "Teodor Currentzis",
+        "ensemble": "SWR Symphonieorchester"
+    },
+    {
+        "id": 1573,
+        "date": "2022-04-03T09:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-jugendsinfonieorchester-stefan-geiger-2g/17028",
+        "musicians": {},
+        "composers": [
+            "August Söderman",
+            "Einojuhani Rautavaara",
+            "Jean Sibelius",
+            "Jean Sibelius"
+        ],
+        "pieces": [
+            [
+                "Svensk Festspel"
+            ],
+            [
+                "Cantus Arcticus op. 61"
+            ],
+            [
+                "Valse triste / aus der Schauspielmusik zu »Kuolema« op. 44"
+            ],
+            [
+                "Sinfonie Nr. 2 D-Dur op. 43"
+            ]
+        ],
+        "conductor": "Stefan Geiger",
+        "ensemble": "NDR Jugendsinfonieorchester"
+    },
+    {
+        "id": 1574,
+        "date": "2022-04-03T14:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-sakari-oramo-2g/16186",
+        "musicians": {},
+        "composers": [
+            "Jean Sibelius",
+            "Robert Schumann"
+        ],
+        "pieces": [
+            [
+                "Tapiola / Tondichtung für großes Orchester op. 112"
+            ],
+            [
+                "Sinfonie Nr. 1 B-Dur op. 38 »Frühlingssinfonie«"
+            ]
+        ],
+        "conductor": "Sakari Oramo",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1575,
+        "date": "2022-04-03T16:30:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-sakari-oramo-2g/17033",
+        "musicians": {},
+        "composers": [
+            "Jean Sibelius",
+            "Robert Schumann"
+        ],
+        "pieces": [
+            [
+                "Tapiola / Tondichtung für großes Orchester op. 112"
+            ],
+            [
+                "Sinfonie Nr. 1 B-Dur op. 38 »Frühlingssinfonie«"
+            ]
+        ],
+        "conductor": "Sakari Oramo",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1576,
+        "date": "2022-04-05T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/london-symphony-orchestra-hardenberger-roth-2g/16246",
+        "musicians": {
+            "Håkan Hardenberger": "Trompete"
+        },
+        "composers": [
+            "Richard Strauss",
+            "Helen Grime",
+            "Joel Järventausta",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                "Till Eulenspiegels lustige Streiche op. 28"
+            ],
+            [
+                "Neues Trompetenkonzert"
+            ],
+            [
+                "Sunfall"
+            ],
+            [
+                "Tod und Verklärung / Tondichtung für großes Orchester op. 24"
+            ]
+        ],
+        "conductor": "François-Xavier Roth",
+        "ensemble": "London Symphony Orchestra"
+    },
+    {
+        "id": 1577,
+        "date": "2022-04-10T09:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/hamburger-camerata-peter-und-der-wolf/17442",
+        "musicians": {
+            "Hamburger Camerata": "",
+            "Andreas Peer Kähler": "Leitung"
+        },
+        "composers": [
+            "Richard Strauss",
+            "Helen Grime",
+            "Joel Järventausta",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                "Till Eulenspiegels lustige Streiche op. 28"
+            ],
+            [
+                "Neues Trompetenkonzert"
+            ],
+            [
+                "Sunfall"
+            ],
+            [
+                "Tod und Verklärung / Tondichtung für großes Orchester op. 24"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Katharina Thalbach"
+    },
+    {
+        "id": 1578,
+        "date": "2022-04-10T16:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-karg-popelka-2g/16200",
+        "musicians": {
+            "Christiane Karg": "Sopran"
+        },
+        "composers": [
+            "Carl Maria von Weber",
+            "Gustav Mahler",
+            "Franz Liszt",
+            "Richard Wagner"
+        ],
+        "pieces": [
+            [
+                "Ouvertüre zu »Oberon« J 306"
+            ],
+            [
+                "Rückert-Lieder"
+            ],
+            [
+                "Les Préludes / Sinfonische Dichtung Nr. 3 S 97"
+            ],
+            [
+                "Ouvertüre zu »Tannhäuser« WWV 70",
+                "Der Venusberg »Bacchanale« / aus der Oper »Tannhäuser« WWV 70"
+            ]
+        ],
+        "conductor": "Petr Popelka",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1724,
+        "date": "2022-04-10T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/8-symphoniekonzert/",
+        "musicians": {
+            "Ulrich Tukur": "Sprecher",
+            "Nikola Hillebrand": "Sopran",
+            "Dresdner Kreuzchor": "",
+            "Mikhail Timoshenko": "Bass",
+            "Sebastian Kohlhepp": "Tenor",
+            "Dresdner Kammerchor": "",
+            "Marie Henriette Reinhold": "Alt"
+        },
+        "composers": [
+            "Wolfgang Amadeus Mozart",
+            "Joseph Haydn",
+            "Wolfgang Amadeus Mozart"
+        ],
+        "pieces": [
+            [
+                "Ouvertüre zur Oper »La clemenza di Tito« KV 621"
+            ],
+            [
+                "Symphonie Nr. 93 D-Dur Hob. I:93"
+            ],
+            [
+                "»Maurerische Trauermusik« c-Moll KV 477",
+                "»Laudate Dominum« aus den »Vesperae solennes de Confessore« KV 339",
+                "Requiem d-Moll KV 626",
+                "Motette »Ave verum corpus« D-Dur KV 618"
+            ]
+        ],
+        "conductor": "Manfred Honeck",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1579,
+        "date": "2022-04-11T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/orchester-des-mariinski-theaters-valery-gergiev-2g/16696",
+        "musicians": {},
+        "composers": [
+            "Igor Strawinsky",
+            "Piotr I. Tschaikowsky",
+            "Igor Strawinsky"
+        ],
+        "pieces": [
+            [
+                "Le baiser de la fée / Allegorisches Ballett in vier Bildern"
+            ],
+            [
+                "Dornröschen (Auszüge) / Ballett in drei Akten op. 66"
+            ],
+            [
+                "L’oiseau de feu (Der Feuervogel) / Ballett in zwei Bildern mit Introduktion"
+            ]
+        ],
+        "conductor": "Valery Gergiev",
+        "ensemble": "Orchester des Mariinski-Theaters"
+    },
+    {
+        "id": 1725,
+        "date": "2022-04-11T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/8-symphoniekonzert/",
+        "musicians": {
+            "Ulrich Tukur": "Sprecher",
+            "Nikola Hillebrand": "Sopran",
+            "Dresdner Kreuzchor": "",
+            "Mikhail Timoshenko": "Bass",
+            "Sebastian Kohlhepp": "Tenor",
+            "Dresdner Kammerchor": "",
+            "Marie Henriette Reinhold": "Alt"
+        },
+        "composers": [
+            "Wolfgang Amadeus Mozart",
+            "Joseph Haydn",
+            "Wolfgang Amadeus Mozart"
+        ],
+        "pieces": [
+            [
+                "Ouvertüre zur Oper »La clemenza di Tito« KV 621"
+            ],
+            [
+                "Symphonie Nr. 93 D-Dur Hob. I:93"
+            ],
+            [
+                "»Maurerische Trauermusik« c-Moll KV 477",
+                "»Laudate Dominum« aus den »Vesperae solennes de Confessore« KV 339",
+                "Requiem d-Moll KV 626",
+                "Motette »Ave verum corpus« D-Dur KV 618"
+            ]
+        ],
+        "conductor": "Manfred Honeck",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1580,
+        "date": "2022-04-12T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/orchester-des-mariinski-theaters-valery-gergiev-2g/16697",
+        "musicians": {},
+        "composers": [
+            "Sergej Prokofjew",
+            "Béla Bartók",
+            "Modest Mussorgsky / Maurice Ravel"
+        ],
+        "pieces": [
+            [
+                "Romeo und Julia (Auszüge) / Ballett op. 64"
+            ],
+            [
+                "Der wunderbare Mandarin / Pantomime in einem Akt Sz 73"
+            ],
+            [
+                "Bilder einer Ausstellung"
+            ]
+        ],
+        "conductor": "Valery Gergiev",
+        "ensemble": "Orchester des Mariinski-Theaters"
+    },
+    {
+        "id": 1661,
+        "date": "2022-04-13T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/brahms-2022-04-13-1730",
+        "musicians": {
+            "Mari Eriksmoen": "Sopran",
+            "Matthias Goerne": "Bariton",
+            "Philharmonischer Chor München": "Einstudierung: Andreas Herrmann"
+        },
+        "composers": [
+            "Johannes Brahms"
+        ],
+        "pieces": [
+            [
+                " \"Ein deutsches Requiem\" op. 45"
+            ]
+        ],
+        "conductor": "Paavo Järvi",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1581,
+        "date": "2022-04-14T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/9-beethoven-teodor-currentzis-2g/17123",
+        "musicians": {},
+        "composers": [
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 9 d-Moll op. 125"
+            ]
+        ],
+        "conductor": "Teodor Currentzis",
+        "ensemble": "musicAeterna"
+    },
+    {
+        "id": 1662,
+        "date": "2022-04-14T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/brahms-2022-04-14-1731",
+        "musicians": {
+            "Mari Eriksmoen": "Sopran",
+            "Matthias Goerne": "Bariton",
+            "Philharmonischer Chor München": "Einstudierung: Andreas Herrmann"
+        },
+        "composers": [
+            "Johannes Brahms"
+        ],
+        "pieces": [
+            [
+                " \"Ein deutsches Requiem\" op. 45"
+            ]
+        ],
+        "conductor": "Paavo Järvi",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1582,
+        "date": "2022-04-15T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/musicaeterna-gregor-a-mayrhofer-teodor-currentzis-2g/17606",
+        "musicians": {
+            "Vivi Vassileva": "Schlagwerk"
+        },
+        "composers": [
+            "Alfred Schnittke",
+            "Gregor A. Mayrhofer",
+            "Alfred Schnittke"
+        ],
+        "pieces": [
+            [
+                "Requiem"
+            ],
+            [
+                "Recycling Concerto / Konzert für Recycling-Percussion und Orchester"
+            ],
+            [
+                "Konzert für Chor"
+            ]
+        ],
+        "conductor": "Teodor Currentzis",
+        "ensemble": "musicAeterna"
+    },
+    {
+        "id": 1583,
+        "date": "2022-04-16T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/9-beethoven-teodor-currentzis-2g/17573",
+        "musicians": {},
+        "composers": [
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 9 d-Moll op. 125"
+            ]
+        ],
+        "conductor": "Teodor Currentzis",
+        "ensemble": "musicAeterna"
+    },
+    {
+        "id": 1584,
+        "date": "2022-04-20T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/die-deutsche-kammerphilharmonie-bremen-jansen-jarvi-2g/16783",
+        "musicians": {
+            "Janine Jansen": "Violine"
+        },
+        "composers": [
+            "Johannes Brahms",
+            "Einführung mit Oliver Wille"
+        ],
+        "pieces": [
+            [
+                "Konzert für Violine und Orchester D-Dur op. 77",
+                "Serenade Nr. 2 A-Dur op. 16"
+            ],
+            [
+                "19 Uhr / Elbphilharmonie, Großer Saal"
+            ]
+        ],
+        "conductor": "Paavo Järvi",
+        "ensemble": "Die Deutsche Kammerphilharmonie Bremen"
+    },
+    {
+        "id": 1517,
+        "date": "2022-04-21T17:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53840/",
+        "musicians": {
+            "Doris Soffel ": " Alt (Gräfin)",
+            "Asmik Grigorian ": " Sopran (Lisa)",
+            "Aigul Akhmetshina ": " Mezzosopran (Polina)",
+            "Arsen Soghomonyan ": " Tenor (Hermann)",
+            "Boris Pinkhasovich ": " Bariton (Fürst Jelezki)",
+            "Vladislav Sulimsky ": " Bariton (Graf Tomski)",
+            "Slowakischer Philharmonischer Chor ": ""
+        },
+        "composers": [
+            "Peter Tschaikowsky"
+        ],
+        "pieces": [
+            [
+                "Pique Dame, Oper in drei Akten op. 68 (konzertante Aufführung)"
+            ]
+        ],
+        "conductor": "Kirill Petrenko",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1585,
+        "date": "2022-04-21T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/mahler-chamber-orchestra-levit-chan-2g/16266",
+        "musicians": {
+            "Igor Levit": "Klavier"
+        },
+        "composers": [
+            "Igor Strawinsky",
+            "William Bolcom",
+            "Aaron Copland",
+            "Igor Strawinsky"
+        ],
+        "pieces": [
+            [
+                "Concerto Es-Dur »Dumbarton Oaks«"
+            ],
+            [
+                "Konzert für Klavier und Orchester Nr.2 / Kompositionsauftrag des Heidelberger Frühlings"
+            ],
+            [
+                "Quiet city"
+            ],
+            [
+                "Suite aus dem Ballett »Pulcinella«"
+            ]
+        ],
+        "conductor": "Elim Chan",
+        "ensemble": "Mahler Chamber Orchestra"
+    },
+    {
+        "id": 1726,
+        "date": "2022-04-24T09:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/9-symphoniekonzert/",
+        "musicians": {
+            "Norbert Anger": "Violoncello",
+            "Céline Moinet": "Oboe",
+            "Matthias Wollong": "Violine",
+            "Thomas Eberhardt": "Fagott"
+        },
+        "composers": [
+            "Johann Sebastian Bach",
+            "Joseph Haydn",
+            "Antonio Vivaldi",
+            "Georg Friedrich Händel"
+        ],
+        "pieces": [
+            [
+                "Orchestersuite Nr. 4 D-Dur BWV 1069"
+            ],
+            [
+                "Sinfonia concertante B-Dur Hob. I:105"
+            ],
+            [
+                "Concerto g-Moll RV 577 »Per l’Orchestra di Dresda«"
+            ],
+            [
+                "»Feuerwerksmusik« D-Dur HWV 351"
+            ]
+        ],
+        "conductor": "Ton Koopman",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1518,
+        "date": "2022-04-24T17:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53840/",
+        "musicians": {
+            "Doris Soffel ": " Alt (Gräfin)",
+            "Asmik Grigorian ": " Sopran (Lisa)",
+            "Aigul Akhmetshina ": " Mezzosopran (Polina)",
+            "Arsen Soghomonyan ": " Tenor (Hermann)",
+            "Boris Pinkhasovich ": " Bariton (Fürst Jelezki)",
+            "Vladislav Sulimsky ": " Bariton (Graf Tomski)",
+            "Slowakischer Philharmonischer Chor ": ""
+        },
+        "composers": [
+            "Peter Tschaikowsky"
+        ],
+        "pieces": [
+            [
+                "Pique Dame, Oper in drei Akten op. 68 (konzertante Aufführung)"
+            ]
+        ],
+        "conductor": "Kirill Petrenko",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1727,
+        "date": "2022-04-25T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/9-symphoniekonzert/",
+        "musicians": {
+            "Norbert Anger": "Violoncello",
+            "Céline Moinet": "Oboe",
+            "Matthias Wollong": "Violine",
+            "Thomas Eberhardt": "Fagott"
+        },
+        "composers": [
+            "Johann Sebastian Bach",
+            "Joseph Haydn",
+            "Antonio Vivaldi",
+            "Georg Friedrich Händel"
+        ],
+        "pieces": [
+            [
+                "Orchestersuite Nr. 4 D-Dur BWV 1069"
+            ],
+            [
+                "Sinfonia concertante B-Dur Hob. I:105"
+            ],
+            [
+                "Concerto g-Moll RV 577 »Per l’Orchestra di Dresda«"
+            ],
+            [
+                "»Feuerwerksmusik« D-Dur HWV 351"
+            ]
+        ],
+        "conductor": "Ton Koopman",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1728,
+        "date": "2022-04-26T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/9-symphoniekonzert/",
+        "musicians": {
+            "Norbert Anger": "Violoncello",
+            "Céline Moinet": "Oboe",
+            "Matthias Wollong": "Violine",
+            "Thomas Eberhardt": "Fagott"
+        },
+        "composers": [
+            "Johann Sebastian Bach",
+            "Joseph Haydn",
+            "Antonio Vivaldi",
+            "Georg Friedrich Händel"
+        ],
+        "pieces": [
+            [
+                "Orchestersuite Nr. 4 D-Dur BWV 1069"
+            ],
+            [
+                "Sinfonia concertante B-Dur Hob. I:105"
+            ],
+            [
+                "Concerto g-Moll RV 577 »Per l’Orchestra di Dresda«"
+            ],
+            [
+                "»Feuerwerksmusik« D-Dur HWV 351"
+            ]
+        ],
+        "conductor": "Ton Koopman",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1586,
+        "date": "2022-04-27T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/rotterdams-philharmonisch-orkest-karg-nezet-seguin-2g/16682",
+        "musicians": {
+            "Christiane Karg": "Sopran"
+        },
+        "composers": [
+            "Gustav Mahler",
+            [
+                "Ausgewählte Lieder von Alma Mahler"
+            ]
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 4 G-Dur für großes Orchester und Sopran"
+            ],
+            []
+        ],
+        "conductor": "Yannick Nézet-Séguin",
+        "ensemble": "Rotterdams Philharmonisch Orkest"
+    },
+    {
+        "id": 1698,
+        "date": "2022-04-28T18:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/le-martyre-de-saint-sebastien,hr-sinfoniekonzert-le-martyre-100.html",
+        "musicians": {
+            "Chen Reiss": "Sopran",
+            "Nora Gubisch": "Sprecherin",
+            "Marie Gautrot": "Mezzosopran",
+            "Marie Kalinine": "Mezzosopran",
+            "MDR-Rundfunkchor": "",
+            "Éric Génovèse": "Schauspieler",
+            "Pierre-Laurent Aimard": "Klavier"
+        },
+        "composers": [
+            "André Caplet",
+            "Claude Debussy",
+            "Claude Debussy"
+        ],
+        "pieces": [
+            [
+                "Suite Persane"
+            ],
+            [
+                "Fantaisie pour piano et orchestre"
+            ],
+            [
+                "Le Martyre de Saint Sébastien (Auszüge)"
+            ]
+        ],
+        "conductor": "Alain Altinoglu",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1587,
+        "date": "2022-04-28T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/haydn-die-schopfung-alan-gilbert-2g/16179",
+        "musicians": {
+            "Benjamin Appl": "Bariton",
+            "WDR Rundfunkchor": "",
+            "NDR Vokalensemble": "",
+            "Christina Landshamer": "Sopran"
+        },
+        "composers": [
+            "Joseph Haydn",
+            "Einführung mit Julius Heile"
+        ],
+        "pieces": [
+            [
+                "Die Schöpfung / Oratorium für Soli, Chor und Orchester Hob. XXI:2"
+            ],
+            [
+                "19 Uhr / Elbphilharmonie, Großer Saal"
+            ]
+        ],
+        "conductor": "Alan Gilbert",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1519,
+        "date": "2022-04-29T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53893/",
+        "musicians": {},
+        "composers": [
+            "Gioacchino Rossini",
+            "Leoš Janáček",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                "Il barbiere di Siviglia: Ouvertüre"
+            ],
+            [
+                "Taras Bulba, Rhapsodie für Orchester"
+            ],
+            [
+                "Don Juan op. 20",
+                "Till Eulenspiegels lustige Streiche op. 28"
+            ]
+        ],
+        "conductor": "Kirill Petrenko",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1699,
+        "date": "2022-04-29T18:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/le-martyre-de-saint-sebastien,hr-sinfoniekonzert-le-martyre-100.html",
+        "musicians": {
+            "Chen Reiss": "Sopran",
+            "Nora Gubisch": "Sprecherin",
+            "Marie Gautrot": "Mezzosopran",
+            "Marie Kalinine": "Mezzosopran",
+            "MDR-Rundfunkchor": "",
+            "Éric Génovèse": "Schauspieler",
+            "Pierre-Laurent Aimard": "Klavier"
+        },
+        "composers": [
+            "André Caplet",
+            "Claude Debussy",
+            "Claude Debussy"
+        ],
+        "pieces": [
+            [
+                "Suite Persane"
+            ],
+            [
+                "Fantaisie pour piano et orchestre"
+            ],
+            [
+                "Le Martyre de Saint Sébastien (Auszüge)"
+            ]
+        ],
+        "conductor": "Alain Altinoglu",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1588,
+        "date": "2022-04-29T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/haydn-die-schopfung-alan-gilbert-2g/16180",
+        "musicians": {
+            "Benjamin Appl": "Bariton",
+            "WDR Rundfunkchor": "",
+            "NDR Vokalensemble": "",
+            "Christina Landshamer": "Sopran"
+        },
+        "composers": [
+            "Joseph Haydn",
+            "Einführung mit Julius Heile"
+        ],
+        "pieces": [
+            [
+                "Die Schöpfung / Oratorium für Soli, Chor und Orchester Hob. XXI:2"
+            ],
+            [
+                "19 Uhr / Elbphilharmonie, Großer Saal"
+            ]
+        ],
+        "conductor": "Alan Gilbert",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1663,
+        "date": "2022-04-30T17:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/dun-2022-04-30-1734",
+        "musicians": {
+            "Sen Guo": "Sopran",
+            "Shenyang": "Bassbariton",
+            "Huiling Zhu": "Mezzosopran",
+            "Jinxu Xiahou": "Tenor",
+            "Philharmonischer Chor München": "Einstudierung: Andreas Herrmann"
+        },
+        "composers": [
+            "Tan Dun"
+        ],
+        "pieces": [
+            [
+                " \"Buddha Passion\" für Chor und Orchester"
+            ]
+        ],
+        "conductor": "Long Yu",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1589,
+        "date": "2022-04-30T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/philharmonisches-staatsorchester-hamburg-kent-nagano-2g/16458",
+        "musicians": {
+            "Gerhild Romberger": "Alt",
+            "Hamburger Knabenchor": "",
+            "Chor der Hamburgischen Staatsoper": ""
+        },
+        "composers": [
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 3 d-Moll für Alt, Knabenchor, Frauenchor und Orchester"
+            ]
+        ],
+        "conductor": "Kent Nagano",
+        "ensemble": "Philharmonisches Staatsorchester Hamburg"
+    },
+    {
+        "id": 1664,
+        "date": "2022-05-01T09:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/dun-2022-05-01-1735",
+        "musicians": {
+            "Sen Guo": "Sopran",
+            "Shenyang": "Bassbariton",
+            "Huiling Zhu": "Mezzosopran",
+            "Jinxu Xiahou": "Tenor",
+            "Philharmonischer Chor München": "Einstudierung: Andreas Herrmann"
+        },
+        "composers": [
+            "Tan Dun"
+        ],
+        "pieces": [
+            [
+                " \"Buddha Passion\" für Chor und Orchester"
+            ]
+        ],
+        "conductor": "Long Yu",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1590,
+        "date": "2022-05-02T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/philharmonisches-staatsorchester-hamburg-kent-nagano-2g/16459",
+        "musicians": {
+            "Gerhild Romberger": "Alt",
+            "Hamburger Knabenchor": "",
+            "Chor der Hamburgischen Staatsoper": ""
+        },
+        "composers": [
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 3 d-Moll für Alt, Knabenchor, Frauenchor und Orchester"
+            ]
+        ],
+        "conductor": "Kent Nagano",
+        "ensemble": "Philharmonisches Staatsorchester Hamburg"
+    },
+    {
+        "id": 1591,
+        "date": "2022-05-03T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/julia-fischer-academy-of-st-martin-in-the-fields-2g/16240",
+        "musicians": {
+            "Academy of St Martin in the Fields": ""
+        },
+        "composers": [
+            "Wolfgang Amadeus Mozart",
+            "Joseph Haydn",
+            "Piotr I. Tschaikowsky",
+            "Josef Suk"
+        ],
+        "pieces": [
+            [
+                "Konzert für Violine und Orchester D-Dur KV 218"
+            ],
+            [
+                "Sinfonie fis-Moll Hob. I:45 »Abschiedssinfonie«"
+            ],
+            [
+                "Souvenir d’un lieu cher für Violine und Klavier op. 42 / Bearbeitung für Violine und Streicher von Alexandru Lascae"
+            ],
+            [
+                "Serenade für Streichorchester Es-Dur op. 6"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Julia Fischer"
+    },
+    {
+        "id": 1665,
+        "date": "2022-05-04T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/strauss-poulenc-2022-05-04-1736",
+        "musicians": {
+            "Barbara Hannigan": "Dirigentin und Sopran"
+        },
+        "composers": [
+            "Richard Strauss",
+            "Francis Poulenc"
+        ],
+        "pieces": [
+            [
+                " \"Metamorphosen\", Studie für 23 Solostreicher"
+            ],
+            [
+                " \"La Voix humaine\" (Die menschliche Stimme)"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1592,
+        "date": "2022-05-04T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/weber-der-freischutz-rene-jacobs-2g/16784",
+        "musicians": {
+            "Max Urlacher": "Samiel",
+            "René Jacobs": "Leitung",
+            "Yannick Debus": "Kilian",
+            "Mari Eriksmoen": "Ännchen",
+            "Torben Jürgens": "Ein Eremit",
+            "Magnus Staveland": "Max",
+            "Matthias Winckhler": "Kuno",
+            "Dimitry Ivashchenko": "Kaspar",
+            "Polina Pasztircsák": "Agathe",
+            "Zürcher Sing-Akademie": ""
+        },
+        "composers": [
+            "Carl Maria von Weber",
+            [
+                "Konzertante Aufführung in deutscher Sprache"
+            ]
+        ],
+        "pieces": [
+            [
+                "Der Freischütz / Romantische Oper in drei Akten op. 77"
+            ],
+            []
+        ],
+        "conductor": "",
+        "ensemble": "Freiburger Barockorchester"
+    },
+    {
+        "id": 1520,
+        "date": "2022-05-05T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53795/",
+        "musicians": {
+            "Christian Gerhaher": " Bariton"
+        },
+        "composers": [
+            "Ludwig van Beethoven",
+            "Gustav Mahler",
+            "Arnold Schönberg",
+            "Franz Schubert"
+        ],
+        "pieces": [
+            [
+                "Coriolan-Ouvertüre c-Moll op. 62"
+            ],
+            [
+                "Fünf Lieder nach Gedichten von Friedrich Rückert"
+            ],
+            [
+                "Kammersymphonie Nr. 2 es-Moll für kleines Orchester op. 38"
+            ],
+            [
+                "Symphonie Nr. 7 h-Moll D 759 »Unvollendete«"
+            ]
+        ],
+        "conductor": "Antonello Manacorda",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1666,
+        "date": "2022-05-05T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/strauss-poulenc-2022-05-05-1737",
+        "musicians": {
+            "Barbara Hannigan": "Dirigentin und Sopran"
+        },
+        "composers": [
+            "Richard Strauss",
+            "Francis Poulenc"
+        ],
+        "pieces": [
+            [
+                " \"Metamorphosen\", Studie für 23 Solostreicher"
+            ],
+            [
+                " \"La Voix humaine\" (Die menschliche Stimme)"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1729,
+        "date": "2022-05-05T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/kammer-und-auffuehrungsabende/2122/6-kammerabend/",
+        "musicians": {
+            "Anke Heyn": "Violoncello",
+            "Robert Lis": "Violine",
+            "Fabian Dirr": "Klarinette",
+            "Klaus Gayer": "Horn",
+            "Paul Rivinius": "Klavier",
+            "Sabine Kittel": "Flöte",
+            "Philipp Zeller": "Fagott",
+            "Florian Richter": "Viola",
+            "Undine Röhner-Stolle": "Oboe"
+        },
+        "composers": [
+            "Albert Roussel",
+            "Guillaume Connesson",
+            "Francis Poulenc",
+            "Franz Lachner"
+        ],
+        "pieces": [
+            [
+                "Divertissement op. 6 für Bläserquintett und Klavier",
+                "»Joueurs de flûte« op. 27 für Flöte und Klavier"
+            ],
+            [
+                "»Techno Parade« für Flöte, Klarinette und Klavier"
+            ],
+            [
+                "Sextett für Bläserquintett und Klavier"
+            ],
+            [
+                "Nonett F-Dur"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1593,
+        "date": "2022-05-06T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/dvorak-rusalka-alan-gilbert-2g/16188",
+        "musicians": {
+            "Eric Owens": "Wassermann",
+            "Dmytro Popov": "Prinz",
+            "Lucy De Butts": "Elfe",
+            "Attilio Glaser": "Heger/Förster",
+            "Michelle DeYoung": "Jezibaba",
+            "Anna-Maria Torkel": "Elfe",
+            "Catherina Witting": "Elfe",
+            "Andreas Heinemeyer": "Jäger",
+            "Ekaterina Gubanova": "Fremde Fürstin",
+            "Anastasiya Taratorkina": "Küchenjunge",
+            "Rachel Willis-Sørensen": "Rusalka",
+            "Prager Philharmonischer Chor": ""
+        },
+        "composers": [
+            "Antonín Dvořák",
+            "Einführung mit Julius Heile",
+            [
+                "Konzertante Aufführung in tschechischer Sprache"
+            ]
+        ],
+        "pieces": [
+            [
+                "Rusalka / Lyrisches Märchen in drei Akten op. 114"
+            ],
+            [
+                "19 Uhr / Elbphilharmonie, Großer Saal"
+            ],
+            []
+        ],
+        "conductor": "Alan Gilbert",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1667,
+        "date": "2022-05-06T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/strauss-poulenc-2022-05-06-1738",
+        "musicians": {
+            "Barbara Hannigan": "Dirigentin und Sopran"
+        },
+        "composers": [
+            "Richard Strauss",
+            "Francis Poulenc"
+        ],
+        "pieces": [
+            [
+                " \"Metamorphosen\", Studie für 23 Solostreicher"
+            ],
+            [
+                " \"La Voix humaine\" (Die menschliche Stimme)"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1521,
+        "date": "2022-05-06T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53795/",
+        "musicians": {
+            "Christian Gerhaher": " Bariton"
+        },
+        "composers": [
+            "Ludwig van Beethoven",
+            "Gustav Mahler",
+            "Arnold Schönberg",
+            "Franz Schubert"
+        ],
+        "pieces": [
+            [
+                "Coriolan-Ouvertüre c-Moll op. 62"
+            ],
+            [
+                "Fünf Lieder nach Gedichten von Friedrich Rückert"
+            ],
+            [
+                "Kammersymphonie Nr. 2 es-Moll für kleines Orchester op. 38"
+            ],
+            [
+                "Symphonie Nr. 7 h-Moll D 759 »Unvollendete«"
+            ]
+        ],
+        "conductor": "Antonello Manacorda",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1594,
+        "date": "2022-05-08T16:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/dvorak-rusalka-alan-gilbert-2g/16187",
+        "musicians": {
+            "Eric Owens": "Wassermann",
+            "Dmytro Popov": "Prinz",
+            "Lucy De Butts": "Elfe",
+            "Attilio Glaser": "Heger/Förster",
+            "Michelle DeYoung": "Jezibaba",
+            "Anna-Maria Torkel": "Elfe",
+            "Catherina Witting": "Elfe",
+            "Andreas Heinemeyer": "Jäger",
+            "Ekaterina Gubanova": "Fremde Fürstin",
+            "Anastasiya Taratorkina": "Küchenjunge",
+            "Rachel Willis-Sørensen": "Rusalka",
+            "Prager Philharmonischer Chor": ""
+        },
+        "composers": [
+            "Antonín Dvořák",
+            "Einführung mit Julius Heile",
+            [
+                "Konzertante Aufführung in tschechischer Sprache"
+            ]
+        ],
+        "pieces": [
+            [
+                "Rusalka / Lyrisches Märchen in drei Akten op. 114"
+            ],
+            [
+                "17 Uhr / Elbphilharmonie, Großer Saal"
+            ],
+            []
+        ],
+        "conductor": "Alan Gilbert",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1595,
+        "date": "2022-05-09T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/philharmonia-orchestra-pekka-kuusisto-santtu-matias-rouvali-2g/16711",
+        "musicians": {
+            "Pekka Kuusisto": "Violine"
+        },
+        "composers": [
+            "Gioachino Rossini",
+            "Bryce Dessner",
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "Ouvertüre zu »Semiramide«"
+            ],
+            [
+                "Violinkonzert"
+            ],
+            [
+                "Sinfonie Nr. 6 F-Dur op. 68 »Pastorale«"
+            ]
+        ],
+        "conductor": "Santtu-Matias Rouvali",
+        "ensemble": "Philharmonia Orchestra"
+    },
+    {
+        "id": 1596,
+        "date": "2022-05-10T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/hr-sinfonieorchester-pierre-laurent-aimard-brad-lubman-2g/16686",
+        "musicians": {
+            "Pierre-Laurent Aimard": "Klavier"
+        },
+        "composers": [
+            "George Crumb",
+            "Augusta Read Thomas",
+            "Olivier Messiaen",
+            "Claude Vivier"
+        ],
+        "pieces": [
+            [
+                "A Haunted Landscape"
+            ],
+            [
+                "Words of the Sea"
+            ],
+            [
+                "Réveil des oiseaux für Klavier und Orchester"
+            ],
+            [
+                "Orion"
+            ]
+        ],
+        "conductor": "Brad Lubman",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1730,
+        "date": "2022-05-11T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/kammer-und-auffuehrungsabende/2122/4-auffuehrungsabend/",
+        "musicians": {
+            "Christa Mayer": "Alt",
+            "Reinhard Krauß": "Violine"
+        },
+        "composers": [
+            "Edward Elgar",
+            "Jörg Herchet",
+            "Georges Bizet"
+        ],
+        "pieces": [
+            [
+                "Streicherserenade e-Moll op. 20"
+            ],
+            [
+                "Konzert für Violine, Alt und Orchester"
+            ],
+            [
+                "Symphonie Nr. 2 C-Dur »Roma«"
+            ]
+        ],
+        "conductor": "Gaetano d'Espinosa",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1597,
+        "date": "2022-05-11T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/symphonieorchester-des-bayerischen-rundfunks-yannick-nezet-seguin-2g/16790",
+        "musicians": {
+            "Beatrice Rana": "Klavier"
+        },
+        "composers": [
+            "Hans Abrahamsen",
+            "Clara Schumann",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Vers le silence"
+            ],
+            [
+                "Konzert für Klavier und Orchester a-Moll op. 7"
+            ],
+            [
+                "Sinfonie Nr. 3 d-Moll"
+            ]
+        ],
+        "conductor": "Yannick Nézet-Séguin",
+        "ensemble": "Symphonieorchester des Bayerischen Rundfunks"
+    },
+    {
+        "id": 1522,
+        "date": "2022-05-12T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53796/",
+        "musicians": {},
+        "composers": [
+            "Roberto Gerhard",
+            "Antonín Dvořák"
+        ],
+        "pieces": [
+            [
+                "Tänze aus Don Quixote",
+                "Symphonie Nr. 3 »Collages«"
+            ],
+            [
+                "Scherzo capriccioso op. 66",
+                "Suite für Orchester A-Dur op. 98b »Amerikanische«"
+            ]
+        ],
+        "conductor": "Sir Simon Rattle",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1598,
+        "date": "2022-05-12T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-betrand-chamayou-pablo-heras-casado-2g/16206",
+        "musicians": {
+            "Bertrand Chamayou": "Klavier"
+        },
+        "composers": [
+            "Benjamin Britten",
+            "Manuel de Falla",
+            "Robert Schumann"
+        ],
+        "pieces": [
+            [
+                "Four Sea Interludes op. 33a / aus der Oper »Peter Grimes«"
+            ],
+            [
+                "Noches en los jardines de España / Symphonische Impressionen für Klavier und Orchester"
+            ],
+            [
+                "Sinfonie Nr. 3 Es-Dur op. 97 »Rheinische«"
+            ]
+        ],
+        "conductor": "Pablo Heras-Casado",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1668,
+        "date": "2022-05-12T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/schostakowitsch-2022-05-12-1741",
+        "musicians": {},
+        "composers": [
+            "Dmitrij Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                " Symphonie Nr. 7 C-Dur op. 60 \"Leningrader\""
+            ]
+        ],
+        "conductor": "Valery Gergiev",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1523,
+        "date": "2022-05-13T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53796/",
+        "musicians": {},
+        "composers": [
+            "Roberto Gerhard",
+            "Antonín Dvořák"
+        ],
+        "pieces": [
+            [
+                "Tänze aus Don Quixote",
+                "Symphonie Nr. 3 »Collages«"
+            ],
+            [
+                "Scherzo capriccioso op. 66",
+                "Suite für Orchester A-Dur op. 98b »Amerikanische«"
+            ]
+        ],
+        "conductor": "Sir Simon Rattle",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1669,
+        "date": "2022-05-13T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/escaich-bruckner-2022-05-13-1742",
+        "musicians": {
+            "Renaud Capuçon": "Violine"
+        },
+        "composers": [
+            "Thierry Escaich",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                " Konzert für Violine und Orchester"
+            ],
+            [
+                " Symphonie Nr. 9 d-Moll"
+            ]
+        ],
+        "conductor": "Valery Gergiev",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1599,
+        "date": "2022-05-13T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-betrand-chamayou-pablo-heras-casado-2g/16207",
+        "musicians": {
+            "Bertrand Chamayou": "Klavier"
+        },
+        "composers": [
+            "Benjamin Britten",
+            "Manuel de Falla",
+            "Robert Schumann"
+        ],
+        "pieces": [
+            [
+                "Four Sea Interludes op. 33a / aus der Oper »Peter Grimes«"
+            ],
+            [
+                "Noches en los jardines de España / Symphonische Impressionen für Klavier und Orchester"
+            ],
+            [
+                "Sinfonie Nr. 3 Es-Dur op. 97 »Rheinische«"
+            ]
+        ],
+        "conductor": "Pablo Heras-Casado",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1524,
+        "date": "2022-05-14T17:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53796/",
+        "musicians": {},
+        "composers": [
+            "Roberto Gerhard",
+            "Antonín Dvořák"
+        ],
+        "pieces": [
+            [
+                "Tänze aus Don Quixote",
+                "Symphonie Nr. 3 »Collages«"
+            ],
+            [
+                "Scherzo capriccioso op. 66",
+                "Suite für Orchester A-Dur op. 98b »Amerikanische«"
+            ]
+        ],
+        "conductor": "Sir Simon Rattle",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1600,
+        "date": "2022-05-14T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/munchner-philharmoniker-valery-gergiev-2g/16648",
+        "musicians": {},
+        "composers": [
+            "Dmitri Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 7 C-Dur op. 60 »Leningrader«"
+            ]
+        ],
+        "conductor": "Valery Gergiev",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1732,
+        "date": "2022-05-15T09:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/sonderkonzerte/2122/rezital-des-capell-virtuosen/",
+        "musicians": {
+            "Antoine Tamestit": "Viola",
+            "Cédric Tiberghien": "Klavier"
+        },
+        "composers": [
+            "Johann Sebastian Bach",
+            "Johannes Brahms",
+            "Gabriel Fauré",
+            "Rebecca Clarke"
+        ],
+        "pieces": [
+            [
+                "Sonate für Viola da gamba und Klavier BWV 1028"
+            ],
+            [
+                "Sonate für Viola und Klavier f-Moll op. 120 Nr. 1"
+            ],
+            [
+                "Berceuse op. 16",
+                "»Sicilienne« op. 78",
+                "»Après un rêve« op. 7 Nr. 1"
+            ],
+            [
+                "Sonate für Viola und Klavier"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1601,
+        "date": "2022-05-15T09:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/philharmonisches-staatsorchester-hamburg-denis-matsuev-kent-nagano-2g/16453",
+        "musicians": {
+            "Denis Matsuev": "Klavier"
+        },
+        "composers": [
+            "Johannes Brahms",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester Nr. 2 B-Dur op. 83"
+            ],
+            [
+                "Sinfonie Nr. 7 E-Dur"
+            ]
+        ],
+        "conductor": "Kent Nagano",
+        "ensemble": "Philharmonisches Staatsorchester Hamburg"
+    },
+    {
+        "id": 1731,
+        "date": "2022-05-15T09:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/sonderkonzerte/2122/rezital-des-capell-virtuosen/",
+        "musicians": {
+            "Antoine Tamestit": "Viola",
+            "Cédric Tiberghien": "Klavier"
+        },
+        "composers": [
+            "Johann Sebastian Bach",
+            "Johannes Brahms",
+            "Gabriel Fauré",
+            "Rebecca Clarke"
+        ],
+        "pieces": [
+            [
+                "Sonate für Viola da gamba und Klavier BWV 1028"
+            ],
+            [
+                "Sonate für Viola und Klavier f-Moll op. 120 Nr. 1"
+            ],
+            [
+                "Berceuse op. 16",
+                "»Sicilienne« op. 78",
+                "»Après un rêve« op. 7 Nr. 1"
+            ],
+            [
+                "Sonate für Viola und Klavier"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1602,
+        "date": "2022-05-15T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/munchner-philharmoniker-renaud-capucon-valery-gergiev-2g/16649",
+        "musicians": {
+            "Renaud Capuçon": "Violine"
+        },
+        "composers": [
+            "Thierry Escaich",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Neues Violinkonzert"
+            ],
+            [
+                "Sinfonie Nr. 9 d-Moll"
+            ]
+        ],
+        "conductor": "Valery Gergiev",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1603,
+        "date": "2022-05-16T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/philharmonisches-staatsorchester-hamburg-denis-matsuev-kent-nagano-2g/16454",
+        "musicians": {
+            "Denis Matsuev": "Klavier"
+        },
+        "composers": [
+            "Johannes Brahms",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester Nr. 2 B-Dur op. 83"
+            ],
+            [
+                "Sinfonie Nr. 7 E-Dur"
+            ]
+        ],
+        "conductor": "Kent Nagano",
+        "ensemble": "Philharmonisches Staatsorchester Hamburg"
+    },
+    {
+        "id": 1604,
+        "date": "2022-05-17T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/anne-sophie-mutter-royal-philharmonic-orchestra-vasily-petrenko-2g/16269",
+        "musicians": {
+            "Anne-Sophie Mutter": "Violine"
+        },
+        "composers": [
+            "Leonard Bernstein",
+            "André Previn",
+            "Sergej Rachmaninow"
+        ],
+        "pieces": [
+            [
+                "Ouvertüre zu »Candide«"
+            ],
+            [
+                "Konzert für Violine und Orchester »Anne-Sophie«"
+            ],
+            [
+                "Sinfonische Tänze op. 45"
+            ]
+        ],
+        "conductor": "Vasily Petrenko",
+        "ensemble": "Royal Philharmonic Orchestra"
+    },
+    {
+        "id": 1605,
+        "date": "2022-05-18T16:30:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/filarmonica-della-scala-ray-chen-riccardo-chailly-2g/16241",
+        "musicians": {
+            "Ray Chen": "Violine"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Konzert für Violine und Orchester e-Moll op. 64"
+            ],
+            [
+                "Sinfonie Nr. 1 D-Dur »Titan«"
+            ]
+        ],
+        "conductor": "Riccardo Chailly",
+        "ensemble": "Filarmonica della Scala"
+    },
+    {
+        "id": 1700,
+        "date": "2022-05-19T18:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/beethoven-8,hr-sinfoniekonzert-beethoven-8-100.html",
+        "musicians": {},
+        "composers": [
+            "Jean Sibelius",
+            "Jüri Reinvere",
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "7. Sinfonie"
+            ],
+            [
+                "Und müde vom Glück, fingen sie an zu tanzen"
+            ],
+            [
+                "8. Sinfonie"
+            ]
+        ],
+        "conductor": "Paavo Järvi",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1525,
+        "date": "2022-05-19T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53797/",
+        "musicians": {
+            "Anna Lapkovskaja": " Mezzosopran"
+        },
+        "composers": [
+            "Joseph Haydn",
+            "Igor Strawinsky"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 102 B-Dur"
+            ],
+            [
+                "Strawinsky Journey, zusammengestellt von Sir Simon Rattle",
+                "Feu d'artifice op. 4",
+                "Faun und Schäferin op. 2:Nr. 2 Die Schäferin",
+                "Pribaoutki",
+                "Requiem Canticles (Auszüge)"
+            ]
+        ],
+        "conductor": "Sir Simon Rattle",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1606,
+        "date": "2022-05-19T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-emanuel-ax-alan-gilbert-2g/16201",
+        "musicians": {
+            "Emanuel Ax": "Klavier"
+        },
+        "composers": [
+            "Marc Neikrug",
+            "Johannes Brahms"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 4 (Uraufführung, Auftragswerk des NDR)"
+            ],
+            [
+                "Konzert für Klavier und Orchester Nr. 1 d-Moll op. 15"
+            ]
+        ],
+        "conductor": "Alan Gilbert",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1526,
+        "date": "2022-05-20T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53797/",
+        "musicians": {
+            "Anna Lapkovskaja": " Mezzosopran"
+        },
+        "composers": [
+            "Joseph Haydn",
+            "Igor Strawinsky"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 102 B-Dur"
+            ],
+            [
+                "Strawinsky Journey, zusammengestellt von Sir Simon Rattle",
+                "Feu d'artifice op. 4",
+                "Faun und Schäferin op. 2:Nr. 2 Die Schäferin",
+                "Pribaoutki",
+                "Requiem Canticles (Auszüge)"
+            ]
+        ],
+        "conductor": "Sir Simon Rattle",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1607,
+        "date": "2022-05-20T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/boston-symphony-orchestra-davidsen-nelsons-2g/16223",
+        "musicians": {
+            "Lise Davidsen": "Sopran"
+        },
+        "composers": [
+            "Richard Strauss",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                "Vier letzte Lieder TrV 296"
+            ],
+            [
+                "Sinfonia domestica für großes Orchester F-Dur op. 53"
+            ]
+        ],
+        "conductor": "Andris Nelsons",
+        "ensemble": "Boston Symphony Orchestra"
+    },
+    {
+        "id": 1701,
+        "date": "2022-05-20T18:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/beethoven-8,hr-sinfoniekonzert-beethoven-8-100.html",
+        "musicians": {},
+        "composers": [
+            "Jean Sibelius",
+            "Jüri Reinvere",
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "7. Sinfonie"
+            ],
+            [
+                "Und müde vom Glück, fingen sie an zu tanzen"
+            ],
+            [
+                "8. Sinfonie"
+            ]
+        ],
+        "conductor": "Paavo Järvi",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1527,
+        "date": "2022-05-21T17:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53797/",
+        "musicians": {
+            "Anna Lapkovskaja": " Mezzosopran"
+        },
+        "composers": [
+            "Joseph Haydn",
+            "Igor Strawinsky"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 102 B-Dur"
+            ],
+            [
+                "Strawinsky Journey, zusammengestellt von Sir Simon Rattle",
+                "Feu d'artifice op. 4",
+                "Faun und Schäferin op. 2:Nr. 2 Die Schäferin",
+                "Pribaoutki",
+                "Requiem Canticles (Auszüge)"
+            ]
+        ],
+        "conductor": "Sir Simon Rattle",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1733,
+        "date": "2022-05-21T17:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/10-symphoniekonzert/",
+        "musicians": {
+            "Julia Kleiter": "Sopran",
+            "Christian Gerhaher": "Bariton"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Alexander von Zemlinsky"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 3 a-Moll op. 56 »Schottische«"
+            ],
+            [
+                "Lyrische Symphonie op. 18 für Sopran, Bariton und Orchester"
+            ]
+        ],
+        "conductor": "Christian Thielemann",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1608,
+        "date": "2022-05-21T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/boston-symphony-orchestra-andris-nelsons-2g/16224",
+        "musicians": {},
+        "composers": [
+            "Richard Strauss",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                "Till Eulenspiegels lustige Streiche op. 28",
+                "Sinfonische Fantasie aus »Die Frau ohne Schatten« für Orchester TrV 234a"
+            ],
+            [
+                "Eine Alpensinfonie op. 64"
+            ]
+        ],
+        "conductor": "Andris Nelsons",
+        "ensemble": "Boston Symphony Orchestra"
+    },
+    {
+        "id": 1734,
+        "date": "2022-05-22T09:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/10-symphoniekonzert/",
+        "musicians": {
+            "Julia Kleiter": "Sopran",
+            "Christian Gerhaher": "Bariton"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Alexander von Zemlinsky"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 3 a-Moll op. 56 »Schottische«"
+            ],
+            [
+                "Lyrische Symphonie op. 18 für Sopran, Bariton und Orchester"
+            ]
+        ],
+        "conductor": "Christian Thielemann",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1609,
+        "date": "2022-05-22T09:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-emanuel-ax-alan-gilbert-2g/16202",
+        "musicians": {
+            "Emanuel Ax": "Klavier"
+        },
+        "composers": [
+            "Marc Neikrug",
+            "Johannes Brahms"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 4"
+            ],
+            [
+                "Konzert für Klavier und Orchester Nr. 1 d-Moll op. 15"
+            ]
+        ],
+        "conductor": "Alan Gilbert",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1610,
+        "date": "2022-05-22T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/budapest-festival-orchestra-alexandre-kantorow-ivan-fischer-2g/16704",
+        "musicians": {
+            "Alexandre Kantorow": "Klavier"
+        },
+        "composers": [
+            "Franz Liszt",
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester Nr. 2 A-Dur S 125"
+            ],
+            [
+                "Sinfonie Nr. 1 D-Dur »Titan«"
+            ]
+        ],
+        "conductor": "Iván Fischer",
+        "ensemble": "Budapest Festival Orchestra"
+    },
+    {
+        "id": 1611,
+        "date": "2022-05-23T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/orchestre-de-paris-igor-levit-manfred-honeck-2g/16281",
+        "musicians": {
+            "Igor Levit": "Klavier"
+        },
+        "composers": [
+            "Maurice Ravel",
+            "George Gershwin",
+            "Béla Bartók"
+        ],
+        "pieces": [
+            [
+                "La valse / Poème chorégraphique für Orchester"
+            ],
+            [
+                "Concerto in F für Klavier und Orchester"
+            ],
+            [
+                "Konzert für Orchester Sz 116"
+            ]
+        ],
+        "conductor": "Manfred Honeck",
+        "ensemble": "Orchestre de Paris"
+    },
+    {
+        "id": 1735,
+        "date": "2022-05-24T17:30:00Z",
+        "city": "Zürich",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/tourneen/2122/europa-tournee/gastkonzert-in-zuerich/",
+        "musicians": {
+            "Julia Kleiter": "Sopran",
+            "Christian Gerhaher": "Bariton"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Alexander von Zemlinsky",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 3 a-Moll op. 56 »Schottische«"
+            ],
+            [
+                "Lyrische Symphonie op. 18 für Sopran, Bariton und Orchester"
+            ],
+            [
+                "Symphonie Nr. 9 d-Moll"
+            ]
+        ],
+        "conductor": "Christian Thielemann",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1612,
+        "date": "2022-05-24T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/orchestra-of-the-age-of-enlightenment-sir-andras-schiff-2g/16798",
+        "musicians": {
+            "Sir András Schiff": "Klavier und Leitung"
+        },
+        "composers": [
+            "Ludwig van Beethoven",
+            "Joseph Haydn",
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester Nr. 3 c-Moll op. 37"
+            ],
+            [
+                "Sinfonie Es-Dur Hob. I:99"
+            ],
+            [
+                "Konzert für Klavier und Orchester Nr. 4 G-Dur op. 58"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Orchestra of the Age of Enlightenment"
+    },
+    {
+        "id": 1613,
+        "date": "2022-05-25T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/haydn-die-jahreszeiten-2g/16800",
+        "musicians": {
+            "Ian Bostridge": "Lukas",
+            "Florian Boesch": "Simon",
+            "Cappella Amsterdam": "",
+            "Christina Landshamer": "Hanne"
+        },
+        "composers": [
+            "Joseph Haydn"
+        ],
+        "pieces": [
+            [
+                "Die Jahreszeiten / Oratorium für Soli, Chor und Orchester Hob. XXI:3"
+            ]
+        ],
+        "conductor": "Nicolas Altstaedt",
+        "ensemble": "Orchester des 18. Jahrhunderts"
+    },
+    {
+        "id": 1736,
+        "date": "2022-05-26T17:30:00Z",
+        "city": "Budapest",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/tourneen/2122/europa-tournee/gastkonzert-in-budapest/",
+        "musicians": {
+            "Julia Kleiter": "Sopran",
+            "Christian Gerhaher": "Bariton"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Alexander von Zemlinsky",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 3 a-Moll op. 56 »Schottische«"
+            ],
+            [
+                "Lyrische Symphonie op. 18 für Sopran, Bariton und Orchester"
+            ],
+            [
+                "Symphonie Nr. 9 d-Moll"
+            ]
+        ],
+        "conductor": "Christian Thielemann",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1614,
+        "date": "2022-05-26T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/elisabeth-leonskaja-die-deutsche-kammerphilharmonie-bremen-2g/16782",
+        "musicians": {
+            "Sarah Christian": "Leitung und Konzertmeisterin",
+            "Elisabeth Leonskaja": "Klavier"
+        },
+        "composers": [
+            "Ludwig van Beethoven",
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester Nr. 4 G-Dur op. 58"
+            ],
+            [
+                "Sinfonie Nr. 7 A-Dur op. 92"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Die Deutsche Kammerphilharmonie Bremen"
+    },
+    {
+        "id": 1528,
+        "date": "2022-05-26T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53798/",
+        "musicians": {
+            "Emmanuel Pahud": " Flöte"
+        },
+        "composers": [
+            "Jean Sibelius",
+            "Erkki-Sven Tüür",
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 7 C-Dur op. 105"
+            ],
+            [
+                "Konzert für Flöte und Orchester, Auftragswerk der Stiftung Berliner Philharmoniker gemeinsam mit der Tonhalle Zürich (Uraufführung)"
+            ],
+            [
+                "Symphonie Nr. 8 F-Dur op. 93"
+            ]
+        ],
+        "conductor": "Paavo Järvi",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1529,
+        "date": "2022-05-27T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53798/",
+        "musicians": {
+            "Emmanuel Pahud": " Flöte"
+        },
+        "composers": [
+            "Jean Sibelius",
+            "Erkki-Sven Tüür",
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 7 C-Dur op. 105"
+            ],
+            [
+                "Konzert für Flöte und Orchester, Auftragswerk der Stiftung Berliner Philharmoniker gemeinsam mit der Tonhalle Zürich (Uraufführung)"
+            ],
+            [
+                "Symphonie Nr. 8 F-Dur op. 93"
+            ]
+        ],
+        "conductor": "Paavo Järvi",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1615,
+        "date": "2022-05-27T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ensemble-modern-ingo-metzmacher-2g/16707",
+        "musicians": {
+            "Knabenchor Hannover": "",
+            "Mädchenchor Hannover": "",
+            "Collegium Vocale Hannover": "",
+            "Norddeutscher Figuralchor": "",
+            "Johannes-Brahms-Chor Hannover": "",
+            "Junges Vokalensemble Hannover": ""
+        },
+        "composers": [
+            "Mark Andre"
+        ],
+        "pieces": [
+            [
+                "rwh 1-4"
+            ]
+        ],
+        "conductor": "Ingo Metzmacher",
+        "ensemble": "Ensemble Modern"
+    },
+    {
+        "id": 1530,
+        "date": "2022-05-28T17:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53798/",
+        "musicians": {
+            "Emmanuel Pahud": " Flöte"
+        },
+        "composers": [
+            "Jean Sibelius",
+            "Erkki-Sven Tüür",
+            "Ludwig van Beethoven"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 7 C-Dur op. 105"
+            ],
+            [
+                "Konzert für Flöte und Orchester, Auftragswerk der Stiftung Berliner Philharmoniker gemeinsam mit der Tonhalle Zürich (Uraufführung)"
+            ],
+            [
+                "Symphonie Nr. 8 F-Dur op. 93"
+            ]
+        ],
+        "conductor": "Paavo Järvi",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1737,
+        "date": "2022-05-28T17:30:00Z",
+        "city": "Graz",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/tourneen/2122/europa-tournee/gastkonzert-in-graz/",
+        "musicians": {
+            "Julia Kleiter": "Sopran",
+            "Christian Gerhaher": "Bariton"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Alexander von Zemlinsky",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 3 a-Moll op. 56 »Schottische«"
+            ],
+            [
+                "Lyrische Symphonie op. 18 für Sopran, Bariton und Orchester"
+            ],
+            [
+                "Symphonie Nr. 9 d-Moll"
+            ]
+        ],
+        "conductor": "Christian Thielemann",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1616,
+        "date": "2022-05-28T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/gewandhausorchester-leipzig-yuja-wang-andris-nelsons-2g/16222",
+        "musicians": {
+            "Yuja Wang": "Klavier"
+        },
+        "composers": [
+            "Richard Strauss",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                "Don Juan / Tondichtung nach Nikolaus Lenau op. 20",
+                "Burleske für Klavier und Orchester d-Moll TrV 145"
+            ],
+            [
+                "Also sprach Zarathustra / Tondichtung frei nach Friedrich Nietzsche op. 30"
+            ]
+        ],
+        "conductor": "Andris Nelsons",
+        "ensemble": "Gewandhausorchester Leipzig"
+    },
+    {
+        "id": 1670,
+        "date": "2022-05-29T13:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/familiengrusical-2022-05-29-1749",
+        "musicians": {
+            "Felix Janosa": "Komponist",
+            "Lena Scheerer": "Bühne und Kostüme",
+            "Levente Páll": "Graf Paginowski",
+            "Julia Taschler": "Tranquilla",
+            "Susanne Seimel": "Senta",
+            "Frederic Böhle": "Glissandi",
+            "Matthias Bucher": "Arrangeur",
+            "Ulrich Proschka": "Regie",
+            "Spielfeld Klassik": "Realisation",
+            "Münchner Volkstheater": "Kooperationspartner",
+            "Cordula Fels-Puia & Marina Pilhofer": "Konzept & Idee"
+        },
+        "composers": [
+            "Felix Janosa Janosa"
+        ],
+        "pieces": [
+            [
+                " \"Senta und die verfluchte Partitur\", das Familiengrusical der Münchner Philharmoniker"
+            ]
+        ],
+        "conductor": "Andreas Kowalewitz",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1617,
+        "date": "2022-05-29T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/gewandhausorchester-leipzig-andris-nelsons-2g/16221",
+        "musicians": {},
+        "composers": [
+            "Richard Strauss",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                "Macbeth / Sinfonische Dichtung op. 23",
+                "Suite aus »Der Rosenkavalier« op. 59"
+            ],
+            [
+                "Ein Heldenleben / Tondichtung für großes Orchester op. 40"
+            ]
+        ],
+        "conductor": "Andris Nelsons",
+        "ensemble": "Gewandhausorchester Leipzig"
+    },
+    {
+        "id": 1671,
+        "date": "2022-05-30T08:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/janosa-2022-05-30-1750",
+        "musicians": {
+            "Felix Janosa": "Komponist",
+            "Lena Scheerer": "Kooperationspartner",
+            "Levente Páll": "Regie",
+            "Julia Taschler": "Tranquilla",
+            "Susanne Seimel": "Senta",
+            "Frederic Böhle": "Glissandi",
+            "Matthias Bucher": "Arrangeur",
+            "Ulrich Proschka": "Bühne und Kostüme",
+            "Spielfeld Klassik": "Konzept & Idee",
+            "Münchner Volkstheater": "Realisation",
+            "Cordula Fels-Puia & Marina Pilhofer": ""
+        },
+        "composers": [
+            "Felix Janosa Janosa"
+        ],
+        "pieces": [
+            [
+                " \"Senta und die verfluchte Partitur\", das Familiengrusical der Münchner Philharmoniker"
+            ]
+        ],
+        "conductor": "Andreas Kowalewitz",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1738,
+        "date": "2022-05-30T17:30:00Z",
+        "city": "Wien",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/tourneen/2122/europa-tournee/gastkonzert-in-wien/",
+        "musicians": {
+            "Julia Kleiter": "Sopran",
+            "Christian Gerhaher": "Bariton"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Alexander von Zemlinsky",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 3 a-Moll op. 56 »Schottische«"
+            ],
+            [
+                "Lyrische Symphonie op. 18 für Sopran, Bariton und Orchester"
+            ],
+            [
+                "Symphonie Nr. 9 d-Moll"
+            ]
+        ],
+        "conductor": "Christian Thielemann",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1618,
+        "date": "2022-05-30T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/oslo-philharmonic-klaus-makela-2g/16589",
+        "musicians": {},
+        "composers": [
+            "Jean Sibelius",
+            "Jean Sibelius"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 1 e-Moll op. 39"
+            ],
+            [
+                "Sinfonie Nr. 6 d-Moll op. 104",
+                "Sinfonie Nr. 7 C-Dur op. 105"
+            ]
+        ],
+        "conductor": "Klaus Mäkelä",
+        "ensemble": "Oslo Philharmonic"
+    },
+    {
+        "id": 1739,
+        "date": "2022-05-31T17:30:00Z",
+        "city": "Wien",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/tourneen/2122/europa-tournee/gastkonzert-in-wien/",
+        "musicians": {
+            "Julia Kleiter": "Sopran",
+            "Christian Gerhaher": "Bariton"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Alexander von Zemlinsky",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 3 a-Moll op. 56 »Schottische«"
+            ],
+            [
+                "Lyrische Symphonie op. 18 für Sopran, Bariton und Orchester"
+            ],
+            [
+                "Symphonie Nr. 9 d-Moll"
+            ]
+        ],
+        "conductor": "Christian Thielemann",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1619,
+        "date": "2022-05-31T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/oslo-philharmonic-klaus-makela-2g/16350",
+        "musicians": {},
+        "composers": [
+            "Jean Sibelius",
+            "Jean Sibelius"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 4 a-Moll op. 63"
+            ],
+            [
+                "Sinfonie Nr. 2 D-Dur op. 43"
+            ]
+        ],
+        "conductor": "Klaus Mäkelä",
+        "ensemble": "Oslo Philharmonic"
+    },
+    {
+        "id": 1620,
+        "date": "2022-06-01T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/oslo-philharmonic-klaus-makela-2g/16588",
+        "musicians": {},
+        "composers": [
+            "Jean Sibelius",
+            "Jean Sibelius"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 3 C-Dur op. 52"
+            ],
+            [
+                "Sinfonie Nr. 5 Es-Dur op. 82"
+            ]
+        ],
+        "conductor": "Klaus Mäkelä",
+        "ensemble": "Oslo Philharmonic"
+    },
+    {
+        "id": 1714,
+        "date": "2022-06-02T16:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/nachtmusique,auftakt-nachtmusique-100.html",
+        "musicians": {
+            "Víkingur Ólafsson": "Leitung/Solist"
+        },
+        "composers": [
+            "Philip Glass",
+            "Johann Sebastian Bach",
+            "Johann Sebastian Bach",
+            "Wolfgang Amadeus Mozart",
+            "Wolfgang Amadeus Mozart"
+        ],
+        "pieces": [
+            [
+                "Opening – aus: Glassworks (Arr. Christian Badzura)"
+            ],
+            [
+                "Klavierkonzert f-Moll BWV 1056"
+            ],
+            [
+                "Adagio – aus: Violinsonate f-Moll BWV 1018 (Arr. Víkingur Ólafsson)"
+            ],
+            [
+                "Serenade c-Moll KV 388 (»Nachtmusique«)"
+            ],
+            [
+                "Klavierkonzert c-Moll KV 491"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1672,
+        "date": "2022-06-02T16:30:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/rachmaninow-debussy-skrjabin-2022-06-02-1751",
+        "musicians": {
+            "Malte Arkona": "Moderator"
+        },
+        "composers": [
+            "Sergej Rachmaninow",
+            "Claude Debussy",
+            "Alexander Skrjabin"
+        ],
+        "pieces": [
+            [
+                " \"Die Toteninsel\", Symphonische Dichtung"
+            ],
+            [
+                " \"Prélude à `L'Après-midi d’un Faune´\""
+            ],
+            [
+                " \"Le Poème de l´Extase\" op. 54"
+            ]
+        ],
+        "conductor": "Lorenzo Viotti",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1531,
+        "date": "2022-06-02T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53799/",
+        "musicians": {
+            "Matthew McDonald": " Kontrabass"
+        },
+        "composers": [
+            "Carl Nielsen",
+            "Gerald Barry",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Helios-Ouvertüre op. 17"
+            ],
+            [
+                "Konzert für Kontrabass und Orchester, Auftragswerk der Stiftung Berliner Philharmoniker (Uraufführung)"
+            ],
+            [
+                "Symphonie Nr. 6 A-Dur"
+            ]
+        ],
+        "conductor": "John Storgårds",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1621,
+        "date": "2022-06-02T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-semyon-bychkov-2g/16203",
+        "musicians": {
+            "Wiebke Lehmkuhl": "Alt",
+            "Knabenchor Hannover": "",
+            "Damen des Rundfunkchores Berlin": ""
+        },
+        "composers": [
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 3 d-Moll für Alt, Knabenchor, Frauenchor und Orchester"
+            ]
+        ],
+        "conductor": "Semyon Bychkov",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1740,
+        "date": "2022-06-02T18:00:00Z",
+        "city": "Paris",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/tourneen/2122/europa-tournee/gastkonzert-in-paris/",
+        "musicians": {
+            "Julia Kleiter": "Sopran",
+            "Christian Gerhaher": "Bariton"
+        },
+        "composers": [
+            "Felix Mendelssohn Bartholdy",
+            "Alexander von Zemlinsky",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 3 a-Moll op. 56 »Schottische«"
+            ],
+            [
+                "Lyrische Symphonie op. 18 für Sopran, Bariton und Orchester"
+            ],
+            [
+                "Symphonie Nr. 9 d-Moll"
+            ]
+        ],
+        "conductor": "Christian Thielemann",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1532,
+        "date": "2022-06-03T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53799/",
+        "musicians": {
+            "Matthew McDonald": " Kontrabass"
+        },
+        "composers": [
+            "Carl Nielsen",
+            "Gerald Barry",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Helios-Ouvertüre op. 17"
+            ],
+            [
+                "Konzert für Kontrabass und Orchester, Auftragswerk der Stiftung Berliner Philharmoniker (Uraufführung)"
+            ],
+            [
+                "Symphonie Nr. 6 A-Dur"
+            ]
+        ],
+        "conductor": "John Storgårds",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1673,
+        "date": "2022-06-03T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/wagner-rachmaninow-debussy-skrjabin-2022-06-03-1752",
+        "musicians": {},
+        "composers": [
+            "Richard Wagner",
+            "Sergej Rachmaninow",
+            "Claude Debussy",
+            "Alexander Skrjabin"
+        ],
+        "pieces": [
+            [
+                " \"Siegfried-Idyll\""
+            ],
+            [
+                " \"Die Toteninsel\", Symphonische Dichtung"
+            ],
+            [
+                " \"Prélude à `L'Après-midi d’un Faune´\""
+            ],
+            [
+                " \"Le Poème de l´Extase\" op. 54"
+            ]
+        ],
+        "conductor": "Lorenzo Viotti",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1715,
+        "date": "2022-06-03T18:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/nachtmusique,auftakt-nachtmusique-100.html",
+        "musicians": {
+            "Víkingur Ólafsson": "Leitung/Solist"
+        },
+        "composers": [
+            "Philip Glass",
+            "Johann Sebastian Bach",
+            "Johann Sebastian Bach",
+            "Wolfgang Amadeus Mozart",
+            "Wolfgang Amadeus Mozart"
+        ],
+        "pieces": [
+            [
+                "Opening – aus: Glassworks (Arr. Christian Badzura)"
+            ],
+            [
+                "Klavierkonzert f-Moll BWV 1056"
+            ],
+            [
+                "Adagio – aus: Violinsonate f-Moll BWV 1018 (Arr. Víkingur Ólafsson)"
+            ],
+            [
+                "Serenade c-Moll KV 388 (»Nachtmusique«)"
+            ],
+            [
+                "Klavierkonzert c-Moll KV 491"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1674,
+        "date": "2022-06-04T17:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/wagner-rachmaninow-debussy-skrjabin-2022-06-04-1754",
+        "musicians": {},
+        "composers": [
+            "Richard Wagner",
+            "Sergej Rachmaninow",
+            "Claude Debussy",
+            "Alexander Skrjabin"
+        ],
+        "pieces": [
+            [
+                " \"Siegfried-Idyll\""
+            ],
+            [
+                " \"Die Toteninsel\", Symphonische Dichtung"
+            ],
+            [
+                " \"Prélude à `L'Après-midi d’un Faune´\""
+            ],
+            [
+                " \"Le Poème de l´Extase\" op. 54"
+            ]
+        ],
+        "conductor": "Lorenzo Viotti",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1533,
+        "date": "2022-06-04T17:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53799/",
+        "musicians": {
+            "Matthew McDonald": " Kontrabass"
+        },
+        "composers": [
+            "Carl Nielsen",
+            "Gerald Barry",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Helios-Ouvertüre op. 17"
+            ],
+            [
+                "Konzert für Kontrabass und Orchester, Auftragswerk der Stiftung Berliner Philharmoniker (Uraufführung)"
+            ],
+            [
+                "Symphonie Nr. 6 A-Dur"
+            ]
+        ],
+        "conductor": "John Storgårds",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1622,
+        "date": "2022-06-05T09:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-semyon-bychkov-2g/16204",
+        "musicians": {
+            "Wiebke Lehmkuhl": "Alt",
+            "Knabenchor Hannover": "",
+            "Damen des Rundfunkchores Berlin": ""
+        },
+        "composers": [
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 3 d-Moll für Alt, Knabenchor, Frauenchor und Orchester"
+            ]
+        ],
+        "conductor": "Semyon Bychkov",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1623,
+        "date": "2022-06-06T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/wiener-philharmoniker-andris-nelsons-2g/16234",
+        "musicians": {},
+        "composers": [
+            "Antonín Dvořák",
+            "Dmitri Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 6 D-Dur op. 60"
+            ],
+            [
+                "Sinfonie Nr. 9 Es-Dur op. 70"
+            ]
+        ],
+        "conductor": "Andris Nelsons",
+        "ensemble": "Wiener Philharmoniker"
+    },
+    {
+        "id": 1624,
+        "date": "2022-06-07T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-frang-franck-2g/16191",
+        "musicians": {
+            "Vilde Frang": "Violine"
+        },
+        "composers": [
+            "Dmitri Schostakowitsch",
+            "César Franck"
+        ],
+        "pieces": [
+            [
+                "Konzert für Violine und Orchester Nr. 1 a-Moll op. 77"
+            ],
+            [
+                "Sinfonie d-Moll FWV 48 / Bearbeitung für Orgel von Daniel Roth und Adrien Levassor"
+            ]
+        ],
+        "conductor": "Mikko Franck",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1625,
+        "date": "2022-06-07T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/chamber-orchestra-of-europe-kozena-staples-rattle-2g/16801",
+        "musicians": {
+            "Andrew Staples": "Tenor",
+            "Magdalena Kožená": "Mezzosopran"
+        },
+        "composers": [
+            "Gustav Mahler",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                "Das Lied von der Erde / Eine Sinfonie für eine Tenor- und eine Alt- (oder Bariton-) Stimme und Orchester"
+            ],
+            [
+                "Metamorphosen / Studie für 23 Solostreicher TrV 290"
+            ]
+        ],
+        "conductor": "Sir Simon Rattle",
+        "ensemble": "Chamber Orchestra of Europe"
+    },
+    {
+        "id": 1741,
+        "date": "2022-06-07T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/kammer-und-auffuehrungsabende/2122/7-kammerabend/",
+        "musicians": {
+            "Anya Dambeck": "Viola",
+            "Joachim Hans": "Fagott",
+            "Norbert Anger": "Violoncello",
+            "Jörg Faßmann": "Violine",
+            "Wolfram Große": "Klarinette",
+            "Andreas Wylezol": "Kontrabass",
+            "Robert Langbein": "Horn",
+            "Matthias Wollong": "Violine",
+            "Sebastian Herberg": "Viola"
+        },
+        "composers": [
+            "Johann Nepomuk Hummel",
+            "Isang Yun",
+            "Egon Wellesz",
+            "Felix Mendelssohn Bartholdy"
+        ],
+        "pieces": [
+            [
+                "Klavierquintett es-Moll op. 87"
+            ],
+            [
+                "Oktett für Klarinette, Fagott, Horn und Streichquintett"
+            ],
+            [
+                "Oktett op. 67 für Klarinette, Fagott, Horn und Streichquintett"
+            ],
+            [
+                "Klaviersextett D-Dur op. 110"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1626,
+        "date": "2022-06-08T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/hamburger-camerata-eckstein-gaudenz/17444",
+        "musicians": {
+            "Severin Eckardstein": "Klavier"
+        },
+        "composers": [
+            "Erich Wolfgang Korngold",
+            "Alexander Skrjabin",
+            "César Franck",
+            "Johannes Brahms"
+        ],
+        "pieces": [
+            [
+                "Thema und Variation op. 42"
+            ],
+            [
+                "Konzert für Klavier und Orchester fis-Moll op. 20"
+            ],
+            [
+                "Variations symphoniques für Klavier und Orchester D-Dur FWV 46"
+            ],
+            [
+                "Variationen über ein Thema von Joseph Haydn op. 56a"
+            ]
+        ],
+        "conductor": "Simon Gaudenz",
+        "ensemble": "Hamburger Camerata"
+    },
+    {
+        "id": 1627,
+        "date": "2022-06-09T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-frang-franck-2g/16190",
+        "musicians": {
+            "Vilde Frang": "Violine"
+        },
+        "composers": [
+            "Dmitri Schostakowitsch",
+            "César Franck"
+        ],
+        "pieces": [
+            [
+                "Konzert für Violine und Orchester Nr. 1 a-Moll op. 77"
+            ],
+            [
+                "Sinfonie d-Moll FWV 48 / Bearbeitung für Orgel von Daniel Roth und Adrien Levassor"
+            ]
+        ],
+        "conductor": "Mikko Franck",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1702,
+        "date": "2022-06-09T18:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/symphonie-espagnole,hr-sinfoniekonzert-symphonie-espagnole-100.html",
+        "musicians": {
+            "Renaud Capuçon": "Violine"
+        },
+        "composers": [
+            "Emmanuel Chabrier",
+            "Édouard Lalo",
+            "Maurice Ravel"
+        ],
+        "pieces": [
+            [
+                "España"
+            ],
+            [
+                "Symphonie espagnole"
+            ],
+            [
+                "Rhapsodie espagnole ",
+                " Pavane pour une infante défunte ",
+                " Boléro"
+            ]
+        ],
+        "conductor": "Alain Altinoglu",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1534,
+        "date": "2022-06-09T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53836/",
+        "musicians": {
+            "Lise Davidsen ": " Sopran",
+            "Christian Gerhaher ": " Bariton",
+            "Noah Bendix-Balgley ": " Violine"
+        },
+        "composers": [
+            "Erwin Schulhoff",
+            "Leone Sinigaglia",
+            "Alexander Zemlinsky"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 2"
+            ],
+            [
+                "Rapsodia piemontese für Violine und Orchester op. 26",
+                "Romanze für Violine und Orchester A-Dur op. 29"
+            ],
+            [
+                "Lyrische Symphonie op. 18"
+            ]
+        ],
+        "conductor": "Kirill Petrenko",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1703,
+        "date": "2022-06-10T18:00:00Z",
+        "city": "Frankfurt",
+        "link": "https://www.hr-sinfonieorchester.de/konzerte/konzerte-21-22/symphonie-espagnole,hr-sinfoniekonzert-symphonie-espagnole-100.html",
+        "musicians": {
+            "Renaud Capuçon": "Violine"
+        },
+        "composers": [
+            "Emmanuel Chabrier",
+            "Édouard Lalo",
+            "Maurice Ravel"
+        ],
+        "pieces": [
+            [
+                "España"
+            ],
+            [
+                "Symphonie espagnole"
+            ],
+            [
+                "Rhapsodie espagnole ",
+                " Pavane pour une infante défunte ",
+                " Boléro"
+            ]
+        ],
+        "conductor": "Alain Altinoglu",
+        "ensemble": "hr-Sinfonieorchester"
+    },
+    {
+        "id": 1535,
+        "date": "2022-06-10T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53836/",
+        "musicians": {
+            "Lise Davidsen ": " Sopran",
+            "Christian Gerhaher ": " Bariton",
+            "Noah Bendix-Balgley ": " Violine"
+        },
+        "composers": [
+            "Erwin Schulhoff",
+            "Leone Sinigaglia",
+            "Alexander Zemlinsky"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 2"
+            ],
+            [
+                "Rapsodia piemontese für Violine und Orchester op. 26",
+                "Romanze für Violine und Orchester A-Dur op. 29"
+            ],
+            [
+                "Lyrische Symphonie op. 18"
+            ]
+        ],
+        "conductor": "Kirill Petrenko",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1536,
+        "date": "2022-06-11T17:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53836/",
+        "musicians": {
+            "Lise Davidsen ": " Sopran",
+            "Christian Gerhaher ": " Bariton",
+            "Noah Bendix-Balgley ": " Violine"
+        },
+        "composers": [
+            "Erwin Schulhoff",
+            "Leone Sinigaglia",
+            "Alexander Zemlinsky"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 2"
+            ],
+            [
+                "Rapsodia piemontese für Violine und Orchester op. 26",
+                "Romanze für Violine und Orchester A-Dur op. 29"
+            ],
+            [
+                "Lyrische Symphonie op. 18"
+            ]
+        ],
+        "conductor": "Kirill Petrenko",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1628,
+        "date": "2022-06-12T09:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/philharmonisches-staatsorchester-hamburg-steinbacher-beermann/16444",
+        "musicians": {
+            "Arabella Steinbacher": "Violine"
+        },
+        "composers": [
+            "Arnold Schönberg",
+            "Camille Saint-Saëns",
+            "Maurice Ravel"
+        ],
+        "pieces": [
+            [
+                "Pelleas und Melisande / Sinfonische Dichtung op. 5"
+            ],
+            [
+                "Danse macabre / Sinfonische Dichtung g-Moll op. 40"
+            ],
+            [
+                "Tzigane / Konzertrhapsodie für Violine und Orchester",
+                "La valse / Poème chorégraphique für Orchester"
+            ]
+        ],
+        "conductor": "Frank Beermann",
+        "ensemble": "Philharmonisches Staatsorchester Hamburg"
+    },
+    {
+        "id": 1742,
+        "date": "2022-06-12T09:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/11-symphoniekonzert/",
+        "musicians": {
+            "Sol Gabetta": "Violoncello"
+        },
+        "composers": [
+            "Robert Schumann",
+            "Pjotr I. Tschaikowsky"
+        ],
+        "pieces": [
+            [
+                "Violoncellokonzert a-Moll op. 129"
+            ],
+            [
+                "Symphonie Nr. 6 h-Moll op. 74 »Pathétique«"
+            ]
+        ],
+        "conductor": "Myung-Whun Chung",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1629,
+        "date": "2022-06-12T16:30:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-mikko-franck-2g/16193",
+        "musicians": {},
+        "composers": [
+            "Jean Sibelius",
+            "César Franck"
+        ],
+        "pieces": [
+            [
+                "Sechs Impromptus op. 5"
+            ],
+            [
+                "Sinfonie d-Moll FWV 48 / Bearbeitung für Orgel von Daniel Roth und Adrien Levassor"
+            ]
+        ],
+        "conductor": "Mikko Franck",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1630,
+        "date": "2022-06-13T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/philharmonisches-staatsorchester-hamburg-steinbacher-beermann/16445",
+        "musicians": {
+            "Arabella Steinbacher": "Violine"
+        },
+        "composers": [
+            "Arnold Schönberg",
+            "Camille Saint-Saëns",
+            "Maurice Ravel"
+        ],
+        "pieces": [
+            [
+                "Pelleas und Melisande / Sinfonische Dichtung op. 5"
+            ],
+            [
+                "Danse macabre / Sinfonische Dichtung g-Moll op. 40"
+            ],
+            [
+                "Tzigane / Konzertrhapsodie für Violine und Orchester",
+                "La valse / Poème chorégraphique für Orchester"
+            ]
+        ],
+        "conductor": "Frank Beermann",
+        "ensemble": "Philharmonisches Staatsorchester Hamburg"
+    },
+    {
+        "id": 1743,
+        "date": "2022-06-13T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/11-symphoniekonzert/",
+        "musicians": {
+            "Sol Gabetta": "Violoncello"
+        },
+        "composers": [
+            "Robert Schumann",
+            "Pjotr I. Tschaikowsky"
+        ],
+        "pieces": [
+            [
+                "Violoncellokonzert a-Moll op. 129"
+            ],
+            [
+                "Symphonie Nr. 6 h-Moll op. 74 »Pathétique«"
+            ]
+        ],
+        "conductor": "Myung-Whun Chung",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1631,
+        "date": "2022-06-14T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/kammerakademie-potsdam-antonello-manacorda-2g/16277",
+        "musicians": {},
+        "composers": [
+            "Wolfgang Amadeus Mozart"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Es-Dur KV 543",
+                "Sinfonie g-Moll KV 550",
+                "Sinfonie C-Dur KV 551 »Jupiter«"
+            ]
+        ],
+        "conductor": "Antonello Manacorda",
+        "ensemble": "Kammerakademie Potsdam"
+    },
+    {
+        "id": 1744,
+        "date": "2022-06-14T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/11-symphoniekonzert/",
+        "musicians": {
+            "Sol Gabetta": "Violoncello"
+        },
+        "composers": [
+            "Robert Schumann",
+            "Pjotr I. Tschaikowsky"
+        ],
+        "pieces": [
+            [
+                "Violoncellokonzert a-Moll op. 129"
+            ],
+            [
+                "Symphonie Nr. 6 h-Moll op. 74 »Pathétique«"
+            ]
+        ],
+        "conductor": "Myung-Whun Chung",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1675,
+        "date": "2022-06-15T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/zinovjev-schostakowitsch-mahler-2022-06-15-1755",
+        "musicians": {
+            "Lisa Batiashvili": "Violine"
+        },
+        "composers": [
+            "Sauli Zinovjev",
+            "Dmitrij Schostakowitsch",
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                " \"Batteria\""
+            ],
+            [
+                " Konzert für Violine und Orchester Nr. 1 a-Moll op. 77"
+            ],
+            [
+                " Symphonie Nr. 1 D-Dur \"Titan\""
+            ]
+        ],
+        "conductor": "Klaus Mäkelä",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1537,
+        "date": "2022-06-16T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53838/",
+        "musicians": {
+            "Janine Jansen": " Violine"
+        },
+        "composers": [
+            "Jean Sibelius",
+            "Rued Langgaard"
+        ],
+        "pieces": [
+            [
+                "Konzert für Violine und Orchester d-Moll op. 47"
+            ],
+            [
+                "Symphonie Nr. 1 »Klippenpastorale«"
+            ]
+        ],
+        "conductor": "Sakari Oramo",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1676,
+        "date": "2022-06-16T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/zinovjev-schostakowitsch-mahler-2022-06-16-1756",
+        "musicians": {
+            "Lisa Batiashvili": "Violine"
+        },
+        "composers": [
+            "Sauli Zinovjev",
+            "Dmitrij Schostakowitsch",
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                " \"Batteria\""
+            ],
+            [
+                " Konzert für Violine und Orchester Nr. 1 a-Moll op. 77"
+            ],
+            [
+                " Symphonie Nr. 1 D-Dur \"Titan\""
+            ]
+        ],
+        "conductor": "Klaus Mäkelä",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1632,
+        "date": "2022-06-16T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-herbert-blomstedt-2g/16291",
+        "musicians": {},
+        "composers": [
+            "Wolfgang Amadeus Mozart",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Sinfonie C-Dur KV 338"
+            ],
+            [
+                "Sinfonie Nr. 7 E-Dur"
+            ]
+        ],
+        "conductor": "Herbert Blomstedt",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1538,
+        "date": "2022-06-17T18:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53838/",
+        "musicians": {
+            "Janine Jansen": " Violine"
+        },
+        "composers": [
+            "Jean Sibelius",
+            "Rued Langgaard"
+        ],
+        "pieces": [
+            [
+                "Konzert für Violine und Orchester d-Moll op. 47"
+            ],
+            [
+                "Symphonie Nr. 1 »Klippenpastorale«"
+            ]
+        ],
+        "conductor": "Sakari Oramo",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1633,
+        "date": "2022-06-17T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-herbert-blomstedt-2g/16235",
+        "musicians": {},
+        "composers": [
+            "Wolfgang Amadeus Mozart",
+            "Anton Bruckner"
+        ],
+        "pieces": [
+            [
+                "Sinfonie C-Dur KV 338"
+            ],
+            [
+                "Sinfonie Nr. 7 E-Dur"
+            ]
+        ],
+        "conductor": "Herbert Blomstedt",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1677,
+        "date": "2022-06-17T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/zinovjev-schostakowitsch-mahler-2022-06-17-1757",
+        "musicians": {
+            "Lisa Batiashvili": "Violine"
+        },
+        "composers": [
+            "Sauli Zinovjev",
+            "Dmitrij Schostakowitsch",
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                " \"Batteria\""
+            ],
+            [
+                " Konzert für Violine und Orchester Nr. 1 a-Moll op. 77"
+            ],
+            [
+                " Symphonie Nr. 1 D-Dur \"Titan\""
+            ]
+        ],
+        "conductor": "Klaus Mäkelä",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1539,
+        "date": "2022-06-18T17:00:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53838/",
+        "musicians": {
+            "Janine Jansen": " Violine"
+        },
+        "composers": [
+            "Jean Sibelius",
+            "Rued Langgaard"
+        ],
+        "pieces": [
+            [
+                "Konzert für Violine und Orchester d-Moll op. 47"
+            ],
+            [
+                "Symphonie Nr. 1 »Klippenpastorale«"
+            ]
+        ],
+        "conductor": "Sakari Oramo",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1745,
+        "date": "2022-06-19T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/kammer-und-auffuehrungsabende/2122/8-kammerabend/",
+        "musicians": {
+            "Anke Heyn": "Violoncello",
+            "Jan Seifert": "Klarinette",
+            "Joachim Hans": "Fagott",
+            "Jonathan Nuß": "Posaune",
+            "Norbert Anger": "Violoncello",
+            "Sabine Kittel": "Flöte",
+            "Sven Barnkoth": "Trompete",
+            "Wolfram Große": "Klarinette",
+            "Robert Langbein": "Horn",
+            "Rozália Szabó": "Flöte",
+            "Hannes Schirlitz": "Fagott",
+            "Matthias Wollong": "Violine",
+            "Thomas Eberhardt": "Fagott",
+            "Sebastian Herberg": "Viola",
+            "Christoph Auerbach": "Posaune",
+            "Johanna Schellenberger": "Harfe"
+        },
+        "composers": [
+            "Claude Debussy",
+            "Igor Strawinsky"
+        ],
+        "pieces": [
+            [
+                "Zwei Tänze für Harfe und Streichquintett",
+                "Sonate für Flöte, Viola und Harfe F-Dur",
+                "Sonate für Violoncello und Klavier d-Moll (Fassung für Violoncello und Harfe)"
+            ],
+            [
+                "Septett für Klarinette, Horn, Fagott, Violine, Viola, Violoncello und Klavier",
+                "Oktett für Bläser"
+            ]
+        ],
+        "conductor": "",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1634,
+        "date": "2022-06-21T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/filarmonica-joven-de-colombia-k-m-labeque-orozco-estrada-2g/16294",
+        "musicians": {
+            "Katia Labèque": "Klavier",
+            "Marielle Labèque": "Klavier"
+        },
+        "composers": [
+            "Wolfgang Ordoñez",
+            "Osvaldo Golijov / Gonzalo Grau",
+            "Igor Strawinsky"
+        ],
+        "pieces": [
+            [
+                "Travesía"
+            ],
+            [
+                "Nazareno für zwei Klaviere und Orchester"
+            ],
+            [
+                "Petruschka / Burleske in vier Szenen (Fassung von 1947)"
+            ]
+        ],
+        "conductor": "Andrés Orozco-Estrada",
+        "ensemble": "Filarmónica Joven de Colombia"
+    },
+    {
+        "id": 1635,
+        "date": "2022-06-24T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-bronfman-gilbert-2g/16209",
+        "musicians": {
+            "Yefim Bronfman": "Klavier"
+        },
+        "composers": [
+            "Béla Bartók",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester Nr. 2 Sz 95"
+            ],
+            [
+                "Eine Alpensinfonie op. 64"
+            ]
+        ],
+        "conductor": "Alan Gilbert",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1678,
+        "date": "2022-06-24T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/ligeti-ades-strauss-2022-06-24-1758",
+        "musicians": {
+            "Augustin Hadelich": "Violine",
+            "Philharmonischer Chor München": "Einstudierung: Andreas Herrmann"
+        },
+        "composers": [
+            "György Ligeti",
+            "Thomas Adès",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                " \"Atmosphères\""
+            ],
+            [
+                " \"Concentric Paths\", Konzert für Violine und Orchester"
+            ],
+            [
+                " \"Also sprach Zarathustra\" op. 30 Tondichtung (frei nach Friedrich Nietzsche) für großes Orchester"
+            ]
+        ],
+        "conductor": "Krzysztof Urbański",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1679,
+        "date": "2022-06-25T17:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/ligeti-ades-strauss-2022-06-25-1759",
+        "musicians": {
+            "Augustin Hadelich": "Violine",
+            "Philharmonischer Chor München": "Einstudierung: Andreas Herrmann"
+        },
+        "composers": [
+            "György Ligeti",
+            "Thomas Adès",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                " \"Atmosphères\""
+            ],
+            [
+                " \"Concentric Paths\", Konzert für Violine und Orchester"
+            ],
+            [
+                " \"Also sprach Zarathustra\" op. 30 Tondichtung (frei nach Friedrich Nietzsche) für großes Orchester"
+            ]
+        ],
+        "conductor": "Krzysztof Urbański",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1636,
+        "date": "2022-06-25T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/ndr-elbphilharmonie-orchester-bronfman-gilbert-2g/16205",
+        "musicians": {
+            "Yefim Bronfman": "Klavier"
+        },
+        "composers": [
+            "Béla Bartók",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                "Konzert für Klavier und Orchester Nr. 2 Sz 95"
+            ],
+            [
+                "Eine Alpensinfonie op. 64"
+            ]
+        ],
+        "conductor": "Alan Gilbert",
+        "ensemble": "NDR Elbphilharmonie Orchester"
+    },
+    {
+        "id": 1540,
+        "date": "2022-06-25T18:15:00Z",
+        "city": "Berlin",
+        "link": "https://www.berliner-philharmoniker.de//konzerte/kalender/details/53845/",
+        "musicians": {
+            "Daniil Trifonov": " Klavier"
+        },
+        "composers": [
+            "Anatoli Ljadow",
+            "Sergej Rachmaninow",
+            "Modest Mussorgsky"
+        ],
+        "pieces": [
+            [
+                "Kikimora op. 63"
+            ],
+            [
+                "Konzert für Klavier und Orchester Nr. 2 c-Moll op. 18"
+            ],
+            [
+                "Bilder einer Ausstellung (Orchestrierung von Maurice Ravel)"
+            ]
+        ],
+        "conductor": "Kirill Petrenko",
+        "ensemble": "Berliner Philharmoniker"
+    },
+    {
+        "id": 1637,
+        "date": "2022-06-26T09:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/philharmonisches-staatsorchester-hamburg-james-conlon/16464",
+        "musicians": {},
+        "composers": [
+            "Dmitri Schostakowitsch",
+            "Alexander von Zemlinsky"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 9 Es-Dur op. 70"
+            ],
+            [
+                "Die Seejungfrau / Sinfonische Dichtung"
+            ]
+        ],
+        "conductor": "James Conlon",
+        "ensemble": "Philharmonisches Staatsorchester Hamburg"
+    },
+    {
+        "id": 1680,
+        "date": "2022-06-26T09:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/ligeti-ades-strauss-2022-06-26-1760",
+        "musicians": {
+            "Augustin Hadelich": "Violine",
+            "Philharmonischer Chor München": "Einstudierung: Andreas Herrmann"
+        },
+        "composers": [
+            "György Ligeti",
+            "Thomas Adès",
+            "Richard Strauss"
+        ],
+        "pieces": [
+            [
+                " \"Atmosphères\""
+            ],
+            [
+                " \"Concentric Paths\", Konzert für Violine und Orchester"
+            ],
+            [
+                " \"Also sprach Zarathustra\" op. 30 Tondichtung (frei nach Friedrich Nietzsche) für großes Orchester"
+            ]
+        ],
+        "conductor": "Krzysztof Urbański",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1638,
+        "date": "2022-06-27T18:00:00Z",
+        "city": "Hamburg",
+        "link": "https://www.elbphilharmonie.de//de/programm/philharmonisches-staatsorchester-hamburg-james-conlon/16446",
+        "musicians": {},
+        "composers": [
+            "Dmitri Schostakowitsch",
+            "Alexander von Zemlinsky"
+        ],
+        "pieces": [
+            [
+                "Sinfonie Nr. 9 Es-Dur op. 70"
+            ],
+            [
+                "Die Seejungfrau / Sinfonische Dichtung"
+            ]
+        ],
+        "conductor": "James Conlon",
+        "ensemble": "Philharmonisches Staatsorchester Hamburg"
+    },
+    {
+        "id": 1746,
+        "date": "2022-06-29T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/sonderkonzerte/2122/sonderkonzert-am-vorabend-der-internationalen-schostakowitsch-tage-gohrisch/",
+        "musicians": {
+            "Vadim Gluzman": "Violine"
+        },
+        "composers": [
+            "Dmitri Schostakowitsch",
+            "Sofia Gubaidulina",
+            "Dmitri Schostakowitsch"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 1 f-Moll op. 10"
+            ],
+            [
+                "Violinkonzert Nr. 1 »Offertorium«"
+            ],
+            [
+                "Symphonie Nr. 9 Es-Dur op. 70"
+            ]
+        ],
+        "conductor": "Omer Meir Wellber",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1681,
+        "date": "2022-07-02T17:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/bernstein-adams-2022-07-02-1762",
+        "musicians": {
+            "Jean-Yves Thibaudet": "Klavier"
+        },
+        "composers": [
+            "Leonard Bernstein",
+            "John Adams",
+            "Leonard Bernstein"
+        ],
+        "pieces": [
+            [
+                " Symphonie Nr. 2 \"The Age of Anxiety\""
+            ],
+            [
+                " \"The Chairman Dances\""
+            ],
+            [
+                " \"West Side Story\", Symphonische Tänze"
+            ]
+        ],
+        "conductor": "Santtu-Matias Rouvali",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1682,
+        "date": "2022-07-03T09:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/bernstein-adams-2022-07-03-1763",
+        "musicians": {
+            "Jean-Yves Thibaudet": "Klavier"
+        },
+        "composers": [
+            "Leonard Bernstein",
+            "John Adams",
+            "Leonard Bernstein"
+        ],
+        "pieces": [
+            [
+                " Symphonie Nr. 2 \"The Age of Anxiety\""
+            ],
+            [
+                " \"The Chairman Dances\""
+            ],
+            [
+                " \"West Side Story\", Symphonische Tänze"
+            ]
+        ],
+        "conductor": "Santtu-Matias Rouvali",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1683,
+        "date": "2022-07-04T18:00:00Z",
+        "city": "Munich",
+        "link": "https://www.mphil.de/konzerte-karten/kalender/konzerte/bernstein-adams-2022-07-04-1764",
+        "musicians": {
+            "Jean-Yves Thibaudet": "Klavier"
+        },
+        "composers": [
+            "Leonard Bernstein",
+            "John Adams",
+            "Leonard Bernstein"
+        ],
+        "pieces": [
+            [
+                " Symphonie Nr. 2 \"The Age of Anxiety\""
+            ],
+            [
+                " \"The Chairman Dances\""
+            ],
+            [
+                " \"West Side Story\", Symphonische Tänze"
+            ]
+        ],
+        "conductor": "Santtu-Matias Rouvali",
+        "ensemble": "Münchner Philharmoniker"
+    },
+    {
+        "id": 1747,
+        "date": "2022-07-10T09:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/12-symphoniekonzert/",
+        "musicians": {},
+        "composers": [
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 9 D-Dur"
+            ]
+        ],
+        "conductor": "Daniele Gatti",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1748,
+        "date": "2022-07-11T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/12-symphoniekonzert/",
+        "musicians": {},
+        "composers": [
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 9 D-Dur"
+            ]
+        ],
+        "conductor": "Daniele Gatti",
+        "ensemble": "Staatskapelle Dresden"
+    },
+    {
+        "id": 1749,
+        "date": "2022-07-12T18:00:00Z",
+        "city": "Dresden",
+        "link": "https://www.staatskapelle-dresden.de//konzerte/symphoniekonzerte/2122/12-symphoniekonzert/",
+        "musicians": {},
+        "composers": [
+            "Gustav Mahler"
+        ],
+        "pieces": [
+            [
+                "Symphonie Nr. 9 D-Dur"
+            ]
+        ],
+        "conductor": "Daniele Gatti",
+        "ensemble": "Staatskapelle Dresden"
+    }
+]
