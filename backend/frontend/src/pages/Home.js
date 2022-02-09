@@ -218,6 +218,13 @@ class Home extends Component {
         this.getAllConcerts(this.state.city)
       }
 
+      componentDidUpdate(prevProps){
+            if(this.props.query !== prevProps.query){
+                const change = () => {this.getAllConcerts('q=' + this.props.query)}
+                change()
+            }
+      }
+
     // function responsible for making the api call to get the concert items matching the query  
     getAllConcerts = (input) => {
         // date is either specified date from datePicker or default new(Date), so today 
@@ -230,7 +237,7 @@ class Home extends Component {
         })
     };
 
-    render(props){ 
+    render(){ 
         return(
         <section class = 'background'>
             <div id = 'home' style = {homeStyle.wrapper}>

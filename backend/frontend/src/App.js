@@ -85,7 +85,7 @@ class App extends Component {
   // }
 
     render(){
-      console.log(this.state.city)
+      // console.log(this.state.inputText)
       return(
         <div id = 'App'>
           <NavBar/>
@@ -108,11 +108,11 @@ class App extends Component {
                   Suche aus über 1000 klassichen Konzerten in ganz Deutschland.
               </Typography>
               <div style = {{'background' : '#fff', 'borderRadius' : '20px'}}>
-                  <SearchBar label = {'Ensemble, Komponist, Dirigent, Stück'}
-                              concerts = {this.state.allConcerts}/>
+                  <SearchBar label = {'Ensemble, Komponist, Dirigent, Stück'} multiple = {false}
+                              concerts = {this.state.allConcerts} onSubmit = {(value) => this.setState({inputText : value})}/>
               </div>
           </div>
-          <Home/>
+          <Home query = {this.state.inputText}/>
           <div id = 'footer' style = {{'marginTop' : '200px'}}></div>
         </div>
         // <DetailedSearch/>
