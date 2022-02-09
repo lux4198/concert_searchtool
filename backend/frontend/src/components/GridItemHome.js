@@ -25,8 +25,7 @@ function GridItemHome(props) {
 
     const [displayState, setdisplayState] = useState(shuffleArray(item))
     const [button, setButton] = useState(Array(6).fill(false))
-
-    console.log(button)
+    const [query, setQuery] = useState('')
 
     return (
         <Grid item xs={12} md={4} lg={4}>
@@ -34,7 +33,9 @@ function GridItemHome(props) {
                 <div class = 'griditem firstitem' >
                     <Button style = {{'textTransform' : 'none', }} 
                             onClick = {() => {setdisplayState(shuffleArray(item)); 
-                                            setButton(Array(6).fill(false))}}>
+                                            setButton(Array(6).fill(false));
+                                            setQuery(''); 
+                                            props.onClick('')}}>
                         <Typography variant = 'h4' color = 'secondary'>
                             {props.header}
                         </Typography>
@@ -44,7 +45,13 @@ function GridItemHome(props) {
                 {displayState.slice(0,6).map((display, index) => 
                 <div class = {!button[index]?  'griditem subitem' : 'griditem subitem clicked'} >
                     <Button style = {{'textTransform' : 'none', 'color' : 'inherit', }} 
-                            onClick = {() => {setButton(alterItem(button, index))}} >
+                            
+                            onClick = {() => {
+                            !button[index]? setQuery(query + ',' + display) : setQuery(query.replace(',' + display, ''));
+                            setButton(alterItem(button, index)); 
+                            !button[index]? props.onClick(query + ',' + display) : props.onClick(query.replace(',' + display, ''));
+                            }} >
+
                         <Typography variant = 'h5' style = {{'color' : 'inherit', }}>
                             {display}
                         </Typography>
