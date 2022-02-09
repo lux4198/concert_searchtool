@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {Typography, Grid, Paper, Button, Box} from '@mui/material'
+
 import SearchBar from '../components/searchbar'
+
 import './Home.css'
 import { styled } from "@mui/material/styles";
-import { typography } from '@mui/system';
 import ConcertItem from '../components/ConcertItem';
+import GridItemHome from '../components/GridItemHome';
+import moment from 'moment';
+import axios from 'axios'
 
 
 const composerArray = [
@@ -171,115 +175,86 @@ const homeStyle = {
 
 }
 
+function RenderConcerts(props){
+    return(
+        props.concerts.length > 0 &&
+        
+        props.concerts.slice(0, props.index).map((concert) =>                         
+        <ConcertItem id = {concert.id} concert = {concert} query = {''} pieceQuery = {''} textColor = {'primary'}/>
+    
+    ))
+}
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
 function shuffleArray(array) {
-for (var i = array.length - 1; i > 0; i--) {
+    var shuffleArray = array.slice(0)
+for (var i = shuffleArray.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
-    var temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
+    var temp = shuffleArray[i];
+    shuffleArray[i] = shuffleArray[j];
+    shuffleArray[j] = temp;
 }
+return(shuffleArray)
 }
 
-function Home(props) {
+class Home extends Component {
 
-    // composerArray now displays unique sequence for every render 
-    shuffleArray(composerArray)
-    shuffleArray(composerFullName)
-    shuffleArray(artists)
-    
-    const concerts = props.concerts
+    constructor(){
+        super();
+          this.state = {
+            allConcerts : [], 
+            allQueryConcerts : [], 
+            inputText : '', 
+            city: 'city=', 
+            date : new Date(), 
+            index : 10, 
+          }
+      }
 
-    return (
-        <div id = 'home' style = {homeStyle.wrapper}>
-            
-            <div id = 'title-page' style = {{'display' : 'flex', 'flexDirection' : 'column', 
-                                                'textAlign' : 'center', 'justifyContent' : 'space-evenly',
-                                                'width' : '60%'}}>
-                    <Typography variant = 'h2' style = {{'marginBottom' : '30px', 'textAlign' : 'start'}}>
-                        Wer spielt 
+      componentDidMount(){
+        this.getAllConcerts(this.state.city)
+      }
 
-                        <div class = 'rw-words rw-words-1'>
-                            {composerArray.map((composer, index) =>
-                                {   const delay = (index * 4).toString() + 's'
-                                    return(
-                                    <Typography color = 'secondary' variant = 'h2' style = {{'animationDelay' : delay, 'display' : 'inline', }}>
-                                        {composer} 
-                                    </Typography> )}
-                                                    )}
-                        </div>
+    // function responsible for making the api call to get the concert items matching the query  
+    getAllConcerts = (input) => {
+        // date is either specified date from datePicker or default new(Date), so today 
+        const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
-                    </Typography>
-                <Typography variant = 'h5' style = {{'marginBottom' : '50px'}}>
-                    Suche aus über 1000 klassichen Konzerten in ganz Deutschland. 
-                </Typography>
-                <div style = {{'background' : '#fff', 'border' : 'solid #99BFD0'}}>
-                    <SearchBar label = {'Ensemble, Komponist, Dirigent, Stück'}
-                                concerts = {props.concerts}/>
+        axios.get('/api/events/?'+ date + '&' + this.state.city + '&' + input)
+        .then((response) => {
+        // console.log(response.data)
+        this.setState({allConcerts : response.data, allQueryConcerts : response.data})
+        })
+    };
+
+    render(props){ 
+        return(
+        <section class = 'background'>
+            <div id = 'home' style = {homeStyle.wrapper}>
+                <div style = {homeStyle.detailsWrapper}>
+                    <div id = 'title-details' style = {homeStyle.details}>
+                        <Typography variant = 'h3'>
+                            Konzertsuche leicht gemacht.
+                        </Typography>
+                        <Grid container spacing={1} style = {{'marginTop' : '10px', 'marginBottom' : '75px'}}>
+                            <GridItemHome item = {cities} header = 'Stadt' 
+                            onClick = {(text) => this.setState({city : 'city=' + text}, () => this.getAllConcerts(this.state.inputText))}/>
+                            <GridItemHome item = {composerFullName} header = 'Komponist*in'
+                            onClick = {(text) => this.setState({inputText : 'q=' + text}, () => this.getAllConcerts(this.state.inputText))}/>
+                            <GridItemHome item = {artists} header = 'Künstler*in'
+                            onClick = {(text) => this.setState({inputText : 'q=' + text}, () => this.getAllConcerts(this.state.inputText))}/>
+                        </Grid>
+                        <RenderConcerts concerts = {this.state.allConcerts} index = {this.state.index}/>
+                    </div>
                 </div>
             </div>
-
-            <div style = {homeStyle.detailsWrapper}>
-                <div id = 'title-details' style = {homeStyle.details}>
-                    <Typography variant = 'h3'>
-                        Konzertsuche leicht gemacht.
-                    </Typography>
-                    <Grid container spacing={4} style = {{'marginTop' : '40px',}}>
-                        <Grid item xs={12} md={5} lg={4}>
-                            <div style = {{'display' : 'flex', 'flexWrap' : 'wrap'}}>
-                                
-                                <div class = 'griditem firstitem' >
-                                    <Typography variant = 'h4'>Stadt</Typography>
-                                </div>
-                                
-                                {cities.map((city) => 
-                                <div class = 'griditem subitem'>
-                                    <Typography variant = 'h5'>{city}</Typography>
-                                </div>)}
-
-                            </div>
-                        </Grid>
-                        <Grid item xs={12} md={5} lg={4}>
-                            <div style = {{'display' : 'flex', 'flexWrap' : 'wrap'}}>
-                                <div class = 'griditem firstitem' >
-                                    <Typography variant = 'h4'>Komponist:In</Typography>
-                                </div>  
-                                {composerFullName.slice(0,6).map((composer) => 
-                                <div class = 'griditem subitem composeritem'>
-                                    <Typography style = {{'marginLeft' : '2px', 'marginRight' : '2px', 'fontSize' : '1.2rem'}} variant = 'subtitle1'>{composer}</Typography>
-                                </div>
-                                )}
-                            </div>
-                        </Grid>
-                        <Grid item xs={12} md={5} lg={4}>
-                            <div style = {{'display' : 'flex', 'flexWrap' : 'wrap'}}>
-                                <div class = 'griditem firstitem' >
-                                    <Typography variant = 'h4'>Musiker:In</Typography>
-                                </div>
-                                {artists.slice(0,6).map((artist) => 
-                                <div class = 'griditem subitem composeritem'>
-                                    <Typography style = {{'marginLeft' : '2px', 'marginRight' : '2px', 'fontSize' : '1.2rem'}} variant = 'subtitle1'>{artist}</Typography>
-                                </div>
-                                )}
-                            </div>
-                        </Grid>
-                    </Grid>
-
-                    {concerts.map((concert) => 
-                        
-                        <ConcertItem id = {concert.id} concert = {concert} query = {''} pieceQuery = {''} textColor = {'primary'}/>
-                    
-                    )}
-                </div>
-            </div>
-
-
-
-        </div>
+        </section>
     )
+}
+
 }
 
 export default Home
