@@ -1,36 +1,64 @@
-import React from 'react'
-import { TextField, Autocomplete } from '@mui/material'
+import React, { useEffect } from 'react'
+import { TextField, Autocomplete, Paper } from '@mui/material'
 
 import { createFilterOptions } from '@mui/material/Autocomplete';
 
 import { styled } from "@mui/material/styles";
 
 const StyledAutocomplete = styled(Autocomplete)({
+    // these apply to a variant = filled component 
+    '& .css-wb57ya-MuiFormControl-root-MuiTextField-root' : {
+        border : '3px solid #F0C035', 
+        borderRadius : '15px', 
+    },
   "& .MuiInputLabel-outlined:not(.MuiInputLabel-shrink)": {
     // Default transform is "translate(14px, 20px) scale(1)""
     // This lines up the label with the initial cursor position in the input
     // after changing its padding-left.
-    color : 'white'
+    color : '#010645', 
   },
+  '& .css-usxwt7-MuiFormLabel-root-MuiInputLabel-root' : {
+    fontSize : '1.5rem', 
+  },
+  '& .css-dslm2c-MuiFormLabel-root-MuiInputLabel-root': {
+    //   label unfocused
+      color : '#010645', 
+        },
+    '& .css-b94c8s-MuiFormLabel-root-MuiInputLabel-root' : {
+    // label unfocused with Text 
+        color : 'transparent', 
+    },
   "& .MuiInputLabel-root.Mui-focused" : {
-      color : 'white', 
+    //   label focused
+      color : 'transparent', 
   },
   "& .MuiAutocomplete-inputRoot": {
-    color: "white",
-    // This matches the specificity of the default styles at https://github.com/mui-org/material-ui/blob/v4.11.3/packages/material-ui-lab/src/Autocomplete/Autocomplete.js#L90
-    '&[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-child': {
-      color : 'white', 
-    },
+    //   placeholder und input text color
+    color: "#010645",
+    fontSize : '1.5rem', 
+
     "& .MuiOutlinedInput-notchedOutline": {
-      borderColor: "white"
+      borderColor: "transparent"
     },
     "&:hover .MuiOutlinedInput-notchedOutline": {
-      borderColor: "white"
+      borderColor: "transparent"
     },
-    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-      borderColor: "white"
-    }
-  }
+  }, 
+  '& .css-76lyfj-MuiInputBase-root-MuiFilledInput-root:after' : {
+    //   bottom border animation on focus 
+      borderBottom : ' 0px solid #F0C035', 
+  }, 
+  '& .css-1voj87v-MuiInputBase-root-MuiOutlinedInput-root:focus-visible' : {
+      outline : '-webkit-focus-ring-color auto 0px', 
+  }, 
+  '& .css-wb57ya-MuiFormControl-root-MuiTextField-root' : {
+    outline : '-webkit-focus-ring-color auto 0px', 
+    borderColor: 'fuchsia', 
+
+  }, 
+  '& ..css-1ljhe6a-MuiAutocomplete-root' : {
+    outline : '-webkit-focus-ring-color auto 0px', 
+  }, 
 });
 
 
@@ -92,7 +120,6 @@ const filterOptions = createFilterOptions({
 
 
 function Searchbar(props) {
-    const classes = props.classes
 
     if (props.concerts){
     const concerts = props.concerts
@@ -130,9 +157,14 @@ function Searchbar(props) {
         
     }
 }
-
-    const [inputValue, setInputValue] = React.useState("");
+    const [inputValue, setInputValue] = React.useState(props.value);
     const [open, setOpen] = React.useState(false);
+
+    useEffect(() => {
+        setInputValue(props.value)
+    }, [props.value])
+
+    
     const handleOpen = () => {
         if (inputValue.length > 0) {
         setOpen(true);
@@ -155,7 +187,7 @@ function Searchbar(props) {
                 inputValue={inputValue}
                 onInputChange={handleInputChange}
 
-                multiple
+                multiple = {props.multiple}
                 freeSolo
                 disableClearable
                 filterOptions = {filterOptions}
@@ -163,6 +195,10 @@ function Searchbar(props) {
                         search_suggestion ? search_suggestion.map((option) => option) : ''}
 
                 onChange = {(event, value) => {props.onSubmit(value)}}
+
+                PaperComponent={({ children }) => (
+                    <Paper style={{ background: "#1A3E64", fontSize : '1.35rem'}}>{children}</Paper>
+                  )}
 
                 renderOption={(props, option) => {
                     return(
@@ -175,11 +211,12 @@ function Searchbar(props) {
                 <TextField
                     {...params}
                     label= {props.label}
-                    // variant = 'filled'
+                    // variant = 'outlined'
                     placeholder= {getplaceholder(pieces, search_suggestion, props.label, props.concerts, inputText, composers) }
                     InputProps={{
                     ...params.InputProps,
                     type: 'search',
+                    style : {'borderRadius' : '20px',}
                     }}
                 />
                 )}

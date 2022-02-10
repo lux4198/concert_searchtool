@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component, useRef, forwardRef} from 'react'
 import {Typography, Grid, Paper, Button, Box} from '@mui/material'
 
 import SearchBar from '../components/searchbar'
@@ -135,6 +135,15 @@ const cities = [
     'Frankfurt', 
 ]
 
+const months = [
+    'Feb', 
+    'Mär', 
+    'Apr', 
+    'Mai', 
+    'Jun', 
+    'Juli', 
+]
+
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
@@ -177,12 +186,19 @@ const homeStyle = {
 
 function RenderConcerts(props){
     return(
-        props.concerts.length > 0 &&
-        
-        props.concerts.slice(0, props.index).map((concert) =>                         
-        <ConcertItem id = {concert.id} concert = {concert} query = {''} pieceQuery = {''} textColor = {'primary'}/>
-    
-    ))
+        <div ref = {props.concertRef} style = {{'width' : '100%'}}>
+            {props.concerts.length > 0 ?
+            
+            props.concerts.slice(0, props.index).map((concert) =>
+            <ConcertItem id = {concert.id} concert = {concert} query = {''} pieceQuery = {''} textColor = {'primary'}/>
+                
+                ):
+            <div>
+                Leider keine Ergebnisse.
+            </div>
+            }
+        </div>
+    )
 }
 
 function getRandomInt(max) {
@@ -220,8 +236,7 @@ class Home extends Component {
 
       componentDidUpdate(prevProps){
             if(this.props.query !== prevProps.query){
-                const change = () => {this.getAllConcerts('q=' + this.props.query)}
-                change()
+                this.setState({inputText : 'q=' + this.props.query} , () => {this.getAllConcerts('q=' + this.props.query)})
             }
       }
 
@@ -241,7 +256,7 @@ class Home extends Component {
         return(
         <section class = 'background'>
             <div id = 'home' style = {homeStyle.wrapper}>
-                <div style = {homeStyle.detailsWrapper}>
+                <div style = {homeStyle.detailsWrapper}>                    
                     <div id = 'title-details' style = {homeStyle.details}>
                         <Typography variant = 'h3'>
                             Konzertsuche leicht gemacht.
@@ -252,9 +267,17 @@ class Home extends Component {
                             <GridItemHome item = {composerFullName} header = 'Komponist*in'
                             onClick = {(text) => this.setState({inputText : 'q=' + text}, () => this.getAllConcerts(this.state.inputText))}/>
                             <GridItemHome item = {artists} header = 'Künstler*in'
-                            onClick = {(text) => this.setState({inputText : 'q=' + text}, () => this.getAllConcerts(this.state.inputText))}/>
+                            onClick = {(text) => {this.setState({inputText : 'q=' + text}, () => this.getAllConcerts(this.state.inputText))}
+                            
+                            }/>
                         </Grid>
-                        <RenderConcerts concerts = {this.state.allConcerts} index = {this.state.index}/>
+                        <div style = {{'background' : '#fff', 'borderRadius' : '20px', 'width' : '80%'}}>
+                            <SearchBar label = {'Ensemble, Komponist, Dirigent, Stück'} multiple = {false}
+                                concerts = {this.state.allQueryConcerts} 
+                                onSubmit = {(value) => console.log(value)} value = {this.props.inputText}/>
+                        </div>
+                        {/* <div>hello</div> */}
+                        <RenderConcerts concertRef = {this.props.concertRef} concerts = {this.state.allConcerts} index = {this.state.index}/>
                     </div>
                 </div>
             </div>
@@ -263,5 +286,4 @@ class Home extends Component {
 }
 
 }
-
 export default Home

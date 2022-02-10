@@ -1,4 +1,4 @@
-import {React, Component} from 'react'
+import {React, Component, useRef, createRef} from 'react'
 import DetailedSearch from './pages/DetailedSearch.js';
 import {Typography, Grid, Paper, Button, Box} from '@mui/material'
 import SearchBar from './components/searchbar.js';
@@ -76,8 +76,9 @@ class App extends Component {
         allQueryConcerts : concerts, 
         inputText : '', 
         city: 'city=', 
-        date : new Date(), 
+        date : new Date(),  
       }
+      this.concertRef = createRef()
   }
 
   // componentDidMount(){
@@ -108,11 +109,16 @@ class App extends Component {
                   Suche aus über 1000 klassichen Konzerten in ganz Deutschland.
               </Typography>
               <div style = {{'background' : '#fff', 'borderRadius' : '20px'}}>
-                  <SearchBar label = {'Ensemble, Komponist, Dirigent, Stück'} multiple = {false}
-                              concerts = {this.state.allConcerts} onSubmit = {(value) => this.setState({inputText : value})}/>
+                  <SearchBar label = {'Ensemble, Komponist, Dirigent, Stück'} multiple = {false} value = {this.state.inputText}
+                              concerts = {this.state.allConcerts} 
+                              onSubmit = {(value) => {
+                                this.setState({inputText : value}); 
+                                this.concertRef.current.scrollIntoView({ behavior : 'smooth'});
+                              }
+                              }/>
               </div>
           </div>
-          <Home query = {this.state.inputText}/>
+          <Home concertRef = {this.concertRef} query = {this.state.inputText} inputText = {this.state.inputText}/>
           <div id = 'footer' style = {{'marginTop' : '200px'}}></div>
         </div>
         // <DetailedSearch/>
