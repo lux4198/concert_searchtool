@@ -1,20 +1,19 @@
-import { Toolbar, Typography, makeStyles } from '@mui/material'
-import { Button } from '@mui/material';
+import { Toolbar, Typography } from '@mui/material'
 import React from 'react'   
-import concerto_logo from './images/concerto_logo.png';
+import concerto_logo from '../Assets/images/concerto_logo.png';
 
 function NavBar() {
     return (
-            <Toolbar position = 'sticky' color = 'primary' 
-                    style = {{'width' : '50%', 'marginTop' : '10px'}}>
+            <div style = {{'width' : '80%'}}>
+                <Toolbar position = 'sticky' color = 'primary'
+                        style = {{'width' : '50%', 'marginTop' : '10px'}}>
                 
-                <img src = {concerto_logo} style = {{width : '150px'}} alt = ''></img>
-
-                <Typography component = 'div' variant = 'body1' style = {{'marginLeft' : '20px',}}>
-                    Erweiterte Suche 
-                </Typography>
-
-            </Toolbar>
+                    <img src = {concerto_logo} style = {{'maxWidth' : '150px', 'width' : '40%', 'minWidth' : '100px'}} alt = ''></img>
+                    <Typography component = 'div' variant = 'body1' style = {{'marginLeft' : '20px',}}>
+                        Erweiterte Suche
+                    </Typography>
+                </Toolbar>
+            </div>
     )
 }
 

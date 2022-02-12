@@ -1,18 +1,11 @@
 import React, {useState} from 'react'
-import {Grid, Typography, Button} from '@mui/material'
+import {Grid, Typography, Button, Collapse, IconButton} from '@mui/material'
+
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+import { shuffleArray} from '../Helpers/helperFunctions';
 
 // import '../pages/Home.css'
-
-function shuffleArray(array) {
-    var shuffleArray = array.slice(0)
-    for (var i = shuffleArray.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = shuffleArray[i];
-        shuffleArray[i] = shuffleArray[j];
-        shuffleArray[j] = temp;
-}
-return(shuffleArray)
-}
 
 function alterItem(array, index){
     var arrayCopy = array.slice(0)
@@ -27,8 +20,10 @@ function GridItemHome(props) {
     const [button, setButton] = useState(Array(6).fill(false))
     const [query, setQuery] = useState('')
 
+    const [collapse, setCollapse] = useState(false)
+
     return (
-        <Grid item xs={12} md={4} lg={4}>
+        <Grid item xs={6} sm={4} lg={4}>
             <div class = 'gridContainer'>
                 <div class = 'griditem firstitem' >
                     <Button style = {{'textTransform' : 'none', }} 
@@ -36,27 +31,31 @@ function GridItemHome(props) {
                                             setButton(Array(6).fill(false));
                                             setQuery(''); 
                                             props.onClick('')}}>
-                        <Typography variant = 'h4' color = 'secondary'>
+                        <Typography variant = 'h5' color = 'secondary'>
                             {props.header}
                         </Typography>
                     </Button>
+                    <IconButton onClick = {() => setCollapse(!collapse)} color = 'secondary' disableRipple = {true}>
+                        <ExpandMoreIcon/>
+                    </IconButton>
                 </div>
                 
-                {displayState.slice(0,6).map((display, index) => 
-                <div class = {!button[index]?  'griditem subitem' : 'griditem subitem clicked'} >
-                    <Button style = {{'textTransform' : 'none', 'color' : 'inherit', }} 
-                            
-                            onClick = {() => {
-                            !button[index]? setQuery(query + ',' + display) : setQuery(query.replace(',' + display, ''));
-                            setButton(alterItem(button, index)); 
-                            !button[index]? props.onClick(query + ',' + display) : props.onClick(query.replace(',' + display, ''));
-                            }} >
-
-                        <Typography variant = 'h5' style = {{'color' : 'inherit', }}>
-                            {display}
-                        </Typography>
-                    </Button>
-                </div>)}
+                <Collapse in = {collapse} style = {{'width' : '100%'}}>
+                    {displayState.slice(0,6).map((display, index) =>
+                    <div class = {!button[index]?  'griditem subitem' : 'griditem subitem clicked'} >
+                        <Button style = {{'textTransform' : 'none', 'color' : 'inherit', 'height' : 'inherit', 'padding' : '1px'}}
+                    
+                                onClick = {() => {
+                                !button[index]? setQuery(query + ',' + display) : setQuery(query.replace(',' + display, ''));
+                                setButton(alterItem(button, index));
+                                !button[index]? props.onClick(query + ',' + display) : props.onClick(query.replace(',' + display, ''));
+                                }} >
+                            <Typography variant = 'subtitle1' style = {{'color' : 'inherit'}}>
+                                {display}
+                            </Typography>
+                        </Button>
+                    </div>)}
+                </Collapse>
 
             </div>
         </Grid>
