@@ -1,71 +1,14 @@
-import {React, Component, useRef, createRef} from 'react'
-import DetailedSearch from './pages/DetailedSearch.js';
-import {Typography, Grid, Paper, Button, Box} from '@mui/material'
-import SearchBar from './components/searchbar.js';
+import {React, Component, createRef} from 'react'
+// import DetailedSearch from './pages/DetailedSearch.js';
 
-import Home from './pages/Home.js';
+import Home from './pages/Home/Home.jsx';
 import NavBar from './components/NavBar.js'
 
-import concerts from './concerts.json'
+import concerts from './Assets/data/concerts.json'
 
-const composerArray = [
-  "Bernstein",
-  "Gershwin",
-  "Beethoven",
-  "Schostakowitsch",
-  "Brahms",
-  "Korngold",
-  "Grieg",
-  "Mozart",
-  "Bruckner",
-  "Strauss",
-  "Mahler",
-  "Schumann",
-  "Mendelssohn",
-  "Liszt",
-  "Haydn",
-  "Varèse",
-  "Rachmaninow",
-  "Strawinsky",
-  "Bach",
-  "Tschaikowsky",
-  "Schubert",
-  "Smetana",
-  "Puccini",
-  "Verdi",
-  "Dvořák",
-  "Prokofjew",
-  "Wagner",
-  "Schönberg",
-  "Ravel",
-  "Debussy",
-  "Bartók",
-  "Elgar",
-  "Sibelius",
-  "Weber",
-  "Vivaldi",
-  "Händel",
-  "Rossini",
-  "Bizet",
-  "Britten",
-  "Fauré",
-  "Skrjabin",
-  "Zemlinsky",
-  "Saint-Saëns",
-  "Mussorgsky",
-  "Gubaidulina"
-]
-
-function shuffleArray(array) {
-  var shuffleArray = array.slice(0)
-for (var i = shuffleArray.length - 1; i > 0; i--) {
-  var j = Math.floor(Math.random() * (i + 1));
-  var temp = shuffleArray[i];
-  shuffleArray[i] = shuffleArray[j];
-  shuffleArray[j] = temp;
-}
-return(shuffleArray)
-}
+import './App.css'
+import MainPageSearch from './components/MainPageSearch.js';
+// import { Collapse } from '@mui/material';
 
 
 class App extends Component {
@@ -81,6 +24,12 @@ class App extends Component {
       this.concertRef = createRef()
   }
 
+
+  onSubmit = (value) => {
+    this.setState({inputText : value});
+    this.concertRef.current.scrollIntoView({ behavior : 'smooth'});
+  }
+
   // componentDidMount(){
   //   this.getAllConcerts(this.state.city)
   // }
@@ -88,39 +37,32 @@ class App extends Component {
     render(){
       // console.log(this.state.inputText)
       return(
-        <div id = 'App'>
-          <NavBar/>
-          <div id = 'title-page' style = {{'display' : 'flex', 'flexDirection' : 'column',
-                                              'textAlign' : 'center', 'justifyContent' : 'space-evenly',
-                                              'width' : '60%'}}>
-                  <Typography variant = 'h2' style = {{ 'fontFamily' : 'Merriweather serif', 'marginBottom' : '30px', 'textAlign' : 'start'}}>
-                      Wer spielt
-                      <div class = 'rw-words rw-words-1'>
-                          {shuffleArray(composerArray).map((composer, index) =>
-                              {   const delay = (index * 4).toString() + 's'
-                                  return(
-                                  <Typography color = 'secondary' variant = 'h2' style = {{'fontFamily' : 'Merriweather serif', 'animationDelay' : delay, 'display' : 'inline', }}>
-                                      {composer}
-                                  </Typography> )}
-                                                  )}
-                      </div>
-                  </Typography>
-              <Typography variant = 'h5' style = {{'marginBottom' : '50px'}}>
-                  Suche aus über 1000 klassichen Konzerten in ganz Deutschland.
-              </Typography>
-              <div style = {{'background' : '#fff', 'borderRadius' : '20px'}}>
-                  <SearchBar label = {'Ensemble, Komponist, Dirigent, Stück'} multiple = {false} value = {this.state.inputText}
-                              concerts = {this.state.allConcerts} 
-                              onSubmit = {(value) => {
-                                this.setState({inputText : value}); 
-                                this.concertRef.current.scrollIntoView({ behavior : 'smooth'});
-                              }
-                              }/>
-              </div>
+        <section>
+          <div id = 'App' class = 'container'>
+            <NavBar/>
+            <div class = 'container content'>
+              <div class = 'droplet'/>
+              <MainPageSearch  concerts = {this.state.allConcerts} 
+                               onSubmit = {this.onSubmit} 
+                               inputText = {this.state.inputText} />
+            </div>
+            <div class = 'background' style = {{'padding' : '10%'}}> 
+              {Array(28).fill(6).map((item, index) => 
+                <div>
+                  <span class = 'blackkeys' style = {{'left' : (index * 3.5).toString() + 'vw', 'opacity' : (index%7===0 | (index+3)%7 === 0)? '0' : '1',
+                                   'height' : (13.69-11.99*(0.894**index)).toString() + 'vw' }}/>
+                  <span class = 'whitekeys' style = {{'left' : (index * 3.5 + 1).toString() + 'vw',
+                                  'height' : (17.2-14*(0.89**index)).toString() + 'vw' }}/>
+                </div>)}
+            </div>
+            <section class = 'details'>
+                <div class = 'content'>
+                  <Home concertRef = {this.concertRef} query = {this.state.inputText} inputText = {this.state.inputText}/>
+                </div>
+            </section>
+            <div id = 'footer' style = {{'marginTop' : '200px'}}></div>
           </div>
-          <Home concertRef = {this.concertRef} query = {this.state.inputText} inputText = {this.state.inputText}/>
-          <div id = 'footer' style = {{'marginTop' : '200px'}}></div>
-        </div>
+        </section>
         // <DetailedSearch/>
       )}
 }

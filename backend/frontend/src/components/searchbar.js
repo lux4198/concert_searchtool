@@ -8,23 +8,23 @@ import { styled } from "@mui/material/styles";
 const StyledAutocomplete = styled(Autocomplete)({
     // these apply to a variant = filled component 
     '& .css-wb57ya-MuiFormControl-root-MuiTextField-root' : {
-        border : '3px solid #F0C035', 
-        borderRadius : '15px', 
+        border : '0px solid #F0C035', 
+        borderRadius : '20px', 
     },
   "& .MuiInputLabel-outlined:not(.MuiInputLabel-shrink)": {
     // Default transform is "translate(14px, 20px) scale(1)""
     // This lines up the label with the initial cursor position in the input
     // after changing its padding-left.
-    color : '#010645', 
+    color : 'black', 
   },
   '& .css-usxwt7-MuiFormLabel-root-MuiInputLabel-root' : {
     fontSize : '1.5rem', 
   },
   '& .css-dslm2c-MuiFormLabel-root-MuiInputLabel-root': {
     //   label unfocused
-      color : '#010645', 
+      color : 'black', 
         },
-    '& .css-b94c8s-MuiFormLabel-root-MuiInputLabel-root' : {
+    '& .css-1tvh079-MuiFormLabel-root-MuiInputLabel-root' : {
     // label unfocused with Text 
         color : 'transparent', 
     },
@@ -34,9 +34,9 @@ const StyledAutocomplete = styled(Autocomplete)({
   },
   "& .MuiAutocomplete-inputRoot": {
     //   placeholder und input text color
-    color: "#010645",
+    // color: "#010645",
+    color : 'black', 
     fontSize : '1.5rem', 
-
     "& .MuiOutlinedInput-notchedOutline": {
       borderColor: "transparent"
     },
@@ -50,13 +50,9 @@ const StyledAutocomplete = styled(Autocomplete)({
   }, 
   '& .css-1voj87v-MuiInputBase-root-MuiOutlinedInput-root:focus-visible' : {
       outline : '-webkit-focus-ring-color auto 0px', 
+      border : 'white 0px', 
   }, 
-  '& .css-wb57ya-MuiFormControl-root-MuiTextField-root' : {
-    outline : '-webkit-focus-ring-color auto 0px', 
-    borderColor: 'fuchsia', 
-
-  }, 
-  '& ..css-1ljhe6a-MuiAutocomplete-root' : {
+  '& .css-1ljhe6a-MuiAutocomplete-root' : {
     outline : '-webkit-focus-ring-color auto 0px', 
   }, 
 });
@@ -101,6 +97,9 @@ function getPiecesbyComposer(concerts, composer){
                 piece.push(concert.pieces[index[i]])
             };
             return(piece)
+        }
+        else{
+            return('')
         }
         
     })
@@ -153,7 +152,7 @@ function Searchbar(props) {
         var inputText = props.inputText.replace('q=', '')
     }
     else{
-        var inputText = false 
+        inputText = false 
         
     }
 }

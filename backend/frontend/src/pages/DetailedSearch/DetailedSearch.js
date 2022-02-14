@@ -2,11 +2,11 @@ import axios from 'axios'
 import {React, Component} from 'react'
 import moment from 'moment';
 
-import ConcertItem from "../components/ConcertItem.js";
-import Searchbar from '../components/searchbar.js';
-import Datepicker from '../components/Datepicker.js';
-import SearchSpecification from '../components/SearchSpecification.js';
-import CurrentFilters from '../components/CurrentFilters.js';
+import ConcertItem from "../../components/ConcertItem.js";
+import Searchbar from '../../components/searchbar.js';
+import Datepicker from '../../components/Datepicker.js';
+import SearchSpecification from '../../components/SearchSpecification.js';
+import CurrentFilters from '../../components/CurrentFilters.js';
 
 function RenderConcerts(props){
  return( props.concerts.length > 0 ? 
@@ -92,7 +92,7 @@ class DetailedSearch extends Component {
       }
 
   searchPiece = (text) => {
-    var text = text.join('').replace(/"/g, '\\"')
+    text = text.join('').replace(/"/g, '\\"')
     var input = this.state.city + '&' + this.state.inputText + '&p=' + text
     this.setState({index : 10, pieceInputText : 'p=' + text}, () => {this.getAllConcerts(input)})
   }
@@ -113,7 +113,7 @@ class DetailedSearch extends Component {
             <div style = {{'display' : 'flex', 'flexDirection' : 'row',}}>
               <Datepicker value = {this.state.date} onChange = {(newDate) => {this.setState({date : newDate}, () => {this.getAllConcerts(this.state.city + '&' + this.state.inputText)})}}/>
               <CurrentFilters date = {this.state.date} city = {this.state.city} onClick = {() => {
-                  this.setState({city : 'city=', date : new Date, reset : true}, () => {this.getAllConcerts(this.state.inputText + '&' + this.state.pieceInputText)})}}/>
+                  this.setState({city : 'city=', date : new(Date), reset : true}, () => {this.getAllConcerts(this.state.inputText + '&' + this.state.pieceInputText)})}}/>
             </div>
 
           {/* render concert items from state (only 10 at a time) */}

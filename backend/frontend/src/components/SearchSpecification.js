@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import { Card, Typography, Checkbox, FormControlLabel, FormGroup } from '@material-ui/core'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Card, Checkbox, FormControlLabel, FormGroup } from '@material-ui/core'
 import axios from 'axios'
 import moment from 'moment'
 
@@ -22,7 +21,7 @@ class SearchSpecification extends Component {
     componentDidUpdate(prevProps, prevState) {
         // if query changes disable prop on city checkboxes is reevaluated
         if (prevProps.query !== this.props.query | prevProps.date !== this.props.date) {
-            cities.map((city, i) => {this.checkConcerts('city=' + city ,i)})
+            cities.map((city, i) => {this.checkConcerts('city=' + city ,i); return(city)})
         }
         // when button is clicked reset prop is passed which resets checkbox states to false and runs a new query
         if (this.props.reset & this.props.reset !== prevProps.reset){
