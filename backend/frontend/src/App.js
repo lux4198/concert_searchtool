@@ -1,5 +1,4 @@
 import {React, Component, createRef} from 'react'
-// import DetailedSearch from './pages/DetailedSearch.js';
 
 import Home from './pages/Home/Home.jsx';
 import NavBar from './components/NavBar.js'
@@ -39,21 +38,20 @@ class App extends Component {
       return(
         <section>
           <div id = 'App' class = 'container'>
-            <NavBar/>
-            <div class = 'container content'>
-              <div class = 'droplet'/>
-              <MainPageSearch  concerts = {this.state.allConcerts} 
-                               onSubmit = {this.onSubmit} 
-                               inputText = {this.state.inputText} />
-            </div>
-            <div class = 'background' style = {{'padding' : '10%'}}> 
-              {Array(28).fill(6).map((item, index) => 
-                <div>
-                  <span class = 'blackkeys' style = {{'left' : (index * 3.5).toString() + 'vw', 'opacity' : (index%7===0 | (index+3)%7 === 0)? '0' : '1',
-                                   'height' : (13.69-11.99*(0.894**index)).toString() + 'vw' }}/>
-                  <span class = 'whitekeys' style = {{'left' : (index * 3.5 + 1).toString() + 'vw',
-                                  'height' : (17.2-14*(0.89**index)).toString() + 'vw' }}/>
-                </div>)}
+            <div class = 'mainpage'>
+              <NavBar/>
+              <MainPageSearch  concerts = {this.state.allConcerts}
+                              onSubmit = {this.onSubmit}
+                              inputText = {this.state.inputText} />
+              <div class = 'background' style = {{'padding' : '10%'}}>
+                {Array(28).fill(6).map((item, index) =>
+                  <div>
+                    <span class = 'blackkeys' style = {{'left' : (index * 3.5).toString() + 'vw', 'opacity' : (index%7===0 | (index+3)%7 === 0)? '0' : '1',
+                                     'height' : (13.69-11.99*(0.894**index)).toString() + 'vw' }}/>
+                    <span class = 'whitekeys' style = {{'left' : (index * 3.5 + 1).toString() + 'vw',
+                                    'height' : (17.2-14*(0.89**index)).toString() + 'vw' }}/>
+                  </div>)}
+              </div>
             </div>
             <section class = 'details'>
                 <div class = 'content'>

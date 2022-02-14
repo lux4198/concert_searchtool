@@ -38,7 +38,7 @@ function GridItemHome(props) {
                     <Button style = {{'textTransform' : 'none'}} 
                             onClick = {() => setCollapse(!collapse)} 
                             color = 'secondary' disableRipple = {true}>
-                        <Typography variant = 'h5' color = 'secondary'>
+                        <Typography variant = 'h5' /* color = 'secondary' */>
                             {props.header}
                         </Typography>
                         <ExpandMoreIcon/>

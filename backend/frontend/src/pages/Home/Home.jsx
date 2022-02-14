@@ -57,9 +57,9 @@ class Home extends Component {
         // date is either specified date from datePicker or default new(Date), so today 
         const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
-        axios.get('/api/events/?'+ date + '&' + this.state.city + '&' + input)
+        axios.get('http://192.168.1.83:8000/api/events/?'+ date + '&' + this.state.city + '&' + input)
         .then((response) => {
-        // console.log(response.data)
+
         this.setState({allConcerts : response.data, allQueryConcerts : response.data})
         })
     };
