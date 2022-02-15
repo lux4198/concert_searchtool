@@ -63,7 +63,7 @@ function ConcertItem(props){
           </div>
         </div>
 
-        <a target={'_blank'} href={concert.link}>
+        <a target={'_blank'} rel="noreferrer"  href={concert.link}>
           <Typography id = {'ensemble'} className = {checkHighlight(concert.ensemble)} style = {{'marginBottom' : '1rem', 'marginTop': '1rem', 'textDecoration': 'underline'}}
                       variant = {'h5'} color = {'primary'}> {concert.ensemble} </Typography>
         </a>

@@ -11,10 +11,12 @@ const theme = createTheme({
       }, 
       'text' : {
         'primary' : '#fff', 
+        'secondary' : '#fff', 
+
       }, 
       'background' : {
-        'default' : '#010645', 
-        'paper' : '#010645'
+        'default' : /* '#010645' */'#000', 
+        'paper' : /* '#010645' */'#000'
       },
       'action' : {
         'hover' : 'rgba(0,0,0,0.15)' 

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Typography, Grid} from '@mui/material'
 
 import SearchBar from '../../components/searchbar'
+import Datepicker from '../../components/Datepicker'
 
 import './Home.css'
 import ConcertItem from '../../components/ConcertItem/ConcertItem';
@@ -71,16 +72,8 @@ class Home extends Component {
                 Konzertsuche leicht gemacht.
             </Typography>
             <div ref = {this.props.concertRef} class = 'sticky'>
-                <Grid container spacing={1}>
-                    <GridItemHome item = {cities} header = 'Stadt'
-                    onClick = {(text) => this.setState({city : 'city=' + text}, () => this.getAllConcerts(this.state.inputText))}/>
-                    <GridItemHome item = {composerFullName} header = 'Komponist*in'
-                    onClick = {(text) => this.setState({inputText : 'q=' + text}, () => this.getAllConcerts(this.state.inputText))}/>
-                    <GridItemHome item = {artists} header = 'Künstler*in'
-                    onClick = {(text) => {this.setState({inputText : 'q=' + text}, () => this.getAllConcerts(this.state.inputText))}
-                
-                    }/>
-                </Grid>
+                <Datepicker/>
+                <GridItemHome item = {cities} header = {'Stadt'} /> 
             </div>
             <div style = {{'background' : '#fff', 'borderRadius' : '20px', 'width' : '80%', 
                                                         'border' : '2px solid black', 'marginTop' : '30px',}}>

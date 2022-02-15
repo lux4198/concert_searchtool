@@ -31,7 +31,7 @@ function GridItemHome(props) {
 
 
     return (
-        <Grid item xs={6} sm={4} lg={4}>
+        <Grid item xs={6} sm={4} lg={6}>
             <div class = 'gridContainer'>
                 <div class = 'firstitem' >
                     
