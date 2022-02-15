@@ -13,7 +13,7 @@ import {composerFullName, artists, cities} from '../../Assets/data/constants.js'
 
 function RenderConcerts(props){
     return(
-        <div style = {{'width' : '100%',}}>
+        <div style = {{'maxWidth' : '90%',}}>
             {props.concerts.length > 0 ?
             
             props.concerts.slice(0, props.index).map((concert) =>
@@ -57,7 +57,7 @@ class Home extends Component {
         // date is either specified date from datePicker or default new(Date), so today 
         const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
-        axios.get('http://192.168.1.83:8000/api/events/?'+ date + '&' + this.state.city + '&' + input)
+        axios.get('/api/events/?'+ date + '&' + this.state.city + '&' + input)
         .then((response) => {
 
         this.setState({allConcerts : response.data, allQueryConcerts : response.data})

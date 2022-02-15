@@ -13,7 +13,7 @@ const styles = makeStyles({
     'width' : '100%', 
   },
   'card' : { 
-    'minHeight' : '17rem', 
+    // 'minHeight' : '17rem', 
     'marginTop' : '2rem', 
     'marginBottom' : '2rem',  
     'paddingRight' : '2rem', 
@@ -112,7 +112,7 @@ function ConcertItem(props){
                 <Typography  color = {props.textColor} className = {classes.leftsideText} style = {{'paddingLeft' : '3%'}}variant = 'h5'>
                   {concert.city}
                 </Typography>
-                <img src = {IMG_0136} alt = '' />
+                <img src = {IMG_0136} alt = ''/>
               </div>
           </div>
           <div className = {classes.rightside}>

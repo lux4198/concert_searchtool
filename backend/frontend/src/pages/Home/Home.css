@@ -2,9 +2,9 @@
 	position: sticky;
 	top: 0;
 	z-index: 2;
-	background-color: #17334e;
+	background-color: #000225;
 	border-radius: 100px;
-	width: 80%;
+	max-width: 80%;
 	margin-top: 10px;
 }
 
@@ -14,6 +14,9 @@
 	justify-content: center;
 	align-items: center;
 	margin-top: 2rem;
+	text-align: center;
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 .gridContainer{
