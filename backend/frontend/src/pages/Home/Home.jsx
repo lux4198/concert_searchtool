@@ -4,7 +4,7 @@ import {Typography, Grid} from '@mui/material'
 import SearchBar from '../../components/searchbar'
 
 import './Home.css'
-import ConcertItem from '../../components/ConcertItem';
+import ConcertItem from '../../components/ConcertItem/ConcertItem';
 import GridItemHome from '../../components/GridItemHome';
 import moment from 'moment';
 import axios from 'axios'
@@ -13,11 +13,11 @@ import {composerFullName, artists, cities} from '../../Assets/data/constants.js'
 
 function RenderConcerts(props){
     return(
-        <div style = {{'maxWidth' : '90%',}}>
+        <div style = {{'maxWidth' : '90%', 'minWidth': '70%'}}>
             {props.concerts.length > 0 ?
             
             props.concerts.slice(0, props.index).map((concert) =>
-            <ConcertItem id = {concert.id} concert = {concert} query = {''} pieceQuery = {''} textColor = {'primary'}/>
+            <ConcertItem id = {concert.id} concert = {concert} query = {''} pieceQuery = {''} textColor = {'black'}/>
                 
                 ):
             <div>
@@ -57,7 +57,7 @@ class Home extends Component {
         // date is either specified date from datePicker or default new(Date), so today 
         const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
-        axios.get('/api/events/?'+ date + '&' + this.state.city + '&' + input)
+        axios.get('http://192.168.1.83:8000/api/events/?'+ date + '&' + this.state.city + '&' + input)
         .then((response) => {
 
         this.setState({allConcerts : response.data, allQueryConcerts : response.data})

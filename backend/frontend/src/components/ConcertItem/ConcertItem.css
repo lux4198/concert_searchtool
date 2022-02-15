@@ -1,0 +1,61 @@
+.card{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+    background-color: white;
+    color: black;
+    border: 6px solid #F0C035;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    width: 100%; 
+}
+
+tr{
+    display: block;
+}
+
+.block td{
+    display: block;
+}
+
+.citydate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.cardbottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.musicians{
+    margin-left: 0.5rem;
+    width: fit-content;
+}
+
+.composerWrap{
+    border-top: 3px solid black ;
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+    width: 100%;
+
+}
+
+.composerExpand{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+}
