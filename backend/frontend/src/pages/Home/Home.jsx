@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {Typography, Grid} from '@mui/material'
+import React, {Component, useLayoutEffect, useState} from 'react'
+import {Typography} from '@mui/material'
 
 import SearchBar from '../../components/searchbar'
 import Datepicker from '../../components/Datepicker'
@@ -9,16 +9,28 @@ import ConcertItem from '../../components/ConcertItem/ConcertItem';
 import GridItemHome from '../../components/GridItemHome';
 import moment from 'moment';
 import axios from 'axios'
-import {composerFullName, artists, cities} from '../../Assets/data/constants.js'
+import {/* composerFullName, artists, */ cities} from '../../Assets/data/constants.js'
 
 
 function RenderConcerts(props){
+
+    const [width, setWidth] = useState(0);
+    useLayoutEffect(() => {
+        function updateWidth() {
+        setWidth(window.innerWidth);
+        }
+        window.addEventListener('resize', updateWidth);
+        updateWidth();
+        return () => window.removeEventListener('resize', updateWidth);
+    }, []);
+    
     return(
-        <div style = {{'maxWidth' : '90%', 'minWidth': '70%'}}>
+        <div style = {{'maxWidth' : '90%', 'minWidth': '70%', 'marginTop': '2rem', }}>
             {props.concerts.length > 0 ?
             
             props.concerts.slice(0, props.index).map((concert) =>
-            <ConcertItem id = {concert.id} concert = {concert} query = {''} pieceQuery = {''} textColor = {'black'}/>
+            <ConcertItem id = {concert.id} concert = {concert} query = {''} pieceQuery = {''} textColor = {'black'}
+                        width = {width}/>
                 
                 ):
             <div>
@@ -68,7 +80,7 @@ class Home extends Component {
     render(){ 
         return(
         <div id = 'title-details' class = 'detailsContainer'>
-            <Typography variant = 'h3'>
+            <Typography variant = 'h3' style = {{'marginBottom': '2rem', }}>
                 Konzertsuche leicht gemacht.
             </Typography>
             <div ref = {this.props.concertRef} class = 'sticky'>

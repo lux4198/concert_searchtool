@@ -160,9 +160,6 @@
 
 
 @media only screen and (max-width: 800px) {
-    .container{
-        overflow: hidden;
-    }
     .mainpage{
         justify-content: space-evenly;
     }
@@ -216,6 +213,5 @@
 @media only screen and (max-width: 400px) {
     .rw-words h2, .rw-words h3{
         left: 10%;
-        overflow: hidden;
     }
 }

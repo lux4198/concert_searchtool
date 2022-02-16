@@ -9,6 +9,7 @@ export default function MaterialUIPickers(props) {
     <div style = {{'background': 'white', 'border': '3px solid #F0C035'}}>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
           <DatePicker
+            OpenPickerButtonProps={{ style: { color: 'black' } }}
             label="Datum"
             inputFormat="MM/dd/yyyy"
             value={props.value}
