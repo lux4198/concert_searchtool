@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useRef} from 'react'
 import {Typography, Button, Collapse} from '@mui/material'
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -24,6 +24,20 @@ function GridItemHome(props) {
 
     const [collapse, setCollapse] = useState(false)
 
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+        if (ref.current && !ref.current.contains(event.target)) {
+            setCollapse(false);
+        }
+        };
+        document.addEventListener('click', handleClickOutside, true);
+        return () => {
+        document.removeEventListener('click', handleClickOutside, true);
+        };
+    },[collapse]);
+
     const onClick = (index, display) => {
         !button[index]? setQuery(query + ',' + display) : setQuery(query.replace(',' + display, ''));
         setButton(alterItem(button, index));
@@ -39,7 +53,7 @@ function GridItemHome(props) {
 
 
     return (
-            <div class = 'gridContainer' style = {{'marginLeft': '1rem', 'marginRight': '1rem'}}>
+            <div ref = {ref} class = 'gridContainer' style = {{'marginLeft': '1rem', 'marginRight': '1rem'}}>
                 <div class = 'firstitem' >
                     
                     <Button style = {{'textTransform' : 'none'}} 
