@@ -25,12 +25,12 @@ function RenderConcerts(props){
     }, []);
         
     return(
-        <div style = {{'maxWidth' : '90%', 'minWidth': '70%', 'marginTop': '2rem', }}>
+        <div style = {{'maxWidth' : '90%', 'minWidth': '80%', 'marginTop': '2rem', 'marginBottom': '5rem'}}>
             {props.concerts.length > 0 ?
             
-            props.concerts.slice(0, props.index).map((concert) =>
-            <ConcertItem id = {concert.id} concert = {concert} query = {''} pieceQuery = {''} textColor = {'black'}
-                        width = {width}/>
+            props.concerts.slice(0, props.index).map((concert, index) =>
+                <ConcertItem id = {concert.id} concert = {concert} query = {''} pieceQuery = {''} textColor = {'black'}
+                            width = {width} key = {index}/>
                 
                 ):
             <div>
@@ -55,27 +55,65 @@ class Home extends Component {
           }
       }
 
-      componentDidMount(){
-        this.getAllConcerts(this.state.city)
-      }
+    componentDidMount(){
+        this.getAllConcerts()
+        window.addEventListener('scroll', this.handleScroll)
+    }
 
-      componentDidUpdate(prevProps){
-            if(this.props.query !== prevProps.query){
-                this.setState({inputText : 'q=' + this.props.query} , () => {this.getAllConcerts('q=' + this.props.query)})
+    componentWillUnmount(){
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    componentDidUpdate(prevProps){
+        if(this.props.query !== prevProps.query){
+            this.setState({inputText : this.props.query} , () => {this.getAllConcerts()})
+        }
+    }
+
+    handleScroll = (e) => {
+        const el = e.target.documentElement
+        const bottom = Math.floor(el.scrollHeight - el.scrollTop) <= el.clientHeight + 10;
+
+        if (bottom) { 
+            this.setState(() => {return({index : this.state.index + 10})})
             }
-      }
+        }
+
+
+    //   api call that runs once to get all available concerts for searchbar 
+    getAllConcerts = () => {
+    // date is either specified date from datePicker or default new(Date), so today 
+    const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
+    axios.get('http://192.168.1.83:8000/api/events/?'+ date)
+    .then((response) => {
+    this.setState({allConcerts : response.data})
+    })
+    };
 
     // function responsible for making the api call to get the concert items matching the query  
-    getAllConcerts = (input) => {
+    getAllQueryConcerts = () => {
         // date is either specified date from datePicker or default new(Date), so today 
         const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
-        axios.get('http://192.168.1.83:8000/api/events/?'+ date + '&' + this.state.city + '&' + input)
+        axios.get('http://192.168.1.83:8000/api/events/?'+ date + '&' + this.state.city + '&' + 'q=' + this.state.inputText)
         .then((response) => {
 
-        this.setState({allConcerts : response.data, allQueryConcerts : response.data})
+        this.setState({allQueryConcerts : response.data})
         })
     };
+
+    setCity(query){
+        this.setState({city : 'city='+query}, () => this.getAllQueryConcerts())
+    }
+
+    setDate(date){
+        this.setState({date : date}, () => this.getAllQueryConcerts())
+    }
+
+    setQuery = (value) => {
+        value = value || ''
+        this.setState({inputText : value},() => this.getAllQueryConcerts())
+    }
 
     render(){ 
         return(
@@ -84,16 +122,16 @@ class Home extends Component {
                 Konzertsuche leicht gemacht.
             </Typography>
             <div ref = {this.props.concertRef} class = 'sticky'>
-                <Datepicker/>
-                <GridItemHome item = {cities} header = {'Stadt'} /> 
+                <Datepicker onChange = {(date) => this.setDate(date)} value = {this.state.date}/>
+                <GridItemHome item = {cities} header = {'Stadt'} onClick = {(query) => this.setCity(query)}/> 
             </div>
             <div style = {{'background' : '#fff', 'borderRadius' : '20px', 'width' : '80%', 
                                                         'border' : '2px solid black', 'marginTop' : '30px',}}>
                 <SearchBar label = {'Ensemble, Komponist, Dirigent, Stück'} multiple = {false}
-                    concerts = {this.state.allQueryConcerts} 
-                    onSubmit = {(value) => console.log(value)} value = {this.props.inputText}/>
+                    concerts = {this.state.allConcerts} 
+                    onSubmit = {this.setQuery} value = {this.props.inputText}/>
             </div>
-            <RenderConcerts concerts = {this.state.allConcerts} index = {this.state.index}/>
+            <RenderConcerts concerts = {this.state.inputText !== '' ? this.state.allQueryConcerts : this.state.allConcerts} index = {this.state.index}/>
         </div>
     )
 }
