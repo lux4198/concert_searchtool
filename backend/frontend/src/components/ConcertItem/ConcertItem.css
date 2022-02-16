@@ -70,6 +70,7 @@ tr{
     flex-direction: column;
 }
 
+
 @media only screen and (min-width : 700px){
 
     .card{
@@ -109,6 +110,10 @@ tr{
     .rightside{
         flex: 1;
         text-align: left;
+    }
+
+    .rightside a{
+        text-decoration: none;
     }
 
     .composerExpand{

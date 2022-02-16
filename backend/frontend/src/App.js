@@ -45,7 +45,7 @@ class App extends Component {
                               inputText = {this.state.inputText} />
               <div class = 'background' style = {{'padding' : '10%'}}>
                 {Array(28).fill(6).map((item, index) =>
-                  <div>
+                  <div key = {index}>
                     <span class = 'blackkeys' style = {{'left' : (index * 3.5).toString() + 'vw', 'opacity' : (index%7===0 | (index+3)%7 === 0)? '0' : '1',
                                      'height' : (13.69-11.99*(0.894**index)).toString() + 'vw' }}/>
                     <span class = 'whitekeys' style = {{'left' : (index * 3.5 + 1).toString() + 'vw',
