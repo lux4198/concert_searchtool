@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {Grid, Typography, Button, Collapse} from '@mui/material'
+import React, {useEffect, useState} from 'react'
+import {Typography, Button, Collapse} from '@mui/material'
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -15,6 +15,7 @@ function alterItem(array, index){
 
 function GridItemHome(props) {
     var item = props.item
+    var reset = props.reset
 
     const [displayState] = useState(shuffleArray(item))
     const [button, setButton] = useState(Array(6).fill(false))
@@ -29,10 +30,16 @@ function GridItemHome(props) {
         !button[index]? props.onClick(query + ',' + display) : props.onClick(query.replace(',' + display, ''));
     }
 
+    useEffect(() => {
+        if (reset){
+            setButton(Array(6).fill(false))
+            reset = false
+        }
+    })
+
 
     return (
-        <Grid item xs={6} sm={4} lg={6}>
-            <div class = 'gridContainer'>
+            <div class = 'gridContainer' style = {{'marginLeft': '1rem', 'marginRight': '1rem'}}>
                 <div class = 'firstitem' >
                     
                     <Button style = {{'textTransform' : 'none'}} 
@@ -49,7 +56,7 @@ function GridItemHome(props) {
                     
                     {displayState.slice(0,6).map((display, index) =>
 
-                    <div class = {!button[index]?  'subitem' : 'subitem clicked'} >
+                    <div class = {!button[index]?  'subitem' : 'subitem clicked'} key = {display+index}>
                         <Button style = {{'textTransform' : 'none', 'color' : 'inherit', 'height' : 'inherit',}}
                                 onClick = {() => onClick(index,display)} >
 
@@ -62,9 +69,7 @@ function GridItemHome(props) {
                     )}
 
                 </Collapse>
-
             </div>
-        </Grid>
     )
 }
 

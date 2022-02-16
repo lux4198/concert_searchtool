@@ -6,15 +6,16 @@ import { DatePicker } from '@mui/lab';
 
 export default function MaterialUIPickers(props) {
   return (
-    <div style = {{'background': 'white', 'border': '3px solid #F0C035'}}>
+    <div style = {{'background': 'white', /* 'border': '3px solid #F0C035' */ 'borderRadius': '20px', 'marginLeft': '1rem', 'marginRight': '1rem'}}>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
           <DatePicker
+            
             OpenPickerButtonProps={{ style: { color: 'black' } }}
             label="Datum"
             inputFormat="MM/dd/yyyy"
             value={props.value}
             onChange={props.onChange}
-            renderInput={(params) => <TextField {...params} 
+            renderInput={(params) => <TextField {...params}
             sx={{
               svg: { color : 'black' },
               input: { color : 'black' },

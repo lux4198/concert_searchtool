@@ -1,5 +1,5 @@
 import React, {Component, useLayoutEffect, useState} from 'react'
-import {Typography} from '@mui/material'
+import {Typography, Button} from '@mui/material'
 
 import SearchBar from '../../components/searchbar'
 import Datepicker from '../../components/Datepicker'
@@ -49,14 +49,16 @@ class Home extends Component {
             allConcerts : [], 
             allQueryConcerts : [], 
             inputText : '', 
-            city: 'city=', 
+            city: '', 
             date : new Date(), 
             index : 10, 
+            reset : false, 
           }
       }
 
     componentDidMount(){
         this.getAllConcerts()
+        this.getAllQueryConcerts()
         window.addEventListener('scroll', this.handleScroll)
     }
 
@@ -95,7 +97,7 @@ class Home extends Component {
         // date is either specified date from datePicker or default new(Date), so today 
         const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
-        axios.get('http://192.168.1.83:8000/api/events/?'+ date + '&' + this.state.city + '&' + 'q=' + this.state.inputText)
+        axios.get('http://192.168.1.83:8000/api/events/?'+ date + '&city=' + this.state.city + '&q=' + this.state.inputText)
         .then((response) => {
 
         this.setState({allQueryConcerts : response.data})
@@ -103,10 +105,10 @@ class Home extends Component {
     };
 
     setCity(query){
-        this.setState({city : 'city='+query}, () => this.getAllQueryConcerts())
+        this.setState({city : query}, () => this.getAllQueryConcerts())
     }
 
-    setDate(date){
+    setDate = (date) => {
         this.setState({date : date}, () => this.getAllQueryConcerts())
     }
 
@@ -116,14 +118,22 @@ class Home extends Component {
     }
 
     render(){ 
+        console.log(this.state.city || (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm'))? 'flex': 'none')
         return(
         <div id = 'title-details' class = 'detailsContainer'>
-            <Typography variant = 'h3' style = {{'marginBottom': '2rem', }}>
+            <Typography variant = 'h2' style = {{'marginBottom': '4rem', 'marginTop': '3rem'}}>
                 Konzertsuche leicht gemacht.
             </Typography>
             <div ref = {this.props.concertRef} class = 'sticky'>
-                <Datepicker onChange = {(date) => this.setDate(date)} value = {this.state.date}/>
-                <GridItemHome item = {cities} header = {'Stadt'} onClick = {(query) => this.setCity(query)}/> 
+                <Datepicker onChange = {this.setDate} value = {this.state.date} />
+                <GridItemHome item = {cities} header = {'Stadt'} onClick = {(query) => this.setCity(query)} reset = {this.state.reset} />
+                <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '40%',
+                                'display': this.state.city || 
+                                (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm'))? 
+                                'flex': 'none'}}
+                                onClick = {() => this.setState({city : '', date : new Date(), reset : true }, () => {this.setState({reset : false}); this.getAllQueryConcerts()})}>
+                    Filter <br/>Zurücksetzen
+                </Button>
             </div>
             <div style = {{'background' : '#fff', 'borderRadius' : '20px', 'width' : '80%', 
                                                         'border' : '2px solid black', 'marginTop' : '30px',}}>
@@ -131,7 +141,7 @@ class Home extends Component {
                     concerts = {this.state.allConcerts} 
                     onSubmit = {this.setQuery} value = {this.props.inputText}/>
             </div>
-            <RenderConcerts concerts = {this.state.inputText !== '' ? this.state.allQueryConcerts : this.state.allConcerts} index = {this.state.index}/>
+            <RenderConcerts concerts = {this.state.allQueryConcerts} index = {this.state.index}/>
         </div>
     )
 }
