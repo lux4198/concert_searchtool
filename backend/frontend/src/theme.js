@@ -27,6 +27,9 @@ const theme = createTheme({
         'color' : "white"
       },
       'fontFamily' : 'Merriweather serif',
+      'h4': {
+        'fontSize': '2rem'
+      }, 
       'subtitle1' : {
         'fontSize' : '1.15rem', 
       },

@@ -31,6 +31,8 @@ function ConcertItem(props){
   const concert = props.concert
   const composers = concert.composers
   const [collapse, setCollapse] = useState(props.width<700? false : true)
+  const [ensembleFont, setEnsembleFont] = useState(props.width<700? 'h5' : 'h4')
+
 
   useEffect(()=>{
     setCollapse(props.width<700? false : true)
@@ -58,7 +60,7 @@ function ConcertItem(props){
 
         <div id = 'topside' class = 'card_top'>
             <div class = 'city_date'>
-              <Typography  color = {props.textColor} variant = 'h5'>
+              <Typography  color = {props.textColor} variant = 'h4'>
                 {concert.city}
               </Typography>
               <div class = 'date_picture'>
@@ -71,7 +73,7 @@ function ConcertItem(props){
           <div id = 'ensemble_and_artists' class = 'rightside'>
             <a target={'_blank'} rel="noreferrer"  href={concert.link}>
               <Typography id = {'ensemble'} className = {checkHighlight(concert.ensemble)} style = {{'marginBottom' : '1rem', 'marginTop': '1rem', 'textDecoration': 'underline'}}
-                          variant = {'h5'} color = {'primary'}> {concert.ensemble} </Typography>
+                          variant = {ensembleFont} color = {'primary'}> {concert.ensemble} </Typography>
             </a>
             <div id = 'musicians' class = 'musicians'>
                 <table>

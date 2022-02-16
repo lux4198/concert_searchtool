@@ -71,6 +71,11 @@ tr{
 }
 
 @media only screen and (min-width : 700px){
+
+    .card{
+        border-radius: 80px;
+    }
+
     .card_top{
         display: flex;
         width: 100%;
@@ -96,7 +101,7 @@ tr{
         margin-top: 1rem;
     }
 
-    .city_date h5{
+    .city_date h4{
         transform: rotate(180deg);
         writing-mode: vertical-lr;
     }

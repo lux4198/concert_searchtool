@@ -23,7 +23,7 @@ function RenderConcerts(props){
         updateWidth();
         return () => window.removeEventListener('resize', updateWidth);
     }, []);
-    
+        
     return(
         <div style = {{'maxWidth' : '90%', 'minWidth': '70%', 'marginTop': '2rem', }}>
             {props.concerts.length > 0 ?
