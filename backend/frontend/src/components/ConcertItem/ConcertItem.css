@@ -4,7 +4,7 @@
     margin-bottom: 1rem; 
     background-color: white;
     color: black;
-    border: 6px solid #F0C035;
+    border: 6px solid var(--highlightcolor);
 
     display: flex;
     flex-direction: column;
