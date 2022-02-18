@@ -29,8 +29,8 @@ function RenderConcerts(props){
             {props.concerts.length > 0 ?
             
             props.concerts.slice(0, props.index).map((concert, index) =>
-                <ConcertItem id = {concert.id} concert = {concert} query = {''} pieceQuery = {''} textColor = {'black'}
-                            width = {width} key = {index}/>
+                <ConcertItem id = {concert.id} concert = {concert}  pieceQuery = {''} textColor = {'black'}
+                            width = {width} key = {index} query = {props.query}/>
                 
                 ):
             <div>
@@ -68,7 +68,7 @@ class Home extends Component {
 
     componentDidUpdate(prevProps){
         if(this.props.query !== prevProps.query){
-            this.setState({inputText : this.props.query} , () => {this.getAllConcerts()})
+            this.setState({inputText : this.props.query} , () => {this.getAllQueryConcerts()})
         }
     }
 
@@ -118,7 +118,6 @@ class Home extends Component {
     }
 
     render(){ 
-        console.log(this.state.city || (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm'))? 'flex': 'none')
         return(
         <div id = 'title-details' class = 'detailsContainer'>
             <Typography variant = 'h2' style = {{'marginBottom': '4rem', 'marginTop': '3rem'}}>
@@ -127,21 +126,21 @@ class Home extends Component {
             <div ref = {this.props.concertRef} class = 'sticky'>
                 <Datepicker onChange = {this.setDate} value = {this.state.date} />
                 <GridItemHome item = {cities} header = {'Stadt'} onClick = {(query) => this.setCity(query)} reset = {this.state.reset} />
-                <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '40%',
+                <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '30%', 'background': '#C88861', 'zIndex': '-1','padding' : '0px', 'borderRadius': '20px',  
                                 'display': this.state.city || 
-                                (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm'))? 
+                                (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm') || this.state.inputText)? 
                                 'flex': 'none'}}
-                                onClick = {() => this.setState({city : '', date : new Date(), reset : true }, () => {this.setState({reset : false}); this.getAllQueryConcerts()})}>
-                    Filter <br/>Zurücksetzen
+                                onClick = {() => this.setState({city : '', date : new Date(), inputText : '', reset : true }, () => {this.setState({reset : false}); this.getAllQueryConcerts()})}>
+                    <Typography>Filter <br/>Zurücksetzen</Typography>
                 </Button>
             </div>
             <div style = {{'background' : '#fff', 'borderRadius' : '20px', 'width' : '80%', 
                                                         'border' : '2px solid black', 'marginTop' : '30px',}}>
                 <SearchBar label = {'Ensemble, Komponist, Dirigent, Stück'} multiple = {false}
                     concerts = {this.state.allConcerts} 
-                    onSubmit = {this.setQuery} value = {this.props.inputText}/>
+                    onSubmit = {this.setQuery} value = {this.state.inputText}/>
             </div>
-            <RenderConcerts concerts = {this.state.allQueryConcerts} index = {this.state.index}/>
+            <RenderConcerts concerts = {this.state.allQueryConcerts} index = {this.state.index} query = {this.state.inputText}/>
         </div>
     )
 }
