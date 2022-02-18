@@ -126,7 +126,7 @@ class Home extends Component {
             <div ref = {this.props.concertRef} class = 'sticky'>
                 <Datepicker onChange = {this.setDate} value = {this.state.date} />
                 <GridItemHome item = {cities} header = {'Stadt'} onClick = {(query) => this.setCity(query)} reset = {this.state.reset} />
-                <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '30%', 'background': '#C88861', 'zIndex': '-1','padding' : '0px', 'borderRadius': '20px',  
+                <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '55%', 'background': '#C88861', 'zIndex': '-1','padding' : '0px', 'borderRadius': '20px',  
                                 'display': this.state.city || 
                                 (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm') || this.state.inputText)? 
                                 'flex': 'none'}}
