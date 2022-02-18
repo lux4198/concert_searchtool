@@ -15,7 +15,6 @@ function alterItem(array, index){
 
 function GridItemHome(props) {
     var item = props.item
-    var reset = props.reset
 
     const [displayState] = useState(shuffleArray(item))
     const [button, setButton] = useState(Array(6).fill(false))
@@ -25,6 +24,7 @@ function GridItemHome(props) {
     const [collapse, setCollapse] = useState(false)
 
     const ref = useRef(null);
+    const reset = useRef(props.reset)
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -45,11 +45,11 @@ function GridItemHome(props) {
     }
 
     useEffect(() => {
-        if (reset){
+        if (reset.current){
             setButton(Array(6).fill(false))
-            reset = false
+            reset.current = !reset.current
         }
-    })
+    }, [])
 
 
     return (

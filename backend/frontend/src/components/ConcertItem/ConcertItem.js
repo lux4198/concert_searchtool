@@ -38,9 +38,7 @@ function ConcertItem(props){
     setCollapse(props.width<700? false : true)
   },[props.width])
 
-  var query = props.query.replace('q=', '') + ',' + props.pieceQuery.replace('p=', '')
-
-  query = query.split(',')
+  var query = props.query || ''
 
   const checkHighlight = (text) => {
     if(text&&query){

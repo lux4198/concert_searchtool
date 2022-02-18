@@ -25,8 +25,8 @@ class App extends Component {
 
 
   onSubmit = (value) => {
-    this.setState({inputText : value});
-    this.concertRef.current.scrollIntoView({ behavior : 'smooth'});
+    value = value || ''
+    this.setState({inputText : value}, this.concertRef.current.scrollIntoView({ behavior : 'smooth'}))
   }
 
   // componentDidMount(){
@@ -55,7 +55,7 @@ class App extends Component {
             </div>
             <section class = 'details'>
                 <div class = 'content'>
-                  <Home concertRef = {this.concertRef} query = {this.state.inputText} inputText = {this.state.inputText}/>
+                  <Home concertRef = {this.concertRef} query = {this.state.inputText}/>
                 </div>
             </section>
             <div id = 'footer' style = {{'marginTop' : '200px'}}></div>
