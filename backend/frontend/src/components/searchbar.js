@@ -188,7 +188,6 @@ function Searchbar(props) {
 
                 multiple = {props.multiple}
                 freeSolo
-                disableClearable
                 filterOptions = {filterOptions}
                 options={pieces && composers.includes(inputText) ? getPiecesbyComposer(props.concerts, inputText) : pieces ? pieces.map((option) => option) : 
                         search_suggestion ? search_suggestion.map((option) => option) : ''}

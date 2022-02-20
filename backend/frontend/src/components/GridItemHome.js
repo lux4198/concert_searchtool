@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {Grid, Typography, Button, Collapse} from '@mui/material'
+import React, {useEffect, useState, useRef} from 'react'
+import {Typography, Button, Collapse} from '@mui/material'
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -23,16 +23,37 @@ function GridItemHome(props) {
 
     const [collapse, setCollapse] = useState(false)
 
+    const ref = useRef(null);
+    const reset = useRef(props.reset)
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+        if (ref.current && !ref.current.contains(event.target)) {
+            setCollapse(false);
+        }
+        };
+        document.addEventListener('click', handleClickOutside, true);
+        return () => {
+        document.removeEventListener('click', handleClickOutside, true);
+        };
+    },[collapse]);
+
     const onClick = (index, display) => {
         !button[index]? setQuery(query + ',' + display) : setQuery(query.replace(',' + display, ''));
         setButton(alterItem(button, index));
         !button[index]? props.onClick(query + ',' + display) : props.onClick(query.replace(',' + display, ''));
     }
 
+    useEffect(() => {
+        if (reset.current){
+            setButton(Array(6).fill(false))
+            reset.current = !reset.current
+        }
+    }, [])
+
 
     return (
-        <Grid item xs={6} sm={4} lg={4}>
-            <div class = 'gridContainer'>
+            <div ref = {ref} class = 'gridContainer' style = {{'marginLeft': '1rem', 'marginRight': '1rem'}}>
                 <div class = 'firstitem' >
                     
                     <Button style = {{'textTransform' : 'none'}} 
@@ -49,7 +70,7 @@ function GridItemHome(props) {
                     
                     {displayState.slice(0,6).map((display, index) =>
 
-                    <div class = {!button[index]?  'subitem' : 'subitem clicked'} >
+                    <div class = {!button[index]?  'subitem' : 'subitem clicked'} key = {display+index}>
                         <Button style = {{'textTransform' : 'none', 'color' : 'inherit', 'height' : 'inherit',}}
                                 onClick = {() => onClick(index,display)} >
 
@@ -62,9 +83,7 @@ function GridItemHome(props) {
                     )}
 
                 </Collapse>
-
             </div>
-        </Grid>
     )
 }
 

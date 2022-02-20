@@ -15,7 +15,7 @@ function MainPageSearch(props) {
                             {shuffleArray(composerArray).map((composer, index) =>
                                 {   const delay = (index * 4).toString() + 's'
                                     return(
-                                    <Typography color = 'secondary' variant = {'h2'} style = {{'animationDelay' : delay}}>
+                                    <Typography key = {index} color = 'secondary' variant = {'h2'} style = {{'animationDelay' : delay}}>
                                         {composer} 
                                     </Typography>
                                     )}

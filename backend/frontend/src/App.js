@@ -25,8 +25,8 @@ class App extends Component {
 
 
   onSubmit = (value) => {
-    this.setState({inputText : value});
-    this.concertRef.current.scrollIntoView({ behavior : 'smooth'});
+    value = value || ''
+    this.setState({inputText : value}, this.concertRef.current.scrollIntoView({ behavior : 'smooth'}))
   }
 
   // componentDidMount(){
@@ -45,7 +45,7 @@ class App extends Component {
                               inputText = {this.state.inputText} />
               <div class = 'background' style = {{'padding' : '10%'}}>
                 {Array(28).fill(6).map((item, index) =>
-                  <div>
+                  <div key = {index}>
                     <span class = 'blackkeys' style = {{'left' : (index * 3.5).toString() + 'vw', 'opacity' : (index%7===0 | (index+3)%7 === 0)? '0' : '1',
                                      'height' : (13.69-11.99*(0.894**index)).toString() + 'vw' }}/>
                     <span class = 'whitekeys' style = {{'left' : (index * 3.5 + 1).toString() + 'vw',
@@ -55,7 +55,7 @@ class App extends Component {
             </div>
             <section class = 'details'>
                 <div class = 'content'>
-                  <Home concertRef = {this.concertRef} query = {this.state.inputText} inputText = {this.state.inputText}/>
+                  <Home concertRef = {this.concertRef} query = {this.state.inputText}/>
                 </div>
             </section>
             <div id = 'footer' style = {{'marginTop' : '200px'}}></div>

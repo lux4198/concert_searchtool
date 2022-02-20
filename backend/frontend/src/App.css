@@ -1,3 +1,7 @@
+:root{
+    --highlightcolor : #F0C035; 
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -66,34 +70,9 @@
     background-color : /* #17002c */#000225;
     width : 100%; 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column; 
     align-items: center;
-}
-
-
-.droplet{
-    height : 100%; 
-}
-
-.droplet::before{
-    position : absolute; 
-    left: 16.4vw;
-    top: 2.59vw; 
-    background-color: white;
-    height: 15px;
-    width: 15px;
-    content: '';
-    border-radius: 90%;
-
-
-
-    animation: droplet 3s linear 2;
-
-}
-
-@keyframes droplet{
-    100% { top : 35vw }
+    min-height: 100vh;
 }
 
 .background{
@@ -114,7 +93,7 @@
     width: 100%;
 	height: 85%;
     border-top: solid black 5px;
-    border-bottom: solid black 5px;
+    /* border-bottom: solid black 5px; */
 
 }
 
@@ -156,13 +135,26 @@
     100% { background-color: black; opacity: 1;}
 }
 
+@media only screen and (min-width : 1500px){
+    .container h5{
+        font-size: 2.5rem;
+    }
+    .container h6{
+        font-size: 1.5rem;
+    }
+
+    .container p{
+        font-size: 1.25rem;
+    }
+    .MainPageSearch h2{
+        font-size: 6rem;
+    }
+}
+
 
 
 
 @media only screen and (max-width: 800px) {
-    .container{
-        overflow: hidden;
-    }
     .mainpage{
         justify-content: space-evenly;
     }
@@ -215,7 +207,6 @@
 
 @media only screen and (max-width: 400px) {
     .rw-words h2, .rw-words h3{
-        left: 10%;
-        overflow: hidden;
+        left: 0;
     }
 }

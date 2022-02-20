@@ -1,11 +1,13 @@
 .sticky{
-	position: sticky;
-	top: 0;
-	z-index: 2;
+	position: sticky; 
+	top: 2px;
+	z-index: 5;
 	background-color: #000225;
-	border-radius: 100px;
-	max-width: 80%;
-	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 40px;
+	padding: 0.7rem;
 }
 
 .detailsContainer{
@@ -17,6 +19,7 @@
 	text-align: center;
 	margin-left: 1rem;
 	margin-right: 1rem;
+	overflow: unset;
 }
 
 .gridContainer{
@@ -26,10 +29,14 @@
 	align-items: center;
 }
 
+
 .collapse{
 	min-width: 65%;
 	max-width: 100%;
 	margin-bottom: 1rem;
+	position: absolute;
+	top: 3.5rem;
+
 }
 
 .firstitem{
@@ -38,7 +45,7 @@
 }
 
 .subitem{
-	border: solid /* #C88861 */ grey 1.5px;
+	border: solid /* #C88861 */ rgb(0, 0, 0) 1.5px;
 	border-radius: 10px ;
 	background : #fff; 
 	min-width: 65%;
