@@ -53,6 +53,7 @@ class Home extends Component {
             date : new Date(), 
             index : 10, 
             reset : false, 
+            apiUrl : /* 'http://192.168.1.83:8000 */'http://127.0.0.1:8000/api/events/?'
           }
       }
 
@@ -86,10 +87,10 @@ class Home extends Component {
     getAllConcerts = () => {
     // date is either specified date from datePicker or default new(Date), so today 
     const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
-    axios.get('http://192.168.1.83:8000/api/events/?'+ date)
+    axios.get(this.state.apiUrl + date)
     .then((response) => {
-    this.setState({allConcerts : response.data})
-    })
+    this.setState({allConcerts : response.data},)
+    }).catch(() => console.log('error'))
     };
 
     // function responsible for making the api call to get the concert items matching the query  
@@ -97,11 +98,11 @@ class Home extends Component {
         // date is either specified date from datePicker or default new(Date), so today 
         const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
-        axios.get('http://192.168.1.83:8000/api/events/?'+ date + '&city=' + this.state.city + '&q=' + this.state.inputText)
+        axios.get(this.state.apiUrl+ date + '&city=' + this.state.city + '&q=' + this.state.inputText)
         .then((response) => {
 
         this.setState({allQueryConcerts : response.data})
-        })
+        }).catch(() => console.log('error'))
     };
 
     setCity(query){

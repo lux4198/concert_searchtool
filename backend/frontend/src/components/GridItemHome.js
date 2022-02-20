@@ -16,7 +16,6 @@ function alterItem(array, index){
 function GridItemHome(props) {
     var item = props.item
 
-    const [displayState] = useState(shuffleArray(item))
     const [button, setButton] = useState(Array(6).fill(false))
 
     const [query, setQuery] = useState('')
@@ -24,7 +23,6 @@ function GridItemHome(props) {
     const [collapse, setCollapse] = useState(false)
 
     const ref = useRef(null);
-    const reset = useRef(props.reset)
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -45,12 +43,11 @@ function GridItemHome(props) {
     }
 
     useEffect(() => {
-        if (reset.current){
+        console.log(props.reset)
+        if (props.reset){
             setButton(Array(6).fill(false))
-            reset.current = !reset.current
         }
-    }, [])
-
+    }, [props.reset])
 
     return (
             <div ref = {ref} class = 'gridContainer' style = {{'marginLeft': '1rem', 'marginRight': '1rem'}}>
@@ -68,7 +65,7 @@ function GridItemHome(props) {
                 
                 <Collapse in = {collapse} className = 'collapse'>
                     
-                    {displayState.slice(0,6).map((display, index) =>
+                    {item.slice(0,6).map((display, index) =>
 
                     <div class = {!button[index]?  'subitem' : 'subitem clicked'} key = {display+index}>
                         <Button style = {{'textTransform' : 'none', 'color' : 'inherit', 'height' : 'inherit',}}
