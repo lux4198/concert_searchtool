@@ -21,21 +21,23 @@ def get_concert_details(details_link):
     
     pieces = []
     for item in soup.find_all('div' , {'class' : 'piece'}):
-        if len(item.contents) == 2:
+        if len(item.contents) >= 2:
             pieces.append((item.contents[0].text, item.contents[1].text))
         elif len(item.contents) == 1:
-            pieces.append((item.contents[0].text, '')) 
+            pieces.append(('', item.contents[0].text)) 
         else:
-            continue
+            pieces.append(('', '')) 
 
     pieces_dict = {}
-
     # adds composers and pieces to dict, if composer already has an entry only the piece will be added
     for piece in pieces: 
-        if piece[0] not in pieces_dict:
+        if not piece[0] and not piece[1]:
+            continue
+        elif piece[0] not in pieces_dict:
             pieces_dict[piece[0]] = [piece[1]]
         else:
             pieces_dict[piece[0]].append(piece[1])
+
     return pieces_dict
 
 def date_march(concert_date):
@@ -119,11 +121,26 @@ def main():
                 # safe link to singleevent 
                 singleevent['link'] = details_link
 
+                # get concert title 
 
-                # get composers and pieces from details_link
+                details = requests.get(details_link)
+                details_soup = BeautifulSoup(details.text, 'html.parser')
+
+                title = ''  
+                if details_soup.find('h1' , {'class' : 'concert-title'}):
+                    title = details_soup.find('h1' , {'class' : 'concert-title'})
+                    title = title.text
+                
+                singleevent['title'] = title 
+
+
+                # get composers, pieces and title from details_link
                 composers_pieces = get_concert_details(details_link)
                 singleevent['composers'] = [item for item  in composers_pieces.keys()]
                 singleevent['pieces'] = [value for value in composers_pieces.values()]
+
+
+                
 
 
                 # define the city of the events 

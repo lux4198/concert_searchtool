@@ -21,12 +21,12 @@ def create_Events(item):
 # this script updates the database by deleting current entries and replacing them with new ones from the scraper scripts 
 
 def main():
-    cities = [berlin_main(), hamburg_main(), munich_main(), frankfurt_main(), dresden_main()]
+    cities = [berlin_main() ,hamburg_main(), munich_main(), frankfurt_main(), dresden_main()]
 
     Event.objects.all().delete()
 
     for item in chain.from_iterable(cities):
-        if '' in [item['composers'], item['musicians'], item['pieces']]:
+        if '' in [item['composers'], item['musicians']]:
             continue
         create_Events(item)
 
