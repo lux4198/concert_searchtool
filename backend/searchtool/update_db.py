@@ -8,6 +8,9 @@ from .models import Event
 from itertools import chain
 
 def create_Events(item):
+    if 'title' not in item: 
+        item['title'] = item['ensemble']
+
     Event.objects.create(
             date = item['datetime'], 
             city = item['city'], 
@@ -16,7 +19,8 @@ def create_Events(item):
             conductor = item['conductor'],
             composers = item['composers'],
             pieces = item['pieces'],
-            link = item['link'])
+            link = item['link'], 
+            title = item['title'])
 
 # this script updates the database by deleting current entries and replacing them with new ones from the scraper scripts 
 
