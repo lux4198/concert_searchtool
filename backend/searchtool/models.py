@@ -13,6 +13,7 @@ class Event(models.Model):
     conductor = models.TextField(max_length=50)
     ensemble = models.TextField(max_length=100)
     title = models.TextField(max_length=100, default='')
+    type = models.TextField(max_length=100, default='Orchestermusik')
 
 
     class Meta:

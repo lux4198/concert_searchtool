@@ -49,12 +49,17 @@
 	border-radius: 10px ;
 	background : #fff; 
 	min-width: 65%;
-	max-width: 100%;
+	max-width: 70%;
 	height: 40px;
 	display: flex;
 	flex-direction: column;
 	color : black;
+}
 
+.MuiCollapse-wrapperInner{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .subitem.clicked{

@@ -70,8 +70,10 @@ function ConcertItem(props){
             </div>
           <div id = 'ensemble_and_artists' class = 'rightside'>
             <a target={'_blank'} rel="noreferrer"  href={concert.link}>
-              <Typography id = {'ensemble'} className = {checkHighlight(concert.ensemble)} style = {{'marginBottom' : '1rem', 'marginTop': '1rem', 'textDecoration': 'underline'}}
-                          variant = {ensembleFont} color = {'primary'}> {concert.ensemble} </Typography>
+              <Typography id = {'ensemble'} className = {checkHighlight(concert.ensemble)} 
+              style = {{'marginBottom' : '1rem', 'marginTop': '1rem', 'textDecoration': 'underline', 
+              'whiteSpace' : 'break-spaces', }}
+                          variant = {ensembleFont} color = {'primary'}> {concert.title} </Typography>
             </a>
             <div id = 'musicians' class = 'musicians'>
                 <table>
@@ -117,8 +119,8 @@ function ConcertItem(props){
                             (piece, pieceIndex) =>
                               <tbody>
                                 <tr key = {piece + pieceIndex + concert.index}>
-                                  <td style = {{'whiteSpace' : 'nowrap', 'paddingBottom' : '3px' }}>
-                                    <Typography color = {props.textColor} className = {checkHighlight(composer)} style = {{'fontWeight' : 'bold', 'textAlign' : 'center'}}>
+                                  <td style = {{'whiteSpace' : 'break-spaces', 'paddingBottom' : '3px' }}>
+                                    <Typography color = {props.textColor} className = {checkHighlight(composer)} style = {{'fontWeight' : 'bold',}}>
                                       {pieceIndex > 0 ? '' : composer}
                                     </Typography>
                                   </td>

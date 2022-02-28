@@ -10,6 +10,8 @@ from itertools import chain
 def create_Events(item):
     if 'title' not in item: 
         item['title'] = item['ensemble']
+    if 'type' not in item: 
+        item['type'] = 'Orchestermusik'
 
     Event.objects.create(
             date = item['datetime'], 
@@ -20,7 +22,8 @@ def create_Events(item):
             composers = item['composers'],
             pieces = item['pieces'],
             link = item['link'], 
-            title = item['title'])
+            title = item['title'], 
+            type = item['type'])
 
 # this script updates the database by deleting current entries and replacing them with new ones from the scraper scripts 
 

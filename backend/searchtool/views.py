@@ -9,7 +9,6 @@ from .scrapers.scraper_Berlin import main
 from .serializers import EventSerializer
 
 import datetime 
-import pytz
 # from unidecode import unidecode 
 
 # Create your views here.
@@ -34,11 +33,17 @@ class EventView(generics.ListCreateAPIView):
         piece_query = self.request.query_params.get('p')
 
         cityquery = self.request.query_params.get('city')
+
+        typequery = self.request.query_params.get('type')
         
 
         if cityquery:
             if queryset.filter(city__in=cityquery.split(',')):
                 queryset = queryset.filter(city__in=cityquery.split(','))
+
+        if typequery: 
+            if queryset.filter(type__in=typequery.split(',')):
+                queryset = queryset.filter(type__in=typequery.split(','))            
         
         if query:
             query = query.split(',')

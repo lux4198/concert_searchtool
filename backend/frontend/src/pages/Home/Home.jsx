@@ -48,12 +48,15 @@ class Home extends Component {
           this.state = {
             allConcerts : [], 
             allQueryConcerts : [], 
-            inputText : '', 
+            query : '', 
             city: '', 
+            type : '', 
+            today : new Date(), 
             date : new Date(), 
             index : 10, 
             reset : false, 
-            apiUrl : /* 'http://192.168.1.83:8000 */'http://127.0.0.1:8000/api/events/?'
+            apiUrl : /* 'http://192.168.1.83:8000 */'http://127.0.0.1:8000/api/events/?', 
+            currentFilters : '', 
           }
       }
 
@@ -67,10 +70,12 @@ class Home extends Component {
         window.removeEventListener('scroll', this.handleScroll);
     }
 
-    componentDidUpdate(prevProps){
+    componentDidUpdate(prevProps, prevState){
         if(this.props.query !== prevProps.query){
-            this.setState({inputText : this.props.query} , () => {this.getAllQueryConcerts()})
+            this.setState({query : this.props.query} , () => {this.getAllQueryConcerts()})
         }
+        if(this.state.city !== prevState.city || this.state.date !== prevState.date || this.state.query !== prevState.query)
+        this.setFilters()
     }
 
     handleScroll = (e) => {
@@ -98,12 +103,16 @@ class Home extends Component {
         // date is either specified date from datePicker or default new(Date), so today 
         const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
-        axios.get(this.state.apiUrl+ date + '&city=' + this.state.city + '&q=' + this.state.inputText)
+        axios.get(this.state.apiUrl+ date + '&city=' + this.state.city + '&q=' + this.state.query + '&type=' + this.state.type)
         .then((response) => {
 
         this.setState({allQueryConcerts : response.data})
         }).catch(() => console.log('error'))
     };
+
+    setType(query){
+        this.setState({type : query}, () => this.getAllQueryConcerts())
+    }
 
     setCity(query){
         this.setState({city : query}, () => this.getAllQueryConcerts())
@@ -115,7 +124,12 @@ class Home extends Component {
 
     setQuery = (value) => {
         value = value || ''
-        this.setState({inputText : value},() => this.getAllQueryConcerts())
+        this.setState({query : value},() => this.getAllQueryConcerts())
+    }
+
+    setFilters = () => {
+        this.setState({currentFilters : [this.state.city.split(',').filter(i => i), this.state.query, 
+                        (moment(this.state.date).format('YYYY-MM-DD') !== moment(this.state.today).format('YYYY-MM-DD'))? moment(this.state.date).format('YYYY-MM-DD') : '']})
     }
 
     render(){ 
@@ -126,12 +140,13 @@ class Home extends Component {
             </Typography>
             <div ref = {this.props.concertRef} class = 'sticky'>
                 <Datepicker onChange = {this.setDate} value = {this.state.date} />
+                <GridItemHome item = {['Kammermusik', 'Orchestermusik']} header = 'Konzertart' onClick = {(query) => this.setType(query)}/>
                 <GridItemHome item = {cities} header = {'Stadt'} onClick = {(query) => this.setCity(query)} reset = {this.state.reset} />
-                <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '55%', 'background': '#C88861', 'zIndex': '-1','padding' : '0px', 'borderRadius': '20px',  
-                                'display': this.state.city || 
-                                (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm') || this.state.inputText)? 
+                <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '55%', 'background': '#C88861', 'zIndex': '-1','padding' : '0px', 'borderRadius': '20px',
+                                'display': this.state.city ||
+                                (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm') || this.state.query)?
                                 'flex': 'none'}}
-                                onClick = {() => this.setState({city : '', date : new Date(), inputText : '', reset : true }, () => {this.setState({reset : false}); this.getAllQueryConcerts()})}>
+                                onClick = {() => this.setState({city : '', date : new Date(), query : '', reset : true }, () => {this.setState({reset : false}); this.getAllQueryConcerts()})}>
                     <Typography>Filter <br/>Zurücksetzen</Typography>
                 </Button>
             </div>
@@ -139,9 +154,9 @@ class Home extends Component {
                                                         'border' : '2px solid black', 'marginTop' : '30px',}}>
                 <SearchBar label = {'Ensemble, Komponist, Dirigent, Stück'} multiple = {false}
                     concerts = {this.state.allConcerts} 
-                    onSubmit = {this.setQuery} value = {this.state.inputText}/>
+                    onSubmit = {this.setQuery} value = {this.state.query}/>
             </div>
-            <RenderConcerts concerts = {this.state.allQueryConcerts} index = {this.state.index} query = {this.state.inputText}/>
+            <RenderConcerts concerts = {this.state.allQueryConcerts} index = {this.state.index} query = {this.state.query}/>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import {Typography, Button, Collapse} from '@mui/material'
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import { shuffleArray} from '../Helpers/helperFunctions';
+// import { shuffleArray} from '../Helpers/helperFunctions';
 
 // import '../pages/Home.css'
 
@@ -43,7 +43,6 @@ function GridItemHome(props) {
     }
 
     useEffect(() => {
-        console.log(props.reset)
         if (props.reset){
             setButton(Array(6).fill(false))
         }

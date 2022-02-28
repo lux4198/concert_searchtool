@@ -60,23 +60,25 @@ def main():
 
     for month in month_list:
         print(month, '\n')
-        urls = ['https://www.berliner-philharmoniker.de/konzerte/kalender/veranstaltungen/von/' + month + '/cat/ensemble/', 
-        'https://www.berliner-philharmoniker.de/konzerte/kalender/von/' + month]
+        urls = [('https://www.berliner-philharmoniker.de/konzerte/kalender/veranstaltungen/von/' + month + '/cat/ensemble/', 'ensemble'), 
+        ('https://www.berliner-philharmoniker.de/konzerte/kalender/von/' + month, 'orchestra')]
 
         for url in urls:
-            data = requests.get(url)
+            data = requests.get(url[0])
 
             soup = BeautifulSoup(data.text, 'html.parser')
 
             # find each concert in concert list 
-            for element in soup.find_all('article', { 'class' : 'calendar-entry clickable-box ensemble'}):
+            for element in soup.find_all('article', { 'class' : 'calendar-entry clickable-box ' + url[1]}):
 
                 singleevent = {}
 
                 if urls.index(url) == 0:
                     singleevent['ensemble'] = 'Kammermusik'
+                    singleevent['type'] = 'Kammermusik'
                 else:
                     singleevent['ensemble'] = 'Berliner Philharmoniker'
+
 
                 # get details from each concert 
                 concert_date = element.find('div', {'class' : 'performance-date'})
