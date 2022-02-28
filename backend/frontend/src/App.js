@@ -29,6 +29,10 @@ class App extends Component {
     this.setState({inputText : value}, this.concertRef.current.scrollIntoView({ behavior : 'smooth'}))
   }
 
+  scrollToTop = () => {
+    this.concertRef.current.scrollIntoView({ behavior : 'smooth'})
+  }
+
   // componentDidMount(){
   //   this.getAllConcerts(this.state.city)
   // }
@@ -45,20 +49,26 @@ class App extends Component {
                               inputText = {this.state.inputText} />
               <div class = 'background' style = {{'padding' : '10%'}}>
                 {Array(28).fill(6).map((item, index) =>
+                  {
+                    return(
                   <div key = {index}>
                     <span class = 'blackkeys' style = {{'left' : (index * 3.5).toString() + 'vw', 'opacity' : (index%7===0 | (index+3)%7 === 0)? '0' : '1',
-                                     'height' : (13.69-11.99*(0.894**index)).toString() + 'vw' }}/>
+                                     'height' : (13.69-11.99*(0.894**index)).toString() + 'vw'}}/>
                     <span class = 'whitekeys' style = {{'left' : (index * 3.5 + 1).toString() + 'vw',
                                     'height' : (17.2-14*(0.89**index)).toString() + 'vw' }}/>
                   </div>)}
+                  )}
               </div>
             </div>
             <section class = 'details'>
                 <div class = 'content'>
-                  <Home concertRef = {this.concertRef} query = {this.state.inputText}/>
+                  <Home concertRef = {this.concertRef} query = {this.state.inputText} scrollToTop = {() => this.scrollToTop()}/>
                 </div>
             </section>
-            <div id = 'footer' style = {{'marginTop' : '200px'}}></div>
+            <div id = 'footer' class = 'footer'>
+              <a href="mailto:lukas.nittka@gmail.com">lukas.nittka@gmail.com</a> <br/>
+              <a href="https://github.com/lux4198/concert_searchtool">https://github.com/lux4198/concert_searchtool</a>
+            </div>
           </div>
         </section>
         // <DetailedSearch/>

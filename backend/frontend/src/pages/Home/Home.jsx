@@ -134,11 +134,11 @@ class Home extends Component {
 
     render(){ 
         return(
-        <div id = 'title-details' class = 'detailsContainer'>
+        <div id = 'title-details' class = 'detailsContainer' ref = {this.props.concertRef}>
             <Typography variant = 'h2' style = {{'marginBottom': '4rem', 'marginTop': '3rem'}}>
                 Konzertsuche leicht gemacht.
             </Typography>
-            <div ref = {this.props.concertRef} class = 'sticky'>
+            <div  class = 'sticky'>
                 <Datepicker onChange = {this.setDate} value = {this.state.date} />
                 <GridItemHome item = {['Kammermusik', 'Orchestermusik']} header = 'Konzertart' onClick = {(query) => this.setType(query)}/>
                 <GridItemHome item = {cities} header = {'Stadt'} onClick = {(query) => this.setCity(query)} reset = {this.state.reset} />
@@ -146,7 +146,17 @@ class Home extends Component {
                                 'display': this.state.city ||
                                 (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm') || this.state.query)?
                                 'flex': 'none'}}
-                                onClick = {() => this.setState({city : '', date : new Date(), query : '', reset : true }, () => {this.setState({reset : false}); this.getAllQueryConcerts()})}>
+                                onClick = {() => this.setState(
+                                    {city : '',
+                                     date : new Date(),
+                                     query : '',
+                                     reset : true }, () => {
+                                         this.setState({reset : false}); 
+                                         this.getAllQueryConcerts();
+                                         this.props.scrollToTop()
+                                        }
+                                         )}>
+
                     <Typography>Filter <br/>Zurücksetzen</Typography>
                 </Button>
             </div>
