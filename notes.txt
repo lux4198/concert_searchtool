@@ -1,0 +1,23 @@
+frontend 
+
+-> pages 
+    -> about page 
+    -> search page / main page 
+        -> title and big search bar 
+        -> search animation 
+            -> suggest searches based on already typed in info 
+        -> display results / concert reccomendations if no search has been made 
+-> create english and german version 
+-> create light and dark mode 
+
+backend 
+
+-> write more scraping algos 
+    - add data to db in generalized format 
+-> differentiate between chamber music and orchestral music 
+
+
+django SECRET_KEY = 'django-insecure-x_016isec^lbtjd+28ijzv$(4@y0-nv9mwgdknf#phauqxbw$v'
+
+-> write Readme for project 
+

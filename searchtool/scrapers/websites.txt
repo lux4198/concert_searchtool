@@ -1,0 +1,15 @@
+## Websites to be scraped 
+
+https://www.wienersymphoniker.at # SSL error no fix 
+https://www.koelner-philharmonie.de/de/programm/ 
+https://www.dresdnerphilharmonie.de/konzerte
+https://www.staatskapelle-dresden.de/konzerte/konzertkalender/
+https://www.gewandhausorchester.de/
+
+
+## done
+
+https://www.berliner-philharmoniker.de/konzerte/kalender/
+https://www.mphil.de/
+https://www.elbphilharmonie.de/de/programm/
+https://www.hr-sinfonieorchester.de/konzerte/konzertkalender/index.html

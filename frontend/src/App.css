@@ -1,0 +1,232 @@
+:root{
+    --highlightcolor : #F0C035; 
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content{
+    max-width: 1200px;
+    min-width: 85%;
+}
+
+.mainpage{
+    width: 100%;
+    height : 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.MainPageSearch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: center;
+    width: 50vw;
+    max-width: 100vw;
+
+}
+
+.MainPageSearch h5{
+    margin-top: 2rem;
+    margin-bottom: 50px;
+}
+
+.rw-words{
+	display: inline;
+	text-indent: 20px;
+	text-align: center;
+    word-wrap: break-word;
+
+
+}
+
+.rw-words h2, .rw-words h3{
+    visibility: visible;
+	position: absolute;
+	opacity: 0;
+    display: inline;
+	animation: rotateWordsFirst 180s linear infinite 0s;
+    max-width: 100%;
+}
+
+@keyframes rotateWordsFirst {
+    0% { opacity: 0; animation-timing-function:ease-in; transform: translateY(-40px)}
+    0.4% { opacity: 0.5; transform: translateY(-20px);}
+    0.7% { opacity: 1; transform: translateY(0px)}
+    1.7% {opacity: 1;transform: translateY(0px)}
+    2.22% { opacity: 0; transform: translateY(20px)}
+	2.23% { opacity: 0; transform: translateY(0px);}
+    100% { opacity: 0; }
+}
+
+.details{
+    background-color : /* #17002c */#000225;
+    width : 100%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 100vh;
+}
+
+.background{
+	height : 20%;
+    width: 100%;
+    position: relative;
+}
+
+.background::after{
+	background-color:  #ebebeb;
+	content: '';
+    border-top-left-radius: 100% 91%;
+    /* border-top-right-radius: 10% 100%; */
+    bottom:0;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+	height: 85%;
+    /* border-top: solid black 5px; */
+    /* border-bottom: solid black 5px; */
+
+}
+
+.blackkeys::after{
+    width: 2.5%;
+    height: inherit;
+    background-color: black;
+    content: '';
+    position: absolute;
+    bottom: 3.5vw;
+    left: inherit;
+    opacity: 0;
+    z-index: 1;
+    border-top-left-radius: 50px 10px;
+    border-bottom-left-radius: 50% 5%;
+    border-bottom-right-radius: 50% 5%;
+    animation: backgroundPiano 100s ease-in;
+    animation-delay: 2s;
+    display : none; 
+
+}
+
+.whitekeys::before{
+    width: 0.2%;
+    opacity: 0;
+    height: inherit;
+    background-color: black;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: inherit;
+    z-index: 1;
+    animation: backgroundPiano 100s linear;
+    animation-delay: 5.5s;
+    display : none; 
+
+
+}
+
+@keyframes backgroundPiano{
+    0% {opacity: 1;}
+    1% { background-color: black; opacity : 1}
+    100% { background-color: black; opacity: 1;}
+}
+
+
+.footer{
+    height : 10rem;
+    width: 100%;
+    text-align: start;
+    padding-left: 10%;
+    padding-top: 2rem;
+
+}
+
+
+.footer a{
+    text-decoration: none;
+    color : white; 
+}
+
+@media only screen and (min-width : 1500px){
+    .container h5{
+        font-size: 2.5rem;
+    }
+    .container h6{
+        font-size: 1.5rem;
+    }
+
+    .container p{
+        font-size: 1.25rem;
+    }
+    .MainPageSearch h2{
+        font-size: 6rem;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .mainpage{
+        justify-content: space-evenly;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .rw-words h2, .rw-words h3{
+      display: block;
+      left: 10%;
+      width: 90%;
+      overflow: unset;
+      font-size: 15vw;
+    }
+
+    .MainPageSearch{
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100vw;
+        justify-content: center;
+
+    }
+
+    .MainPageSearch h5{
+        margin-top: 5rem;
+        font-size: 1.5rem;
+    }
+
+    .MainPageSearch h2{
+        font-size: 3rem;
+    }
+
+    .droplet::before{
+        content : none;
+    }
+
+    .background::after{
+        visibility: hidden;
+    }
+
+    .blackkeys::after{
+        visibility: hidden;
+    }
+    .whitekeys::before{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .rw-words h2, .rw-words h3{
+        left: 0;
+    }
+}

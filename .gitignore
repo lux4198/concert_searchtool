@@ -1,2 +1,2 @@
-backend/db.sqlite3
-backend/backend/settings.py
+db.sqlite3
+backend/settings.py
