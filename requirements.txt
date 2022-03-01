@@ -19,6 +19,7 @@ django-cors-headers==3.11.0
 django-filter==21.1
 djangorestframework==3.12.4
 entrypoints==0.3
+gunicorn==20.1.0
 idna==3.2
 ipykernel==6.4.1
 ipython==7.28.0
