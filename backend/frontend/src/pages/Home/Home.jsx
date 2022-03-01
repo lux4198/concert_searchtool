@@ -103,7 +103,7 @@ class Home extends Component {
         // date is either specified date from datePicker or default new(Date), so today 
         const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
 
-        axios.get(this.state.apiUrl+ date + '&city=' + this.state.city + '&q=' + this.state.query + '&type=' + this.state.type)
+        axios.get(/* this.state.apiUrl */ '/api/events/?' + date + '&city=' + this.state.city + '&q=' + this.state.query + '&type=' + this.state.type)
         .then((response) => {
 
         this.setState({allQueryConcerts : response.data})
@@ -140,16 +140,17 @@ class Home extends Component {
             </Typography>
             <div  class = 'sticky'>
                 <Datepicker onChange = {this.setDate} value = {this.state.date} />
-                <GridItemHome item = {['Kammermusik', 'Orchestermusik']} header = 'Konzertart' onClick = {(query) => this.setType(query)}/>
+                <GridItemHome item = {['Kammermusik', 'Orchestermusik']} header = 'Konzertart' onClick = {(query) => this.setType(query)} reset = {this.state.reset}/>
                 <GridItemHome item = {cities} header = {'Stadt'} onClick = {(query) => this.setCity(query)} reset = {this.state.reset} />
                 <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '55%', 'background': '#C88861', 'zIndex': '-1','padding' : '0px', 'borderRadius': '20px',
                                 'display': this.state.city ||
-                                (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm') || this.state.query)?
+                                (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm') || this.state.query || this.state.type)?
                                 'flex': 'none'}}
                                 onClick = {() => this.setState(
                                     {city : '',
                                      date : new Date(),
                                      query : '',
+                                     type : '', 
                                      reset : true }, () => {
                                          this.setState({reset : false}); 
                                          this.getAllQueryConcerts();
