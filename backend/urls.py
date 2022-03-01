@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls.conf import include
+from django.urls.conf import include, re_path
 from rest_framework import routers
+from django.views.generic import TemplateView
 
 from searchtool import views
 
@@ -25,5 +26,6 @@ from searchtool import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/events/', views.EventView.as_view())
+    path('api/events/', views.EventView.as_view()),
+    re_path('.*', TemplateView.as_view(template_name='index.html'))
 ]
