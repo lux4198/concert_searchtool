@@ -5,7 +5,7 @@ from datetime import datetime
 from locale import setlocale, LC_TIME
 import pytz
 
-setlocale(LC_TIME, 'de_DE')
+setlocale(LC_TIME, 'deu_deu')
 
 # from ..models import Event 
 
