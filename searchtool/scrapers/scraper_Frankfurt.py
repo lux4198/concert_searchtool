@@ -6,7 +6,7 @@ from datetime import datetime
 import pytz
 from locale import setlocale, LC_TIME
 
-setlocale(LC_TIME, 'deu_deu')
+setlocale(LC_TIME, 'de_DE')
 
 
 def main():

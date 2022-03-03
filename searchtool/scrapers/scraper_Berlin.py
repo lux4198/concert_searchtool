@@ -2,10 +2,10 @@ from numpy import single
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
-from locale import setlocale, LC_TIME
+from locale import LC_TIME, setlocale
 import pytz
 
-setlocale(LC_TIME, 'deu_deu')
+setlocale(LC_TIME, 'de_DE')
 
 # from ..models import Event 
 
@@ -41,13 +41,16 @@ def get_concert_details(details_link):
     return pieces_dict
 
 def date_march(concert_date):
+    concert_date = concert_date.split(',')[1:]
+    concert_date = ''.join(concert_date)
+
     if concert_date.split(' ')[1] != 'Mär':
-        concert_date = datetime.strptime(concert_date, '%A,%d. %b %Y,  %H.%M')
+        concert_date = datetime.strptime(concert_date, '%d. %b %Y  %H.%M')
     else:
         concert_date = concert_date.split(' ')
         concert_date[1] = 'Mrz'
         concert_date = ' '.join(concert_date)
-        concert_date = datetime.strptime(concert_date, '%A,%d. %b %Y,  %H.%M')
+        concert_date = datetime.strptime(concert_date, '%d. %b %Y  %H.%M')
     return pytz.timezone('Europe/Berlin').localize(concert_date)
     
 
