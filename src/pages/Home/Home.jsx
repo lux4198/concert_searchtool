@@ -92,7 +92,7 @@ class Home extends Component {
     getAllConcerts = () => {
     // date is either specified date from datePicker or default new(Date), so today 
     const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
-    axios.get(this.state.apiUrl + date)
+    axios.get('/api/events/?' + date)
     .then((response) => {
     this.setState({allConcerts : response.data},)
     }).catch(() => console.log('error'))
