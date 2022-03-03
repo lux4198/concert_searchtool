@@ -105,7 +105,7 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'd6n6r51ohsbr47',
         'USER' : 'wchnioakarvsde', 
         'PASSWORD' : 'f74989e259f7fc4c9178f331c1282afeb68a12dcf31b5818fd15ae2692af80b0', 
         'HOST' : 'ec2-54-220-243-77.eu-west-1.compute.amazonaws.com', 
@@ -150,7 +150,7 @@ USE_I18N = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.django.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
