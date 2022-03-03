@@ -142,7 +142,8 @@ class Home extends Component {
                 <Datepicker onChange = {this.setDate} value = {this.state.date} />
                 <GridItemHome item = {['Kammermusik', 'Orchestermusik']} header = 'Konzertart' onClick = {(query) => this.setType(query)} reset = {this.state.reset}/>
                 <GridItemHome item = {cities} header = {'Stadt'} onClick = {(query) => this.setCity(query)} reset = {this.state.reset} />
-                <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '55%', 'background': '#C88861', 'zIndex': '-1','padding' : '0px', 'borderRadius': '20px',
+                <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '55%', 'background': '#C88861', 'zIndex': '-1','padding' : '0px', 
+                                  'borderRadius': '20px', 'minWidth' : '100px', 'maxWidth' : '35%',  
                                 'display': this.state.city ||
                                 (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm') || this.state.query || this.state.type)?
                                 'flex': 'none'}}

@@ -6,8 +6,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap; 
 	border-radius: 40px;
 	padding: 0.7rem;
+	width: 70%;
+}
+
+.sticky>*{
+	flex : 1 1 130px; 
 }
 
 .detailsContainer{
@@ -27,7 +33,7 @@
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-}
+	}
 
 
 .collapse{
@@ -36,7 +42,7 @@
 	margin-bottom: 1rem;
 	position: absolute;
 	top: 3.5rem;
-
+	z-index: 6;
 }
 
 .firstitem{
@@ -75,4 +81,10 @@
 	0% { color : #fff; }
 	3% { background: #C88861/* 10273d */;}
 	100% { background: #C88861/* 10273d */; color : #fff; }
+}
+
+@media only screen and (max-width : 700px){
+	.collapse{
+		top: 7rem; 
+	}
 }

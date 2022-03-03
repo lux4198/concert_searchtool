@@ -40,6 +40,7 @@ function GridItemHome(props) {
         !button[index]? setQuery(query + ',' + display) : setQuery(query.replace(',' + display, ''));
         setButton(alterItem(button, index));
         !button[index]? props.onClick(query + ',' + display) : props.onClick(query.replace(',' + display, ''));
+        setCollapse(false)
     }
 
     useEffect(() => {
@@ -49,7 +50,7 @@ function GridItemHome(props) {
     }, [props.reset])
 
     return (
-            <div ref = {ref} class = 'gridContainer' style = {{'marginLeft': '1rem', 'marginRight': '1rem'}}>
+            <div ref = {ref} class = 'gridContainer'>
                 <div class = 'firstitem' >
                     
                     <Button style = {{'textTransform' : 'none'}} 
