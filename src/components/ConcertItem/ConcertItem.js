@@ -51,7 +51,7 @@ function ConcertItem(props){
 
   let formattedDate = moment(concert.date).format('DD. MMM YYYY')
   let formattedWeekday = moment(concert.date).format('dddd')
-  // let formattedTime = moment(concert.date).format('HH:mm')
+  let formattedTime = moment(concert.date).format('HH:mm')
 
   return(
       <Card class = 'card' >
@@ -63,7 +63,7 @@ function ConcertItem(props){
               </Typography>
               <div class = 'date_picture'>
                   <Typography color = {props.textColor} variant = 'h6' style = {{'fontWeight' : 'bold', 'marginTop': 'auto', 'marginRight': '1rem', }}>
-                    {`${formattedWeekday} - ${formattedDate}`}
+                    {`${formattedDate} - ${formattedTime}`}
                   </Typography>
                   <img src = {IMG_0136} alt = '' class = 'picture'/>
               </div>
