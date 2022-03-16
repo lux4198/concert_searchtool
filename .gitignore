@@ -28,4 +28,5 @@ yarn-error.log*
 notes.txt
 /Python/websites.txt
 # backend/settings.py
+backend/.env
 db.sqlite3

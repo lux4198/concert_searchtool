@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('concert_searchtool_Django_secret_key')
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -106,8 +110,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'd6n6r51ohsbr47',
-        'USER' : 'wchnioakarvsde', 
-        'PASSWORD' : os.environ.get('concert_searchtool_DB_password'), 
+        'USER' : env('DB_USER'),
+        'PASSWORD' : env('DB_PASSWORD'),
         'HOST' : 'ec2-54-220-243-77.eu-west-1.compute.amazonaws.com', 
         'PORT' : '5432', 
     }
