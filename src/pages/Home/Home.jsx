@@ -83,7 +83,7 @@ class Home extends Component {
         const bottom = Math.floor(el.scrollHeight - el.scrollTop) <= el.clientHeight + 10;
 
         if (bottom) { 
-            this.setState(() => {return({index : this.state.index + 10})})
+            this.setState(() => {return({index : this.state.index + 10})}, this.getAllQueryConcerts())
             }
         }
 
@@ -92,7 +92,8 @@ class Home extends Component {
     getAllConcerts = () => {
     // date is either specified date from datePicker or default new(Date), so today 
     const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
-    axios.get('/api/events/?' + date)
+    const index = 'n=' + this.state.index
+    axios.get('/api/events/?' + date + '&' + index)
     .then((response) => {
     this.setState({allConcerts : response.data},)
     }).catch(() => console.log('error'))
@@ -102,8 +103,9 @@ class Home extends Component {
     getAllQueryConcerts = () => {
         // date is either specified date from datePicker or default new(Date), so today 
         const date = 'date=' + moment(this.state.date).format('YYYY-MM-DD HH:mm')
+        const index = 'n=' + this.state.index
 
-        axios.get(/* this.state.apiUrl */ '/api/events/?' + date + '&city=' + this.state.city + '&q=' + this.state.query + '&type=' + this.state.type)
+        axios.get(/* this.state.apiUrl */ '/api/events/?' + date + '&' + index + '&city=' + this.state.city + '&q=' + this.state.query + '&type=' + this.state.type)
         .then((response) => {
 
         this.setState({allQueryConcerts : response.data})
@@ -129,7 +131,8 @@ class Home extends Component {
 
     setFilters = () => {
         this.setState({currentFilters : [this.state.city.split(',').filter(i => i), this.state.query, 
-                        (moment(this.state.date).format('YYYY-MM-DD') !== moment(this.state.today).format('YYYY-MM-DD'))? moment(this.state.date).format('YYYY-MM-DD') : '']})
+                        (moment(this.state.date).format('YYYY-MM-DD') !== moment(this.state.today).format('YYYY-MM-DD'))? moment(this.state.date).format('YYYY-MM-DD') : ''], 
+                        index : 10})
     }
 
     render(){ 
