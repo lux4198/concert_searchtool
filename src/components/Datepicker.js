@@ -20,7 +20,7 @@ const theme = createTheme({
 export default function MaterialUIPickers(props) {
   return (
     <div style = {{'background': 'white', 'borderRadius': '20px', 'marginLeft': '1rem', 'marginRight': '1rem', 
-                    'marginBottom' : '0.5rem', 'width' : '20%'}}>
+                    'marginBottom' : '0.5rem',}}>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
           <ThemeProvider theme = {theme}>
             <DatePicker

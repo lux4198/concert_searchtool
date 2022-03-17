@@ -1,5 +1,6 @@
 import React, {Component, useLayoutEffect, useState} from 'react'
-import {Typography, Button} from '@mui/material'
+import {Typography, Button, Collapse} from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu';
 
 import SearchBar from '../../components/searchbar'
 import Datepicker from '../../components/Datepicker'
@@ -57,6 +58,7 @@ class Home extends Component {
             reset : false, 
             apiUrl : /* 'http://192.168.1.83:8000 */'http://127.0.0.1:8000/api/events/?', 
             currentFilters : '', 
+            collapse : true,
           }
       }
 
@@ -141,29 +143,35 @@ class Home extends Component {
             <Typography variant = 'h2' style = {{'marginBottom': '4rem', 'marginTop': '3rem'}}>
                 Konzertsuche leicht gemacht.
             </Typography>
-            <div  class = 'sticky'>
-                <Datepicker onChange = {this.setDate} value = {this.state.date} />
-                <GridItemHome item = {['Kammermusik', 'Orchestermusik']} header = 'Konzertart' onClick = {(query) => this.setType(query)} reset = {this.state.reset}/>
-                <GridItemHome item = {cities} header = {'Stadt'} onClick = {(query) => this.setCity(query)} reset = {this.state.reset} />
-                <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '55%', 'background': '#C88861', 'zIndex': '-1','padding' : '0px', 
-                                  'borderRadius': '20px', 'minWidth' : '100px', 'maxWidth' : '35%',  
-                                'display': this.state.city ||
-                                (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm') || this.state.query || this.state.type)?
-                                'flex': 'none'}}
-                                onClick = {() => this.setState(
-                                    {city : '',
-                                     date : new Date(),
-                                     query : '',
-                                     type : '', 
-                                     reset : true }, () => {
-                                         this.setState({reset : false}); 
-                                         this.getAllQueryConcerts();
-                                         this.props.scrollToTop()
-                                        }
-                                         )}>
-
-                    <Typography>Filter <br/>Zurücksetzen</Typography>
+            <div  class = 'sticky' style = {{'width' : this.state.collapse? '80%' : '50px',}}>
+                <Button onClick = {() => this.setState({ collapse : !this.state.collapse})} style = {{'width' : '10%', }}>
+                    <MenuIcon style = {{'color' : 'white'}} />
                 </Button>
+                <Collapse in = {this.state.collapse}>
+                    <div class = 'collapseItems'>
+                        <Datepicker onChange = {this.setDate} value = {this.state.date} />
+                        <GridItemHome item = {['Kammermusik', 'Orchestermusik']} header = 'Konzertart' onClick = {(query) => this.setType(query)} reset = {this.state.reset}/>
+                        <GridItemHome item = {cities} header = {'Stadt'} onClick = {(query) => this.setCity(query)} reset = {this.state.reset} />
+                        <Button style = {{'color': 'white', 'textTransform': 'none', 'width': '55%', 'background': '#C88861', 'padding' : '0px',
+                                          'borderRadius': '20px', 'minWidth' : '100px', 'maxWidth' : '35%',
+                                        'display': this.state.city ||
+                                        (moment(this.state.date).format('YYYY-MM-DD HH:mm') !== moment(new Date()).format('YYYY-MM-DD HH:mm') || this.state.query || this.state.type)?
+                                        'flex': 'none'}}
+                                        onClick = {() => this.setState(
+                                            {city : '',
+                                             date : new Date(),
+                                             query : '',
+                                             type : '',
+                                             reset : true }, () => {
+                                                 this.setState({reset : false});
+                                                 this.getAllQueryConcerts();
+                                                 this.props.scrollToTop()
+                                                }
+                                                 )}>
+                            <Typography>Filter <br/>Zurücksetzen</Typography>
+                        </Button>
+                    </div>
+                </Collapse>
             </div>
             <div style = {{'background' : '#fff', 'borderRadius' : '20px', 'width' : '80%', 
                                                         'border' : '2px solid black', 'marginTop' : '30px',}}>

@@ -1,19 +1,22 @@
 .sticky{
 	position: sticky; 
 	top: 2px;
+	right: 100vw;
 	z-index: 5;
 	background-color: #000225;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap; 
 	border-radius: 40px;
 	padding: 0.7rem;
-	width: 70%;
 }
 
-.sticky>*{
+/* .sticky>*{
 	flex : 1 1 130px; 
+} */
+
+.collapseItems{
+	display: flex;
 }
 
 .detailsContainer{
@@ -86,5 +89,12 @@
 @media only screen and (max-width : 700px){
 	.collapse{
 		top: 7rem; 
+	}
+}
+
+@media only screen and (max-width : 500px){
+	.collapseItems{
+		display: flex;
+		flex-direction: column;
 	}
 }
